@@ -2,6 +2,7 @@
 #define DATA_H
 
 #include <string>
+#include <qstring.h>
 
 enum Channel{
     CAN = 0,
@@ -16,28 +17,20 @@ enum DataType{
     STRING = 4
 };
 
-//class DataValue{
-//public:
-//    DataValue(unsigned char* value){
-//        this->value = value;
-//    };
-//    unsigned char* value;
-//};
-
 using namespace std;
 
 class Data
 {
 public:
-    Data(string name, Channel channel, DataType type, unsigned char* value);
-    unsigned char* getValue();
+    Data(string name, Channel channel, DataType type, QString value);
+    QString getValue();
     void replaceby(Data* data);
-    void update(string name, Channel channel, DataType type, unsigned char* value);
+    void update(string name, Channel channel, DataType type, QString value);
 private:
     string name;
     Channel channel;
     DataType type;
-    unsigned char* value;
+    QString value;
 };
 
 #endif // DATA_H

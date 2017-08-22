@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'displaythread.h'
 **
-** Created: Tue Aug 22 02:46:34 2017
+** Created: Tue Aug 22 08:37:18 2017
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.2)
 **
 ** WARNING! All changes made in this file will be lost!

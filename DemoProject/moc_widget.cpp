@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'widget.h'
 **
-** Created: Tue Aug 22 02:46:34 2017
+** Created: Tue Aug 22 08:37:16 2017
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_Widget[] = {
        4,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -33,12 +33,15 @@ static const uint qt_meta_data_Widget[] = {
  // slots: signature, parameters, type, tag, flags
        8,    7,    7,    7, 0x08,
       22,   18,    7,    7, 0x08,
+      35,    7,    7,    7, 0x08,
+      53,    7,    7,    7, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_Widget[] = {
     "Widget\0\0display()\0str\0log(QString)\0"
+    "decreaseCluster()\0increaseCluster()\0"
 };
 
 const QMetaObject Widget::staticMetaObject = {
@@ -72,9 +75,11 @@ int Widget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         switch (_id) {
         case 0: display(); break;
         case 1: log((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 2: decreaseCluster(); break;
+        case 3: increaseCluster(); break;
         default: ;
         }
-        _id -= 2;
+        _id -= 4;
     }
     return _id;
 }

@@ -2,20 +2,27 @@
 #define DATAPOOL_H
 
 #include <map>
-#include <data.h>
+#include "data.h"
 #include <string>
 #include <stdio.h>
 #include "ui_widget.h"
 #include <stdexcept>
 
-class DataPool
+class DataPool : public QObject
 {
+    Q_OBJECT
 public:   
     static DataPool* newInstance();
     void store(string name, double value);
-    void store(string name, Channel channel, DataType type, unsigned char* value);
+    void store(string name, unsigned char* value, int length);
+    void store(string name, Channel channel, DataType type, QString value);
+
     Data* retrieve(string name);
     double getDouble(string name);
+    int getInt(string name);
+    unsigned char* getUnsignedCharArray(string name);
+signals:
+    void log(QString str);
 private:
     DataPool(){};
     ~DataPool();

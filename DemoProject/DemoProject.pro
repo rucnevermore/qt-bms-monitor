@@ -8,13 +8,17 @@ SOURCES += main.cpp \
     datapool.cpp \
     data.cpp \
     displaythread.cpp \
-    collectionthread.cpp
+    collectionthread.cpp \
+    configure.cpp \
+    canparser.cpp
 HEADERS += widget.h \
-    datapool.h \
     data.h \
     displayThread.h \
     displaythread.h \
     collectionthread.h \
-    ../ycapi/ycapi.h
+    configure.h \
+    datapool.h \
+    canparser.h \
+    structs.h
 FORMS += widget.ui
 INSTALLS += target

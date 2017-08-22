@@ -1,5 +1,5 @@
-#ifndef THREAD_H
-#define THREAD_H
+#ifndef DISPLAYTHREAD_H
+#define DISPLAYTHREAD_H
 
 #include <QThread>
 #include <sys/ioctl.h>
@@ -23,4 +23,4 @@ private:
     bool running;
 };
 
-#endif // THREAD_H
+#endif // DISPLAYTHREAD_H

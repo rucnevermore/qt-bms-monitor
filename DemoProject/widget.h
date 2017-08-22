@@ -5,7 +5,8 @@
 #include <ui_widget.h>
 #include "displaythread.h"
 #include "collectionthread.h"
-#include <datapool.h>
+#include "datapool.h"
+#include "configure.h"
 
 namespace Ui {
     class Widget;
@@ -20,6 +21,8 @@ public:
 private slots:
     void display();
     void log(QString str);
+    void decreaseCluster();
+    void increaseCluster();
 
 protected:
     void changeEvent(QEvent *e);
@@ -27,6 +30,7 @@ protected:
 private:
     Ui::Widget *ui;
     DataPool* dataPool;
+    Configure* configure;
     DisplayThread *displayThread;
     CollectionThread *collectionThread;
 };
