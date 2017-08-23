@@ -1,6 +1,7 @@
 #include "collectionthread.h"
 #include "datapool.h"
 #include <sstream>
+#include <stdio.h>
 #include "structs.h"
 #include "canparser.h"
 //#include <linux/can.h>
@@ -28,17 +29,15 @@ void CollectionThread::run()
     {
         // collection from Can Bus start.
        // ycapiT->ReadCan(&frame.can_id,&frame.can_dlc,frame.data);
-        frame.can_id = 0x01020304;
+        frame.can_id = 0x18F212F3;
         frame.can_dlc = 0x08;
-        QString datav = "0102030405060708";
-        memcpy(frame.data, datav.toLocal8Bit().data(), frame.can_dlc) ;
+//        frame.data = {0x00, 0x00, 0x52, 0xC8, 0x0C, 0xE5, 0x1F, 0x23};
+        long long b = 0x000052C80CE51F23;
+        memcpy(frame.data, QString::number(b).toLocal8Bit().data(), frame.can_dlc) ;
         memset(buf,0,100);
-//        frame.data = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08};
-
         sprintf(buf,"<0x%x>  <%d>",frame.can_id,frame.can_dlc);
         for(i=0;i<frame.can_dlc;i++)
         {
-//            printf("xxx:%x  ",frame.data[i]);
             sprintf(buf,"%s 0x%x",buf,frame.data[i]);
         }
         log(QString(buf));

@@ -76,7 +76,7 @@ void Widget::display()
 //    ui->lcd_soc->display(dataPool->getDouble("soc"));
 //    ui->lcd_zddy_1->display(dataPool->getDouble("zddy_1"));
 //    ui->lcd_zddy_2->display(dataPool->getDouble("zddy_2"));
-//    ui->lcd_zdl->display(dataPool->getDouble("zdl"));
+    ui->lcd_zdl->display(dataPool->getDouble("zdl"));
 //    ui->lcd_zdwc->display(dataPool->getDouble("zdwc"));
 //    ui->lcd_zdwd_1->display(dataPool->getDouble("zdwd_1"));
 //    ui->lcd_zdwd_2->display(dataPool->getDouble("zdwd_2"));
