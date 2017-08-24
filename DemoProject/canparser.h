@@ -16,7 +16,7 @@ signals:
 private:
     DataPool* dataPool;
 
-    double visit8BytesArray(QString source, long long mask, int mask_offset, string name, double resol, double offset);
+    double visit8BytesArray(char* source, long long mask, int mask_offset, string name, double resol, double offset);
 
     void processBMS_INF(CanFrame frame);
 

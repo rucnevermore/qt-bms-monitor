@@ -32,8 +32,10 @@ void CollectionThread::run()
         frame.can_id = 0x18F212F3;
         frame.can_dlc = 0x08;
 //        frame.data = {0x00, 0x00, 0x52, 0xC8, 0x0C, 0xE5, 0x1F, 0x23};
-        long long b = 0x000052C80CE51F23;
-        memcpy(frame.data, QString::number(b).toLocal8Bit().data(), frame.can_dlc) ;
+        long long b = 0x130052C880F21F23;
+        for(int j = 0; j < 8; j++){
+            frame.data[j] = b >> (j * 8) & 0xFF;
+        }
         memset(buf,0,100);
         sprintf(buf,"<0x%x>  <%d>",frame.can_id,frame.can_dlc);
         for(i=0;i<frame.can_dlc;i++)
@@ -44,9 +46,9 @@ void CollectionThread::run()
         parser->parse(frame);
 
         // collection from Can Bus finish.
-        dataPool->store("pjdy_1", pjdy_1++);
-        dataPool->store("pjdy_2", pjdy_2++);
-        dataPool->store("pBar_soc", pBar_soc++);
+//        dataPool->store("pjdy_1", pjdy_1++);
+//        dataPool->store("pjdy_2", pjdy_2++);
+//        dataPool->store("pBar_soc", pBar_soc++);
         dataPool->store("cluster_number", 10);
         this->sleep(1);
     }

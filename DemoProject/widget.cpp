@@ -73,20 +73,20 @@ void Widget::display()
 {
     ui->lcd_pjdy_1->display(dataPool->getDouble("pjdy_1"));
     ui->lcd_pjdy_2->display(dataPool->getDouble("pjdy_2"));
-//    ui->lcd_soc->display(dataPool->getDouble("soc"));
-//    ui->lcd_zddy_1->display(dataPool->getDouble("zddy_1"));
-//    ui->lcd_zddy_2->display(dataPool->getDouble("zddy_2"));
+    ui->lcd_soc->display(dataPool->getDouble("soc"));
+    ui->lcd_zddy_1->display(dataPool->getDouble("zddy_1"));
+    ui->lcd_zddy_2->display(dataPool->getDouble("zddy_2"));
     ui->lcd_zdl->display(dataPool->getDouble("zdl"));
-//    ui->lcd_zdwc->display(dataPool->getDouble("zdwc"));
-//    ui->lcd_zdwd_1->display(dataPool->getDouble("zdwd_1"));
-//    ui->lcd_zdwd_2->display(dataPool->getDouble("zdwd_2"));
+    ui->lcd_zdwc->display(dataPool->getDouble("zdwc"));
+    ui->lcd_zdwd_1->display(dataPool->getDouble("zdwd_1"));
+    ui->lcd_zdwd_2->display(dataPool->getDouble("zdwd_2"));
     ui->lcd_zdy->display(dataPool->getDouble("zdy"));
-//    ui->lcd_zdyc->display(dataPool->getDouble("zdyc"));
-//    ui->lcd_zgwd_1->display(dataPool->getDouble("zgwd_1"));
-//    ui->lcd_zgwd_2->display(dataPool->getDouble("zgwd_2"));
-//    ui->lcd_zxdy_1->display(dataPool->getDouble("zxdy_1"));
-//    ui->lcd_zxdy_2->display(dataPool->getDouble("zxdy_2"));
-    ui->pBar_soc->setValue(dataPool->getDouble("pBar_soc"));
+    ui->lcd_zdyc->display(dataPool->getDouble("zdyc"));
+    ui->lcd_zgwd_1->display(dataPool->getDouble("zgwd_1"));
+    ui->lcd_zgwd_2->display(dataPool->getDouble("zgwd_2"));
+    ui->lcd_zxdy_1->display(dataPool->getDouble("zxdy_1"));
+    ui->lcd_zxdy_2->display(dataPool->getDouble("zxdy_2"));
+    ui->pBar_soc->setValue(dataPool->getDouble("soc"));
 }
 void Widget::log(QString str)
 {
