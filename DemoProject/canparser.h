@@ -19,8 +19,15 @@ private:
     double visit8BytesArray(char* source, long long mask, int mask_offset, string name, double resol, double offset);
 
     void processBMS_INF(CanFrame frame);
-
-
+    void processFAU_ALA(CanFrame frame);
+    void processNOM_PAR(CanFrame frame);
+    void processMUN_ID(CanFrame frame);
+    void processMNOM_PAR(CanFrame frame);
+    void processMVT_PAR1(CanFrame frame);
+    void processMVT_PAR2(CanFrame frame);
+    void processCELL_V(int index, CanFrame frame);
+    void processCELL_T(CanFrame frame);
+    void processPCBA(int index, CanFrame frame);
 };
 
 #define CAN_ID_1 0x01020304
