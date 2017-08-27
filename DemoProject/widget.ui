@@ -47,7 +47,7 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab_xtxx">
     <attribute name="title">
@@ -1439,7 +1439,7 @@ p, li { white-space: pre-wrap; }
        <string>系统总压</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_2">
+     <widget class="QLCDNumber" name="lcd_p2_xtdy">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -1483,7 +1483,7 @@ p, li { white-space: pre-wrap; }
        <string>电流</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_3">
+     <widget class="QLCDNumber" name="lcd_p2_dl">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -1527,7 +1527,7 @@ p, li { white-space: pre-wrap; }
        <string>SOC</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_4">
+     <widget class="QLCDNumber" name="lcd_p2_soh">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -1571,7 +1571,7 @@ p, li { white-space: pre-wrap; }
        <string>SOH</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_5">
+     <widget class="QLCDNumber" name="lcd_p2_soc">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -1602,7 +1602,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_6">
+     <widget class="QLCDNumber" name="lcd_p2_rjbbh">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -1659,7 +1659,7 @@ p, li { white-space: pre-wrap; }
        <string>系统状态</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_7">
+     <widget class="QLCDNumber" name="lcd_p2_xtzt">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -1703,7 +1703,7 @@ p, li { white-space: pre-wrap; }
        <string>功率</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_8">
+     <widget class="QLCDNumber" name="lcd_p2_gl">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -1747,7 +1747,7 @@ p, li { white-space: pre-wrap; }
        <string>子模数量</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_9">
+     <widget class="QLCDNumber" name="lcd_p2_zmsl">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -1791,7 +1791,7 @@ p, li { white-space: pre-wrap; }
        <string>充电次数</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_10">
+     <widget class="QLCDNumber" name="lcd_p2_cdcs">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -1835,7 +1835,7 @@ p, li { white-space: pre-wrap; }
        <string>系统故障状态</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_11">
+     <widget class="QLCDNumber" name="lcd_p2_xtgzzt">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -1892,7 +1892,7 @@ p, li { white-space: pre-wrap; }
        <string>生命周期</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_13">
+     <widget class="QLCDNumber" name="lcd_p2_jyzz">
       <property name="geometry">
        <rect>
         <x>370</x>
@@ -1923,7 +1923,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_14">
+     <widget class="QLCDNumber" name="lcd_p2_dczt">
       <property name="geometry">
        <rect>
         <x>370</x>
@@ -1954,7 +1954,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_15">
+     <widget class="QLCDNumber" name="lcd_p2_smzq">
       <property name="geometry">
        <rect>
         <x>370</x>
@@ -2036,7 +2036,7 @@ p, li { white-space: pre-wrap; }
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="label_zgdy">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -2049,7 +2049,7 @@ p, li { white-space: pre-wrap; }
        <string>最高电压</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber">
+     <widget class="QLCDNumber" name="lcd_p2_zgdy">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -2065,7 +2065,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_2">
+     <widget class="QLCDNumber" name="lcd_p2_zddy">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -2081,7 +2081,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="label_zddy">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -2094,7 +2094,7 @@ p, li { white-space: pre-wrap; }
        <string>最低电压</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_3">
+     <widget class="QLCDNumber" name="lcd_p2_zgwd">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -2110,7 +2110,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="label_zgwd">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -2123,7 +2123,7 @@ p, li { white-space: pre-wrap; }
        <string>最高温度</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_4">
+     <widget class="QLCDNumber" name="lcd_p2_zdwd">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -2139,7 +2139,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="label_zdwd">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -2152,7 +2152,7 @@ p, li { white-space: pre-wrap; }
        <string>最低温度</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_5">
+     <widget class="QLCDNumber" name="lcd_p2_szwz">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -2168,7 +2168,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLabel" name="label_5">
+     <widget class="QLabel" name="label_szwz">
       <property name="geometry">
        <rect>
         <x>20</x>

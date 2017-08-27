@@ -28,6 +28,7 @@ Widget::Widget(QWidget *parent) :
     connect(ui->pbutton_left,SIGNAL(clicked()),this,SLOT(decreaseCluster()));
     connect(ui->pbutton_right,SIGNAL(clicked()),this,SLOT(increaseCluster()));
 
+    configure->setClusterId(1);
 }
 
 
@@ -52,10 +53,12 @@ void Widget::decreaseCluster()
     log(QString::fromStdString("current num is ").append(QString::number(currentNum)).append(QString::fromStdString("cluster number is ")).append(QString::number(configure->getClusterNum())));
     if (currentNum > 1){        
         ui->label_cluster->setText(QString::number(currentNum - 1));
+        configure->setClusterId(currentNum - 1);
     }else{
         ui->label_cluster->setText(QString::number(configure->getClusterNum()));
+        configure->setClusterId(configure->getClusterNum());
     }
-
+    this->display();
 }
 
 void Widget::increaseCluster()
@@ -63,30 +66,32 @@ void Widget::increaseCluster()
     int currentNum = ui->label_cluster->text().toInt();
     if (currentNum < configure->getClusterNum()){
         ui->label_cluster->setText(QString::number(currentNum + 1));
+        configure->setClusterId(currentNum + 1);
     }else{
         ui->label_cluster->setText(QString::number(1));
+        configure->setClusterId(1);
     }
-
+    this->display();
 }
 
 void Widget::display()
 {
-    ui->lcd_pjdy_1->display(dataPool->getDouble("pjdy_1"));
-    ui->lcd_pjdy_2->display(dataPool->getDouble("pjdy_2"));
+    // page 1
     ui->lcd_soc->display(dataPool->getDouble("soc"));
-    ui->lcd_zddy_1->display(dataPool->getDouble("zddy_1"));
-    ui->lcd_zddy_2->display(dataPool->getDouble("zddy_2"));
     ui->lcd_zdl->display(dataPool->getDouble("zdl"));
     ui->lcd_zdwc->display(dataPool->getDouble("zdwc"));
-    ui->lcd_zdwd_1->display(dataPool->getDouble("zdwd_1"));
-    ui->lcd_zdwd_2->display(dataPool->getDouble("zdwd_2"));
     ui->lcd_zdy->display(dataPool->getDouble("zdy"));
     ui->lcd_zdyc->display(dataPool->getDouble("zdyc"));
-    ui->lcd_zgwd_1->display(dataPool->getDouble("zgwd_1"));
-    ui->lcd_zgwd_2->display(dataPool->getDouble("zgwd_2"));
-    ui->lcd_zxdy_1->display(dataPool->getDouble("zxdy_1"));
-    ui->lcd_zxdy_2->display(dataPool->getDouble("zxdy_2"));
     ui->pBar_soc->setValue(dataPool->getDouble("soc"));
+
+    // page 2
+    int current_cluster_id = configure->getClusterId();
+    ui->lcd_p2_cdcs->display(dataPool->getDouble(current_cluster_id, "mkcdcs"));
+    ui->lcd_p2_dczt->display(dataPool->getDouble(current_cluster_id, "dczt"));
+    ui->lcd_p2_dl->display(dataPool->getDouble(current_cluster_id, "mkzdl"));
+    ui->lcd_p2_gl->display(dataPool->getDouble(current_cluster_id, "mkzdl"));
+    ui->lcd_p2_zgwd->display(dataPool->getDouble(current_cluster_id, "mknzgwd"));
+    ui->lcd_p2_zdwd->display(dataPool->getDouble(current_cluster_id, "mknzdwd"));
 }
 void Widget::log(QString str)
 {

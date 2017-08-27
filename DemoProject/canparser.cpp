@@ -9,35 +9,93 @@ CanParser::CanParser()
 void CanParser::parse(CanFrame frame){
     int id = frame.can_id;
     switch (id){
-    case BMS_INF:
-        log(QString("receive can package BMS_INF"));
-        processBMS_INF(frame);
-        break;
-    case FAU_ALA:
-        log(QString("receive can package FAU_ALA"));
-        processFAU_ALA(frame);
-        break;
-    case NOM_PAR:
-        log(QString("receive can package NOM_PAR"));
-        processNOM_PAR(frame);
-        break;
-    case MUN_ID:
-        log(QString("receive can package NOM_PAR"));
-        processMUN_ID(frame);
-        break;
-    default:
-        log(QString("receive unknown can package ").append(QString::number(id, 16)));
-        break;
+        case BMS_INF:
+            log(QString("receive can package BMS_INF"));
+            processBMS_INF(frame);
+            break;
+        case FAU_ALA:
+            log(QString("receive can package FAU_ALA"));
+            processFAU_ALA(frame);
+            break;
+        case NOM_PAR:
+            log(QString("receive can package NOM_PAR"));
+            processNOM_PAR(frame);
+            break;
+        case MUN_ID:
+            log(QString("receive can package NOM_PAR"));
+            processMUN_ID(frame);
+            break;
+        case MNOM_PAR:
+            log(QString("receive can package MNOM_PAR"));
+            processMNOM_PAR(frame);
+            break;
+        case MVT_PAR1:
+            log(QString("receive can package MVT_PAR1"));
+            processMVT_PAR1(frame);
+            break;
+        case MVT_PAR2:
+            log(QString("receive can package MVT_PAR2"));
+            processMVT_PAR2(frame);
+            break;
+        case CELL_V1:
+        case CELL_V2:
+        case CELL_V3:
+        case CELL_V4:
+        case CELL_V5:
+        case CELL_V6:
+        case CELL_V7:
+        case CELL_V8:
+        case CELL_V9:
+        case CELL_V10:
+        case CELL_V11:
+        case CELL_V12:
+        case CELL_V13:
+        case CELL_V14:
+        case CELL_V15:
+        case CELL_V16:
+            log(QString("receive can package CELL_V1"));
+            processCELL_V(id, frame);
+            break;
+        case CELL_T1:
+            log(QString("receive can package CELL_T1"));
+            processCELL_T1(frame);
+            break;
+        case CELL_T2:
+            log(QString("receive can package CELL_T2"));
+            processCELL_T2(frame);
+            break;
+        case PCBA_6803_1:
+        case PCBA_6803_2:
+        case PCBA_6803_3:
+        case PCBA_6803_4:
+            log(QString("receive can package PCBA_6803"));
+            processPCBA(id, frame);
+            break;
+        default:
+            log(QString("receive unknown can package ").append(QString::number(id, 16)));
+            break;
     }
 }
 
-double CanParser::visit8BytesArray(char* source, long long mask, int mask_offset, string name, double resol, double offset){
+double CanParser::maskAndGetValue(char* source, long long mask, int mask_offset, double resol, double offset){
     long long bytes;
     memcpy(&bytes, source, 8);
     bytes = (bytes & mask) >> mask_offset;
     double res = bytes * resol + offset;
+    return res;
+}
+
+double CanParser::visit8BytesArray(char* source, long long mask, int mask_offset, string name, double resol, double offset){
+    double res = maskAndGetValue(source, mask, mask_offset, resol, offset);
 //    log(QString("[visit8BytesArray] res = ").append(QString::number(res)));
     dataPool->store(name, res);
+    return res;
+}
+
+double CanParser::visit8BytesArray(int moduleId, char* source, long long mask, int mask_offset, string name, double resol, double offset){
+    double res = maskAndGetValue(source, mask, mask_offset, resol, offset);
+//    log(QString("[visit8BytesArray] res = ").append(QString::number(res)));
+    dataPool->store(moduleId, name, res);
     return res;
 }
 
@@ -136,27 +194,283 @@ void CanParser::processMUN_ID(CanFrame frame){
     // byte 4-1,          电池模块的唯一编号信息,         1, 0,
     visit8BytesArray((char*)frame.data,0x00000000FFFFFFFF, 0, "wybhxx", 1, 0);
     // byte 6-5,          最大允许充电（回馈）电流,       1, 0,
-    visit8BytesArray((char*)frame.data,0x0000FFFF00000000, 8, "zdyxcddl", 1, 0);
+    visit8BytesArray((char*)frame.data,0x0000FFFF00000000, 32, "zdyxcddl", 1, 0);
     // byte 8-7,          最大允许放电电流,              1, 0,
-    visit8BytesArray((char*)frame.data,0xFFFF000000000000, 16, "zdyxfddl", 1, 0);
+    visit8BytesArray((char*)frame.data,0xFFFF000000000000, 48, "zdyxfddl", 1, 0);
 }
 
 void CanParser::processMNOM_PAR(CanFrame frame){
     // byte 1,          蓄电池模块号,         1, 0,
-    visit8BytesArray((char*)frame.data,0x00000000000000FF, 0, "xdcmkh", 1, 0);
+    int moduleId = maskAndGetValue((char*)frame.data, 0x00000000000000FF, 0, 1, 0);
     // byte 2,          模块内单体电池数,       1, 0,
-    visit8BytesArray((char*)frame.data,0x000000000000FF00, 8, "mkndtdcs", 1, 0);
+    visit8BytesArray(moduleId, (char*)frame.data,0x000000000000FF00, 8, "mkndtdcs", 1, 0);
     // byte 3,          模块内温度采样点数,       1, 0,
-    visit8BytesArray((char*)frame.data,0x0000000000FF0000, 16, "mknwdcyds", 1, 0);
+    visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FF0000, 16, "mknwdcyds", 1, 0);
     // byte 4,          模块SOC,              0.4, 0, %
-    visit8BytesArray((char*)frame.data,0x00000000FF000000, 24, "mksoc", 0.4, 0);
+    visit8BytesArray(moduleId, (char*)frame.data,0x00000000FF000000, 24, "mksoc", 0.4, 0);
     // byte 6-5,        模块充电次数,         1, 0,
-    visit8BytesArray((char*)frame.data,0x0000FFFF00000000, 32, "mkcdcs", 1, 0);
+    visit8BytesArray(moduleId, (char*)frame.data,0x0000FFFF00000000, 32, "mkcdcs", 1, 0);
     // byte 8-7,        模块总电流,            0.1, -3200,
-    visit8BytesArray((char*)frame.data,0xFFFF000000000000, 48, "mkzdl", 0.1, -3200);
+    visit8BytesArray(moduleId, (char*)frame.data,0xFFFF000000000000, 48, "mkzdl", 0.1, -3200);
 }
 
+void CanParser::processMVT_PAR1(CanFrame frame){
+    // byte 1,          蓄电池模块号,
+    int moduleId = maskAndGetValue((char*)frame.data, 0x00000000000000FF, 0, 1, 0);
+    // byte 3-2,        模块总电压,
+    visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "mkzdy", 0.02, 0);
+    // byte 4,          模块内最高温度,
+    visit8BytesArray(moduleId, (char*)frame.data,0x00000000FF000000, 24, "mknzgwd", 1, -40);
+    // byte 5,          最高温度采样点号,
+    visit8BytesArray(moduleId, (char*)frame.data,0x000000FF00000000, 32, "zgwdcydh", 1, 0);
+    // byte 6,          模块内最低温度,
+    visit8BytesArray(moduleId, (char*)frame.data,0x0000FF0000000000, 40, "mknzdwd", 1, -40);
+    // byte 7,          最低温度采样点号,
+    visit8BytesArray(moduleId, (char*)frame.data,0x00FF000000000000, 48, "zdwdcydh", 1, 0);
+    // byte 8 bit 8,    内部通讯故障,
+    visit8BytesArray(moduleId, (char*)frame.data,0x8000000000000000, 63, "nbtxgz", 1, 0);
+}
 
+void CanParser::processMVT_PAR2(CanFrame frame){
+    // byte 1,          蓄电池模块号,
+    int moduleId = maskAndGetValue((char*)frame.data, 0x00000000000000FF, 0, 1, 0);
+    // byte 3-2,        模块内单体最高电压,
+    visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "mkndtzgdy", 0.001, 0);
+    // byte 4,          电压最高单体号,
+    visit8BytesArray(moduleId, (char*)frame.data,0x00000000FF000000, 24, "dyzgdth", 1, 0);
+    // byte 6-5,        模块内单体最低电压,
+    visit8BytesArray(moduleId, (char*)frame.data,0x0000FFFF00000000, 32, "mkndtzddy", 0.001, 0);
+    // byte 7,          电压最低单体号,
+    visit8BytesArray(moduleId, (char*)frame.data,0x00FF000000000000, 48, "dyzddth", 1, 0);
+}
+
+void CanParser::processCELL_V(int index, CanFrame frame){
+    // byte 1,          蓄电池模块号,
+    int moduleId = maskAndGetValue((char*)frame.data, 0x00000000000000FF, 0, 1, 0);
+    switch(index){
+        case CELL_V1:
+            // byte 3-2, 第1节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "dcdy_1", 0.001, 0);
+            // byte 5-4, 第2节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FFFF000000, 24, "dcdy_2", 0.001, 0);
+            // byte 7-6, 第3节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00FFFF0000000000, 40, "dcdy_3", 0.001, 0);
+            break;
+        case CELL_V2:
+            // byte 3-2, 第4节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "dcdy_4", 0.001, 0);
+            // byte 5-4, 第5节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FFFF000000, 24, "dcdy_5", 0.001, 0);
+            // byte 7-6, 第6节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00FFFF0000000000, 40, "dcdy_6", 0.001, 0);
+            break;
+        case CELL_V3:
+            // byte 3-2, 第7节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "dcdy_7", 0.001, 0);
+            // byte 5-4, 第8节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FFFF000000, 24, "dcdy_8", 0.001, 0);
+            // byte 7-6, 第9节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00FFFF0000000000, 40, "dcdy_9", 0.001, 0);
+            break;
+        case CELL_V4:
+            // byte 3-2, 第10节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "dcdy_10", 0.001, 0);
+            // byte 5-4, 第11节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FFFF000000, 24, "dcdy_11", 0.001, 0);
+            // byte 7-6, 第12节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00FFFF0000000000, 40, "dcdy_12", 0.001, 0);
+            break;
+        case CELL_V5:
+            // byte 3-2, 第13节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "dcdy_13", 0.001, 0);
+            // byte 5-4, 第14节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FFFF000000, 24, "dcdy_14", 0.001, 0);
+            // byte 7-6, 第15节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00FFFF0000000000, 40, "dcdy_15", 0.001, 0);
+            break;
+        case CELL_V6:
+            // byte 3-2, 第16节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "dcdy_16", 0.001, 0);
+            // byte 5-4, 第17节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FFFF000000, 24, "dcdy_17", 0.001, 0);
+            // byte 7-6, 第18节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00FFFF0000000000, 40, "dcdy_18", 0.001, 0);
+            break;
+        case CELL_V7:
+            // byte 3-2, 第19节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "dcdy_19", 0.001, 0);
+            // byte 5-4, 第20节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FFFF000000, 24, "dcdy_20", 0.001, 0);
+            // byte 7-6, 第21节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00FFFF0000000000, 40, "dcdy_21", 0.001, 0);
+            break;
+        case CELL_V8:
+            // byte 3-2, 第22节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "dcdy_22", 0.001, 0);
+            // byte 5-4, 第23节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FFFF000000, 24, "dcdy_23", 0.001, 0);
+            // byte 7-6, 第24节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00FFFF0000000000, 40, "dcdy_24", 0.001, 0);
+            break;
+        case CELL_V9:
+            // byte 3-2, 第25节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "dcdy_25", 0.001, 0);
+            // byte 5-4, 第26节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FFFF000000, 24, "dcdy_26", 0.001, 0);
+            // byte 7-6, 第27节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00FFFF0000000000, 40, "dcdy_27", 0.001, 0);
+            break;
+        case CELL_V10:
+            // byte 3-2, 第28节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "dcdy_28", 0.001, 0);
+            // byte 5-4, 第29节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FFFF000000, 24, "dcdy_29", 0.001, 0);
+            // byte 7-6, 第30节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00FFFF0000000000, 40, "dcdy_30", 0.001, 0);
+            break;
+        case CELL_V11:
+            // byte 3-2, 第31节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "dcdy_31", 0.001, 0);
+            // byte 5-4, 第32节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FFFF000000, 24, "dcdy_32", 0.001, 0);
+            // byte 7-6, 第33节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00FFFF0000000000, 40, "dcdy_33", 0.001, 0);
+            break;
+        case CELL_V12:
+            // byte 3-2, 第34节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "dcdy_34", 0.001, 0);
+            // byte 5-4, 第35节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FFFF000000, 24, "dcdy_35", 0.001, 0);
+            // byte 7-6, 第36节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00FFFF0000000000, 40, "dcdy_36", 0.001, 0);
+            break;
+        case CELL_V13:
+            // byte 3-2, 第37节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "dcdy_37", 0.001, 0);
+            // byte 5-4, 第38节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FFFF000000, 24, "dcdy_38", 0.001, 0);
+            // byte 7-6, 第39节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00FFFF0000000000, 40, "dcdy_39", 0.001, 0);
+            break;
+        case CELL_V14:
+            // byte 3-2, 第40节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "dcdy_40", 0.001, 0);
+            // byte 5-4, 第41节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FFFF000000, 24, "dcdy_41", 0.001, 0);
+            // byte 7-6, 第42节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00FFFF0000000000, 40, "dcdy_42", 0.001, 0);
+            break;
+        case CELL_V15:
+            // byte 3-2, 第43节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "dcdy_43", 0.001, 0);
+            // byte 5-4, 第44节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FFFF000000, 24, "dcdy_44", 0.001, 0);
+            // byte 7-6, 第45节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00FFFF0000000000, 40, "dcdy_45", 0.001, 0);
+            break;
+        case CELL_V16:
+            // byte 3-2, 第46节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FFFF00, 8, "dcdy_46", 0.001, 0);
+            // byte 5-4, 第47节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FFFF000000, 24, "dcdy_47", 0.001, 0);
+            // byte 7-6, 第48节电池电压,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00FFFF0000000000, 40, "dcdy_48", 0.001, 0);
+            break;
+        default:
+            log(QString("no such battery cell."));
+            break;
+    }
+}
+
+void CanParser::processCELL_T1(CanFrame frame){
+    // byte 1,          蓄电池模块号,
+    int moduleId = maskAndGetValue((char*)frame.data, 0x00000000000000FF, 0, 1, 0);
+    // byte 2,          模块内第1个采样温度,
+    visit8BytesArray(moduleId, (char*)frame.data,0x000000000000FF00,  8, "cywd_1", 1, -40);
+    // byte 3,          模块内第2个采样温度,
+    visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FF0000, 16, "cywd_2", 1, -40);
+    // byte 4,          模块内第3个采样温度,
+    visit8BytesArray(moduleId, (char*)frame.data,0x00000000FF000000, 24, "cywd_3", 1, -40);
+    // byte 5,          模块内第4个采样温度,
+    visit8BytesArray(moduleId, (char*)frame.data,0x000000FF00000000, 32, "cywd_4", 1, -40);
+    // byte 6,          模块内第5个采样温度,
+    visit8BytesArray(moduleId, (char*)frame.data,0x0000FF0000000000, 40, "cywd_5", 1, -40);
+    // byte 7,          模块内第6个采样温度,
+    visit8BytesArray(moduleId, (char*)frame.data,0x00FF000000000000, 48, "cywd_6", 1, -40);
+    // byte 8,          模块内第7个采样温度,
+    visit8BytesArray(moduleId, (char*)frame.data,0xFF00000000000000, 56, "cywd_7", 1, -40);
+}
+
+void CanParser::processCELL_T2(CanFrame frame){
+    // byte 1,          蓄电池模块号,
+    int moduleId = maskAndGetValue((char*)frame.data, 0x00000000000000FF, 0, 1, 0);
+    // byte 2,          模块内第8个采样温度,
+    visit8BytesArray(moduleId, (char*)frame.data,0x000000000000FF00,  8, "cywd_8", 1, -40);
+    // byte 3,          模块内第9个采样温度,
+    visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FF0000, 16, "cywd_9", 1, -40);
+    // byte 4,          模块内第10个采样温度,
+    visit8BytesArray(moduleId, (char*)frame.data,0x00000000FF000000, 24, "cywd_10", 1, -40);
+    // byte 5,          模块内第11个采样温度,
+    visit8BytesArray(moduleId, (char*)frame.data,0x000000FF00000000, 32, "cywd_11", 1, -40);
+    // byte 6,          模块内第12个采样温度,
+    visit8BytesArray(moduleId, (char*)frame.data,0x0000FF0000000000, 40, "cywd_12", 1, -40);
+    // byte 7,          正极柱采样温度,
+    visit8BytesArray(moduleId, (char*)frame.data,0x00FF000000000000, 48, "zjzcywd", 1, -40);
+    // byte 8,          负极柱采样温度,
+    visit8BytesArray(moduleId, (char*)frame.data,0xFF00000000000000, 56, "fjzcywd", 1, -40);
+}
+
+void CanParser::processPCBA(int index, CanFrame frame){
+    // byte 1,          蓄电池模块号,
+    int moduleId = maskAndGetValue((char*)frame.data, 0x00000000000000FF, 0, 1, 0);
+    switch(index){
+        case PCBA_6803_1:
+            // byte 2,          PCBA1温度,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000000000FF00,  8, "6803_1_pcba1wd", 1, -40);
+            // byte 3,          PCBA2温度,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FF0000, 16, "6803_1_pcba2wd", 1, -40);
+            // byte 4,          PCBA3温度,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00000000FF000000, 24, "6803_1_pcba3wd", 1, -40);
+            // byte 5,          PCBA4温度,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FF00000000, 32, "6803_1_pcba4wd", 1, -40);
+            break;
+        case PCBA_6803_2:
+            // byte 2,          PCBA1温度,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000000000FF00,  8, "6803_2_pcba1wd", 1, -40);
+            // byte 3,          PCBA2温度,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FF0000, 16, "6803_2_pcba2wd", 1, -40);
+            // byte 4,          PCBA3温度,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00000000FF000000, 24, "6803_2_pcba3wd", 1, -40);
+            // byte 5,          PCBA4温度,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FF00000000, 32, "6803_2_pcba4wd", 1, -40);
+            break;
+        case PCBA_6803_3:
+            // byte 2,          PCBA1温度,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000000000FF00,  8, "6803_3_pcba1wd", 1, -40);
+            // byte 3,          PCBA2温度,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FF0000, 16, "6803_3_pcba2wd", 1, -40);
+            // byte 4,          PCBA3温度,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00000000FF000000, 24, "6803_3_pcba3wd", 1, -40);
+            // byte 5,          PCBA4温度,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FF00000000, 32, "6803_3_pcba4wd", 1, -40);
+            break;
+        case PCBA_6803_4:
+            // byte 2,          PCBA1温度,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000000000FF00,  8, "6803_4_pcba1wd", 1, -40);
+            // byte 3,          PCBA2温度,
+            visit8BytesArray(moduleId, (char*)frame.data,0x0000000000FF0000, 16, "6803_4_pcba2wd", 1, -40);
+            // byte 4,          PCBA3温度,
+            visit8BytesArray(moduleId, (char*)frame.data,0x00000000FF000000, 24, "6803_4_pcba3wd", 1, -40);
+            // byte 5,          PCBA4温度,
+            visit8BytesArray(moduleId, (char*)frame.data,0x000000FF00000000, 32, "6803_4_pcba4wd", 1, -40);
+            break;
+        default:
+            log(QString("no such PCBA type."));
+            break;
+    }
+
+
+}
 
 
 

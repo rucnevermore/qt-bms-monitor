@@ -19,9 +19,6 @@ void CollectionThread::run()
     CanParser* parser = new CanParser();
     connect(parser,SIGNAL(log(QString)),this,SIGNAL(log(QString)));
     CanFrame frame;
-    double pjdy_1 = 12;
-    double pjdy_2 = 24;
-    int pBar_soc = 1;
     char buf[100]={0};
     int i;
 
@@ -31,7 +28,6 @@ void CollectionThread::run()
        // ycapiT->ReadCan(&frame.can_id,&frame.can_dlc,frame.data);
         frame.can_id = 0x18F212F3;
         frame.can_dlc = 0x08;
-//        frame.data = {0x00, 0x00, 0x52, 0xC8, 0x0C, 0xE5, 0x1F, 0x23};
         long long b = 0x130052C880F21F23;
         for(int j = 0; j < 8; j++){
             frame.data[j] = b >> (j * 8) & 0xFF;
@@ -45,10 +41,23 @@ void CollectionThread::run()
         log(QString(buf));
         parser->parse(frame);
 
+        frame.can_id = 0x181E17F3;
+        frame.can_dlc = 0x08;
+        b = 0x00000A0050000010;
+        for(int j = 0; j < 8; j++){
+            frame.data[j] = b >> (j * 8) & 0xFF;
+        }
+        parser->parse(frame);
+
+        frame.can_id = 0x181E17F3;
+        frame.can_dlc = 0x08;
+        b = 0x00000B0040000011;
+        for(int j = 0; j < 8; j++){
+            frame.data[j] = b >> (j * 8) & 0xFF;
+        }
+        parser->parse(frame);
+
         // collection from Can Bus finish.
-//        dataPool->store("pjdy_1", pjdy_1++);
-//        dataPool->store("pjdy_2", pjdy_2++);
-//        dataPool->store("pBar_soc", pBar_soc++);
         dataPool->store("cluster_number", 10);
         this->sleep(1);
     }

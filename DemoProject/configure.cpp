@@ -18,3 +18,11 @@ Configure* Configure::newInstance(){
 int Configure::getClusterNum(){
     return dataPool->getInt("cluster_number");
 }
+
+void Configure::setClusterId(int clusterId){
+    dataPool->store("current_cluster_id", clusterId);
+}
+
+int Configure::getClusterId(){
+    return dataPool->getInt("current_cluster_id");
+}

@@ -16,7 +16,9 @@ signals:
 private:
     DataPool* dataPool;
 
+    double maskAndGetValue(char* source, long long mask, int mask_offset, double resol, double offset);
     double visit8BytesArray(char* source, long long mask, int mask_offset, string name, double resol, double offset);
+    double visit8BytesArray(int moduleId, char* source, long long mask, int mask_offset, string name, double resol, double offset);
 
     void processBMS_INF(CanFrame frame);
     void processFAU_ALA(CanFrame frame);
@@ -26,7 +28,8 @@ private:
     void processMVT_PAR1(CanFrame frame);
     void processMVT_PAR2(CanFrame frame);
     void processCELL_V(int index, CanFrame frame);
-    void processCELL_T(CanFrame frame);
+    void processCELL_T1(CanFrame frame);
+    void processCELL_T2(CanFrame frame);
     void processPCBA(int index, CanFrame frame);
 };
 
@@ -57,7 +60,8 @@ private:
 #define CELL_V15   0x183217F3
 #define CELL_V16   0x183317F3
 
-#define CELL_T    0x184A17F3
+#define CELL_T1    0x184A17F3
+#define CELL_T2    0x184B17F3
 
 #define PCBA_6803_1      0x184C17F3
 #define PCBA_6803_2      0x184D17F3
