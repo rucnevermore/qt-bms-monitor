@@ -3,13 +3,16 @@
 #include <qobject.h>
 #include "structs.h"
 #include "datapool.h"
+#include <sys/ioctl.h>
+#include <net/if.h>
+#include <linux/can.h>
 
 class CanParser : public QObject
 {
         Q_OBJECT
 public:
     CanParser();
-    void parse(CanFrame frame);
+    void parse(can_frame frame);
 signals:
     void log(QString str);
 
@@ -20,22 +23,22 @@ private:
     double visit8BytesArray(char* source, long long mask, int mask_offset, string name, double resol, double offset);
     double visit8BytesArray(int moduleId, char* source, long long mask, int mask_offset, string name, double resol, double offset);
 
-    void processBMS_INF(CanFrame frame);
-    void processFAU_ALA(CanFrame frame);
-    void processNOM_PAR(CanFrame frame);
-    void processMUN_ID(CanFrame frame);
-    void processMNOM_PAR(CanFrame frame);
-    void processMVT_PAR1(CanFrame frame);
-    void processMVT_PAR2(CanFrame frame);
-    void processCELL_V(int index, CanFrame frame);
-    void processCELL_T1(CanFrame frame);
-    void processCELL_T2(CanFrame frame);
-    void processPCBA(int index, CanFrame frame);
+    void processBMS_INF(can_frame frame);
+    void processFAU_ALA(can_frame frame);
+    void processNOM_PAR(can_frame frame);
+    void processMUN_ID(can_frame frame);
+    void processMNOM_PAR(can_frame frame);
+    void processMVT_PAR1(can_frame frame);
+    void processMVT_PAR2(can_frame frame);
+    void processCELL_V(int index, can_frame frame);
+    void processCELL_T1(can_frame frame);
+    void processCELL_T2(can_frame frame);
+    void processPCBA(int index, can_frame frame);
 };
 
 #define CAN_ID_1 0x01020304
 
-#define CAN_ID_MASK 0xFFFFFFF0
+#define CAN_ID_MASK 0x1FFFFFF0
 
 #define BMS_INF   0x18F212F0
 #define FAU_ALA   0x18F214F0

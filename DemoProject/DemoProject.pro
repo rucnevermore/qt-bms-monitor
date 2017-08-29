@@ -19,8 +19,12 @@ HEADERS += widget.h \
     configure.h \
     datapool.h \
     canparser.h \
-    structs.h
+    structs.h \
+    ycapi/ycapi.h
 FORMS += widget.ui
 INSTALLS += target
 RESOURCES += resources.qrc
 OTHER_FILES += 
+LIBS += -L../ycapi \
+    -lycapi
+INCLUDEPATH += ../ycapi

@@ -1,6 +1,8 @@
 <RCC>
     <qresource prefix="/">
-        <file>qss/Style_Blue.qss</file>
+        <file>qss/blue.qss</file>
         <file>qss/white.qss</file>
+        <file>ycapi/libycapi.so</file>
+        <file>ycapi/libycapic.so</file>
     </qresource>
 </RCC>

@@ -1,8 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'widget.ui'
 **
-** Created: Tue Aug 29 02:56:15 2017
-**      by: Qt User Interface Compiler version 4.6.2
+** Created by: Qt User Interface Compiler version 4.8.5
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -16,6 +15,7 @@
 #include <QtGui/QButtonGroup>
 #include <QtGui/QComboBox>
 #include <QtGui/QFrame>
+#include <QtGui/QGridLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLCDNumber>
 #include <QtGui/QLabel>
@@ -31,6 +31,7 @@ QT_BEGIN_NAMESPACE
 class Ui_Widget
 {
 public:
+    QGridLayout *gridLayout;
     QTabWidget *tabWidget;
     QWidget *tab_xtxx;
     QTextBrowser *text_zdy;
@@ -212,12 +213,20 @@ public:
         if (Widget->objectName().isEmpty())
             Widget->setObjectName(QString::fromUtf8("Widget"));
         Widget->setWindowModality(Qt::NonModal);
-        Widget->resize(657, 476);
+        Widget->resize(669, 478);
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(Widget->sizePolicy().hasHeightForWidth());
+        Widget->setSizePolicy(sizePolicy);
         Widget->setAutoFillBackground(false);
+        gridLayout = new QGridLayout(Widget);
+        gridLayout->setSpacing(6);
+        gridLayout->setContentsMargins(11, 11, 11, 11);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         tabWidget = new QTabWidget(Widget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         tabWidget->setEnabled(true);
-        tabWidget->setGeometry(QRect(0, 0, 661, 471));
         tabWidget->setContextMenuPolicy(Qt::DefaultContextMenu);
         tabWidget->setAutoFillBackground(true);
         tabWidget->setStyleSheet(QString::fromUtf8(""));
@@ -1318,11 +1327,14 @@ public:
         text_log->setObjectName(QString::fromUtf8("text_log"));
         text_log->setGeometry(QRect(20, 20, 611, 401));
         tabWidget->addTab(tab_xtrz, QString());
+
+        gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
+
         QWidget::setTabOrder(tabWidget, text_zdy);
 
         retranslateUi(Widget);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Widget);
