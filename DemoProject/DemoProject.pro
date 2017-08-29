@@ -22,3 +22,5 @@ HEADERS += widget.h \
     structs.h
 FORMS += widget.ui
 INSTALLS += target
+RESOURCES += resources.qrc
+OTHER_FILES += 

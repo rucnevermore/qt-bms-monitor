@@ -51,14 +51,6 @@ void DataPool::store(map<string, Data*>* localMap, string name, Channel channel,
     }
 }
 
-unsigned char* DataPool::getUnsignedCharArray(string name){
-    try{
-        return (unsigned char*)(((Data*)dataMap.at(name))->getValue().toLocal8Bit().data());
-    }catch(std::out_of_range &e){
-        return NULL;
-    }
-}
-
 double DataPool::getDouble(string name){
     try{
         return dataMap.at(name)->getValue().toDouble();

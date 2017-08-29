@@ -22,7 +22,6 @@ public:
     double getDouble(string name);
     double getDouble(int index, string name);
     int getInt(string name);
-    unsigned char* getUnsignedCharArray(string name);
 signals:
     void log(QString str);
 private:

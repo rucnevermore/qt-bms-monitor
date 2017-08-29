@@ -8,7 +8,7 @@ CanParser::CanParser()
 // parse the can data and store into the data pool according to the can id.
 void CanParser::parse(CanFrame frame){
     int id = frame.can_id;
-    switch (id){
+    switch (id & CAN_ID_MASK){//use mask to remove the cluster information.
         case BMS_INF:
             log(QString("receive can package BMS_INF"));
             processBMS_INF(frame);
