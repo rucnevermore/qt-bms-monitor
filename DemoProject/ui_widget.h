@@ -15,7 +15,6 @@
 #include <QtGui/QButtonGroup>
 #include <QtGui/QComboBox>
 #include <QtGui/QFrame>
-#include <QtGui/QGridLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLCDNumber>
 #include <QtGui/QLabel>
@@ -31,7 +30,6 @@ QT_BEGIN_NAMESPACE
 class Ui_Widget
 {
 public:
-    QGridLayout *gridLayout;
     QTabWidget *tabWidget;
     QWidget *tab_xtxx;
     QTextBrowser *text_zdy;
@@ -220,13 +218,10 @@ public:
         sizePolicy.setHeightForWidth(Widget->sizePolicy().hasHeightForWidth());
         Widget->setSizePolicy(sizePolicy);
         Widget->setAutoFillBackground(false);
-        gridLayout = new QGridLayout(Widget);
-        gridLayout->setSpacing(6);
-        gridLayout->setContentsMargins(11, 11, 11, 11);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         tabWidget = new QTabWidget(Widget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         tabWidget->setEnabled(true);
+        tabWidget->setGeometry(QRect(9, 9, 651, 461));
         tabWidget->setContextMenuPolicy(Qt::DefaultContextMenu);
         tabWidget->setAutoFillBackground(true);
         tabWidget->setStyleSheet(QString::fromUtf8(""));
@@ -590,58 +585,6 @@ public:
         text_c9->setObjectName(QString::fromUtf8("text_c9"));
         text_c9->setGeometry(QRect(590, 360, 31, 31));
         tabWidget->addTab(tab_xtxx, QString());
-        text_zdl->raise();
-        text_zdyc->raise();
-        text_zdwc->raise();
-        text_pjdy->raise();
-        text_zgwd->raise();
-        text_zddy->raise();
-        text_zxdy->raise();
-        text_zdy->raise();
-        lcd_zdy->raise();
-        lcd_zdl->raise();
-        label_header->raise();
-        pBar_soc->raise();
-        text_soc->raise();
-        lcd_soc->raise();
-        lcd_zdyc->raise();
-        lcd_zdwc->raise();
-        lcd_zddy_2->raise();
-        lcd_zddy_1->raise();
-        label_zddy_loc->raise();
-        label_zxdy_loc->raise();
-        lcd_zxdy_1->raise();
-        lcd_zxdy_2->raise();
-        label_zgwd_loc->raise();
-        lcd_zgwd_1->raise();
-        text_zdwd->raise();
-        lcd_zdwd_2->raise();
-        lcd_zgwd_2->raise();
-        label_zdwd_loc->raise();
-        lcd_zdwd_1->raise();
-        label_pjdy_loc->raise();
-        lcd_pjdy_1->raise();
-        text_xtzt->raise();
-        lcd_pjdy_2->raise();
-        text_value_xtzt->raise();
-        text_c1->raise();
-        lcd_c1->raise();
-        text_c2->raise();
-        lcd_c2->raise();
-        text_c3->raise();
-        lcd_c3->raise();
-        text_c4->raise();
-        lcd_c4->raise();
-        text_c5->raise();
-        lcd_c5->raise();
-        text_c6->raise();
-        lcd_c6->raise();
-        text_c7->raise();
-        lcd_c7->raise();
-        lcd_c8->raise();
-        text_c8->raise();
-        lcd_c9->raise();
-        text_c9->raise();
         tab_cjbxx = new QWidget();
         tab_cjbxx->setObjectName(QString::fromUtf8("tab_cjbxx"));
         pbutton_right = new QPushButton(tab_cjbxx);
@@ -1327,9 +1270,6 @@ public:
         text_log->setObjectName(QString::fromUtf8("text_log"));
         text_log->setGeometry(QRect(20, 20, 611, 401));
         tabWidget->addTab(tab_xtrz, QString());
-
-        gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
-
         QWidget::setTabOrder(tabWidget, text_zdy);
 
         retranslateUi(Widget);

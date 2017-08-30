@@ -17,6 +17,7 @@ class Widget : public QWidget {
 public:
     Widget(QWidget *parent = 0);
     ~Widget();
+    Ui::Widget *ui;
 
 private slots:
     void display();
@@ -28,7 +29,6 @@ protected:
     void changeEvent(QEvent *e);
 
 private:
-    Ui::Widget *ui;
     DataPool* dataPool;
     Configure* configure;
     DisplayThread *displayThread;
