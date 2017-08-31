@@ -96,7 +96,7 @@ double CanParser::visit8BytesArray(char* source, long long mask, int mask_offset
 double CanParser::visit8BytesArray(int clusterId, int moduleId, char* source, long long mask, int mask_offset, string name, double resol, double offset){
     double res = maskAndGetValue(source, mask, mask_offset, resol, offset);
 //    log(QString("[visit8BytesArray] res = ").append(QString::number(res)));
-    dataPool->store(clusterId, moduleId, name, res);
+    dataPool->storeById(clusterId, moduleId, name, res);
     return res;
 }
 

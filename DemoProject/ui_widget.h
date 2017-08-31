@@ -316,7 +316,7 @@ public:
         pBar_soc->setValue(24);
         text_soc = new QTextBrowser(tab_xtxx);
         text_soc->setObjectName(QString::fromUtf8("text_soc"));
-        text_soc->setGeometry(QRect(410, 140, 91, 31));
+        text_soc->setGeometry(QRect(410, 140, 71, 31));
         text_soc->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         text_soc->setFrameShape(QFrame::NoFrame);
         lcd_soc = new QLCDNumber(tab_xtxx);
@@ -1656,7 +1656,7 @@ public:
 
         retranslateUi(Widget);
 
-        tabWidget->setCurrentIndex(4);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Widget);

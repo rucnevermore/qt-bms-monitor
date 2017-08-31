@@ -7,50 +7,20 @@
 #include <stdio.h>
 #include "ui_widget.h"
 #include <stdexcept>
+#include "basedatapool.h"
+#include "clusterdatapool.h"
 
-class ClusterDataPool : public QObject
+class DataPool : public BaseDataPool
 {
-    Q_OBJECT
 public:
-    ClusterDataPool(){};
-    ~ClusterDataPool(){};
-    void store(string name, double value);
-    void store(int moduleId, string name, double value);
-    void store(string name, unsigned char* value, int length);
-    void store(map<string, Data*>* localMap, string name, Channel channel, DataType type, QString value);
-
-    Data* retrieve(string name);
-    double getDouble(string name);
-    double getDouble(int index, string name);
-    int getInt(string name);
-signals:
-    void log(QString str);
-private:  
-    map<string, Data*> dataMap;
-    // Cluster id, Module id, datamap
-    map<int, map<string, Data*>*> moduleDataMap;
-};
-
-
-class DataPool : public QObject
-{
-    Q_OBJECT
-public:   
     static DataPool* newInstance();
-    void store(string name, double value);
-    void store(int clusterId, int moduleId, string name, double value);
-    void store(map<string, Data*>* localMap, string name, Channel channel, DataType type, QString value);
-
-    Data* retrieve(string name);
-    double getDouble(string name);
-    double getDouble(int clusterId, string name);
-    int getInt(string name);
-signals:
-    void log(QString str);
+    void storeById(int clusterId, int moduleId, string name, double value);
+    double getDoubleByIndex(int clusterIndex, string name);
+    double getDoubleByIndex(int clusterIndex, int moduleIndex, string name);
+    double getDoubleById(int clusterId, int moduleId, string name);
 private:
     DataPool(){};
     ~DataPool();
-    map<string, Data*> dataMap;
     // Cluster id, Module id, datamap
     map<int, ClusterDataPool*> clusterDataMap;
     static DataPool* instance_;

@@ -10,7 +10,9 @@ SOURCES += main.cpp \
     displaythread.cpp \
     collectionthread.cpp \
     configure.cpp \
-    canparser.cpp
+    canparser.cpp \
+    basedatapool.cpp \
+    clusterdatapool.cpp
 HEADERS += widget.h \
     data.h \
     displayThread.h \
@@ -20,7 +22,9 @@ HEADERS += widget.h \
     datapool.h \
     canparser.h \
     structs.h \
-    ycapi/ycapi.h
+    ycapi/ycapi.h \
+    basedatapool.h \
+    clusterdatapool.h
 FORMS += widget.ui
 INSTALLS += target
 RESOURCES += resources.qrc

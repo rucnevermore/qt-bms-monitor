@@ -14,7 +14,7 @@ Widget::Widget(QWidget *parent) :
     log(QString::fromStdString("application start..."));
     log(QString::fromStdString("init data pool..."));
     dataPool = DataPool::newInstance();
-    connect(dataPool,SIGNAL(log(QString)),this,SLOT(log(QString)));
+//    connect(dataPool,SIGNAL(log(QString)),this,SLOT(log(QString)));
 
     configure = Configure::newInstance();
 
@@ -90,12 +90,12 @@ void Widget::display()
 
     // page 2
     int current_cluster_id = configure->getClusterId();
-    ui->lcd_p2_cdcs->display(dataPool->getDouble(current_cluster_id, "mkcdcs"));
-    ui->lcd_p2_dczt->display(dataPool->getDouble(current_cluster_id, "dczt"));
-    ui->lcd_p2_dl->display(dataPool->getDouble(current_cluster_id, "mkzdl"));
-    ui->lcd_p2_gl->display(dataPool->getDouble(current_cluster_id, "mkzdl"));
-    ui->lcd_p2_zgwd->display(dataPool->getDouble(current_cluster_id, "mknzgwd"));
-    ui->lcd_p2_zdwd->display(dataPool->getDouble(current_cluster_id, "mknzdwd"));
+    ui->lcd_p2_cdcs->display(dataPool->getDoubleByIndex(current_cluster_id, "mkcdcs"));
+    ui->lcd_p2_dczt->display(dataPool->getDoubleByIndex(current_cluster_id, "dczt"));
+    ui->lcd_p2_dl->display(dataPool->getDoubleByIndex(current_cluster_id, "mkzdl"));
+    ui->lcd_p2_gl->display(dataPool->getDoubleByIndex(current_cluster_id, "mkzdl"));
+    ui->lcd_p2_zgwd->display(dataPool->getDoubleByIndex(current_cluster_id, "mknzgwd"));
+    ui->lcd_p2_zdwd->display(dataPool->getDoubleByIndex(current_cluster_id, "mknzdwd"));
 }
 void Widget::log(QString str)
 {

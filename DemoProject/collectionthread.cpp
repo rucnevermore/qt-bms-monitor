@@ -21,7 +21,8 @@ void CollectionThread::run()
     can_frame frame;
     char buf[100]={0};
     int i;
-    bool debug = false;
+    dataPool->store("cluster_number", 10);
+    bool debug = true;
     while(running)
     {
         // collection from Can Bus start.
@@ -60,10 +61,8 @@ void CollectionThread::run()
         log(QString(buf));
         parser->parse(frame);
 
-
-
         // collection from Can Bus finish.
-        dataPool->store("cluster_number", 10);
+
         this->sleep(1);
     }
 
