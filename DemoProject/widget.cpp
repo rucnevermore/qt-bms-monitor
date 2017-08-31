@@ -7,6 +7,10 @@ Widget::Widget(QWidget *parent) :
 {
 
     ui->setupUi(this);
+
+    log(QString::number(this->width(),10));
+    log(QString::number(this->height(),10));
+
     log(QString::fromStdString("application start..."));
     log(QString::fromStdString("init data pool..."));
     dataPool = DataPool::newInstance();
