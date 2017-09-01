@@ -53,7 +53,7 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="tab_xtxx">
     <attribute name="title">
@@ -2359,7 +2359,7 @@ p, li { white-space: pre-wrap; }
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QLCDNumber" name="lcd_zdy_37">
+     <widget class="QLCDNumber" name="lcd_zy_37">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -2390,7 +2390,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_36">
+     <widget class="QLCDNumber" name="lcd_zy_38">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -2421,7 +2421,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_35">
+     <widget class="QLCDNumber" name="lcd_zy_39">
       <property name="geometry">
        <rect>
         <x>390</x>
@@ -2452,7 +2452,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_38">
+     <widget class="QLCDNumber" name="lcd_zy_40">
       <property name="geometry">
        <rect>
         <x>540</x>
@@ -2483,7 +2483,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_30">
+     <widget class="QLCDNumber" name="lcd_zy_41">
       <property name="geometry">
        <rect>
         <x>690</x>
@@ -2514,7 +2514,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_32">
+     <widget class="QLCDNumber" name="lcd_zy_42">
       <property name="geometry">
        <rect>
         <x>840</x>
@@ -2555,7 +2555,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压37</string>
+       <string>电压37</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_38">
@@ -2568,7 +2568,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压38</string>
+       <string>电压38</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_39">
@@ -2581,7 +2581,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压39</string>
+       <string>电压39</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_40">
@@ -2594,7 +2594,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压40</string>
+       <string>电压40</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_41">
@@ -2607,7 +2607,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压41</string>
+       <string>电压41</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_42">
@@ -2620,10 +2620,10 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压42</string>
+       <string>电压42</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_42">
+     <widget class="QLCDNumber" name="lcd_zy_33">
       <property name="geometry">
        <rect>
         <x>390</x>
@@ -2664,10 +2664,10 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压33</string>
+       <string>电压33</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_31">
+     <widget class="QLCDNumber" name="lcd_zy_35">
       <property name="geometry">
        <rect>
         <x>690</x>
@@ -2708,7 +2708,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压31</string>
+       <string>电压31</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_32">
@@ -2721,7 +2721,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压32</string>
+       <string>电压32</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_35">
@@ -2734,10 +2734,10 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压35</string>
+       <string>电压35</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_43">
+     <widget class="QLCDNumber" name="lcd_zy_34">
       <property name="geometry">
        <rect>
         <x>540</x>
@@ -2768,7 +2768,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_44">
+     <widget class="QLCDNumber" name="lcd_zy_32">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -2799,7 +2799,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_33">
+     <widget class="QLCDNumber" name="lcd_zy_36">
       <property name="geometry">
        <rect>
         <x>840</x>
@@ -2840,10 +2840,10 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压36</string>
+       <string>电压36</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_45">
+     <widget class="QLCDNumber" name="lcd_zy_31">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -2884,10 +2884,10 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压34</string>
+       <string>电压34</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_46">
+     <widget class="QLCDNumber" name="lcd_zy_27">
       <property name="geometry">
        <rect>
         <x>390</x>
@@ -2928,10 +2928,10 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压27</string>
+       <string>电压27</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_34">
+     <widget class="QLCDNumber" name="lcd_zy_29">
       <property name="geometry">
        <rect>
         <x>690</x>
@@ -2972,7 +2972,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压25</string>
+       <string>电压25</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_26">
@@ -2985,7 +2985,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压26</string>
+       <string>电压26</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_29">
@@ -2998,10 +2998,10 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压29</string>
+       <string>电压29</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_47">
+     <widget class="QLCDNumber" name="lcd_zy_28">
       <property name="geometry">
        <rect>
         <x>540</x>
@@ -3032,7 +3032,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_48">
+     <widget class="QLCDNumber" name="lcd_zy_26">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -3063,7 +3063,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_49">
+     <widget class="QLCDNumber" name="lcd_zy_30">
       <property name="geometry">
        <rect>
         <x>840</x>
@@ -3104,10 +3104,10 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压30</string>
+       <string>电压30</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_50">
+     <widget class="QLCDNumber" name="lcd_zy_25">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -3148,10 +3148,10 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压28</string>
+       <string>电压28</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_51">
+     <widget class="QLCDNumber" name="lcd_zy_21">
       <property name="geometry">
        <rect>
         <x>390</x>
@@ -3192,10 +3192,10 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压21</string>
+       <string>电压21</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_52">
+     <widget class="QLCDNumber" name="lcd_zy_23">
       <property name="geometry">
        <rect>
         <x>690</x>
@@ -3236,7 +3236,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压19</string>
+       <string>电压19</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_20">
@@ -3249,7 +3249,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压20</string>
+       <string>电压20</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_23">
@@ -3262,10 +3262,10 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压23</string>
+       <string>电压23</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_53">
+     <widget class="QLCDNumber" name="lcd_zy_22">
       <property name="geometry">
        <rect>
         <x>540</x>
@@ -3296,7 +3296,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_54">
+     <widget class="QLCDNumber" name="lcd_zy_20">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -3327,7 +3327,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_55">
+     <widget class="QLCDNumber" name="lcd_zy_24">
       <property name="geometry">
        <rect>
         <x>840</x>
@@ -3368,10 +3368,10 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压24</string>
+       <string>电压24</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_56">
+     <widget class="QLCDNumber" name="lcd_zy_19">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -3412,7 +3412,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压22</string>
+       <string>电压22</string>
       </property>
      </widget>
      <widget class="QLCDNumber" name="lcd_zy_15">
@@ -3456,7 +3456,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压15</string>
+       <string>电压15</string>
       </property>
      </widget>
      <widget class="QLCDNumber" name="lcd_zy_17">
@@ -3500,7 +3500,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压13</string>
+       <string>电压13</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_14">
@@ -3513,7 +3513,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压14</string>
+       <string>电压14</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_17">
@@ -3526,7 +3526,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压17</string>
+       <string>电压17</string>
       </property>
      </widget>
      <widget class="QLCDNumber" name="lcd_zy_16">
@@ -3591,7 +3591,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_61">
+     <widget class="QLCDNumber" name="lcd_zy_18">
       <property name="geometry">
        <rect>
         <x>840</x>
@@ -3632,7 +3632,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压18</string>
+       <string>电压18</string>
       </property>
      </widget>
      <widget class="QLCDNumber" name="lcd_zy_13">
@@ -3676,7 +3676,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压16</string>
+       <string>电压16</string>
       </property>
      </widget>
      <widget class="QLCDNumber" name="lcd_zy_9">
@@ -3720,7 +3720,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压9</string>
+       <string>电压9</string>
       </property>
      </widget>
      <widget class="QLCDNumber" name="lcd_zy_11">
@@ -3764,7 +3764,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压7</string>
+       <string>电压7</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_8">
@@ -3777,7 +3777,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压8</string>
+       <string>电压8</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_11">
@@ -3790,7 +3790,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压11</string>
+       <string>电压11</string>
       </property>
      </widget>
      <widget class="QLCDNumber" name="lcd_zy_10">
@@ -3896,7 +3896,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压12</string>
+       <string>电压12</string>
       </property>
      </widget>
      <widget class="QLCDNumber" name="lcd_zy_7">
@@ -3940,7 +3940,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压10</string>
+       <string>电压10</string>
       </property>
      </widget>
      <widget class="QLCDNumber" name="lcd_zy_3">
@@ -3984,7 +3984,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压3</string>
+       <string>电压3</string>
       </property>
      </widget>
      <widget class="QLCDNumber" name="lcd_zy_5">
@@ -4028,7 +4028,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压1</string>
+       <string>电压1</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_2">
@@ -4041,7 +4041,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压2</string>
+       <string>电压2</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_5">
@@ -4054,7 +4054,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压5</string>
+       <string>电压5</string>
       </property>
      </widget>
      <widget class="QLCDNumber" name="lcd_zy_4">
@@ -4160,7 +4160,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压6</string>
+       <string>电压6</string>
       </property>
      </widget>
      <widget class="QLCDNumber" name="lcd_zy_1">
@@ -4204,10 +4204,10 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压4</string>
+       <string>电压4</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_39">
+     <widget class="QLCDNumber" name="lcd_zy_45">
       <property name="geometry">
        <rect>
         <x>390</x>
@@ -4248,10 +4248,10 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压45</string>
+       <string>电压45</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_40">
+     <widget class="QLCDNumber" name="lcd_zy_47">
       <property name="geometry">
        <rect>
         <x>690</x>
@@ -4292,7 +4292,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压43</string>
+       <string>电压43</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_44">
@@ -4305,7 +4305,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压44</string>
+       <string>电压44</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_zy_47">
@@ -4318,10 +4318,10 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压47</string>
+       <string>电压47</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_41">
+     <widget class="QLCDNumber" name="lcd_zy_46">
       <property name="geometry">
        <rect>
         <x>540</x>
@@ -4352,7 +4352,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_75">
+     <widget class="QLCDNumber" name="lcd_zy_44">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -4383,7 +4383,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_76">
+     <widget class="QLCDNumber" name="lcd_zy_48">
       <property name="geometry">
        <rect>
         <x>840</x>
@@ -4424,10 +4424,10 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压48</string>
+       <string>电压48</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zdy_77">
+     <widget class="QLCDNumber" name="lcd_zy_43">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -4468,7 +4468,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>总压46</string>
+       <string>电压46</string>
       </property>
      </widget>
     </widget>
