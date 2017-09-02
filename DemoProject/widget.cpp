@@ -90,12 +90,23 @@ void Widget::display()
 
     // page 2
     int current_cluster_id = configure->getClusterId();
-    ui->lcd_p2_cdcs->display(dataPool->getDoubleByIndex(current_cluster_id, "mkcdcs"));
-    ui->lcd_p2_dczt->display(dataPool->getDoubleByIndex(current_cluster_id, "dczt"));
-    ui->lcd_p2_dl->display(dataPool->getDoubleByIndex(current_cluster_id, "mkzdl"));
-    ui->lcd_p2_gl->display(dataPool->getDoubleByIndex(current_cluster_id, "mkzdl"));
-    ui->lcd_p2_zgwd->display(dataPool->getDoubleByIndex(current_cluster_id, "mknzgwd"));
-    ui->lcd_p2_zdwd->display(dataPool->getDoubleByIndex(current_cluster_id, "mknzdwd"));
+
+    ui->lcd_p2_zgdy->display(dataPool->getDoubleByIndex(current_cluster_id, "zgdy"));
+    ui->lcd_p2_zddy->display(dataPool->getDoubleByIndex(current_cluster_id, "zddy"));
+    ui->lcd_p2_zgwd->display(dataPool->getDoubleByIndex(current_cluster_id, "zgwd"));
+    ui->lcd_p2_zdwd->display(dataPool->getDoubleByIndex(current_cluster_id, "zdwd"));
+
+    ui->lcd_p2_cdcs->display(dataPool->getDoubleByIndex(current_cluster_id, "xdccdcs"));
+    int value = dataPool->getDoubleByIndex(current_cluster_id, "dccdzt");
+    if (value == 1){
+        ui->text_p2_dczt->setText(QString::fromUtf8("充电中"));
+    }else if (value == 0){
+        ui->text_p2_dczt->setText(QString::fromUtf8("未充电"));
+    }else{
+        ui->text_p2_dczt->setText(QString::fromUtf8("未知"));
+    }
+    ui->lcd_p2_zmsl->display(dataPool->getDoubleByIndex(current_cluster_id, "xdcxtmkzsl"));
+
 }
 void Widget::log(QString str)
 {

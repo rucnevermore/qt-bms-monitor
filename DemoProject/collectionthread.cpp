@@ -22,6 +22,9 @@ void CollectionThread::run()
     char buf[100]={0};
     int i;
     dataPool->store("cluster_number", 10);
+    dataPool->store("zdy",2102);
+    dataPool->store("zdl",50.6);
+    dataPool->store("soc",89.5);
     bool debug = true;
     while(running)
     {
@@ -48,18 +51,34 @@ void CollectionThread::run()
             for(int j = 0; j < 8; j++){
                 frame.data[j] = b >> (j * 8) & 0xFF;
             }
+            parser->parse(frame);
+            frame.can_id = 0x181817F3;
+            frame.can_dlc = 0x08;
+            b = 0x0200520100640801;
+            for(int j = 0; j < 8; j++){
+                frame.data[j] = b >> (j * 8) & 0xFF;
+            }
+            parser->parse(frame);
+            frame.can_id = 0x181817F4;
+            frame.can_dlc = 0x08;
+            b = 0x0200520100750601;
+            for(int j = 0; j < 8; j++){
+                frame.data[j] = b >> (j * 8) & 0xFF;
+            }
+            parser->parse(frame);
         }else{
             ycapi->ReadCan(&frame.can_id,&frame.can_dlc,frame.data);
+            parser->parse(frame);
         }
 
-        memset(buf,0,100);
-        sprintf(buf,"<0x%x>  <%d>",frame.can_id,frame.can_dlc);
-        for(i=0;i<frame.can_dlc;i++)
-        {
-            sprintf(buf,"%s 0x%x",buf,frame.data[i]);
-        }
-        log(QString(buf));
-        parser->parse(frame);
+//        memset(buf,0,100);
+//        sprintf(buf,"<0x%x>  <%d>",frame.can_id,frame.can_dlc);
+//        for(i=0;i<frame.can_dlc;i++)
+//        {
+//            sprintf(buf,"%s 0x%x",buf,frame.data[i]);
+//        }
+//        log(QString(buf));
+
 
         // collection from Can Bus finish.
 

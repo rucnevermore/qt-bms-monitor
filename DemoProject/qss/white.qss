@@ -952,3 +952,12 @@ QPushButton#menuButton::menu-indicator{
         image: url(:/White/arrowBottom);
         padding-right: 3px;
 }
+
+/******customize******/
+#frame_bj > QLabel {
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(0, 0, 0)
+}
+
+

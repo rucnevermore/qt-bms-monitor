@@ -10,8 +10,20 @@ DataPool* DataPool::newInstance(){
     return instance_;
 };
 
-DataPool::~DataPool(){
-    //remove all the instance in the map.
+//DataPool::~DataPool(){
+//    //remove all the instance in the map.
+//}
+
+void DataPool::storeById(int clusterId, string name, double value){
+    ClusterDataPool* currentClusterDataPool;
+    try{
+        currentClusterDataPool = clusterDataMap.at(clusterId);
+    }catch(std::out_of_range &e){
+        currentClusterDataPool = new ClusterDataPool;
+        this->clusterDataMap.insert(std::pair<int, ClusterDataPool*>(clusterId, currentClusterDataPool));
+    }
+//    log(QString("store data by id"));
+    currentClusterDataPool->store(name, value);
 }
 
 void DataPool::storeById(int clusterId, int moduleId, string name, double value){

@@ -14,13 +14,14 @@ class DataPool : public BaseDataPool
 {
 public:
     static DataPool* newInstance();
+    void storeById(int clusterId, string name, double value);
     void storeById(int clusterId, int moduleId, string name, double value);
     double getDoubleByIndex(int clusterIndex, string name);
     double getDoubleByIndex(int clusterIndex, int moduleIndex, string name);
     double getDoubleById(int clusterId, int moduleId, string name);
 private:
     DataPool(){};
-    ~DataPool();
+    ~DataPool(){};
     // Cluster id, Module id, datamap
     map<int, ClusterDataPool*> clusterDataMap;
     static DataPool* instance_;
