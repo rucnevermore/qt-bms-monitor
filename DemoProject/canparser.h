@@ -38,40 +38,43 @@ private:
 
 #define CAN_ID_1 0x01020304
 
-#define CAN_ID_MASK 0x1FFFFFF0
+#define CAN_ID_MASK 0x1FFFFF00
 
-#define BMS_INF   0x18F212F0
-#define FAU_ALA   0x18F214F0
-#define NOM_PAR   0x181817F0
-#define MUN_ID    0x185717F0
-#define MNOM_PAR  0x181D17F0
-#define MVT_PAR1  0x181E17F0
-#define MVT_PAR2  0x181F17F0
+#define BMS_INF   0x18003000
+#define BMS_INF1  0x18013000
+#define FAU_ALA   0x18023000
+#define BMS_INF2  0x18033000
+#define NOM_PAR   0x18043000
+#define MUN_ID    0x18053000
+#define MNOM_PAR  0x18103000
+#define MVT_PAR1  0x18113000
+#define MVT_PAR2  0x18123000
 
-#define CELL_V1    0x182417F0
-#define CELL_V2    0x182517F0
-#define CELL_V3    0x182617F0
-#define CELL_V4    0x182717F0
-#define CELL_V5    0x182817F0
-#define CELL_V6    0x182917F0
-#define CELL_V7    0x182A17F0
-#define CELL_V8    0x182B17F0
-#define CELL_V9    0x182C17F0
-#define CELL_V10   0x182D17F0
-#define CELL_V11   0x182E17F0
-#define CELL_V12   0x182F17F0
-#define CELL_V13   0x183017F0
-#define CELL_V14   0x183117F0
-#define CELL_V15   0x183217F0
-#define CELL_V16   0x183317F0
+#define CELL_V1    0x18203000
+#define CELL_V2    0x18213000
+#define CELL_V3    0x18223000
+#define CELL_V4    0x18233000
+#define CELL_V5    0x18243000
+#define CELL_V6    0x18253000
+#define CELL_V7    0x18263000
+#define CELL_V8    0x18273000
+#define CELL_V9    0x18283000
+#define CELL_V10   0x18293000
+#define CELL_V11   0x182A3000
+#define CELL_V12   0x182B3000
+#define CELL_V13   0x182C3000
+#define CELL_V14   0x182D3000
+#define CELL_V15   0x182E3000
+#define CELL_V16   0x182F3000
 
-#define CELL_T1    0x184A17F0
-#define CELL_T2    0x184B17F0
+#define CELL_T1    0x18603000
+#define CELL_T2    0x18613000
 
-#define PCBA_6803_1      0x184C17F0
-#define PCBA_6803_2      0x184D17F0
-#define PCBA_6803_3      0x184E17F0
-#define PCBA_6803_4      0x184F17F0
+#define PCBA_6803_1      0x18623000
+#define PCBA_6803_2      0x18633000
+#define PCBA_6803_3      0x18643000
+#define PCBA_6803_4      0x18653000
 
+#define BCU_CTRL      0x18E03000
 
 #endif // CANPARSER_H
