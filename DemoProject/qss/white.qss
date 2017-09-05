@@ -160,13 +160,11 @@ QTabBar::tab {
         border-top-right-radius: 4px;
         color: white;
         background: rgb(120, 170, 220);
-	height: 40px;
-        min-width: 180px;
+        height: 28px;
+        min-width: 85px;
         margin-right: 5px;
         padding-left: 5px;
         padding-right: 5px;
-        font-size:20px;                  
-        font-weight:bold;
 }
 QTabBar::tab:hover {
         background: rgb(0, 78, 161);
@@ -239,7 +237,6 @@ QHeaderView::down-arrow:hover, QHeaderView::down-arrow:pressed {
 }
 
 /**********??**********/
-/*
 QTableView {
         border: 1px solid rgb(111, 156, 207);
         background: rgb(224, 238, 255);
@@ -290,7 +287,7 @@ QTableView::indicator:enabled:indeterminate:hover {
 QTableView::indicator:enabled:indeterminate:pressed {
         image: url(:/White/checkBoxIndeterminatePressed);
 }
-*/
+
 /**********???-??**********/
 QScrollBar:horizontal {
         height: 20px;
@@ -957,15 +954,10 @@ QPushButton#menuButton::menu-indicator{
 }
 
 /******customize******/
-QTableWidget {        
-        border-width: 0px;
-	background: rgb(232, 241, 252);
-}
-QTextBrowser {
-	background: white;
-}
-QTextBrowser#textBrowser_header{
-	background: rgb(187, 212, 238);
+#frame_bj > QLabel {
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(0, 0, 0)
 }
 
 

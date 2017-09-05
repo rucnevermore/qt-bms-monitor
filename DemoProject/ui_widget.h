@@ -88,7 +88,7 @@ public:
     QPushButton *pbutton_left;
     QFrame *frame;
     QLabel *label_xtzy;
-    QLCDNumber *lcd_p2_xtdy;
+    QLCDNumber *lcd_p2_xtzy;
     QLabel *label_xtzy_2;
     QLCDNumber *lcd_p2_dl;
     QLabel *label_xtzy_3;
@@ -98,7 +98,6 @@ public:
     QLCDNumber *lcd_p2_rjbbh;
     QLabel *label_xtzy_5;
     QLabel *label_xtzy_6;
-    QLCDNumber *lcd_p2_xtzt;
     QLabel *label_xtzy_7;
     QLCDNumber *lcd_p2_gl;
     QLabel *label_xtzy_8;
@@ -110,9 +109,10 @@ public:
     QLCDNumber *lcd_p2_jyzz;
     QLCDNumber *lcd_p2_smzq;
     QLabel *label_xtzy_15;
-    QLCDNumber *lcd_p2_gzzt;
     QLabel *label_xtzy_10;
     QTextBrowser *text_p2_dczt;
+    QTextBrowser *text_p2_xtzt;
+    QTextBrowser *text_p2_gzzt;
     QLabel *label_cluster;
     QFrame *frame_2;
     QLabel *label_zgdy;
@@ -125,31 +125,31 @@ public:
     QLabel *label_zdwd;
     QFrame *frame_bj;
     QTableWidget *tableWidget;
-    QTextBrowser *textBrowser;
-    QTextBrowser *textBrowser_2;
-    QTextBrowser *textBrowser_3;
-    QTextBrowser *textBrowser_4;
-    QTextBrowser *textBrowser_5;
-    QTextBrowser *textBrowser_6;
-    QTextBrowser *textBrowser_7;
-    QTextBrowser *textBrowser_8;
-    QTextBrowser *textBrowser_9;
-    QTextBrowser *textBrowser_10;
-    QTextBrowser *textBrowser_11;
-    QTextBrowser *textBrowser_12;
-    QTextBrowser *textBrowser_13;
-    QTextBrowser *textBrowser_14;
-    QTextBrowser *textBrowser_15;
-    QTextBrowser *textBrowser_16;
-    QTextBrowser *textBrowser_17;
-    QTextBrowser *textBrowser_18;
-    QTextBrowser *textBrowser_19;
-    QTextBrowser *textBrowser_20;
-    QTextBrowser *textBrowser_21;
-    QTextBrowser *textBrowser_22;
-    QTextBrowser *textBrowser_23;
-    QTextBrowser *textBrowser_24;
-    QTextBrowser *textBrowser_25;
+    QTextBrowser *text_p2_bj_dtgy;
+    QTextBrowser *text_p2_bj_xtwc;
+    QTextBrowser *text_p2_bj_socg;
+    QTextBrowser *text_p2_gz_yzctx;
+    QTextBrowser *text_p2_gz_zzzl;
+    QTextBrowser *text_p2_bj_xtgw;
+    QTextBrowser *text_p2_bj_socd;
+    QTextBrowser *text_p2_gz_ybmutx;
+    QTextBrowser *text_p2_gz_zfzl;
+    QTextBrowser *text_p2_bj_dtqy;
+    QTextBrowser *text_p2_bj_xtdw;
+    QTextBrowser *text_p2_gz_yc;
+    QTextBrowser *text_p2_bj_xtjy;
+    QTextBrowser *text_p2_bj_xtgy;
+    QTextBrowser *text_p2_gz_ycdjtx;
+    QTextBrowser *text_p2_gz_dycgq;
+    QTextBrowser *text_p2_bj_xtqy;
+    QTextBrowser *text_p2_bj_jzgw;
+    QTextBrowser *text_p2_gz_jr;
+    QTextBrowser *text_p2_bj_fdgl;
+    QTextBrowser *text_p2_gz_wdcgq;
+    QTextBrowser *text_p2_bj_xtyc;
+    QTextBrowser *text_p2_gz_sjzj;
+    QTextBrowser *text_p2_gz_fs;
+    QTextBrowser *text_p2_bj_cdgl;
     QWidget *tab_cxxxx;
     QLabel *label_cluster_2;
     QPushButton *pbutton_left_2;
@@ -615,16 +615,16 @@ public:
         QFont font;
         font.setPointSize(11);
         label_xtzy->setFont(font);
-        lcd_p2_xtdy = new QLCDNumber(frame);
-        lcd_p2_xtdy->setObjectName(QString::fromUtf8("lcd_p2_xtdy"));
-        lcd_p2_xtdy->setGeometry(QRect(20, 40, 71, 71));
-        lcd_p2_xtdy->setAutoFillBackground(false);
-        lcd_p2_xtdy->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_p2_xtdy->setFrameShape(QFrame::NoFrame);
-        lcd_p2_xtdy->setFrameShadow(QFrame::Raised);
-        lcd_p2_xtdy->setSmallDecimalPoint(false);
-        lcd_p2_xtdy->setMode(QLCDNumber::Dec);
-        lcd_p2_xtdy->setSegmentStyle(QLCDNumber::Flat);
+        lcd_p2_xtzy = new QLCDNumber(frame);
+        lcd_p2_xtzy->setObjectName(QString::fromUtf8("lcd_p2_xtzy"));
+        lcd_p2_xtzy->setGeometry(QRect(20, 40, 71, 71));
+        lcd_p2_xtzy->setAutoFillBackground(false);
+        lcd_p2_xtzy->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p2_xtzy->setFrameShape(QFrame::NoFrame);
+        lcd_p2_xtzy->setFrameShadow(QFrame::Raised);
+        lcd_p2_xtzy->setSmallDecimalPoint(false);
+        lcd_p2_xtzy->setMode(QLCDNumber::Dec);
+        lcd_p2_xtzy->setSegmentStyle(QLCDNumber::Flat);
         label_xtzy_2 = new QLabel(frame);
         label_xtzy_2->setObjectName(QString::fromUtf8("label_xtzy_2"));
         label_xtzy_2->setGeometry(QRect(120, 40, 61, 21));
@@ -685,16 +685,6 @@ public:
         label_xtzy_6->setObjectName(QString::fromUtf8("label_xtzy_6"));
         label_xtzy_6->setGeometry(QRect(120, 10, 71, 17));
         label_xtzy_6->setFont(font);
-        lcd_p2_xtzt = new QLCDNumber(frame);
-        lcd_p2_xtzt->setObjectName(QString::fromUtf8("lcd_p2_xtzt"));
-        lcd_p2_xtzt->setGeometry(QRect(190, 10, 61, 21));
-        lcd_p2_xtzt->setAutoFillBackground(false);
-        lcd_p2_xtzt->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_p2_xtzt->setFrameShape(QFrame::NoFrame);
-        lcd_p2_xtzt->setFrameShadow(QFrame::Raised);
-        lcd_p2_xtzt->setSmallDecimalPoint(false);
-        lcd_p2_xtzt->setMode(QLCDNumber::Dec);
-        lcd_p2_xtzt->setSegmentStyle(QLCDNumber::Flat);
         label_xtzy_7 = new QLabel(frame);
         label_xtzy_7->setObjectName(QString::fromUtf8("label_xtzy_7"));
         label_xtzy_7->setGeometry(QRect(280, 40, 71, 17));
@@ -769,16 +759,6 @@ public:
         label_xtzy_15->setObjectName(QString::fromUtf8("label_xtzy_15"));
         label_xtzy_15->setGeometry(QRect(480, 40, 71, 17));
         label_xtzy_15->setFont(font);
-        lcd_p2_gzzt = new QLCDNumber(frame);
-        lcd_p2_gzzt->setObjectName(QString::fromUtf8("lcd_p2_gzzt"));
-        lcd_p2_gzzt->setGeometry(QRect(370, 10, 61, 21));
-        lcd_p2_gzzt->setAutoFillBackground(false);
-        lcd_p2_gzzt->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_p2_gzzt->setFrameShape(QFrame::NoFrame);
-        lcd_p2_gzzt->setFrameShadow(QFrame::Raised);
-        lcd_p2_gzzt->setSmallDecimalPoint(false);
-        lcd_p2_gzzt->setMode(QLCDNumber::Dec);
-        lcd_p2_gzzt->setSegmentStyle(QLCDNumber::Flat);
         label_xtzy_10 = new QLabel(frame);
         label_xtzy_10->setObjectName(QString::fromUtf8("label_xtzy_10"));
         label_xtzy_10->setGeometry(QRect(280, 10, 71, 17));
@@ -787,6 +767,14 @@ public:
         text_p2_dczt->setObjectName(QString::fromUtf8("text_p2_dczt"));
         text_p2_dczt->setGeometry(QRect(570, 10, 61, 21));
         text_p2_dczt->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_xtzt = new QTextBrowser(frame);
+        text_p2_xtzt->setObjectName(QString::fromUtf8("text_p2_xtzt"));
+        text_p2_xtzt->setGeometry(QRect(190, 10, 61, 21));
+        text_p2_xtzt->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gzzt = new QTextBrowser(frame);
+        text_p2_gzzt->setObjectName(QString::fromUtf8("text_p2_gzzt"));
+        text_p2_gzzt->setGeometry(QRect(370, 10, 61, 21));
+        text_p2_gzzt->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         label_cluster = new QLabel(tab_cjbxx);
         label_cluster->setObjectName(QString::fromUtf8("label_cluster"));
         label_cluster->setGeometry(QRect(60, 20, 71, 81));
@@ -846,107 +834,107 @@ public:
         tableWidget->setGeometry(QRect(10, 10, 730, 331));
         tableWidget->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         tableWidget->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser = new QTextBrowser(frame_bj);
-        textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
-        textBrowser->setGeometry(QRect(114, 33, 35, 20));
-        textBrowser->setAutoFillBackground(false);
-        textBrowser->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_2 = new QTextBrowser(frame_bj);
-        textBrowser_2->setObjectName(QString::fromUtf8("textBrowser_2"));
-        textBrowser_2->setGeometry(QRect(114, 99, 35, 20));
-        textBrowser_2->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_3 = new QTextBrowser(frame_bj);
-        textBrowser_3->setObjectName(QString::fromUtf8("textBrowser_3"));
-        textBrowser_3->setGeometry(QRect(114, 165, 35, 20));
-        textBrowser_3->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_4 = new QTextBrowser(frame_bj);
-        textBrowser_4->setObjectName(QString::fromUtf8("textBrowser_4"));
-        textBrowser_4->setGeometry(QRect(114, 231, 35, 20));
-        textBrowser_4->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_5 = new QTextBrowser(frame_bj);
-        textBrowser_5->setObjectName(QString::fromUtf8("textBrowser_5"));
-        textBrowser_5->setGeometry(QRect(114, 297, 35, 20));
-        textBrowser_5->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_6 = new QTextBrowser(frame_bj);
-        textBrowser_6->setObjectName(QString::fromUtf8("textBrowser_6"));
-        textBrowser_6->setGeometry(QRect(260, 99, 35, 20));
-        textBrowser_6->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_7 = new QTextBrowser(frame_bj);
-        textBrowser_7->setObjectName(QString::fromUtf8("textBrowser_7"));
-        textBrowser_7->setGeometry(QRect(260, 165, 35, 20));
-        textBrowser_7->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_8 = new QTextBrowser(frame_bj);
-        textBrowser_8->setObjectName(QString::fromUtf8("textBrowser_8"));
-        textBrowser_8->setGeometry(QRect(260, 231, 35, 20));
-        textBrowser_8->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_9 = new QTextBrowser(frame_bj);
-        textBrowser_9->setObjectName(QString::fromUtf8("textBrowser_9"));
-        textBrowser_9->setGeometry(QRect(260, 297, 35, 20));
-        textBrowser_9->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_10 = new QTextBrowser(frame_bj);
-        textBrowser_10->setObjectName(QString::fromUtf8("textBrowser_10"));
-        textBrowser_10->setGeometry(QRect(260, 33, 35, 20));
-        textBrowser_10->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_11 = new QTextBrowser(frame_bj);
-        textBrowser_11->setObjectName(QString::fromUtf8("textBrowser_11"));
-        textBrowser_11->setGeometry(QRect(406, 99, 35, 20));
-        textBrowser_11->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_12 = new QTextBrowser(frame_bj);
-        textBrowser_12->setObjectName(QString::fromUtf8("textBrowser_12"));
-        textBrowser_12->setGeometry(QRect(406, 297, 35, 20));
-        textBrowser_12->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_13 = new QTextBrowser(frame_bj);
-        textBrowser_13->setObjectName(QString::fromUtf8("textBrowser_13"));
-        textBrowser_13->setGeometry(QRect(406, 165, 35, 20));
-        textBrowser_13->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_14 = new QTextBrowser(frame_bj);
-        textBrowser_14->setObjectName(QString::fromUtf8("textBrowser_14"));
-        textBrowser_14->setGeometry(QRect(406, 33, 35, 20));
-        textBrowser_14->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_15 = new QTextBrowser(frame_bj);
-        textBrowser_15->setObjectName(QString::fromUtf8("textBrowser_15"));
-        textBrowser_15->setGeometry(QRect(406, 231, 35, 20));
-        textBrowser_15->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_16 = new QTextBrowser(frame_bj);
-        textBrowser_16->setObjectName(QString::fromUtf8("textBrowser_16"));
-        textBrowser_16->setGeometry(QRect(550, 297, 35, 20));
-        textBrowser_16->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_17 = new QTextBrowser(frame_bj);
-        textBrowser_17->setObjectName(QString::fromUtf8("textBrowser_17"));
-        textBrowser_17->setGeometry(QRect(550, 33, 35, 20));
-        textBrowser_17->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_18 = new QTextBrowser(frame_bj);
-        textBrowser_18->setObjectName(QString::fromUtf8("textBrowser_18"));
-        textBrowser_18->setGeometry(QRect(550, 165, 35, 20));
-        textBrowser_18->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_19 = new QTextBrowser(frame_bj);
-        textBrowser_19->setObjectName(QString::fromUtf8("textBrowser_19"));
-        textBrowser_19->setGeometry(QRect(550, 231, 35, 20));
-        textBrowser_19->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_20 = new QTextBrowser(frame_bj);
-        textBrowser_20->setObjectName(QString::fromUtf8("textBrowser_20"));
-        textBrowser_20->setGeometry(QRect(550, 99, 35, 20));
-        textBrowser_20->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_21 = new QTextBrowser(frame_bj);
-        textBrowser_21->setObjectName(QString::fromUtf8("textBrowser_21"));
-        textBrowser_21->setGeometry(QRect(696, 297, 35, 20));
-        textBrowser_21->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_22 = new QTextBrowser(frame_bj);
-        textBrowser_22->setObjectName(QString::fromUtf8("textBrowser_22"));
-        textBrowser_22->setGeometry(QRect(696, 33, 35, 20));
-        textBrowser_22->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_23 = new QTextBrowser(frame_bj);
-        textBrowser_23->setObjectName(QString::fromUtf8("textBrowser_23"));
-        textBrowser_23->setGeometry(QRect(696, 165, 35, 20));
-        textBrowser_23->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_24 = new QTextBrowser(frame_bj);
-        textBrowser_24->setObjectName(QString::fromUtf8("textBrowser_24"));
-        textBrowser_24->setGeometry(QRect(696, 231, 35, 20));
-        textBrowser_24->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_25 = new QTextBrowser(frame_bj);
-        textBrowser_25->setObjectName(QString::fromUtf8("textBrowser_25"));
-        textBrowser_25->setGeometry(QRect(696, 99, 35, 20));
-        textBrowser_25->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_dtgy = new QTextBrowser(frame_bj);
+        text_p2_bj_dtgy->setObjectName(QString::fromUtf8("text_p2_bj_dtgy"));
+        text_p2_bj_dtgy->setGeometry(QRect(114, 33, 35, 20));
+        text_p2_bj_dtgy->setAutoFillBackground(false);
+        text_p2_bj_dtgy->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_xtwc = new QTextBrowser(frame_bj);
+        text_p2_bj_xtwc->setObjectName(QString::fromUtf8("text_p2_bj_xtwc"));
+        text_p2_bj_xtwc->setGeometry(QRect(114, 99, 35, 20));
+        text_p2_bj_xtwc->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_socg = new QTextBrowser(frame_bj);
+        text_p2_bj_socg->setObjectName(QString::fromUtf8("text_p2_bj_socg"));
+        text_p2_bj_socg->setGeometry(QRect(114, 165, 35, 20));
+        text_p2_bj_socg->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_yzctx = new QTextBrowser(frame_bj);
+        text_p2_gz_yzctx->setObjectName(QString::fromUtf8("text_p2_gz_yzctx"));
+        text_p2_gz_yzctx->setGeometry(QRect(114, 231, 35, 20));
+        text_p2_gz_yzctx->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_zzzl = new QTextBrowser(frame_bj);
+        text_p2_gz_zzzl->setObjectName(QString::fromUtf8("text_p2_gz_zzzl"));
+        text_p2_gz_zzzl->setGeometry(QRect(114, 297, 35, 20));
+        text_p2_gz_zzzl->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_xtgw = new QTextBrowser(frame_bj);
+        text_p2_bj_xtgw->setObjectName(QString::fromUtf8("text_p2_bj_xtgw"));
+        text_p2_bj_xtgw->setGeometry(QRect(260, 99, 35, 20));
+        text_p2_bj_xtgw->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_socd = new QTextBrowser(frame_bj);
+        text_p2_bj_socd->setObjectName(QString::fromUtf8("text_p2_bj_socd"));
+        text_p2_bj_socd->setGeometry(QRect(260, 165, 35, 20));
+        text_p2_bj_socd->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_ybmutx = new QTextBrowser(frame_bj);
+        text_p2_gz_ybmutx->setObjectName(QString::fromUtf8("text_p2_gz_ybmutx"));
+        text_p2_gz_ybmutx->setGeometry(QRect(260, 231, 35, 20));
+        text_p2_gz_ybmutx->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_zfzl = new QTextBrowser(frame_bj);
+        text_p2_gz_zfzl->setObjectName(QString::fromUtf8("text_p2_gz_zfzl"));
+        text_p2_gz_zfzl->setGeometry(QRect(260, 297, 35, 20));
+        text_p2_gz_zfzl->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_dtqy = new QTextBrowser(frame_bj);
+        text_p2_bj_dtqy->setObjectName(QString::fromUtf8("text_p2_bj_dtqy"));
+        text_p2_bj_dtqy->setGeometry(QRect(260, 33, 35, 20));
+        text_p2_bj_dtqy->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_xtdw = new QTextBrowser(frame_bj);
+        text_p2_bj_xtdw->setObjectName(QString::fromUtf8("text_p2_bj_xtdw"));
+        text_p2_bj_xtdw->setGeometry(QRect(406, 99, 35, 20));
+        text_p2_bj_xtdw->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_yc = new QTextBrowser(frame_bj);
+        text_p2_gz_yc->setObjectName(QString::fromUtf8("text_p2_gz_yc"));
+        text_p2_gz_yc->setGeometry(QRect(406, 297, 35, 20));
+        text_p2_gz_yc->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_xtjy = new QTextBrowser(frame_bj);
+        text_p2_bj_xtjy->setObjectName(QString::fromUtf8("text_p2_bj_xtjy"));
+        text_p2_bj_xtjy->setGeometry(QRect(406, 165, 35, 20));
+        text_p2_bj_xtjy->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_xtgy = new QTextBrowser(frame_bj);
+        text_p2_bj_xtgy->setObjectName(QString::fromUtf8("text_p2_bj_xtgy"));
+        text_p2_bj_xtgy->setGeometry(QRect(406, 33, 35, 20));
+        text_p2_bj_xtgy->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_ycdjtx = new QTextBrowser(frame_bj);
+        text_p2_gz_ycdjtx->setObjectName(QString::fromUtf8("text_p2_gz_ycdjtx"));
+        text_p2_gz_ycdjtx->setGeometry(QRect(406, 231, 35, 20));
+        text_p2_gz_ycdjtx->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_dycgq = new QTextBrowser(frame_bj);
+        text_p2_gz_dycgq->setObjectName(QString::fromUtf8("text_p2_gz_dycgq"));
+        text_p2_gz_dycgq->setGeometry(QRect(550, 297, 35, 20));
+        text_p2_gz_dycgq->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_xtqy = new QTextBrowser(frame_bj);
+        text_p2_bj_xtqy->setObjectName(QString::fromUtf8("text_p2_bj_xtqy"));
+        text_p2_bj_xtqy->setGeometry(QRect(550, 33, 35, 20));
+        text_p2_bj_xtqy->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_jzgw = new QTextBrowser(frame_bj);
+        text_p2_bj_jzgw->setObjectName(QString::fromUtf8("text_p2_bj_jzgw"));
+        text_p2_bj_jzgw->setGeometry(QRect(550, 165, 35, 20));
+        text_p2_bj_jzgw->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_jr = new QTextBrowser(frame_bj);
+        text_p2_gz_jr->setObjectName(QString::fromUtf8("text_p2_gz_jr"));
+        text_p2_gz_jr->setGeometry(QRect(550, 231, 35, 20));
+        text_p2_gz_jr->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_fdgl = new QTextBrowser(frame_bj);
+        text_p2_bj_fdgl->setObjectName(QString::fromUtf8("text_p2_bj_fdgl"));
+        text_p2_bj_fdgl->setGeometry(QRect(550, 99, 35, 20));
+        text_p2_bj_fdgl->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_wdcgq = new QTextBrowser(frame_bj);
+        text_p2_gz_wdcgq->setObjectName(QString::fromUtf8("text_p2_gz_wdcgq"));
+        text_p2_gz_wdcgq->setGeometry(QRect(696, 297, 35, 20));
+        text_p2_gz_wdcgq->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_xtyc = new QTextBrowser(frame_bj);
+        text_p2_bj_xtyc->setObjectName(QString::fromUtf8("text_p2_bj_xtyc"));
+        text_p2_bj_xtyc->setGeometry(QRect(696, 33, 35, 20));
+        text_p2_bj_xtyc->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_sjzj = new QTextBrowser(frame_bj);
+        text_p2_gz_sjzj->setObjectName(QString::fromUtf8("text_p2_gz_sjzj"));
+        text_p2_gz_sjzj->setGeometry(QRect(696, 165, 35, 20));
+        text_p2_gz_sjzj->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_fs = new QTextBrowser(frame_bj);
+        text_p2_gz_fs->setObjectName(QString::fromUtf8("text_p2_gz_fs"));
+        text_p2_gz_fs->setGeometry(QRect(696, 231, 35, 20));
+        text_p2_gz_fs->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_cdgl = new QTextBrowser(frame_bj);
+        text_p2_bj_cdgl->setObjectName(QString::fromUtf8("text_p2_bj_cdgl"));
+        text_p2_bj_cdgl->setGeometry(QRect(696, 99, 35, 20));
+        text_p2_bj_cdgl->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         tabWidget->addTab(tab_cjbxx, QString());
         pbutton_right->raise();
         pbutton_left->raise();
@@ -1634,127 +1622,127 @@ public:
         label_zddy->setText(QApplication::translate("Widget", "\346\234\200\344\275\216\347\224\265\345\216\213", 0, QApplication::UnicodeUTF8));
         label_zgwd->setText(QApplication::translate("Widget", "\346\234\200\351\253\230\346\270\251\345\272\246", 0, QApplication::UnicodeUTF8));
         label_zdwd->setText(QApplication::translate("Widget", "\346\234\200\344\275\216\346\270\251\345\272\246", 0, QApplication::UnicodeUTF8));
-        textBrowser->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_bj_dtgy->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_2->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_bj_xtwc->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_3->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_bj_socg->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_4->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_gz_yzctx->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_5->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_gz_zzzl->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_6->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_bj_xtgw->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_7->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_bj_socd->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_8->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_gz_ybmutx->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_9->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_gz_zfzl->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_10->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_bj_dtqy->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_11->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_bj_xtdw->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_12->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_gz_yc->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_13->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_bj_xtjy->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_14->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_bj_xtgy->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_15->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_gz_ycdjtx->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_16->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_gz_dycgq->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_17->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_bj_xtqy->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_18->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_bj_jzgw->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_19->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_gz_jr->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_20->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_bj_fdgl->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_21->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_gz_wdcgq->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_22->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_bj_xtyc->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_23->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_gz_sjzj->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_24->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_gz_fs->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
-        textBrowser_25->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_p2_bj_cdgl->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"

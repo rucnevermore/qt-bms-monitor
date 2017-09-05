@@ -1367,7 +1367,7 @@ p, li { white-space: pre-wrap; }
        <string>系统总压</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_p2_xtdy">
+     <widget class="QLCDNumber" name="lcd_p2_xtzy">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -1610,37 +1610,6 @@ p, li { white-space: pre-wrap; }
       </property>
       <property name="text">
        <string>系统状态</string>
-      </property>
-     </widget>
-     <widget class="QLCDNumber" name="lcd_p2_xtzt">
-      <property name="geometry">
-       <rect>
-        <x>190</x>
-        <y>10</y>
-        <width>61</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="autoFillBackground">
-       <bool>false</bool>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <property name="smallDecimalPoint">
-       <bool>false</bool>
-      </property>
-      <property name="mode">
-       <enum>QLCDNumber::Dec</enum>
-      </property>
-      <property name="segmentStyle">
-       <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
      <widget class="QLabel" name="label_xtzy_7">
@@ -1906,37 +1875,6 @@ p, li { white-space: pre-wrap; }
        <string>绝缘阻值</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_p2_gzzt">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>10</y>
-        <width>61</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="autoFillBackground">
-       <bool>false</bool>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <property name="smallDecimalPoint">
-       <bool>false</bool>
-      </property>
-      <property name="mode">
-       <enum>QLCDNumber::Dec</enum>
-      </property>
-      <property name="segmentStyle">
-       <enum>QLCDNumber::Flat</enum>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_xtzy_10">
       <property name="geometry">
        <rect>
@@ -1959,6 +1897,32 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>570</x>
+        <y>10</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="text_p2_xtzt">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>10</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="text_p2_gzzt">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
         <y>10</y>
         <width>61</width>
         <height>21</height>
@@ -2174,7 +2138,7 @@ p, li { white-space: pre-wrap; }
        <enum>Qt::ScrollBarAlwaysOff</enum>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser">
+     <widget class="QTextBrowser" name="text_p2_bj_dtgy">
       <property name="geometry">
        <rect>
         <x>114</x>
@@ -2197,7 +2161,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_2">
+     <widget class="QTextBrowser" name="text_p2_bj_xtwc">
       <property name="geometry">
        <rect>
         <x>114</x>
@@ -2217,7 +2181,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_3">
+     <widget class="QTextBrowser" name="text_p2_bj_socg">
       <property name="geometry">
        <rect>
         <x>114</x>
@@ -2237,7 +2201,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_4">
+     <widget class="QTextBrowser" name="text_p2_gz_yzctx">
       <property name="geometry">
        <rect>
         <x>114</x>
@@ -2257,7 +2221,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_5">
+     <widget class="QTextBrowser" name="text_p2_gz_zzzl">
       <property name="geometry">
        <rect>
         <x>114</x>
@@ -2277,7 +2241,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_6">
+     <widget class="QTextBrowser" name="text_p2_bj_xtgw">
       <property name="geometry">
        <rect>
         <x>260</x>
@@ -2297,7 +2261,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_7">
+     <widget class="QTextBrowser" name="text_p2_bj_socd">
       <property name="geometry">
        <rect>
         <x>260</x>
@@ -2317,7 +2281,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_8">
+     <widget class="QTextBrowser" name="text_p2_gz_ybmutx">
       <property name="geometry">
        <rect>
         <x>260</x>
@@ -2337,7 +2301,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_9">
+     <widget class="QTextBrowser" name="text_p2_gz_zfzl">
       <property name="geometry">
        <rect>
         <x>260</x>
@@ -2357,7 +2321,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_10">
+     <widget class="QTextBrowser" name="text_p2_bj_dtqy">
       <property name="geometry">
        <rect>
         <x>260</x>
@@ -2377,7 +2341,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_11">
+     <widget class="QTextBrowser" name="text_p2_bj_xtdw">
       <property name="geometry">
        <rect>
         <x>406</x>
@@ -2397,7 +2361,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_12">
+     <widget class="QTextBrowser" name="text_p2_gz_yc">
       <property name="geometry">
        <rect>
         <x>406</x>
@@ -2417,7 +2381,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_13">
+     <widget class="QTextBrowser" name="text_p2_bj_xtjy">
       <property name="geometry">
        <rect>
         <x>406</x>
@@ -2437,7 +2401,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_14">
+     <widget class="QTextBrowser" name="text_p2_bj_xtgy">
       <property name="geometry">
        <rect>
         <x>406</x>
@@ -2457,7 +2421,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_15">
+     <widget class="QTextBrowser" name="text_p2_gz_ycdjtx">
       <property name="geometry">
        <rect>
         <x>406</x>
@@ -2477,7 +2441,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_16">
+     <widget class="QTextBrowser" name="text_p2_gz_dycgq">
       <property name="geometry">
        <rect>
         <x>550</x>
@@ -2497,7 +2461,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_17">
+     <widget class="QTextBrowser" name="text_p2_bj_xtqy">
       <property name="geometry">
        <rect>
         <x>550</x>
@@ -2517,7 +2481,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_18">
+     <widget class="QTextBrowser" name="text_p2_bj_jzgw">
       <property name="geometry">
        <rect>
         <x>550</x>
@@ -2537,7 +2501,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_19">
+     <widget class="QTextBrowser" name="text_p2_gz_jr">
       <property name="geometry">
        <rect>
         <x>550</x>
@@ -2557,7 +2521,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_20">
+     <widget class="QTextBrowser" name="text_p2_bj_fdgl">
       <property name="geometry">
        <rect>
         <x>550</x>
@@ -2577,7 +2541,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_21">
+     <widget class="QTextBrowser" name="text_p2_gz_wdcgq">
       <property name="geometry">
        <rect>
         <x>696</x>
@@ -2597,7 +2561,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_22">
+     <widget class="QTextBrowser" name="text_p2_bj_xtyc">
       <property name="geometry">
        <rect>
         <x>696</x>
@@ -2617,7 +2581,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_23">
+     <widget class="QTextBrowser" name="text_p2_gz_sjzj">
       <property name="geometry">
        <rect>
         <x>696</x>
@@ -2637,7 +2601,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_24">
+     <widget class="QTextBrowser" name="text_p2_gz_fs">
       <property name="geometry">
        <rect>
         <x>696</x>
@@ -2657,7 +2621,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;正常&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_25">
+     <widget class="QTextBrowser" name="text_p2_bj_cdgl">
       <property name="geometry">
        <rect>
         <x>696</x>

@@ -33,6 +33,7 @@ private:
     Configure* configure;
     DisplayThread *displayThread;
     CollectionThread *collectionThread;
+    void setAlertText(QTextBrowser* textBrowser, double value);
 };
 
 #endif // WIDGET_H

@@ -195,7 +195,7 @@ void CanParser::processNOM_PAR(can_frame frame){
     // byte 7-6,        蓄电池输入输出功率,    1, 0,
     visit8BytesArray(clusterId, (char*)frame.data,0x00FFFF0000000000, 40, "xdcsrscgl", 1, 0);
     // byte 8,          生命周期,            1, 0,
-    visit8BytesArray(clusterId, (char*)frame.data,0xFF00000000000000, 56, "xtyxzt", 1, 0);
+    visit8BytesArray(clusterId, (char*)frame.data,0xFF00000000000000, 56, "smzq", 1, 0);
 }
 
 void CanParser::processMUN_ID(can_frame frame){

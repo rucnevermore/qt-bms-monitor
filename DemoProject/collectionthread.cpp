@@ -3,7 +3,6 @@
 #include <sstream>
 #include <stdio.h>
 #include "structs.h"
-#include "canparser.h"
 
 CollectionThread::CollectionThread(QObject *parent) :
         QThread(parent)
@@ -11,6 +10,16 @@ CollectionThread::CollectionThread(QObject *parent) :
     running = true;
     ycapi = new Ycapi();
     ycapi->OpenCan(250000);
+}
+
+void CollectionThread::sendDebugPackage(CanParser* parser, unsigned int id, unsigned char length, long long data){
+    can_frame frame;
+    frame.can_id = id;
+    frame.can_dlc = length;
+    for(int j = 0; j < 8; j++){
+        frame.data[j] = data >> (j * 8) & 0xFF;
+    }
+    parser->parse(frame);
 }
 
 void CollectionThread::run()
@@ -45,27 +54,11 @@ void CollectionThread::run()
             //                frame.data[j] = b >> (j * 8) & 0xFF;
             //            }
             //            parser->parse(frame);
-            frame.can_id = 0x18F212F3;
-            frame.can_dlc = 0x08;
-            long long b = 0x130052C880F21F23;
-            for(int j = 0; j < 8; j++){
-                frame.data[j] = b >> (j * 8) & 0xFF;
-            }
-            parser->parse(frame);
-            frame.can_id = 0x181817F3;
-            frame.can_dlc = 0x08;
-            b = 0x0200520100640801;
-            for(int j = 0; j < 8; j++){
-                frame.data[j] = b >> (j * 8) & 0xFF;
-            }
-            parser->parse(frame);
-            frame.can_id = 0x181817F4;
-            frame.can_dlc = 0x08;
-            b = 0x0200520100750601;
-            for(int j = 0; j < 8; j++){
-                frame.data[j] = b >> (j * 8) & 0xFF;
-            }
-            parser->parse(frame);
+
+            sendDebugPackage(parser, 0x18F212F3, 0x08, 0x130052C880F21F23);
+            sendDebugPackage(parser, 0x181817F3, 0x08, 0x0200520100640801);
+            sendDebugPackage(parser, 0x18F214F3, 0x08, 0x1B1B1B1B1B1B1B1B);
+            sendDebugPackage(parser, 0x181817F4, 0x08, 0x0200520100750601);
         }else{
             ycapi->ReadCan(&frame.can_id,&frame.can_dlc,frame.data);
             parser->parse(frame);

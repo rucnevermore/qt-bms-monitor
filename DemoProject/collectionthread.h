@@ -5,6 +5,7 @@
 #include <sys/ioctl.h>
 #include <net/if.h>
 #include <linux/can.h>
+#include "canparser.h"
 
 #ifndef PF_CAN
 #define PF_CAN 29
@@ -30,7 +31,7 @@ private:
     bool running;
     std::string getstring(int n);
     Ycapi *ycapi;
-
+    void sendDebugPackage(CanParser* parser, unsigned int id, unsigned char length, long long data);
 };
 
 #endif // COLLECTIONTHREAD_H
