@@ -14,9 +14,17 @@ void CanParser::parse(can_frame frame){
             log(QString("receive can package BMS_INF"));
             processBMS_INF(frame);
             break;
+        case BMS_INF1:
+            log(QString("receive can package BMS_INF1"));
+            processBMS_INF1(frame);
+            break;
         case FAU_ALA:
             log(QString("receive can package FAU_ALA"));
             processFAU_ALA(frame);
+            break;
+        case BMS_INF2:
+            log(QString("receive can package BMS_INF2"));
+            processBMS_INF2(frame);
             break;
         case NOM_PAR:
             log(QString("receive can package NOM_PAR"));
@@ -105,7 +113,7 @@ double CanParser::visit8BytesArray(int clusterId, char* source, long long mask, 
 }
 
 void CanParser::processBMS_INF(can_frame frame){
-    int clusterId = frame.can_id & 0x0000000F;
+    int clusterId = frame.can_id & CLUSTER_ID_MASK;
     // byte 2-1, 动力电池的总电压, 0.02, 0, V
     visit8BytesArray(clusterId, (char*)frame.data,0x000000000000FFFF, 0, "zdy", 0.02, 0);
     // byte 4-3, 动力电池的总电流, 0.1, -3200, A
@@ -114,14 +122,30 @@ void CanParser::processBMS_INF(can_frame frame){
     visit8BytesArray(clusterId, (char*)frame.data,0x000000FF00000000, 32, "soc", 0.4, 0);
     // byte 6, BMS软件版本号, 0.1, 0,
     visit8BytesArray(clusterId, (char*)frame.data,0x0000FF0000000000, 40, "ver", 0.1, 0);
-    // byte 8 bit 4 - 1, BMS系统故障, 1, 0,
+    // byte 8 bit 4-1, BMS系统故障, 1, 0,
     visit8BytesArray(clusterId, (char*)frame.data,0x0F00000000000000, 56, "xtgz", 1, 0);
-    // byte 8 bit 8 - 5, 系统运行状态, 1, 0,
+    // byte 8 bit 8-5, 系统运行状态, 1, 0,
     visit8BytesArray(clusterId, (char*)frame.data,0xF000000000000000, 60, "xtyxzt", 1, 0);
 }
 
+void CanParser::processBMS_INF1(can_frame frame){
+    int clusterId = frame.can_id & CLUSTER_ID_MASK;
+    // byte 1, 单体最高电压, 0.02, 0, V
+    visit8BytesArray(clusterId, (char*)frame.data,0x00000000000000FF, 0, "dtzgdy", 0.02, 0);
+    // byte 2, 单体最低电压, 0.02, 0, V
+    visit8BytesArray(clusterId, (char*)frame.data,0x000000000000FF00, 8, "dtzddy", 0.02, 0);
+    // byte 3, 单体最高温度, 1, -40,
+    visit8BytesArray(clusterId, (char*)frame.data,0x0000000000FF0000, 16, "dtzgwd", 1, -40);
+    // byte 4, 单体最低温度, 1, -40,
+    visit8BytesArray(clusterId, (char*)frame.data,0x00000000FF000000, 24, "dtzdwd", 1, -40);
+    // byte 6, SOH, 0.4, 0, %
+    visit8BytesArray(clusterId, (char*)frame.data,0x0000FF0000000000, 40, "soh", 0.4, 0);
+    // byte 8-7, 绝缘阻值, 0.2, 0, k
+    visit8BytesArray(clusterId, (char*)frame.data,0xFFFF000000000000, 48, "jyzz", 0.2, 0);
+}
+
 void CanParser::processFAU_ALA(can_frame frame){
-    int clusterId = frame.can_id & 0x0000000F;
+    int clusterId = frame.can_id & CLUSTER_ID_MASK;
     // byte 1 bit 8-7, 单体过压报警, 1, 0,
     // byte 1 bit 6-5, 单体欠压报警, 1, 0,
     // byte 1 bit 4-3, 系统过压报警, 1, 0,
@@ -156,7 +180,6 @@ void CanParser::processFAU_ALA(can_frame frame){
     visit8BytesArray(clusterId, (char*)frame.data,0x00000000C0000000, 30, "xtjy_bj", 1, 0);
     visit8BytesArray(clusterId, (char*)frame.data,0x0000000030000000, 28, "jzgw_bj", 1, 0);
 
-
     // byte 6 bit 8, 数据自检故障, 1, 0,
     // byte 6 bit 7, 与整车通信故障, 1, 0,
     // byte 6 bit 6, 与bmu通信故障,   1, 0,
@@ -182,8 +205,28 @@ void CanParser::processFAU_ALA(can_frame frame){
     visit8BytesArray(clusterId, (char*)frame.data,0x0020000000000000, 53, "wdcgq_gz", 1, 0);
 }
 
+void CanParser::processBMS_INF2(can_frame frame){
+    int clusterId = frame.can_id & CLUSTER_ID_MASK;
+    // byte 1, 最高电压位置, 1, 0,
+    visit8BytesArray(clusterId, (char*)frame.data,0x00000000000000FF, 0, "zgdywz", 1, 0);
+    // byte 2, 最低电压位置, 1, 0,
+    visit8BytesArray(clusterId, (char*)frame.data,0x000000000000FF00, 8, "zddywz", 1, 0);
+    // byte 3, 最高温度位置, 1, 0,
+    visit8BytesArray(clusterId, (char*)frame.data,0x0000000000FF0000, 16, "zgwdwz", 1, 0);
+    // byte 4, 最低温度位置, 1, 0,
+    visit8BytesArray(clusterId, (char*)frame.data,0x00000000FF000000, 24, "zdwdwz", 1, 0);
+    // byte 5, 最高电压箱号, 1, 0,
+    visit8BytesArray(clusterId, (char*)frame.data,0x000000FF00000000, 32, "zgdyxh", 1, 0);
+    // byte 6, 最低电压箱号, 1, 0,
+    visit8BytesArray(clusterId, (char*)frame.data,0x0000FF0000000000, 40, "zddyxh", 1, 0);
+    // byte 7, 最高温度箱号, 1, 0,
+    visit8BytesArray(clusterId, (char*)frame.data,0x00FF000000000000, 48, "zgwdxh", 1, 0);
+    // byte 8, 最低温度箱号, 1, 0,
+    visit8BytesArray(clusterId, (char*)frame.data,0xFF00000000000000, 56, "zdwdxh", 1, 0);
+}
+
 void CanParser::processNOM_PAR(can_frame frame){
-    int clusterId = frame.can_id & 0x0000000F;
+    int clusterId = frame.can_id & CLUSTER_ID_MASK;
     // byte 1,          蓄电池组编号,         1, 0,
     visit8BytesArray(clusterId, (char*)frame.data,0x00000000000000FF, 0, "xdczbh", 1, 0);
     // byte 2,          蓄电池系统模块总数量,  1, 0,
@@ -199,7 +242,7 @@ void CanParser::processNOM_PAR(can_frame frame){
 }
 
 void CanParser::processMUN_ID(can_frame frame){
-    int clusterId = frame.can_id & 0x0000000F;
+    int clusterId = frame.can_id & CLUSTER_ID_MASK;
     // byte 4-1,          电池模块的唯一编号信息,         1, 0,
     visit8BytesArray(clusterId, (char*)frame.data,0x00000000FFFFFFFF, 0, "wybhxx", 1, 0);
     // byte 6-5,          最大允许充电（回馈）电流,       1, 0,
@@ -209,7 +252,7 @@ void CanParser::processMUN_ID(can_frame frame){
 }
 
 void CanParser::processMNOM_PAR(can_frame frame){
-    int clusterId = frame.can_id & 0x0000000F;
+    int clusterId = frame.can_id & CLUSTER_ID_MASK;
     // byte 1,          蓄电池模块号,         1, 0,
     int moduleId = maskAndGetValue((char*)frame.data, 0x00000000000000FF, 0, 1, 0);
     // byte 2,          模块内单体电池数,       1, 0,
@@ -225,7 +268,7 @@ void CanParser::processMNOM_PAR(can_frame frame){
 }
 
 void CanParser::processMVT_PAR1(can_frame frame){
-    int clusterId = frame.can_id & 0x0000000F;
+    int clusterId = frame.can_id & CLUSTER_ID_MASK;
     // byte 1,          蓄电池模块号,
     int moduleId = maskAndGetValue((char*)frame.data, 0x00000000000000FF, 0, 1, 0);
     // byte 3-2,        模块总电压,
@@ -243,7 +286,7 @@ void CanParser::processMVT_PAR1(can_frame frame){
 }
 
 void CanParser::processMVT_PAR2(can_frame frame){
-    int clusterId = frame.can_id & 0x0000000F;
+    int clusterId = frame.can_id & CLUSTER_ID_MASK;
     // byte 1,          蓄电池模块号,
     int moduleId = maskAndGetValue((char*)frame.data, 0x00000000000000FF, 0, 1, 0);
     // byte 3-2,        模块内单体最高电压,
@@ -257,7 +300,7 @@ void CanParser::processMVT_PAR2(can_frame frame){
 }
 
 void CanParser::processCELL_V(int index, can_frame frame){
-    int clusterId = frame.can_id & 0x0000000F;
+    int clusterId = frame.can_id & CLUSTER_ID_MASK;
     // byte 1,          蓄电池模块号,
     int moduleId = maskAndGetValue((char*)frame.data, 0x00000000000000FF, 0, 1, 0);
     switch(index){
@@ -396,7 +439,7 @@ void CanParser::processCELL_V(int index, can_frame frame){
 }
 
 void CanParser::processCELL_T1(can_frame frame){
-    int clusterId = frame.can_id & 0x0000000F;
+    int clusterId = frame.can_id & CLUSTER_ID_MASK;
     // byte 1,          蓄电池模块号,
     int moduleId = maskAndGetValue((char*)frame.data, 0x00000000000000FF, 0, 1, 0);
     // byte 2,          模块内第1个采样温度,
@@ -416,7 +459,7 @@ void CanParser::processCELL_T1(can_frame frame){
 }
 
 void CanParser::processCELL_T2(can_frame frame){
-    int clusterId = frame.can_id & 0x0000000F;
+    int clusterId = frame.can_id & CLUSTER_ID_MASK;
     // byte 1,          蓄电池模块号,
     int moduleId = maskAndGetValue((char*)frame.data, 0x00000000000000FF, 0, 1, 0);
     // byte 2,          模块内第8个采样温度,
@@ -436,7 +479,7 @@ void CanParser::processCELL_T2(can_frame frame){
 }
 
 void CanParser::processPCBA(int index, can_frame frame){
-    int clusterId = frame.can_id & 0x0000000F;
+    int clusterId = frame.can_id & CLUSTER_ID_MASK;
     // byte 1,          蓄电池模块号,
     int moduleId = maskAndGetValue((char*)frame.data, 0x00000000000000FF, 0, 1, 0);
     switch(index){

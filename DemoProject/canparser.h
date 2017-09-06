@@ -24,7 +24,9 @@ private:
     double visit8BytesArray(int clusterId, int moduleId, char* source, long long mask, int mask_offset, string name, double resol, double offset);
 
     void processBMS_INF(can_frame frame);
+    void processBMS_INF1(can_frame frame);
     void processFAU_ALA(can_frame frame);
+    void processBMS_INF2(can_frame frame);
     void processNOM_PAR(can_frame frame);
     void processMUN_ID(can_frame frame);
     void processMNOM_PAR(can_frame frame);
@@ -38,6 +40,7 @@ private:
 
 #define CAN_ID_1 0x01020304
 
+#define CLUSTER_ID_MASK 0x000000FF
 #define CAN_ID_MASK 0x1FFFFF00
 
 #define BMS_INF   0x18003000
