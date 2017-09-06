@@ -9,6 +9,7 @@
 #include <stdexcept>
 #include "basedatapool.h"
 #include "clusterdatapool.h"
+#include "alertevent.h"
 
 class DataPool : public BaseDataPool
 {
@@ -24,6 +25,7 @@ private:
     ~DataPool(){};
     // Cluster id, Module id, datamap
     map<int, ClusterDataPool*> clusterDataMap;
+    AlertEvent[100] events;
     static DataPool* instance_;
 };
 

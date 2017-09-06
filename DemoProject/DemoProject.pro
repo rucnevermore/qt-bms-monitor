@@ -12,7 +12,8 @@ SOURCES += main.cpp \
     configure.cpp \
     canparser.cpp \
     basedatapool.cpp \
-    clusterdatapool.cpp
+    clusterdatapool.cpp \
+    alertevent.cpp
 HEADERS += widget.h \
     data.h \
     displayThread.h \
@@ -24,7 +25,8 @@ HEADERS += widget.h \
     structs.h \
     ycapi/ycapi.h \
     basedatapool.h \
-    clusterdatapool.h
+    clusterdatapool.h \
+    alertevent.h
 FORMS += widget.ui
 INSTALLS += target
 RESOURCES += resources.qrc

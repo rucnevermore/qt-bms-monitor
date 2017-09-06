@@ -6,6 +6,7 @@ DataPool* DataPool::newInstance(){
     if (NULL == instance_){
         static DataPool instanceT;
         instance_ = &instanceT;
+        events = new AlertEvent[100]();
     }
     return instance_;
 };

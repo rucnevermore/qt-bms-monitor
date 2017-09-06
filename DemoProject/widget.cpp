@@ -111,13 +111,13 @@ void Widget::display()
     int current_cluster_id = configure->getClusterId();
 
     // 最高电压
-    ui->lcd_p2_zgdy->display(dataPool->getDoubleByIndex(current_cluster_id, "zgdy"));
+    ui->lcd_p2_zgdy->display(dataPool->getDoubleByIndex(current_cluster_id, "dtzgdy"));
     // 最低电压
-    ui->lcd_p2_zddy->display(dataPool->getDoubleByIndex(current_cluster_id, "zddy"));
+    ui->lcd_p2_zddy->display(dataPool->getDoubleByIndex(current_cluster_id, "dtzddy"));
     // 最高温度
-    ui->lcd_p2_zgwd->display(dataPool->getDoubleByIndex(current_cluster_id, "zgwd"));
+    ui->lcd_p2_zgwd->display(dataPool->getDoubleByIndex(current_cluster_id, "dtzgwd"));
     // 最低温度
-    ui->lcd_p2_zdwd->display(dataPool->getDoubleByIndex(current_cluster_id, "zdwd"));
+    ui->lcd_p2_zdwd->display(dataPool->getDoubleByIndex(current_cluster_id, "dtzdwd"));
 
     // 系统总压
     ui->lcd_p2_xtzy->display(dataPool->getDoubleByIndex(current_cluster_id, "zdy"));
@@ -139,6 +139,7 @@ void Widget::display()
     // SOC
     ui->lcd_p2_soc->display(dataPool->getDoubleByIndex(current_cluster_id, "soc"));
     // SOH
+    ui->lcd_p2_soh->display(dataPool->getDoubleByIndex(current_cluster_id, "soh"));
     // 故障状态
     value = dataPool->getDoubleByIndex(current_cluster_id, "xtgz");
     if (value == 0){
@@ -168,6 +169,7 @@ void Widget::display()
         ui->text_p2_dczt->setText(QString::fromUtf8("未知"));
     }
     // 绝缘阻值
+    ui->lcd_p2_jyzz->display(dataPool->getDoubleByIndex(current_cluster_id, "jyzz"));
     // 生命周期
     ui->lcd_p2_smzq->display(dataPool->getDoubleByIndex(current_cluster_id, "smzq"));
     // 软件版本号   

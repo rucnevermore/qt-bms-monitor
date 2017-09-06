@@ -55,10 +55,13 @@ void CollectionThread::run()
             //            }
             //            parser->parse(frame);
 
-            sendDebugPackage(parser, 0x18F212F3, 0x08, 0x130052C880F21F23);
-            sendDebugPackage(parser, 0x181817F3, 0x08, 0x0200520100640801);
-            sendDebugPackage(parser, 0x18F214F3, 0x08, 0x1B1B1B1B1B1B1B1B);
-            sendDebugPackage(parser, 0x181817F4, 0x08, 0x0200520100750601);
+            sendDebugPackage(parser, 0x18003001, 0x08, 0x130052C880F21F23);
+            sendDebugPackage(parser, 0x18013001, 0x08, 0x0100640005A505A5);
+            sendDebugPackage(parser, 0x18023001, 0x08, 0x1B1B1B1B1B1B1B1B);
+            sendDebugPackage(parser, 0x18033001, 0x08, 0x1B1B1B1B1B1B1B1B);
+            sendDebugPackage(parser, 0x18043001, 0x08, 0x0200520100640801);
+
+            sendDebugPackage(parser, 0x18043002, 0x08, 0x0200520100750601);
         }else{
             ycapi->ReadCan(&frame.can_id,&frame.can_dlc,frame.data);
             parser->parse(frame);
