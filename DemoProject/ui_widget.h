@@ -262,6 +262,11 @@ public:
         tabWidget->setTabShape(QTabWidget::Rounded);
         tab_xtxx = new QWidget();
         tab_xtxx->setObjectName(QString::fromUtf8("tab_xtxx"));
+        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(tab_xtxx->sizePolicy().hasHeightForWidth());
+        tab_xtxx->setSizePolicy(sizePolicy1);
         text_zdy = new QTextBrowser(tab_xtxx);
         text_zdy->setObjectName(QString::fromUtf8("text_zdy"));
         text_zdy->setGeometry(QRect(140, 60, 181, 71));
@@ -378,9 +383,13 @@ public:
         label_zddy_loc = new QLabel(tab_xtxx);
         label_zddy_loc->setObjectName(QString::fromUtf8("label_zddy_loc"));
         label_zddy_loc->setGeometry(QRect(140, 280, 31, 21));
+        sizePolicy1.setHeightForWidth(label_zddy_loc->sizePolicy().hasHeightForWidth());
+        label_zddy_loc->setSizePolicy(sizePolicy1);
         label_zxdy_loc = new QLabel(tab_xtxx);
         label_zxdy_loc->setObjectName(QString::fromUtf8("label_zxdy_loc"));
         label_zxdy_loc->setGeometry(QRect(140, 380, 31, 21));
+        sizePolicy1.setHeightForWidth(label_zxdy_loc->sizePolicy().hasHeightForWidth());
+        label_zxdy_loc->setSizePolicy(sizePolicy1);
         lcd_zxdy_1 = new QLCDNumber(tab_xtxx);
         lcd_zxdy_1->setObjectName(QString::fromUtf8("lcd_zxdy_1"));
         lcd_zxdy_1->setGeometry(QRect(180, 370, 61, 31));
@@ -410,6 +419,8 @@ public:
         label_zgwd_loc = new QLabel(tab_xtxx);
         label_zgwd_loc->setObjectName(QString::fromUtf8("label_zgwd_loc"));
         label_zgwd_loc->setGeometry(QRect(440, 280, 31, 21));
+        sizePolicy1.setHeightForWidth(label_zgwd_loc->sizePolicy().hasHeightForWidth());
+        label_zgwd_loc->setSizePolicy(sizePolicy1);
         lcd_zgwd_1 = new QLCDNumber(tab_xtxx);
         lcd_zgwd_1->setObjectName(QString::fromUtf8("lcd_zgwd_1"));
         lcd_zgwd_1->setGeometry(QRect(480, 270, 61, 31));
@@ -456,6 +467,8 @@ public:
         label_zdwd_loc = new QLabel(tab_xtxx);
         label_zdwd_loc->setObjectName(QString::fromUtf8("label_zdwd_loc"));
         label_zdwd_loc->setGeometry(QRect(440, 380, 31, 21));
+        sizePolicy1.setHeightForWidth(label_zdwd_loc->sizePolicy().hasHeightForWidth());
+        label_zdwd_loc->setSizePolicy(sizePolicy1);
         lcd_zdwd_1 = new QLCDNumber(tab_xtxx);
         lcd_zdwd_1->setObjectName(QString::fromUtf8("lcd_zdwd_1"));
         lcd_zdwd_1->setGeometry(QRect(480, 370, 61, 31));
@@ -1562,7 +1575,7 @@ public:
 
         retranslateUi(Widget);
 
-        tabWidget->setCurrentIndex(3);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(Widget);

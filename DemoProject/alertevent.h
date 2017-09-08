@@ -6,7 +6,7 @@
 class AlertEvent
 {
 public:
-    AlertEvent();
+    AlertEvent(QDate date, QString message);
     QDate date;
     QString message;
     // TODO: detail

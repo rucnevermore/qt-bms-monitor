@@ -8,43 +8,51 @@ BaseDataPool::BaseDataPool()
 
 void BaseDataPool::store(string name, double value){
     QString temp = QString::number(value);
-//    log(QString::fromStdString("[DataPool]store double value ").append(QString::fromLocal8Bit((char*)temp)));
     this->store(&dataMap, name, CAN, DOUBLE, temp);
 }
 
-void BaseDataPool::store(map<string, Data*>* localMap, string name, Channel channel, DataType type, QString value){
+void BaseDataPool::registerListener(EventListener listener){
+
+}
+
+void BaseDataPool::notifyListener(){
+
+}
+
+void BaseDataPool::store(QMap<string, Data*>* localMap, string name, Channel channel, DataType type, QString value){
     if (localMap->find(name) != localMap->end()){
-        Data* dataT = localMap->at(name);
-        dataT->update(name, channel, type, value);
+        Data* dataT = localMap->value(name);
+        if (dataT->update(name, channel, type, value)){
+            this->notifyListener();
+        }
     }else{
-//        log(QString("create new Data in the data pool for ").append(QString::fromStdString(name)));
         Data* data = new Data(name, channel, type, value);
-        localMap->insert(std::pair<string, Data*>(name, data));
+        localMap->insert(name, data);
+        this->notifyListener();
     }
 }
 
 void BaseDataPool::store(string name, unsigned char* value, int length){
     QString temp = QString::fromLocal8Bit((char*)value, length);
-//    log(QString::fromStdString("[DataPool]store double value ").append(QString::fromLocal8Bit((char*)temp)));
     this->store(&dataMap, name, CAN, DOUBLE, temp);
 }
 
 int BaseDataPool::getInt(string name){
-    try{
-        return dataMap.at(name)->getValue().toInt();
-    }catch(std::out_of_range &e){
+    if (dataMap.contains(name)){
+        return dataMap.value(name)->getValue().toInt();
+    }else{
         return 0;
     }
 }
 
 double BaseDataPool::getDouble(string name){
-    try{
-        return dataMap.at(name)->getValue().toDouble();
-    }catch(std::out_of_range &e){
+    if (dataMap.contains(name)){
+        return dataMap.value(name)->getValue().toDouble();
+    }else{
         return 0;
     }
 }
 
 Data* BaseDataPool::retrieve(string name){
-    return this->dataMap.at(name);
+    return this->dataMap.value(name);
 }

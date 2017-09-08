@@ -28,33 +28,14 @@ void CollectionThread::run()
     CanParser* parser = new CanParser();
     connect(parser,SIGNAL(log(QString)),this,SIGNAL(log(QString)));
     can_frame frame;
-    char buf[100]={0};
-    int i;
-    dataPool->store("cluster_number", 10);
     dataPool->store("zdy",2102);
     dataPool->store("zdl",50.6);
     dataPool->store("soc",89.5);
     bool debug = true;
     while(running)
     {
-        // collection from Can Bus start.
-        if (debug == true){
-            //            frame.can_id = 0x181E17F3;
-            //            frame.can_dlc = 0x08;
-            //            b = 0x00000A0050000010;
-            //            for(int j = 0; j < 8; j++){
-            //                frame.data[j] = b >> (j * 8) & 0xFF;
-            //            }
-            //            parser->parse(frame);
-            //
-            //            frame.can_id = 0x181E17F3;
-            //            frame.can_dlc = 0x08;
-            //            b = 0x00000B0040000011;
-            //            for(int j = 0; j < 8; j++){
-            //                frame.data[j] = b >> (j * 8) & 0xFF;
-            //            }
-            //            parser->parse(frame);
 
+        if (debug == true){
             sendDebugPackage(parser, 0x18003001, 0x08, 0x130052C880F21F23);
             sendDebugPackage(parser, 0x18013001, 0x08, 0x0100640005A505A5);
             sendDebugPackage(parser, 0x18023001, 0x08, 0x1B1B1B1B1B1B1B1B);
@@ -63,21 +44,11 @@ void CollectionThread::run()
 
             sendDebugPackage(parser, 0x18043002, 0x08, 0x0200520100750601);
         }else{
+            // collection from Can Bus start.
             ycapi->ReadCan(&frame.can_id,&frame.can_dlc,frame.data);
             parser->parse(frame);
+            // collection from Can Bus finish.
         }
-
-//        memset(buf,0,100);
-//        sprintf(buf,"<0x%x>  <%d>",frame.can_id,frame.can_dlc);
-//        for(i=0;i<frame.can_dlc;i++)
-//        {
-//            sprintf(buf,"%s 0x%x",buf,frame.data[i]);
-//        }
-//        log(QString(buf));
-
-
-        // collection from Can Bus finish.
-
         this->sleep(1);
     }
 

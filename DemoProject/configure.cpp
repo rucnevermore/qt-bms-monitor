@@ -19,6 +19,10 @@ int Configure::getClusterNum(){
     return dataPool->getInt("cluster_number");
 }
 
+int Configure::getMaxEventNum(){
+    return dataPool->getInt("max_event_number");
+}
+
 void Configure::setClusterId(int clusterId){
     dataPool->store("current_cluster_id", clusterId);
 }

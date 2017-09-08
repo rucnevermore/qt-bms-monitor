@@ -24,9 +24,15 @@ void Data::replaceby(Data* data){
     }
 }
 
-void Data::update(string name, Channel channel, DataType type, QString value){
+bool Data::update(string name, Channel channel, DataType type, QString value){
     this->name = name;
     this->channel = channel;
     this->type = type;
+
+    bool flag = false;
+    if (this->value.toStdString() != value.toStdString()){
+        flag = true;
+    }
     this->value = value;
+    return flag;
 }

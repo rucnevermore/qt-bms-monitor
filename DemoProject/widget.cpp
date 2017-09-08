@@ -33,6 +33,10 @@ Widget::Widget(QWidget *parent) :
     connect(ui->pbutton_right,SIGNAL(clicked()),this,SLOT(increaseCluster()));
 
     configure->setClusterId(1);
+
+    // for debug purpose.
+    dataPool->store("max_event_number", 100);
+    dataPool->store("cluster_number", 10);
 }
 
 

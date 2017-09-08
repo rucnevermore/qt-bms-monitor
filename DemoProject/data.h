@@ -25,7 +25,7 @@ public:
     Data(string name, Channel channel, DataType type, QString value);
     QString getValue();
     void replaceby(Data* data);
-    void update(string name, Channel channel, DataType type, QString value);
+    bool update(string name, Channel channel, DataType type, QString value);
 private:
     string name;
     Channel channel;

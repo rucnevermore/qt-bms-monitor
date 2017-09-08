@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include "basedatapool.h"
+#include <QMap>
 
 class ClusterDataPool : public QObject, public BaseDataPool
 {
@@ -12,7 +13,7 @@ public:
     double getDoubleByIndex(int moduleIndex, string name);
     double getDoubleById(int moduleId, string name);
 private:
-    map<int, map<string, Data*>*> moduleDataMap;
+    QMap<int, QMap<string, Data*>*> moduleDataMap;
 };
 
 #endif // CLUSTERDATAPOOL_H

@@ -8,6 +8,7 @@ class Configure
 public:
     static Configure* newInstance();
     int getClusterNum();
+    int getMaxEventNum();
     void setClusterId(int clusterId);
     int getClusterId();
 private:

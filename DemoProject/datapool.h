@@ -1,7 +1,7 @@
 #ifndef DATAPOOL_H
 #define DATAPOOL_H
 
-#include <map>
+#include <QMap>
 #include "data.h"
 #include <string>
 #include <stdio.h>
@@ -10,6 +10,7 @@
 #include "basedatapool.h"
 #include "clusterdatapool.h"
 #include "alertevent.h"
+#include <QVector>
 
 class DataPool : public BaseDataPool
 {
@@ -20,12 +21,15 @@ public:
     double getDoubleByIndex(int clusterIndex, string name);
     double getDoubleByIndex(int clusterIndex, int moduleIndex, string name);
     double getDoubleById(int clusterId, int moduleId, string name);
+
+    void addEvent(QString message);
+    void addEvent(QDate date, QString message);
 private:
     DataPool(){};
-    ~DataPool(){};
+    ~DataPool();
     // Cluster id, Module id, datamap
-    map<int, ClusterDataPool*> clusterDataMap;
-    AlertEvent[100] events;
+    QMap<int, ClusterDataPool*> clusterDataMap;
+    QVector<AlertEvent*> events;
     static DataPool* instance_;
 };
 

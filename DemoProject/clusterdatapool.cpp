@@ -6,27 +6,26 @@ ClusterDataPool::ClusterDataPool()
 }
 
 void ClusterDataPool::storeById(int moduleId, string name, double value){
-    map<string, Data*>* currentMap;
-    try{
-        currentMap = moduleDataMap.at(moduleId);
-    }catch(std::out_of_range &e){
-        map<string, Data*>* tempDataMap = new map<string, Data*>();
-        moduleDataMap.insert(std::pair<int, map<string, Data*>*>(moduleId, tempDataMap));
+    QMap<string, Data*>* currentMap;
+    if (moduleDataMap.contains(moduleId)){
+        currentMap = moduleDataMap.value(moduleId);
+    }else{
+        QMap<string, Data*>* tempDataMap = new QMap<string, Data*>();
+        moduleDataMap.insert(moduleId, tempDataMap);
         currentMap = tempDataMap;
     }
     QString temp = QString::number(value);
-//    log(QString::fromStdString("[DataPool]store double value ").append(QString::fromLocal8Bit((char*)temp)));
     this->store(currentMap, name, CAN, DOUBLE, temp);
 }
 
 double ClusterDataPool::getDoubleByIndex(int moduleIndex, string name){
     int i = 1;
     int key = -1;
-    map<int, map<string, Data*>* >::iterator iter;
+    QMap<int, QMap<string, Data*>* >::iterator iter;
     for(iter = moduleDataMap.begin(); iter != moduleDataMap.end(); ++iter)
     {
         if (i == moduleIndex){
-            key = iter->first;
+            key = iter.key();
             break;
         }
         i++;
@@ -35,17 +34,17 @@ double ClusterDataPool::getDoubleByIndex(int moduleIndex, string name){
         return 0;
     }
 
-    try{
-        return moduleDataMap[key]->at(name)->getValue().toDouble();
-    }catch(std::out_of_range &e){// no such data
+    if (moduleDataMap[key]->contains(name)){
+        return moduleDataMap[key]->value(name)->getValue().toDouble();
+    }else{// no such data
         return 0;
     }
 }
 
 double ClusterDataPool::getDoubleById(int moduleId, string name){
-    try{
-        return moduleDataMap.at(moduleId)->at(name)->getValue().toDouble();
-    }catch(std::out_of_range &e){// no such data
+    if (moduleDataMap.contains(moduleId)&&moduleDataMap.value(moduleId)->contains(name)){
+        return moduleDataMap.value(moduleId)->value(name)->getValue().toDouble();
+    }else{// no such data
         return 0;
     }
 }
