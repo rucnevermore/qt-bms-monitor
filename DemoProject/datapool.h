@@ -24,12 +24,12 @@ public:
 
     void addEvent(QString message);
     void addEvent(QDate date, QString message);
+    QVector<AlertEvent*> events;
 private:
     DataPool(){};
     ~DataPool();
     // Cluster id, Module id, datamap
     QMap<int, ClusterDataPool*> clusterDataMap;
-    QVector<AlertEvent*> events;
     static DataPool* instance_;
 };
 

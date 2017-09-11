@@ -1,7 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'widget.ui'
 **
-** Created by: Qt User Interface Compiler version 4.8.5
+** Created: Mon Sep 11 08:47:44 2017
+**      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -21,7 +22,6 @@
 #include <QtGui/QProgressBar>
 #include <QtGui/QPushButton>
 #include <QtGui/QTabWidget>
-#include <QtGui/QTableView>
 #include <QtGui/QTableWidget>
 #include <QtGui/QTextBrowser>
 #include <QtGui/QWidget>
@@ -235,7 +235,7 @@ public:
     QLCDNumber *lcd_zy_33;
     QLCDNumber *lcd_zy_34;
     QWidget *tab_gzxx;
-    QTableView *tableView_2;
+    QTableWidget *tableWidget_2;
     QWidget *tab_xtrz;
     QTextBrowser *text_log;
 
@@ -1561,9 +1561,9 @@ public:
         tabWidget->addTab(tab_cxxxx, QString());
         tab_gzxx = new QWidget();
         tab_gzxx->setObjectName(QString::fromUtf8("tab_gzxx"));
-        tableView_2 = new QTableView(tab_gzxx);
-        tableView_2->setObjectName(QString::fromUtf8("tableView_2"));
-        tableView_2->setGeometry(QRect(30, 30, 961, 471));
+        tableWidget_2 = new QTableWidget(tab_gzxx);
+        tableWidget_2->setObjectName(QString::fromUtf8("tableWidget_2"));
+        tableWidget_2->setGeometry(QRect(10, 10, 1031, 511));
         tabWidget->addTab(tab_gzxx, QString());
         tab_xtrz = new QWidget();
         tab_xtrz->setObjectName(QString::fromUtf8("tab_xtrz"));
@@ -1575,7 +1575,7 @@ public:
 
         retranslateUi(Widget);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(Widget);

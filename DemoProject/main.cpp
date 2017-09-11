@@ -225,6 +225,15 @@ int main(int argc, char *argv[])
     w.ui->tableWidget_wd->horizontalHeader()->setVisible(false);
     w.ui->tableWidget_wd->horizontalHeader()->setStretchLastSection(true);
 
+    w.ui->tableWidget_2->setColumnCount(3);
+    w.ui->tableWidget_2->setRowCount(10);
+    w.ui->tableWidget_2->verticalHeader()->setResizeMode(QHeaderView::Stretch);
+    w.ui->tableWidget_2->verticalHeader()->setStretchLastSection(true);
+    w.ui->tableWidget_2->verticalHeader()->setVisible(false);
+    w.ui->tableWidget_2->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
+    w.ui->tableWidget_2->horizontalHeader()->setVisible(false);
+    w.ui->tableWidget_2->horizontalHeader()->setStretchLastSection(true);
+
     w.show();
     return a.exec();
 }

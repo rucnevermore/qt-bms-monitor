@@ -1,5 +1,6 @@
 #include "widget.h"
 #include <ctime>
+#include "alerteventlistener.h"
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -16,8 +17,12 @@ Widget::Widget(QWidget *parent) :
     dataPool = DataPool::newInstance();
 //    connect(dataPool,SIGNAL(log(QString)),this,SLOT(log(QString)));
 
-    configure = Configure::newInstance();
+    dataPool->registerListener(new AlertEventListener());
+    // for debug purpose.
+    dataPool->store("max_event_number", 100);
+    dataPool->store("cluster_number", 10);
 
+    configure = Configure::newInstance();
     // start the display thread.
     log(QString::fromStdString("start display thread..."));
     displayThread = new DisplayThread();
@@ -33,10 +38,6 @@ Widget::Widget(QWidget *parent) :
     connect(ui->pbutton_right,SIGNAL(clicked()),this,SLOT(increaseCluster()));
 
     configure->setClusterId(1);
-
-    // for debug purpose.
-    dataPool->store("max_event_number", 100);
-    dataPool->store("cluster_number", 10);
 }
 
 
@@ -229,6 +230,13 @@ void Widget::display()
     setAlertText(ui->text_p2_gz_dycgq, dataPool->getDoubleByIndex(current_cluster_id, "dycgq_gz"));
     // 温度传感器故障
     setAlertText(ui->text_p2_gz_wdcgq, dataPool->getDoubleByIndex(current_cluster_id, "wdcgq_gz"));
+
+    // page 4
+    log(QString("event size is :").append(QString::number(dataPool->events.size())));
+    for (int i=0; i < dataPool->events.size(); i++){
+        ui->tableWidget_2->setItem(i,0,new QTableWidgetItem(dataPool->events.at(i)->date.toString()));
+        ui->tableWidget_2->setItem(i,1,new QTableWidgetItem(dataPool->events.at(i)->message));
+    }
 
 }
 void Widget::log(QString str)

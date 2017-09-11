@@ -53,7 +53,7 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab_xtxx">
     <property name="sizePolicy">
@@ -4543,13 +4543,13 @@ p, li { white-space: pre-wrap; }
     <attribute name="title">
      <string>故障信息</string>
     </attribute>
-    <widget class="QTableView" name="tableView_2">
+    <widget class="QTableWidget" name="tableWidget_2">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>30</y>
-       <width>961</width>
-       <height>471</height>
+       <x>10</x>
+       <y>10</y>
+       <width>1031</width>
+       <height>511</height>
       </rect>
      </property>
     </widget>
