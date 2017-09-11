@@ -19,8 +19,8 @@ public:
     double getDouble(string name);
     int getInt(string name);
 
-    void registerListener(EventListener listener);
-    void notifyListener();
+    void registerListener(EventListener* listener);
+    void notifyListener(Data* data);
 protected:
     QMap<string, Data*> dataMap;
     QList<EventListener*> listeners;

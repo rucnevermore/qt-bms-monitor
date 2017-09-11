@@ -11,24 +11,30 @@ void BaseDataPool::store(string name, double value){
     this->store(&dataMap, name, CAN, DOUBLE, temp);
 }
 
-void BaseDataPool::registerListener(EventListener listener){
-
+void BaseDataPool::registerListener(EventListener* listener){
+    if (!listeners.contains(listener)){
+        listeners.append(listener);
+    }
 }
 
-void BaseDataPool::notifyListener(){
-
+void BaseDataPool::notifyListener(Data* data){
+    EventListener* listener;
+    for(int i = 0; i < listeners.length(); i++){
+        listener = listeners.at(i);
+        listener->notify(data);
+    }
 }
 
 void BaseDataPool::store(QMap<string, Data*>* localMap, string name, Channel channel, DataType type, QString value){
     if (localMap->find(name) != localMap->end()){
         Data* dataT = localMap->value(name);
         if (dataT->update(name, channel, type, value)){
-            this->notifyListener();
+            this->notifyListener(dataT);
         }
     }else{
         Data* data = new Data(name, channel, type, value);
         localMap->insert(name, data);
-        this->notifyListener();
+        this->notifyListener(data);
     }
 }
 

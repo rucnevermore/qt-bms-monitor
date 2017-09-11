@@ -23,6 +23,7 @@ class Data
 {
 public:
     Data(string name, Channel channel, DataType type, QString value);
+    string getName();
     QString getValue();
     void replaceby(Data* data);
     bool update(string name, Channel channel, DataType type, QString value);

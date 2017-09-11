@@ -14,7 +14,7 @@ SOURCES += main.cpp \
     basedatapool.cpp \
     clusterdatapool.cpp \
     alertevent.cpp \
-    eventlistener.cpp
+    alerteventlistener.cpp
 HEADERS += widget.h \
     data.h \
     displayThread.h \
@@ -28,7 +28,8 @@ HEADERS += widget.h \
     basedatapool.h \
     clusterdatapool.h \
     alertevent.h \
-    eventlistener.h
+    eventlistener.h \
+    alerteventlistener.h
 FORMS += widget.ui
 INSTALLS += target
 RESOURCES += resources.qrc
