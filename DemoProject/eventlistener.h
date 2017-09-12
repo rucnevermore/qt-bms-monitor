@@ -6,7 +6,7 @@
 class EventListener
 {
 public:
-    virtual void notify(Data* data)=0;
+    virtual void notify(string name, QString value)=0;
 };
 
 #endif // EVENTLISTENER_H

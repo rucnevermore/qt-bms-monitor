@@ -18,15 +18,29 @@ DataPool::~DataPool(){
     events.clear();
 }
 
+void DataPool::registerListener(EventListener* listener){
+    if (!listeners.contains(listener)){
+        listeners.append(listener);
+    }
+}
+
+void DataPool::notifyListener(string name, QString value){
+    EventListener* listener;
+    for(int i = 0; i < listeners.length(); i++){
+        listener = listeners.at(i);
+        listener->notify(name, value);
+    }
+}
+
 void DataPool::addEvent(QString message){
-    addEvent(QDate::currentDate(), message);
+    addEvent(QDateTime::currentDateTime(), message);
 }
 
 // add an event into datapool, if event number exceed maximum number, the oldest event will be remove.
-void DataPool::addEvent(QDate date, QString message){
+void DataPool::addEvent(QDateTime date, QString message){
     Configure* configure = Configure::newInstance();
     int maxEventNum = configure->getMaxEventNum();
-    if (events.size() >= maxEventNum){
+    if (events.size() > 0 && events.size() >= maxEventNum){
         events.remove(0);
     }
     events.append(new AlertEvent(date, message));
@@ -41,7 +55,9 @@ void DataPool::storeById(int clusterId, string name, double value){
         currentClusterDataPool = new ClusterDataPool;
         this->clusterDataMap.insert(clusterId, currentClusterDataPool);
     }
-    currentClusterDataPool->store(name, value);
+    if (currentClusterDataPool->store(name, value)){
+        this->notifyListener(name, QString::number(value));
+    }
 }
 
 void DataPool::storeById(int clusterId, int moduleId, string name, double value){
@@ -52,7 +68,9 @@ void DataPool::storeById(int clusterId, int moduleId, string name, double value)
         currentClusterDataPool = new ClusterDataPool;
         this->clusterDataMap.insert(clusterId, currentClusterDataPool);
     }
-    currentClusterDataPool->storeById(moduleId, name, value);
+    if (currentClusterDataPool->storeById(moduleId, name, value)){
+        this->notifyListener(name, QString::number(value));
+    }
 }
 
 double DataPool::getDoubleByIndex(int clusterIndex, string name){
@@ -69,6 +87,10 @@ double DataPool::getDoubleByIndex(int clusterIndex, string name){
     }
     if(key == -1){
         return 0;
+    }
+    // special treatment for macro.
+    if (name == "_MODULE_NUMBER_"){
+        return clusterDataMap[key]->moduleDataMap.size();
     }
     try{
         return clusterDataMap[key]->getDouble(name);

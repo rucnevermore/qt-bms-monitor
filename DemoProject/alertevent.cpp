@@ -1,6 +1,6 @@
 #include "alertevent.h"
 
-AlertEvent::AlertEvent(QDate date, QString message)
+AlertEvent::AlertEvent(QDateTime date, QString message)
 {
     this->date = date;
     this->message = message;

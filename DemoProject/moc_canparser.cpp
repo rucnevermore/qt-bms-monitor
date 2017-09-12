@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'canparser.h'
 **
-** Created: Mon Sep 11 08:47:57 2017
+** Created: Tue Sep 12 02:26:09 2017
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.2)
 **
 ** WARNING! All changes made in this file will be lost!

@@ -24,6 +24,8 @@ private slots:
     void log(QString str);
     void decreaseCluster();
     void increaseCluster();
+    void lastPage();
+    void nextPage();
 
 protected:
     void changeEvent(QEvent *e);

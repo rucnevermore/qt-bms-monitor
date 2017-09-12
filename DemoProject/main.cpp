@@ -227,12 +227,14 @@ int main(int argc, char *argv[])
 
     w.ui->tableWidget_2->setColumnCount(3);
     w.ui->tableWidget_2->setRowCount(10);
-    w.ui->tableWidget_2->verticalHeader()->setResizeMode(QHeaderView::Stretch);
+    w.ui->tableWidget_2->verticalHeader()->setResizeMode(QHeaderView::Stretch);  
     w.ui->tableWidget_2->verticalHeader()->setStretchLastSection(true);
     w.ui->tableWidget_2->verticalHeader()->setVisible(false);
     w.ui->tableWidget_2->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
+    w.ui->tableWidget_2->horizontalHeader()->setResizeMode(0, QHeaderView::ResizeToContents);// date time
+    w.ui->tableWidget_2->horizontalHeader()->setResizeMode(2, QHeaderView::ResizeToContents);// 查看
     w.ui->tableWidget_2->horizontalHeader()->setVisible(false);
-    w.ui->tableWidget_2->horizontalHeader()->setStretchLastSection(true);
+    w.ui->tableWidget_2->horizontalHeader()->setStretchLastSection(false);
 
     w.show();
     return a.exec();

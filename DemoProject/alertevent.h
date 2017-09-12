@@ -1,13 +1,13 @@
 #ifndef ALERTEVENT_H
 #define ALERTEVENT_H
 
-#include <QDate>
+#include <QDateTime>
 
 class AlertEvent
 {
 public:
-    AlertEvent(QDate date, QString message);
-    QDate date;
+    AlertEvent(QDateTime date, QString message);
+    QDateTime date;
     QString message;
     // TODO: detail
 };

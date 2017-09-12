@@ -23,13 +23,17 @@ public:
     double getDoubleById(int clusterId, int moduleId, string name);
 
     void addEvent(QString message);
-    void addEvent(QDate date, QString message);
+    void addEvent(QDateTime date, QString message);
     QVector<AlertEvent*> events;
+
+    void registerListener(EventListener* listener);
+    void notifyListener(string name, QString value);
+    QList<EventListener*> listeners;
+    // Cluster id, Module id, datamap
+    QMap<int, ClusterDataPool*> clusterDataMap;
 private:
     DataPool(){};
     ~DataPool();
-    // Cluster id, Module id, datamap
-    QMap<int, ClusterDataPool*> clusterDataMap;
     static DataPool* instance_;
 };
 

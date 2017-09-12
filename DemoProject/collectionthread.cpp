@@ -36,13 +36,15 @@ void CollectionThread::run()
     {
 
         if (debug == true){
-            sendDebugPackage(parser, 0x18003001, 0x08, 0x130052C880F21F23);
-            sendDebugPackage(parser, 0x18013001, 0x08, 0x0100640005A505A5);
-            sendDebugPackage(parser, 0x18023001, 0x08, 0x1B1B1B1B1B1B1B1B);
-            sendDebugPackage(parser, 0x18033001, 0x08, 0x1B1B1B1B1B1B1B1B);
-            sendDebugPackage(parser, 0x18043001, 0x08, 0x0200520100640801);
+            sendDebugPackage(parser, BMS_INF+1, 0x08, 0x130052C880F21F23);
+            sendDebugPackage(parser, BMS_INF1+1, 0x08, 0x0100640005A505A5);
+            sendDebugPackage(parser, FAU_ALA+1, 0x08, 0x1B1B1B1B1B1B1B1B);
+            sendDebugPackage(parser, BMS_INF2+1, 0x08, 0x1B1B1B1B1B1B1B1B);
+            sendDebugPackage(parser, NOM_PAR+1, 0x08, 0x0200520100640801);
+            sendDebugPackage(parser, MNOM_PAR+1, 0x08, 0x21FA101F0041011);
+            sendDebugPackage(parser, MNOM_PAR+1, 0x08, 0x21FA101F0041005);
 
-            sendDebugPackage(parser, 0x18043002, 0x08, 0x0200520100750601);
+            sendDebugPackage(parser, NOM_PAR+2, 0x08, 0x0200520100750601);
         }else{
             // collection from Can Bus start.
             ycapi->ReadCan(&frame.can_id,&frame.can_dlc,frame.data);

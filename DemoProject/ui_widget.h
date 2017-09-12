@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'widget.ui'
 **
-** Created: Mon Sep 11 08:47:44 2017
+** Created: Tue Sep 12 02:26:02 2017
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -236,6 +236,9 @@ public:
     QLCDNumber *lcd_zy_34;
     QWidget *tab_gzxx;
     QTableWidget *tableWidget_2;
+    QPushButton *pbutton_up;
+    QPushButton *pbutton_down;
+    QTextBrowser *text_p4_pagenum;
     QWidget *tab_xtrz;
     QTextBrowser *text_log;
 
@@ -1559,11 +1562,29 @@ public:
         lcd_zy_34->setMode(QLCDNumber::Dec);
         lcd_zy_34->setSegmentStyle(QLCDNumber::Flat);
         tabWidget->addTab(tab_cxxxx, QString());
+        frame_3->raise();
+        label_cluster_2->raise();
+        pbutton_left_2->raise();
+        pbutton_right_2->raise();
+        comboBox->raise();
+        frame_4->raise();
+        frame_5->raise();
+        frame_6->raise();
+        frame_11->raise();
         tab_gzxx = new QWidget();
         tab_gzxx->setObjectName(QString::fromUtf8("tab_gzxx"));
         tableWidget_2 = new QTableWidget(tab_gzxx);
         tableWidget_2->setObjectName(QString::fromUtf8("tableWidget_2"));
-        tableWidget_2->setGeometry(QRect(10, 10, 1031, 511));
+        tableWidget_2->setGeometry(QRect(10, 10, 1031, 441));
+        pbutton_up = new QPushButton(tab_gzxx);
+        pbutton_up->setObjectName(QString::fromUtf8("pbutton_up"));
+        pbutton_up->setGeometry(QRect(210, 470, 121, 41));
+        pbutton_down = new QPushButton(tab_gzxx);
+        pbutton_down->setObjectName(QString::fromUtf8("pbutton_down"));
+        pbutton_down->setGeometry(QRect(640, 470, 121, 41));
+        text_p4_pagenum = new QTextBrowser(tab_gzxx);
+        text_p4_pagenum->setObjectName(QString::fromUtf8("text_p4_pagenum"));
+        text_p4_pagenum->setGeometry(QRect(470, 470, 41, 41));
         tabWidget->addTab(tab_gzxx, QString());
         tab_xtrz = new QWidget();
         tab_xtrz->setObjectName(QString::fromUtf8("tab_xtrz"));
@@ -1575,7 +1596,7 @@ public:
 
         retranslateUi(Widget);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(Widget);
@@ -1851,6 +1872,8 @@ public:
         label_7->setText(QApplication::translate("Widget", "\345\215\225\344\275\223\344\270\262\346\225\260", 0, QApplication::UnicodeUTF8));
         label_10->setText(QApplication::translate("Widget", "\346\270\251\345\272\246\344\270\252\346\225\260", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_cxxxx), QApplication::translate("Widget", "\347\260\207\350\257\246\347\273\206\344\277\241\346\201\257", 0, QApplication::UnicodeUTF8));
+        pbutton_up->setText(QApplication::translate("Widget", "\344\270\212\344\270\200\351\241\265", 0, QApplication::UnicodeUTF8));
+        pbutton_down->setText(QApplication::translate("Widget", "\344\270\213\344\270\200\351\241\265", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_gzxx), QApplication::translate("Widget", "\346\225\205\351\232\234\344\277\241\346\201\257", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_xtrz), QApplication::translate("Widget", "\347\263\273\347\273\237\346\227\245\345\277\227", 0, QApplication::UnicodeUTF8));
     } // retranslateUi

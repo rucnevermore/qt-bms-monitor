@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'widget.h'
 **
-** Created: Mon Sep 11 08:47:54 2017
+** Created: Tue Sep 12 02:26:08 2017
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_Widget[] = {
        4,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -35,6 +35,8 @@ static const uint qt_meta_data_Widget[] = {
       22,   18,    7,    7, 0x08,
       35,    7,    7,    7, 0x08,
       53,    7,    7,    7, 0x08,
+      71,    7,    7,    7, 0x08,
+      82,    7,    7,    7, 0x08,
 
        0        // eod
 };
@@ -42,6 +44,7 @@ static const uint qt_meta_data_Widget[] = {
 static const char qt_meta_stringdata_Widget[] = {
     "Widget\0\0display()\0str\0log(QString)\0"
     "decreaseCluster()\0increaseCluster()\0"
+    "lastPage()\0nextPage()\0"
 };
 
 const QMetaObject Widget::staticMetaObject = {
@@ -77,9 +80,11 @@ int Widget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: log((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 2: decreaseCluster(); break;
         case 3: increaseCluster(); break;
+        case 4: lastPage(); break;
+        case 5: nextPage(); break;
         default: ;
         }
-        _id -= 4;
+        _id -= 6;
     }
     return _id;
 }

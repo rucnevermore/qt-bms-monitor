@@ -5,7 +5,7 @@ ClusterDataPool::ClusterDataPool()
 {
 }
 
-void ClusterDataPool::storeById(int moduleId, string name, double value){
+bool ClusterDataPool::storeById(int moduleId, string name, double value){
     QMap<string, Data*>* currentMap;
     if (moduleDataMap.contains(moduleId)){
         currentMap = moduleDataMap.value(moduleId);
@@ -15,7 +15,7 @@ void ClusterDataPool::storeById(int moduleId, string name, double value){
         currentMap = tempDataMap;
     }
     QString temp = QString::number(value);
-    this->store(currentMap, name, CAN, DOUBLE, temp);
+    return this->store(currentMap, name, CAN, DOUBLE, temp);
 }
 
 double ClusterDataPool::getDoubleByIndex(int moduleIndex, string name){
@@ -32,6 +32,10 @@ double ClusterDataPool::getDoubleByIndex(int moduleIndex, string name){
     }
     if(key == -1){
         return 0;
+    }
+    // special treatment for macro.
+    if (name == "_ID_"){
+        return key;
     }
 
     if (moduleDataMap[key]->contains(name)){

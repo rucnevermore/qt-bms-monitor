@@ -53,7 +53,7 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab_xtxx">
     <property name="sizePolicy">
@@ -4538,6 +4538,15 @@ p, li { white-space: pre-wrap; }
       </property>
      </widget>
     </widget>
+    <zorder>frame_3</zorder>
+    <zorder>label_cluster_2</zorder>
+    <zorder>pbutton_left_2</zorder>
+    <zorder>pbutton_right_2</zorder>
+    <zorder>comboBox</zorder>
+    <zorder>frame_4</zorder>
+    <zorder>frame_5</zorder>
+    <zorder>frame_6</zorder>
+    <zorder>frame_11</zorder>
    </widget>
    <widget class="QWidget" name="tab_gzxx">
     <attribute name="title">
@@ -4549,7 +4558,43 @@ p, li { white-space: pre-wrap; }
        <x>10</x>
        <y>10</y>
        <width>1031</width>
-       <height>511</height>
+       <height>441</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pbutton_up">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>470</y>
+       <width>121</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>上一页</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pbutton_down">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>470</y>
+       <width>121</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>下一页</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="text_p4_pagenum">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>470</y>
+       <width>41</width>
+       <height>41</height>
       </rect>
      </property>
     </widget>

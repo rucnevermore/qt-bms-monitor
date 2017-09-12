@@ -8,7 +8,7 @@ class AlertEventListener : public EventListener
 {
 public:
     AlertEventListener();
-    virtual void notify(Data* data);
+    virtual void notify(string name, QString value);
 private:
     DataPool* dataPool;
 };

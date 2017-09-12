@@ -16,17 +16,40 @@ Configure* Configure::newInstance(){
 }
 
 int Configure::getClusterNum(){
-    return dataPool->getInt("cluster_number");
+    return dataPool->clusterDataMap.size();
 }
 
 int Configure::getMaxEventNum(){
     return dataPool->getInt("max_event_number");
 }
 
-void Configure::setClusterId(int clusterId){
-    dataPool->store("current_cluster_id", clusterId);
+// maximum event number in one page
+int Configure::getMaxEventInOnePage(){
+    return dataPool->getInt("max_num_in_one_page");
 }
 
-int Configure::getClusterId(){
-    return dataPool->getInt("current_cluster_id");
+void Configure::setMaxEventInOnePage(int num){
+    dataPool->store("max_num_in_one_page", num);
+}
+
+// event current page number for event
+int Configure::getEventCurrentPageNum(){
+    return dataPool->getInt("current_event_page");
+}
+
+void Configure::setEventCurrentPageNum(int num){
+    dataPool->store("current_event_page", num);
+}
+
+// event total
+int Configure::getEventTotal(){
+    return dataPool->events.size();
+}
+
+void Configure::setClusterIndex(int clusterId){
+    dataPool->store("current_cluster_index", clusterId);
+}
+
+int Configure::getClusterIndex(){
+    return dataPool->getInt("current_cluster_index");
 }
