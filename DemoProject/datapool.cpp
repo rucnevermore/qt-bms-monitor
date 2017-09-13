@@ -73,6 +73,28 @@ void DataPool::storeById(int clusterId, int moduleId, string name, double value)
     }
 }
 
+void DataPool::storeByIndex(int clusterIndex, string name, double value){
+    int i = 1;
+    int key = -1;
+    QMap<int, ClusterDataPool* >::iterator iter;
+    for(iter = clusterDataMap.begin(); iter != clusterDataMap.end(); ++iter)
+    {
+        if (i == clusterIndex){
+            key = iter.key();
+            break;
+        }
+        i++;
+    }
+    if(key == -1){
+        return;
+    }
+    try{
+        clusterDataMap[key]->store(name, value);
+    }catch(std::out_of_range &e){// no such data
+        return;
+    }
+}
+
 double DataPool::getDoubleByIndex(int clusterIndex, string name){
     int i = 1;
     int key = -1;

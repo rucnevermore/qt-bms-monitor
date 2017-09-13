@@ -53,7 +53,7 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab_xtxx">
     <property name="sizePolicy">
@@ -372,7 +372,7 @@ p, li { white-space: pre-wrap; }
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLCDNumber" name="lcd_zddy_2">
+    <widget class="QLCDNumber" name="lcd_zddy">
      <property name="geometry">
       <rect>
        <x>260</x>
@@ -432,14 +432,20 @@ p, li { white-space: pre-wrap; }
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLCDNumber" name="lcd_zddy_1">
+    <widget class="QLCDNumber" name="lcd_zddy_loc_1">
      <property name="geometry">
       <rect>
        <x>180</x>
        <y>270</y>
-       <width>61</width>
+       <width>21</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Andale Mono</family>
+       <pointsize>6</pointsize>
+      </font>
      </property>
      <property name="autoFillBackground">
       <bool>false</bool>
@@ -498,34 +504,6 @@ p, li { white-space: pre-wrap; }
       <string>Loc:</string>
      </property>
     </widget>
-    <widget class="QLCDNumber" name="lcd_zxdy_1">
-     <property name="geometry">
-      <rect>
-       <x>180</x>
-       <y>370</y>
-       <width>61</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <property name="smallDecimalPoint">
-      <bool>false</bool>
-     </property>
-     <property name="segmentStyle">
-      <enum>QLCDNumber::Flat</enum>
-     </property>
-    </widget>
     <widget class="QTextBrowser" name="text_zxdy">
      <property name="geometry">
       <rect>
@@ -558,7 +536,7 @@ p, li { white-space: pre-wrap; }
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLCDNumber" name="lcd_zxdy_2">
+    <widget class="QLCDNumber" name="lcd_zxdy">
      <property name="geometry">
       <rect>
        <x>260</x>
@@ -605,34 +583,6 @@ p, li { white-space: pre-wrap; }
       <string>Loc:</string>
      </property>
     </widget>
-    <widget class="QLCDNumber" name="lcd_zgwd_1">
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>270</y>
-       <width>61</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <property name="smallDecimalPoint">
-      <bool>false</bool>
-     </property>
-     <property name="segmentStyle">
-      <enum>QLCDNumber::Flat</enum>
-     </property>
-    </widget>
     <widget class="QTextBrowser" name="text_zdwd">
      <property name="geometry">
       <rect>
@@ -665,7 +615,7 @@ p, li { white-space: pre-wrap; }
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLCDNumber" name="lcd_zdwd_2">
+    <widget class="QLCDNumber" name="lcd_zdwd">
      <property name="geometry">
       <rect>
        <x>560</x>
@@ -725,7 +675,7 @@ p, li { white-space: pre-wrap; }
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLCDNumber" name="lcd_zgwd_2">
+    <widget class="QLCDNumber" name="lcd_zgwd">
      <property name="geometry">
       <rect>
        <x>560</x>
@@ -770,34 +720,6 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="text">
       <string>Loc:</string>
-     </property>
-    </widget>
-    <widget class="QLCDNumber" name="lcd_zdwd_1">
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>370</y>
-       <width>61</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <property name="smallDecimalPoint">
-      <bool>false</bool>
-     </property>
-     <property name="segmentStyle">
-      <enum>QLCDNumber::Flat</enum>
      </property>
     </widget>
     <widget class="QTextBrowser" name="text_xtzt">
@@ -1331,6 +1253,380 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;镇江科信动力系统设计研究有限公司&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcd_zddy_loc_2">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>270</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Andale Mono</family>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="smallDecimalPoint">
+      <bool>false</bool>
+     </property>
+     <property name="segmentStyle">
+      <enum>QLCDNumber::Flat</enum>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcd_zddy_loc_3">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>270</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Andale Mono</family>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="smallDecimalPoint">
+      <bool>false</bool>
+     </property>
+     <property name="segmentStyle">
+      <enum>QLCDNumber::Flat</enum>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcd_zxdy_loc_3">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>370</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Andale Mono</family>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="smallDecimalPoint">
+      <bool>false</bool>
+     </property>
+     <property name="segmentStyle">
+      <enum>QLCDNumber::Flat</enum>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcd_zxdy_loc_1">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>370</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Andale Mono</family>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="smallDecimalPoint">
+      <bool>false</bool>
+     </property>
+     <property name="segmentStyle">
+      <enum>QLCDNumber::Flat</enum>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcd_zxdy_loc_2">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>370</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Andale Mono</family>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="smallDecimalPoint">
+      <bool>false</bool>
+     </property>
+     <property name="segmentStyle">
+      <enum>QLCDNumber::Flat</enum>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcd_zgwd_loc_3">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>270</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Andale Mono</family>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="smallDecimalPoint">
+      <bool>false</bool>
+     </property>
+     <property name="segmentStyle">
+      <enum>QLCDNumber::Flat</enum>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcd_zgwd_loc_1">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>270</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Andale Mono</family>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="smallDecimalPoint">
+      <bool>false</bool>
+     </property>
+     <property name="segmentStyle">
+      <enum>QLCDNumber::Flat</enum>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcd_zgwd_loc_2">
+     <property name="geometry">
+      <rect>
+       <x>505</x>
+       <y>270</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Andale Mono</family>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="smallDecimalPoint">
+      <bool>false</bool>
+     </property>
+     <property name="segmentStyle">
+      <enum>QLCDNumber::Flat</enum>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcd_zdwd_loc_2">
+     <property name="geometry">
+      <rect>
+       <x>505</x>
+       <y>370</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Andale Mono</family>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="smallDecimalPoint">
+      <bool>false</bool>
+     </property>
+     <property name="segmentStyle">
+      <enum>QLCDNumber::Flat</enum>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcd_zdwd_loc_1">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>370</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Andale Mono</family>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="smallDecimalPoint">
+      <bool>false</bool>
+     </property>
+     <property name="segmentStyle">
+      <enum>QLCDNumber::Flat</enum>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcd_zdwd_loc_3">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>370</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Andale Mono</family>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="smallDecimalPoint">
+      <bool>false</bool>
+     </property>
+     <property name="segmentStyle">
+      <enum>QLCDNumber::Flat</enum>
      </property>
     </widget>
    </widget>
@@ -2049,7 +2345,7 @@ p, li { white-space: pre-wrap; }
         <enum>QLCDNumber::Flat</enum>
        </property>
       </widget>
-      <widget class="QLCDNumber" name="lcd_p2_zgdy_ch">
+      <widget class="QLCDNumber" name="lcd_p2_zgdy_loc_2">
        <property name="geometry">
         <rect>
          <x>40</x>
@@ -2065,7 +2361,7 @@ p, li { white-space: pre-wrap; }
         <enum>QLCDNumber::Flat</enum>
        </property>
       </widget>
-      <widget class="QLCDNumber" name="lcd_p2_zgdy_xh">
+      <widget class="QLCDNumber" name="lcd_p2_zgdy_loc_1">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -2131,7 +2427,7 @@ p, li { white-space: pre-wrap; }
         <enum>QLCDNumber::Flat</enum>
        </property>
       </widget>
-      <widget class="QLCDNumber" name="lcd_p2_zddy_ch">
+      <widget class="QLCDNumber" name="lcd_p2_zddy_loc_2">
        <property name="geometry">
         <rect>
          <x>40</x>
@@ -2147,7 +2443,7 @@ p, li { white-space: pre-wrap; }
         <enum>QLCDNumber::Flat</enum>
        </property>
       </widget>
-      <widget class="QLCDNumber" name="lcd_p2_zddy_xh">
+      <widget class="QLCDNumber" name="lcd_p2_zddy_loc_1">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -2213,7 +2509,7 @@ p, li { white-space: pre-wrap; }
         <enum>QLCDNumber::Flat</enum>
        </property>
       </widget>
-      <widget class="QLCDNumber" name="lcd_p2_zgwd_ch">
+      <widget class="QLCDNumber" name="lcd_p2_zgwd_loc_2">
        <property name="geometry">
         <rect>
          <x>40</x>
@@ -2229,7 +2525,7 @@ p, li { white-space: pre-wrap; }
         <enum>QLCDNumber::Flat</enum>
        </property>
       </widget>
-      <widget class="QLCDNumber" name="lcd_p2_zgwd_xh">
+      <widget class="QLCDNumber" name="lcd_p2_zgwd_loc_1">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -2295,7 +2591,7 @@ p, li { white-space: pre-wrap; }
         <enum>QLCDNumber::Flat</enum>
        </property>
       </widget>
-      <widget class="QLCDNumber" name="lcd_p2_zdwd_ch">
+      <widget class="QLCDNumber" name="lcd_p2_zdwd_loc_2">
        <property name="geometry">
         <rect>
          <x>40</x>
@@ -2311,7 +2607,7 @@ p, li { white-space: pre-wrap; }
         <enum>QLCDNumber::Flat</enum>
        </property>
       </widget>
-      <widget class="QLCDNumber" name="lcd_p2_zdwd_xh">
+      <widget class="QLCDNumber" name="lcd_p2_zdwd_loc_1">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -2400,9 +2696,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>114</x>
-        <y>33</y>
+        <y>22</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="autoFillBackground">
@@ -2423,9 +2719,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>114</x>
-        <y>99</y>
+        <y>88</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2443,9 +2739,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>114</x>
-        <y>165</y>
+        <y>154</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2463,9 +2759,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>114</x>
-        <y>231</y>
+        <y>220</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2483,9 +2779,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>114</x>
-        <y>297</y>
+        <y>286</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2503,9 +2799,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>99</y>
+        <y>88</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2523,9 +2819,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>165</y>
+        <y>154</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2543,9 +2839,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>231</y>
+        <y>220</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2563,9 +2859,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>297</y>
+        <y>286</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2583,9 +2879,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>33</y>
+        <y>22</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2603,9 +2899,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>406</x>
-        <y>99</y>
+        <y>88</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2623,9 +2919,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>406</x>
-        <y>297</y>
+        <y>286</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2643,9 +2939,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>406</x>
-        <y>165</y>
+        <y>154</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2663,9 +2959,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>406</x>
-        <y>33</y>
+        <y>22</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2683,9 +2979,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>406</x>
-        <y>231</y>
+        <y>220</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2703,9 +2999,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>297</y>
+        <y>286</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2723,9 +3019,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>33</y>
+        <y>22</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2743,9 +3039,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>165</y>
+        <y>154</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2763,9 +3059,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>231</y>
+        <y>220</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2783,9 +3079,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>99</y>
+        <y>88</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2803,9 +3099,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>696</x>
-        <y>297</y>
+        <y>286</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2823,9 +3119,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>696</x>
-        <y>33</y>
+        <y>22</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2843,9 +3139,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>696</x>
-        <y>165</y>
+        <y>154</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2863,9 +3159,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>696</x>
-        <y>231</y>
+        <y>220</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2883,9 +3179,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>696</x>
-        <y>99</y>
+        <y>88</y>
         <width>35</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2994,7 +3290,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_22">
+     <widget class="QLCDNumber" name="lcd_p3_dy_22">
       <property name="geometry">
        <rect>
         <x>259</x>
@@ -3025,7 +3321,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_3">
+     <widget class="QLCDNumber" name="lcd_p3_dy_3">
       <property name="geometry">
        <rect>
         <x>414</x>
@@ -3056,7 +3352,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_8">
+     <widget class="QLCDNumber" name="lcd_p3_dy_8">
       <property name="geometry">
        <rect>
         <x>549</x>
@@ -3087,7 +3383,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_10">
+     <widget class="QLCDNumber" name="lcd_p3_dy_10">
       <property name="geometry">
        <rect>
         <x>259</x>
@@ -3118,7 +3414,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_6">
+     <widget class="QLCDNumber" name="lcd_p3_dy_6">
       <property name="geometry">
        <rect>
         <x>259</x>
@@ -3149,7 +3445,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_5">
+     <widget class="QLCDNumber" name="lcd_p3_dy_5">
       <property name="geometry">
        <rect>
         <x>104</x>
@@ -3180,7 +3476,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_19">
+     <widget class="QLCDNumber" name="lcd_p3_dy_19">
       <property name="geometry">
        <rect>
         <x>414</x>
@@ -3211,7 +3507,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_14">
+     <widget class="QLCDNumber" name="lcd_p3_dy_14">
       <property name="geometry">
        <rect>
         <x>259</x>
@@ -3242,7 +3538,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_12">
+     <widget class="QLCDNumber" name="lcd_p3_dy_12">
       <property name="geometry">
        <rect>
         <x>549</x>
@@ -3273,7 +3569,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_9">
+     <widget class="QLCDNumber" name="lcd_p3_dy_9">
       <property name="geometry">
        <rect>
         <x>104</x>
@@ -3304,7 +3600,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_11">
+     <widget class="QLCDNumber" name="lcd_p3_dy_11">
       <property name="geometry">
        <rect>
         <x>414</x>
@@ -3335,7 +3631,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_23">
+     <widget class="QLCDNumber" name="lcd_p3_dy_23">
       <property name="geometry">
        <rect>
         <x>414</x>
@@ -3366,7 +3662,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_18">
+     <widget class="QLCDNumber" name="lcd_p3_dy_18">
       <property name="geometry">
        <rect>
         <x>259</x>
@@ -3397,7 +3693,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_1">
+     <widget class="QLCDNumber" name="lcd_p3_dy_1">
       <property name="geometry">
        <rect>
         <x>104</x>
@@ -3428,7 +3724,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_17">
+     <widget class="QLCDNumber" name="lcd_p3_dy_17">
       <property name="geometry">
        <rect>
         <x>104</x>
@@ -3459,7 +3755,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_20">
+     <widget class="QLCDNumber" name="lcd_p3_dy_20">
       <property name="geometry">
        <rect>
         <x>549</x>
@@ -3490,7 +3786,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_21">
+     <widget class="QLCDNumber" name="lcd_p3_dy_21">
       <property name="geometry">
        <rect>
         <x>104</x>
@@ -3521,7 +3817,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_7">
+     <widget class="QLCDNumber" name="lcd_p3_dy_7">
       <property name="geometry">
        <rect>
         <x>414</x>
@@ -3552,7 +3848,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_16">
+     <widget class="QLCDNumber" name="lcd_p3_dy_16">
       <property name="geometry">
        <rect>
         <x>550</x>
@@ -3583,7 +3879,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_4">
+     <widget class="QLCDNumber" name="lcd_p3_dy_4">
       <property name="geometry">
        <rect>
         <x>549</x>
@@ -3614,7 +3910,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_15">
+     <widget class="QLCDNumber" name="lcd_p3_dy_15">
       <property name="geometry">
        <rect>
         <x>414</x>
@@ -3645,7 +3941,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_2">
+     <widget class="QLCDNumber" name="lcd_p3_dy_2">
       <property name="geometry">
        <rect>
         <x>259</x>
@@ -3676,7 +3972,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_24">
+     <widget class="QLCDNumber" name="lcd_p3_dy_24">
       <property name="geometry">
        <rect>
         <x>549</x>
@@ -3707,7 +4003,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_13">
+     <widget class="QLCDNumber" name="lcd_p3_dy_13">
       <property name="geometry">
        <rect>
         <x>104</x>
@@ -3816,7 +4112,7 @@ p, li { white-space: pre-wrap; }
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QLCDNumber" name="lcdNumber_8">
+     <widget class="QLCDNumber" name="lcd_p3_zgwd">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -3884,7 +4180,7 @@ p, li { white-space: pre-wrap; }
        <string>最小电压</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_13">
+     <widget class="QLCDNumber" name="lcd_p3_zgwd_loc_2">
       <property name="geometry">
        <rect>
         <x>55</x>
@@ -3900,7 +4196,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_14">
+     <widget class="QLCDNumber" name="lcd_p3_zgwd_loc_1">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -3932,7 +4228,7 @@ p, li { white-space: pre-wrap; }
        <enum>QFrame::Raised</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_9">
+     <widget class="QLCDNumber" name="lcd_p3_zdwd">
       <property name="geometry">
        <rect>
         <x>235</x>
@@ -3948,7 +4244,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_15">
+     <widget class="QLCDNumber" name="lcd_p3_zdwd_loc_1">
       <property name="geometry">
        <rect>
         <x>185</x>
@@ -3980,7 +4276,7 @@ p, li { white-space: pre-wrap; }
        <enum>QFrame::Raised</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_16">
+     <widget class="QLCDNumber" name="lcd_p3_zdwd_loc_2">
       <property name="geometry">
        <rect>
         <x>210</x>
@@ -3996,7 +4292,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_11">
+     <widget class="QLCDNumber" name="lcd_p3_zddy">
       <property name="geometry">
        <rect>
         <x>390</x>
@@ -4012,7 +4308,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_17">
+     <widget class="QLCDNumber" name="lcd_p3_zddy_loc_1">
       <property name="geometry">
        <rect>
         <x>340</x>
@@ -4044,7 +4340,7 @@ p, li { white-space: pre-wrap; }
        <enum>QFrame::Raised</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_18">
+     <widget class="QLCDNumber" name="lcd_p3_zddy_loc_2">
       <property name="geometry">
        <rect>
         <x>365</x>
@@ -4060,7 +4356,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_12">
+     <widget class="QLCDNumber" name="lcd_p3_zxdy">
       <property name="geometry">
        <rect>
         <x>545</x>
@@ -4076,7 +4372,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_19">
+     <widget class="QLCDNumber" name="lcd_p3_zxdy_loc_1">
       <property name="geometry">
        <rect>
         <x>495</x>
@@ -4108,7 +4404,7 @@ p, li { white-space: pre-wrap; }
        <enum>QFrame::Raised</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_20">
+     <widget class="QLCDNumber" name="lcd_p3_zxdy_loc_2">
       <property name="geometry">
        <rect>
         <x>520</x>
@@ -4124,26 +4420,26 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
+     <zorder>frame_8</zorder>
+     <zorder>frame_7</zorder>
      <zorder>frame_9</zorder>
      <zorder>frame_10</zorder>
-     <zorder>lcdNumber_8</zorder>
+     <zorder>lcd_p3_zgwd</zorder>
      <zorder>label_8</zorder>
      <zorder>label_9</zorder>
      <zorder>label_11</zorder>
      <zorder>label_12</zorder>
-     <zorder>lcdNumber_13</zorder>
-     <zorder>lcdNumber_14</zorder>
-     <zorder>frame_7</zorder>
-     <zorder>lcdNumber_9</zorder>
-     <zorder>lcdNumber_15</zorder>
-     <zorder>frame_8</zorder>
-     <zorder>lcdNumber_16</zorder>
-     <zorder>lcdNumber_11</zorder>
-     <zorder>lcdNumber_17</zorder>
-     <zorder>lcdNumber_18</zorder>
-     <zorder>lcdNumber_12</zorder>
-     <zorder>lcdNumber_19</zorder>
-     <zorder>lcdNumber_20</zorder>
+     <zorder>lcd_p3_zgwd_loc_2</zorder>
+     <zorder>lcd_p3_zgwd_loc_1</zorder>
+     <zorder>lcd_p3_zdwd</zorder>
+     <zorder>lcd_p3_zdwd_loc_1</zorder>
+     <zorder>lcd_p3_zdwd_loc_2</zorder>
+     <zorder>lcd_p3_zddy</zorder>
+     <zorder>lcd_p3_zddy_loc_1</zorder>
+     <zorder>lcd_p3_zddy_loc_2</zorder>
+     <zorder>lcd_p3_zxdy</zorder>
+     <zorder>lcd_p3_zxdy_loc_1</zorder>
+     <zorder>lcd_p3_zxdy_loc_2</zorder>
     </widget>
     <widget class="QFrame" name="frame_3">
      <property name="geometry">
@@ -4189,7 +4485,7 @@ p, li { white-space: pre-wrap; }
        <string>模块总压</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_6">
+     <widget class="QLCDNumber" name="lcd_p3_mkzy">
       <property name="geometry">
        <rect>
         <x>70</x>
@@ -4218,7 +4514,7 @@ p, li { white-space: pre-wrap; }
        <string>单体串数</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_7">
+     <widget class="QLCDNumber" name="lcd_p3_dtcs">
       <property name="geometry">
        <rect>
         <x>70</x>
@@ -4247,7 +4543,7 @@ p, li { white-space: pre-wrap; }
        <string>温度个数</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_10">
+     <widget class="QLCDNumber" name="lcd_p3_wdgs">
       <property name="geometry">
        <rect>
         <x>70</x>
@@ -4289,7 +4585,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_27">
+     <widget class="QLCDNumber" name="lcd_p3_wd_1">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -4320,7 +4616,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_28">
+     <widget class="QLCDNumber" name="lcd_p3_wd_2">
       <property name="geometry">
        <rect>
         <x>230</x>
@@ -4351,7 +4647,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_29">
+     <widget class="QLCDNumber" name="lcd_p3_wd_4">
       <property name="geometry">
        <rect>
         <x>230</x>
@@ -4382,7 +4678,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_30">
+     <widget class="QLCDNumber" name="lcd_p3_wd_3">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -4413,7 +4709,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_31">
+     <widget class="QLCDNumber" name="lcd_p3_wd_5">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -4444,7 +4740,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_32">
+     <widget class="QLCDNumber" name="lcd_p3_wd_6">
       <property name="geometry">
        <rect>
         <x>230</x>
@@ -4475,7 +4771,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_33">
+     <widget class="QLCDNumber" name="lcd_p3_wd_7">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -4506,7 +4802,7 @@ p, li { white-space: pre-wrap; }
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcd_zy_34">
+     <widget class="QLCDNumber" name="lcd_p3_wd_8">
       <property name="geometry">
        <rect>
         <x>230</x>

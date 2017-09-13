@@ -16,6 +16,8 @@ public:
     int getEventCurrentPageNum();
     void setEventCurrentPageNum(int num);
     int getEventTotal();
+    int getCurrentModuleSelected(int clusterIndex);
+    void setCurrentModuleSelected(int clusterIndex, int moduleIndex);
 private:
     Configure(){};
     ~Configure();

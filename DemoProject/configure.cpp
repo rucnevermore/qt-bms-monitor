@@ -23,6 +23,15 @@ int Configure::getMaxEventNum(){
     return dataPool->getInt("max_event_number");
 }
 
+// current selected module index
+int Configure::getCurrentModuleSelected(int clusterIndex){
+    return dataPool->getDoubleByIndex(clusterIndex, "current_module_selected");
+}
+
+void Configure::setCurrentModuleSelected(int clusterIndex, int moduleIndex){
+    dataPool->storeByIndex(clusterIndex, "current_module_selected", moduleIndex);
+}
+
 // maximum event number in one page
 int Configure::getMaxEventInOnePage(){
     return dataPool->getInt("max_num_in_one_page");

@@ -26,6 +26,7 @@ private slots:
     void increaseCluster();
     void lastPage();
     void nextPage();
+    void onIndexChanged(const QString &);
 
 protected:
     void changeEvent(QEvent *e);

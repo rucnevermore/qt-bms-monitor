@@ -10,6 +10,22 @@ void CanParser::parse(can_frame frame){
     //use mask to remove the cluster information.
     int id = frame.can_id& CAN_ID_MASK;
     switch (id){
+        case BAMS_INF1:
+            log(QString("receive can package BAMS_INF1"));
+            processBAMS_INF1(frame);
+            break;
+        case BAMS_INF2:
+            log(QString("receive can package BAMS_INF2"));
+            processBAMS_INF2(frame);
+            break;
+        case BAMS_INF3:
+            log(QString("receive can package BAMS_INF3"));
+            processBAMS_INF3(frame);
+            break;
+        case BAMS_INF4:
+            log(QString("receive can package BAMS_INF4"));
+            processBAMS_INF4(frame);
+            break;
         case BMS_INF:
             log(QString("receive can package BMS_INF"));
             processBMS_INF(frame);
@@ -110,6 +126,66 @@ double CanParser::visit8BytesArray(int clusterId, char* source, long long mask, 
     double res = maskAndGetValue(source, mask, mask_offset, resol, offset);
     dataPool->storeById(clusterId, name, res);
     return res;
+}
+
+void CanParser::processBAMS_INF1(can_frame frame){
+    // byte 2-1, 系统电压, 0.02, 0, V
+    visit8BytesArray((char*)frame.data,0x000000000000FFFF, 0, "g_xtdy", 0.02, 0);
+    // byte 4-3, 系统电流, 0.1, -400, A
+    visit8BytesArray((char*)frame.data,0x00000000FFFF0000, 16, "g_xtdl", 0.1, -400);
+    // byte 5, 系统SOC, 0.4, 0, %
+    visit8BytesArray((char*)frame.data,0x000000FF00000000, 32, "g_xtsoc", 0.4, 0);
+    // byte 6, 系统状态, 1, 0,
+    visit8BytesArray((char*)frame.data,0x0000FF0000000000, 40, "g_xtzt", 1, 0);
+}
+
+void CanParser::processBAMS_INF2(can_frame frame){
+    // byte 2-1, 最高电压, 0.02, 0, V
+    visit8BytesArray((char*)frame.data,0x000000000000FFFF, 0, "g_zgdy", 0.02, 0);
+    // byte 4-3, 最低电压, 0.02, 0, V
+    visit8BytesArray((char*)frame.data,0x00000000FFFF0000, 16, "g_zddy", 0.02, 0);
+    // byte 6-5, 最高温度, 1, -40,
+    visit8BytesArray((char*)frame.data,0x0000FFFF00000000, 32, "g_zgwd", 1, -40);
+    // byte 8-7, 最低温度, 1, -40,
+    visit8BytesArray((char*)frame.data,0xFFFF000000000000, 48, "g_zdwd", 1, -40);
+}
+
+void CanParser::processBAMS_INF3(can_frame frame){
+    // byte 1, 最高电压所在组号, 1, 0,
+    visit8BytesArray((char*)frame.data,0x000000000000FFFF, 0, "g_zgdy_zh", 1, 0);
+    // byte 2, 最高电压所在模块号, 1, 0,
+    visit8BytesArray((char*)frame.data,0x00000000FFFF0000, 8, "g_zgdy_mkh", 1, 0);
+    // byte 3, 最高电压所在位置, 1, 0,
+    visit8BytesArray((char*)frame.data,0x000000FF00000000, 16, "g_zgdy_wz", 1, 0);
+    // byte 4, 最低电压所在组号, 1, 0,
+    visit8BytesArray((char*)frame.data,0x0000FF0000000000, 24, "g_zddy_zh", 1, 0);
+    // byte 5, 最低电压所在模块号, 1, 0,
+    visit8BytesArray((char*)frame.data,0x000000000000FFFF, 32, "g_zddy_mkh", 1, 0);
+    // byte 6, 最低电压所在位置, 1, 0,
+    visit8BytesArray((char*)frame.data,0x00000000FFFF0000, 40, "g_zddy_wz", 1, 0);
+    // byte 7, 最高SOC, 1, 0,
+    visit8BytesArray((char*)frame.data,0x000000FF00000000, 48, "g_zgsoc", 1, 0);
+    // byte 8, 最高SOC所在箱号, 1, 0,
+    visit8BytesArray((char*)frame.data,0x0000FF0000000000, 56, "g_zgsoc_xh", 1, 0);
+}
+
+void CanParser::processBAMS_INF4(can_frame frame){
+    // byte 1, 最高温度所在组号, 1, 0,
+    visit8BytesArray((char*)frame.data,0x000000000000FFFF, 0, "g_zgwd_zh", 1, 0);
+    // byte 2, 最高温度所在模块号, 1, 0,
+    visit8BytesArray((char*)frame.data,0x00000000FFFF0000, 8, "g_zgwd_mkh", 1, 0);
+    // byte 3, 最高温度所在位置, 1, 0,
+    visit8BytesArray((char*)frame.data,0x000000FF00000000, 16, "g_zgwd_wz", 1, 0);
+    // byte 4, 最低温度所在组号, 1, 0,
+    visit8BytesArray((char*)frame.data,0x0000FF0000000000, 24, "g_zdwd_zh", 1, 0);
+    // byte 5, 最低温度所在模块号, 1, 0,
+    visit8BytesArray((char*)frame.data,0x000000000000FFFF, 32, "g_zdwd_mkh", 1, 0);
+    // byte 6, 最低温度所在位置, 1, 0,
+    visit8BytesArray((char*)frame.data,0x00000000FFFF0000, 40, "g_zdwd_wz", 1, 0);
+    // byte 7, 最低SOC, 1, 0,
+    visit8BytesArray((char*)frame.data,0x000000FF00000000, 48, "g_zdsoc", 1, 0);
+    // byte 8, 最低SOC所在箱号, 1, 0,
+    visit8BytesArray((char*)frame.data,0x0000FF0000000000, 56, "g_zdsoc_xh", 1, 0);
 }
 
 void CanParser::processBMS_INF(can_frame frame){
