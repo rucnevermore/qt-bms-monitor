@@ -36,12 +36,35 @@ void CollectionThread::run()
     {
 
         if (debug == true){
+
+            sendDebugPackage(parser, BAMS_INF1, 0x08, 0x130052C880F21F23);
+            sendDebugPackage(parser, BAMS_INF2, 0x08, 0x130052C880F21F23);
+            sendDebugPackage(parser, BAMS_INF3, 0x08, 0x130052C880F21F23);
+            sendDebugPackage(parser, BAMS_INF4, 0x08, 0x130052C880F21F23);
+
             sendDebugPackage(parser, BMS_INF+1, 0x08, 0x130052C880F21F23);
             sendDebugPackage(parser, BMS_INF1+1, 0x08, 0x0100640005A505A5);
             sendDebugPackage(parser, FAU_ALA+1, 0x08, 0x1B1B1B1B1B1B1B1B);
             sendDebugPackage(parser, BMS_INF2+1, 0x08, 0x1B1B1B1B1B1B1B1B);
             sendDebugPackage(parser, NOM_PAR+1, 0x08, 0x0200520100640801);
+            // module1
             sendDebugPackage(parser, MNOM_PAR+1, 0x08, 0x21FA101F0041011);
+            sendDebugPackage(parser, MVT_PAR1+1, 0x08, 0x21FA101F0041011);
+            sendDebugPackage(parser, MVT_PAR2+1, 0x08, 0x21FA101F0041011);
+            sendDebugPackage(parser, CELL_V1+1, 0x08, 0x21FA101F0041011);
+            sendDebugPackage(parser, CELL_V2+1, 0x08, 0x21FA101F0041011);
+            sendDebugPackage(parser, CELL_V3+1, 0x08, 0x21FA101F0041011);
+            sendDebugPackage(parser, CELL_V4+1, 0x08, 0x21FA101F0041011);
+            sendDebugPackage(parser, CELL_V5+1, 0x08, 0x21FA101F0041011);
+            sendDebugPackage(parser, CELL_V6+1, 0x08, 0x21FA101F0041011);
+            sendDebugPackage(parser, CELL_T1+1, 0x08, 0x21FA101F0041011);
+            sendDebugPackage(parser, CELL_T2+1, 0x08, 0x21FA101F0041011);
+            sendDebugPackage(parser, PCBA_6803_1+1, 0x08, 0x21FA101F0041011);
+            sendDebugPackage(parser, PCBA_6803_2+1, 0x08, 0x21FA101F0041011);
+            sendDebugPackage(parser, PCBA_6803_3+1, 0x08, 0x21FA101F0041011);
+            sendDebugPackage(parser, PCBA_6803_4+1, 0x08, 0x21FA101F0041011);
+
+            //module2
             sendDebugPackage(parser, MNOM_PAR+1, 0x08, 0x21FA101F0041005);
 
             sendDebugPackage(parser, NOM_PAR+2, 0x08, 0x0200520100750601);
