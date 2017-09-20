@@ -1,10 +1,10 @@
 #ifndef COLLECTIONTHREAD_H
 #define COLLECTIONTHREAD_H
 #include <QThread>
-#include "ycapi.h"
-#include <sys/ioctl.h>
-#include <net/if.h>
-#include <linux/can.h>
+//#include "ycapi.h"
+//#include <sys/ioctl.h>
+//#include <net/if.h>
+//#include <linux/can.h>
 #include "canparser.h"
 
 #ifndef PF_CAN
@@ -30,7 +30,7 @@ public slots:
 private:
     bool running;
     std::string getstring(int n);
-    Ycapi *ycapi;
+//    Ycapi *ycapi;
     void sendDebugPackage(CanParser* parser, unsigned int id, unsigned char length, long long data);
 };
 

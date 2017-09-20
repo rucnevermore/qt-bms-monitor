@@ -18,6 +18,7 @@ public:
     Widget(QWidget *parent = 0);
     ~Widget();
     Ui::Widget *ui;
+    void setAlertItems(QMap<string, QTableWidgetItem*> alertItemMap);
 
 private slots:
     void display();
@@ -36,6 +37,8 @@ private:
     Configure* configure;
     DisplayThread *displayThread;
     CollectionThread *collectionThread;
+    QMap<string, QTableWidgetItem*> alertItemMap;
+
     void setAlertText(QTextBrowser* textBrowser, double value);
 };
 

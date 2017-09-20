@@ -8,8 +8,8 @@ CollectionThread::CollectionThread(QObject *parent) :
         QThread(parent)
 {
     running = true;
-    ycapi = new Ycapi();
-    ycapi->OpenCan(250000);
+//    ycapi = new Ycapi();
+//    ycapi->OpenCan(250000);
 }
 
 void CollectionThread::sendDebugPackage(CanParser* parser, unsigned int id, unsigned char length, long long data){
@@ -70,7 +70,7 @@ void CollectionThread::run()
             sendDebugPackage(parser, NOM_PAR+2, 0x08, 0x0200520100750601);
         }else{
             // collection from Can Bus start.
-            ycapi->ReadCan(&frame.can_id,&frame.can_dlc,frame.data);
+//            ycapi->ReadCan(&frame.can_id,&frame.can_dlc,frame.data);
             parser->parse(frame);
             // collection from Can Bus finish.
         }

@@ -1,7 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'widget.ui'
 **
-** Created by: Qt User Interface Compiler version 4.8.5
+** Created: Wed Sep 20 09:17:12 2017
+**      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -60,24 +61,6 @@ public:
     QTextBrowser *text_pjdy;
     QLCDNumber *lcd_pjdy_2;
     QTextBrowser *text_value_xtzt;
-    QTextBrowser *text_c1;
-    QLCDNumber *lcd_c1;
-    QTextBrowser *text_c2;
-    QLCDNumber *lcd_c2;
-    QTextBrowser *text_c3;
-    QLCDNumber *lcd_c3;
-    QTextBrowser *text_c4;
-    QLCDNumber *lcd_c4;
-    QTextBrowser *text_c5;
-    QLCDNumber *lcd_c5;
-    QTextBrowser *text_c6;
-    QLCDNumber *lcd_c6;
-    QTextBrowser *text_c7;
-    QLCDNumber *lcd_c7;
-    QLCDNumber *lcd_c8;
-    QTextBrowser *text_c8;
-    QLCDNumber *lcd_c9;
-    QTextBrowser *text_c9;
     QTextBrowser *textBrowser_header;
     QLCDNumber *lcd_zddy_loc_2;
     QLCDNumber *lcd_zddy_loc_3;
@@ -170,10 +153,6 @@ public:
     QTextBrowser *text_p2_gz_fs;
     QTextBrowser *text_p2_bj_cdgl;
     QWidget *tab_cxxxx;
-    QLabel *label_cluster_2;
-    QPushButton *pbutton_left_2;
-    QPushButton *pbutton_right_2;
-    QComboBox *comboBox;
     QFrame *frame_4;
     QTableWidget *tableWidget_dy;
     QLCDNumber *lcd_p3_dy_22;
@@ -203,27 +182,31 @@ public:
     QLCDNumber *lcd_zy_25;
     QLCDNumber *lcd_zy_26;
     QFrame *frame_5;
-    QLCDNumber *lcd_p3_zgwd;
-    QLabel *label_8;
-    QLabel *label_9;
-    QLabel *label_11;
-    QLabel *label_12;
-    QLCDNumber *lcd_p3_zgwd_loc_2;
-    QLCDNumber *lcd_p3_zgwd_loc_1;
     QFrame *frame_7;
-    QLCDNumber *lcd_p3_zdwd;
-    QLCDNumber *lcd_p3_zdwd_loc_1;
+    QLabel *label_8;
+    QLCDNumber *lcd_p3_zgwd_loc_1;
+    QLCDNumber *lcd_p3_zgwd_loc_2;
+    QLCDNumber *lcd_p3_zgwd;
     QFrame *frame_8;
     QLCDNumber *lcd_p3_zdwd_loc_2;
-    QLCDNumber *lcd_p3_zddy;
-    QLCDNumber *lcd_p3_zddy_loc_1;
+    QLCDNumber *lcd_p3_zdwd;
+    QLabel *label_9;
+    QLCDNumber *lcd_p3_zdwd_loc_1;
     QFrame *frame_9;
     QLCDNumber *lcd_p3_zddy_loc_2;
-    QLCDNumber *lcd_p3_zxdy;
-    QLCDNumber *lcd_p3_zxdy_loc_1;
+    QLCDNumber *lcd_p3_zddy;
+    QLabel *label_11;
+    QLCDNumber *lcd_p3_zddy_loc_1;
     QFrame *frame_10;
+    QLabel *label_12;
+    QLCDNumber *lcd_p3_zxdy_loc_1;
     QLCDNumber *lcd_p3_zxdy_loc_2;
+    QLCDNumber *lcd_p3_zxdy;
     QFrame *frame_3;
+    QComboBox *comboBox;
+    QPushButton *pbutton_right_2;
+    QLabel *label_cluster_2;
+    QPushButton *pbutton_left_2;
     QFrame *frame_6;
     QLabel *label_6;
     QLCDNumber *lcd_p3_mkzy;
@@ -254,7 +237,7 @@ public:
         if (Widget->objectName().isEmpty())
             Widget->setObjectName(QString::fromUtf8("Widget"));
         Widget->setWindowModality(Qt::NonModal);
-        Widget->resize(1147, 591);
+        Widget->resize(800, 480);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -264,7 +247,7 @@ public:
         tabWidget = new QTabWidget(Widget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         tabWidget->setEnabled(true);
-        tabWidget->setGeometry(QRect(9, 9, 1051, 561));
+        tabWidget->setGeometry(QRect(9, 9, 790, 470));
         tabWidget->setContextMenuPolicy(Qt::DefaultContextMenu);
         tabWidget->setAutoFillBackground(true);
         tabWidget->setStyleSheet(QString::fromUtf8(""));
@@ -279,7 +262,7 @@ public:
         tab_xtxx->setSizePolicy(sizePolicy1);
         text_zdy = new QTextBrowser(tab_xtxx);
         text_zdy->setObjectName(QString::fromUtf8("text_zdy"));
-        text_zdy->setGeometry(QRect(140, 60, 181, 71));
+        text_zdy->setGeometry(QRect(40, 60, 181, 71));
         text_zdy->setAutoFillBackground(true);
         text_zdy->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         text_zdy->setFrameShape(QFrame::Box);
@@ -287,7 +270,7 @@ public:
         text_zdy->setAcceptRichText(true);
         lcd_zdy = new QLCDNumber(tab_xtxx);
         lcd_zdy->setObjectName(QString::fromUtf8("lcd_zdy"));
-        lcd_zdy->setGeometry(QRect(170, 90, 121, 31));
+        lcd_zdy->setGeometry(QRect(70, 90, 121, 31));
         lcd_zdy->setAutoFillBackground(false);
         lcd_zdy->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_zdy->setFrameShape(QFrame::NoFrame);
@@ -297,7 +280,7 @@ public:
         lcd_zdy->setSegmentStyle(QLCDNumber::Flat);
         lcd_zdl = new QLCDNumber(tab_xtxx);
         lcd_zdl->setObjectName(QString::fromUtf8("lcd_zdl"));
-        lcd_zdl->setGeometry(QRect(170, 170, 121, 31));
+        lcd_zdl->setGeometry(QRect(70, 170, 121, 31));
         lcd_zdl->setAutoFillBackground(false);
         lcd_zdl->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_zdl->setFrameShape(QFrame::NoFrame);
@@ -306,7 +289,7 @@ public:
         lcd_zdl->setSegmentStyle(QLCDNumber::Flat);
         text_zdl = new QTextBrowser(tab_xtxx);
         text_zdl->setObjectName(QString::fromUtf8("text_zdl"));
-        text_zdl->setGeometry(QRect(140, 140, 181, 71));
+        text_zdl->setGeometry(QRect(40, 140, 181, 71));
         text_zdl->setAutoFillBackground(true);
         text_zdl->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         text_zdl->setFrameShape(QFrame::Box);
@@ -314,16 +297,16 @@ public:
         text_zdl->setAcceptRichText(true);
         pBar_soc = new QProgressBar(tab_xtxx);
         pBar_soc->setObjectName(QString::fromUtf8("pBar_soc"));
-        pBar_soc->setGeometry(QRect(420, 70, 211, 81));
+        pBar_soc->setGeometry(QRect(290, 60, 211, 81));
         pBar_soc->setValue(24);
         text_soc = new QTextBrowser(tab_xtxx);
         text_soc->setObjectName(QString::fromUtf8("text_soc"));
-        text_soc->setGeometry(QRect(440, 170, 71, 31));
+        text_soc->setGeometry(QRect(320, 160, 71, 31));
         text_soc->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         text_soc->setFrameShape(QFrame::NoFrame);
         lcd_soc = new QLCDNumber(tab_xtxx);
         lcd_soc->setObjectName(QString::fromUtf8("lcd_soc"));
-        lcd_soc->setGeometry(QRect(520, 170, 81, 31));
+        lcd_soc->setGeometry(QRect(400, 160, 81, 31));
         lcd_soc->setAutoFillBackground(false);
         lcd_soc->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_soc->setFrameShape(QFrame::NoFrame);
@@ -332,7 +315,7 @@ public:
         lcd_soc->setSegmentStyle(QLCDNumber::Flat);
         lcd_zdyc = new QLCDNumber(tab_xtxx);
         lcd_zdyc->setObjectName(QString::fromUtf8("lcd_zdyc"));
-        lcd_zdyc->setGeometry(QRect(770, 90, 111, 31));
+        lcd_zdyc->setGeometry(QRect(610, 90, 111, 31));
         lcd_zdyc->setAutoFillBackground(false);
         lcd_zdyc->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_zdyc->setFrameShape(QFrame::NoFrame);
@@ -341,7 +324,7 @@ public:
         lcd_zdyc->setSegmentStyle(QLCDNumber::Flat);
         text_zdyc = new QTextBrowser(tab_xtxx);
         text_zdyc->setObjectName(QString::fromUtf8("text_zdyc"));
-        text_zdyc->setGeometry(QRect(740, 60, 171, 71));
+        text_zdyc->setGeometry(QRect(580, 60, 171, 71));
         text_zdyc->setAutoFillBackground(true);
         text_zdyc->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         text_zdyc->setFrameShape(QFrame::Box);
@@ -349,7 +332,7 @@ public:
         text_zdyc->setAcceptRichText(true);
         lcd_zdwc = new QLCDNumber(tab_xtxx);
         lcd_zdwc->setObjectName(QString::fromUtf8("lcd_zdwc"));
-        lcd_zdwc->setGeometry(QRect(770, 170, 111, 31));
+        lcd_zdwc->setGeometry(QRect(610, 170, 111, 31));
         lcd_zdwc->setAutoFillBackground(false);
         lcd_zdwc->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_zdwc->setFrameShape(QFrame::NoFrame);
@@ -358,7 +341,7 @@ public:
         lcd_zdwc->setSegmentStyle(QLCDNumber::Flat);
         text_zdwc = new QTextBrowser(tab_xtxx);
         text_zdwc->setObjectName(QString::fromUtf8("text_zdwc"));
-        text_zdwc->setGeometry(QRect(740, 140, 171, 71));
+        text_zdwc->setGeometry(QRect(580, 140, 171, 71));
         text_zdwc->setAutoFillBackground(true);
         text_zdwc->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         text_zdwc->setFrameShape(QFrame::Box);
@@ -366,7 +349,7 @@ public:
         text_zdwc->setAcceptRichText(true);
         lcd_zddy = new QLCDNumber(tab_xtxx);
         lcd_zddy->setObjectName(QString::fromUtf8("lcd_zddy"));
-        lcd_zddy->setGeometry(QRect(260, 270, 61, 31));
+        lcd_zddy->setGeometry(QRect(170, 270, 61, 31));
         lcd_zddy->setAutoFillBackground(false);
         lcd_zddy->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_zddy->setFrameShape(QFrame::NoFrame);
@@ -375,7 +358,7 @@ public:
         lcd_zddy->setSegmentStyle(QLCDNumber::Flat);
         text_zddy = new QTextBrowser(tab_xtxx);
         text_zddy->setObjectName(QString::fromUtf8("text_zddy"));
-        text_zddy->setGeometry(QRect(117, 230, 221, 81));
+        text_zddy->setGeometry(QRect(27, 230, 221, 81));
         text_zddy->setAutoFillBackground(true);
         text_zddy->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         text_zddy->setFrameShape(QFrame::Box);
@@ -383,7 +366,7 @@ public:
         text_zddy->setAcceptRichText(true);
         lcd_zddy_loc_1 = new QLCDNumber(tab_xtxx);
         lcd_zddy_loc_1->setObjectName(QString::fromUtf8("lcd_zddy_loc_1"));
-        lcd_zddy_loc_1->setGeometry(QRect(180, 270, 21, 31));
+        lcd_zddy_loc_1->setGeometry(QRect(90, 270, 21, 31));
         QFont font;
         font.setFamily(QString::fromUtf8("Andale Mono"));
         font.setPointSize(6);
@@ -396,17 +379,17 @@ public:
         lcd_zddy_loc_1->setSegmentStyle(QLCDNumber::Flat);
         label_zddy_loc = new QLabel(tab_xtxx);
         label_zddy_loc->setObjectName(QString::fromUtf8("label_zddy_loc"));
-        label_zddy_loc->setGeometry(QRect(140, 280, 31, 21));
+        label_zddy_loc->setGeometry(QRect(50, 280, 31, 21));
         sizePolicy1.setHeightForWidth(label_zddy_loc->sizePolicy().hasHeightForWidth());
         label_zddy_loc->setSizePolicy(sizePolicy1);
         label_zxdy_loc = new QLabel(tab_xtxx);
         label_zxdy_loc->setObjectName(QString::fromUtf8("label_zxdy_loc"));
-        label_zxdy_loc->setGeometry(QRect(140, 380, 31, 21));
+        label_zxdy_loc->setGeometry(QRect(50, 380, 31, 21));
         sizePolicy1.setHeightForWidth(label_zxdy_loc->sizePolicy().hasHeightForWidth());
         label_zxdy_loc->setSizePolicy(sizePolicy1);
         text_zxdy = new QTextBrowser(tab_xtxx);
         text_zxdy->setObjectName(QString::fromUtf8("text_zxdy"));
-        text_zxdy->setGeometry(QRect(117, 330, 221, 81));
+        text_zxdy->setGeometry(QRect(27, 330, 221, 81));
         text_zxdy->setAutoFillBackground(true);
         text_zxdy->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         text_zxdy->setFrameShape(QFrame::Box);
@@ -414,7 +397,7 @@ public:
         text_zxdy->setAcceptRichText(true);
         lcd_zxdy = new QLCDNumber(tab_xtxx);
         lcd_zxdy->setObjectName(QString::fromUtf8("lcd_zxdy"));
-        lcd_zxdy->setGeometry(QRect(260, 370, 61, 31));
+        lcd_zxdy->setGeometry(QRect(170, 370, 61, 31));
         lcd_zxdy->setAutoFillBackground(false);
         lcd_zxdy->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_zxdy->setFrameShape(QFrame::NoFrame);
@@ -423,12 +406,12 @@ public:
         lcd_zxdy->setSegmentStyle(QLCDNumber::Flat);
         label_zgwd_loc = new QLabel(tab_xtxx);
         label_zgwd_loc->setObjectName(QString::fromUtf8("label_zgwd_loc"));
-        label_zgwd_loc->setGeometry(QRect(440, 280, 31, 21));
+        label_zgwd_loc->setGeometry(QRect(310, 280, 31, 21));
         sizePolicy1.setHeightForWidth(label_zgwd_loc->sizePolicy().hasHeightForWidth());
         label_zgwd_loc->setSizePolicy(sizePolicy1);
         text_zdwd = new QTextBrowser(tab_xtxx);
         text_zdwd->setObjectName(QString::fromUtf8("text_zdwd"));
-        text_zdwd->setGeometry(QRect(420, 330, 221, 81));
+        text_zdwd->setGeometry(QRect(290, 330, 221, 81));
         text_zdwd->setAutoFillBackground(true);
         text_zdwd->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         text_zdwd->setFrameShape(QFrame::Box);
@@ -436,7 +419,7 @@ public:
         text_zdwd->setAcceptRichText(true);
         lcd_zdwd = new QLCDNumber(tab_xtxx);
         lcd_zdwd->setObjectName(QString::fromUtf8("lcd_zdwd"));
-        lcd_zdwd->setGeometry(QRect(560, 370, 61, 31));
+        lcd_zdwd->setGeometry(QRect(430, 370, 61, 31));
         lcd_zdwd->setAutoFillBackground(false);
         lcd_zdwd->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_zdwd->setFrameShape(QFrame::NoFrame);
@@ -445,7 +428,7 @@ public:
         lcd_zdwd->setSegmentStyle(QLCDNumber::Flat);
         text_zgwd = new QTextBrowser(tab_xtxx);
         text_zgwd->setObjectName(QString::fromUtf8("text_zgwd"));
-        text_zgwd->setGeometry(QRect(420, 230, 221, 81));
+        text_zgwd->setGeometry(QRect(290, 230, 221, 81));
         text_zgwd->setAutoFillBackground(true);
         text_zgwd->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         text_zgwd->setFrameShape(QFrame::Box);
@@ -453,7 +436,7 @@ public:
         text_zgwd->setAcceptRichText(true);
         lcd_zgwd = new QLCDNumber(tab_xtxx);
         lcd_zgwd->setObjectName(QString::fromUtf8("lcd_zgwd"));
-        lcd_zgwd->setGeometry(QRect(560, 270, 61, 31));
+        lcd_zgwd->setGeometry(QRect(430, 270, 61, 31));
         lcd_zgwd->setAutoFillBackground(false);
         lcd_zgwd->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_zgwd->setFrameShape(QFrame::NoFrame);
@@ -462,12 +445,12 @@ public:
         lcd_zgwd->setSegmentStyle(QLCDNumber::Flat);
         label_zdwd_loc = new QLabel(tab_xtxx);
         label_zdwd_loc->setObjectName(QString::fromUtf8("label_zdwd_loc"));
-        label_zdwd_loc->setGeometry(QRect(440, 380, 31, 21));
+        label_zdwd_loc->setGeometry(QRect(310, 380, 31, 21));
         sizePolicy1.setHeightForWidth(label_zdwd_loc->sizePolicy().hasHeightForWidth());
         label_zdwd_loc->setSizePolicy(sizePolicy1);
         text_xtzt = new QTextBrowser(tab_xtxx);
         text_xtzt->setObjectName(QString::fromUtf8("text_xtzt"));
-        text_xtzt->setGeometry(QRect(717, 330, 211, 81));
+        text_xtzt->setGeometry(QRect(547, 330, 211, 81));
         text_xtzt->setAutoFillBackground(true);
         text_xtzt->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         text_xtzt->setFrameShape(QFrame::Box);
@@ -475,7 +458,7 @@ public:
         text_xtzt->setAcceptRichText(true);
         text_pjdy = new QTextBrowser(tab_xtxx);
         text_pjdy->setObjectName(QString::fromUtf8("text_pjdy"));
-        text_pjdy->setGeometry(QRect(717, 230, 211, 81));
+        text_pjdy->setGeometry(QRect(547, 230, 211, 81));
         text_pjdy->setAutoFillBackground(true);
         text_pjdy->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         text_pjdy->setFrameShape(QFrame::Box);
@@ -483,7 +466,7 @@ public:
         text_pjdy->setAcceptRichText(true);
         lcd_pjdy_2 = new QLCDNumber(tab_xtxx);
         lcd_pjdy_2->setObjectName(QString::fromUtf8("lcd_pjdy_2"));
-        lcd_pjdy_2->setGeometry(QRect(780, 270, 91, 31));
+        lcd_pjdy_2->setGeometry(QRect(610, 270, 91, 31));
         lcd_pjdy_2->setAutoFillBackground(false);
         lcd_pjdy_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_pjdy_2->setFrameShape(QFrame::NoFrame);
@@ -492,124 +475,16 @@ public:
         lcd_pjdy_2->setSegmentStyle(QLCDNumber::Flat);
         text_value_xtzt = new QTextBrowser(tab_xtxx);
         text_value_xtzt->setObjectName(QString::fromUtf8("text_value_xtzt"));
-        text_value_xtzt->setGeometry(QRect(740, 370, 171, 31));
+        text_value_xtzt->setGeometry(QRect(570, 370, 171, 31));
         text_value_xtzt->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        text_c1 = new QTextBrowser(tab_xtxx);
-        text_c1->setObjectName(QString::fromUtf8("text_c1"));
-        text_c1->setGeometry(QRect(110, 430, 31, 31));
-        lcd_c1 = new QLCDNumber(tab_xtxx);
-        lcd_c1->setObjectName(QString::fromUtf8("lcd_c1"));
-        lcd_c1->setGeometry(QRect(80, 470, 80, 40));
-        lcd_c1->setAutoFillBackground(false);
-        lcd_c1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_c1->setFrameShape(QFrame::NoFrame);
-        lcd_c1->setFrameShadow(QFrame::Raised);
-        lcd_c1->setSmallDecimalPoint(false);
-        lcd_c1->setSegmentStyle(QLCDNumber::Flat);
-        text_c2 = new QTextBrowser(tab_xtxx);
-        text_c2->setObjectName(QString::fromUtf8("text_c2"));
-        text_c2->setGeometry(QRect(210, 430, 31, 31));
-        lcd_c2 = new QLCDNumber(tab_xtxx);
-        lcd_c2->setObjectName(QString::fromUtf8("lcd_c2"));
-        lcd_c2->setGeometry(QRect(180, 470, 80, 40));
-        lcd_c2->setAutoFillBackground(false);
-        lcd_c2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_c2->setFrameShape(QFrame::NoFrame);
-        lcd_c2->setFrameShadow(QFrame::Raised);
-        lcd_c2->setSmallDecimalPoint(false);
-        lcd_c2->setSegmentStyle(QLCDNumber::Flat);
-        text_c3 = new QTextBrowser(tab_xtxx);
-        text_c3->setObjectName(QString::fromUtf8("text_c3"));
-        text_c3->setGeometry(QRect(310, 430, 31, 31));
-        lcd_c3 = new QLCDNumber(tab_xtxx);
-        lcd_c3->setObjectName(QString::fromUtf8("lcd_c3"));
-        lcd_c3->setGeometry(QRect(280, 470, 80, 40));
-        lcd_c3->setAutoFillBackground(false);
-        lcd_c3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_c3->setFrameShape(QFrame::NoFrame);
-        lcd_c3->setFrameShadow(QFrame::Raised);
-        lcd_c3->setSmallDecimalPoint(false);
-        lcd_c3->setSegmentStyle(QLCDNumber::Flat);
-        text_c4 = new QTextBrowser(tab_xtxx);
-        text_c4->setObjectName(QString::fromUtf8("text_c4"));
-        text_c4->setGeometry(QRect(410, 430, 31, 31));
-        lcd_c4 = new QLCDNumber(tab_xtxx);
-        lcd_c4->setObjectName(QString::fromUtf8("lcd_c4"));
-        lcd_c4->setGeometry(QRect(380, 470, 80, 40));
-        lcd_c4->setAutoFillBackground(false);
-        lcd_c4->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_c4->setFrameShape(QFrame::NoFrame);
-        lcd_c4->setFrameShadow(QFrame::Raised);
-        lcd_c4->setSmallDecimalPoint(false);
-        lcd_c4->setSegmentStyle(QLCDNumber::Flat);
-        text_c5 = new QTextBrowser(tab_xtxx);
-        text_c5->setObjectName(QString::fromUtf8("text_c5"));
-        text_c5->setGeometry(QRect(510, 430, 31, 31));
-        lcd_c5 = new QLCDNumber(tab_xtxx);
-        lcd_c5->setObjectName(QString::fromUtf8("lcd_c5"));
-        lcd_c5->setGeometry(QRect(480, 470, 80, 40));
-        lcd_c5->setAutoFillBackground(false);
-        lcd_c5->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_c5->setFrameShape(QFrame::NoFrame);
-        lcd_c5->setFrameShadow(QFrame::Raised);
-        lcd_c5->setSmallDecimalPoint(false);
-        lcd_c5->setSegmentStyle(QLCDNumber::Flat);
-        text_c6 = new QTextBrowser(tab_xtxx);
-        text_c6->setObjectName(QString::fromUtf8("text_c6"));
-        text_c6->setGeometry(QRect(610, 430, 31, 31));
-        lcd_c6 = new QLCDNumber(tab_xtxx);
-        lcd_c6->setObjectName(QString::fromUtf8("lcd_c6"));
-        lcd_c6->setGeometry(QRect(580, 470, 80, 40));
-        lcd_c6->setAutoFillBackground(false);
-        lcd_c6->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_c6->setFrameShape(QFrame::NoFrame);
-        lcd_c6->setFrameShadow(QFrame::Raised);
-        lcd_c6->setSmallDecimalPoint(false);
-        lcd_c6->setSegmentStyle(QLCDNumber::Flat);
-        text_c7 = new QTextBrowser(tab_xtxx);
-        text_c7->setObjectName(QString::fromUtf8("text_c7"));
-        text_c7->setGeometry(QRect(710, 430, 31, 31));
-        lcd_c7 = new QLCDNumber(tab_xtxx);
-        lcd_c7->setObjectName(QString::fromUtf8("lcd_c7"));
-        lcd_c7->setGeometry(QRect(680, 470, 80, 40));
-        lcd_c7->setAutoFillBackground(false);
-        lcd_c7->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_c7->setFrameShape(QFrame::NoFrame);
-        lcd_c7->setFrameShadow(QFrame::Raised);
-        lcd_c7->setSmallDecimalPoint(false);
-        lcd_c7->setSegmentStyle(QLCDNumber::Flat);
-        lcd_c8 = new QLCDNumber(tab_xtxx);
-        lcd_c8->setObjectName(QString::fromUtf8("lcd_c8"));
-        lcd_c8->setGeometry(QRect(780, 470, 80, 40));
-        lcd_c8->setAutoFillBackground(false);
-        lcd_c8->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_c8->setFrameShape(QFrame::NoFrame);
-        lcd_c8->setFrameShadow(QFrame::Raised);
-        lcd_c8->setSmallDecimalPoint(false);
-        lcd_c8->setSegmentStyle(QLCDNumber::Flat);
-        text_c8 = new QTextBrowser(tab_xtxx);
-        text_c8->setObjectName(QString::fromUtf8("text_c8"));
-        text_c8->setGeometry(QRect(810, 430, 31, 31));
-        lcd_c9 = new QLCDNumber(tab_xtxx);
-        lcd_c9->setObjectName(QString::fromUtf8("lcd_c9"));
-        lcd_c9->setGeometry(QRect(880, 470, 80, 40));
-        lcd_c9->setAutoFillBackground(false);
-        lcd_c9->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_c9->setFrameShape(QFrame::NoFrame);
-        lcd_c9->setFrameShadow(QFrame::Raised);
-        lcd_c9->setSmallDecimalPoint(false);
-        lcd_c9->setSegmentStyle(QLCDNumber::Flat);
-        text_c9 = new QTextBrowser(tab_xtxx);
-        text_c9->setObjectName(QString::fromUtf8("text_c9"));
-        text_c9->setGeometry(QRect(910, 430, 31, 31));
         textBrowser_header = new QTextBrowser(tab_xtxx);
         textBrowser_header->setObjectName(QString::fromUtf8("textBrowser_header"));
-        textBrowser_header->setGeometry(QRect(-10, 10, 1071, 31));
+        textBrowser_header->setGeometry(QRect(-10, 10, 800, 31));
         textBrowser_header->setStyleSheet(QString::fromUtf8("background-color: rgb(120, 170, 220);"));
         textBrowser_header->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         lcd_zddy_loc_2 = new QLCDNumber(tab_xtxx);
         lcd_zddy_loc_2->setObjectName(QString::fromUtf8("lcd_zddy_loc_2"));
-        lcd_zddy_loc_2->setGeometry(QRect(205, 270, 21, 31));
+        lcd_zddy_loc_2->setGeometry(QRect(115, 270, 21, 31));
         lcd_zddy_loc_2->setFont(font);
         lcd_zddy_loc_2->setAutoFillBackground(false);
         lcd_zddy_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
@@ -619,7 +494,7 @@ public:
         lcd_zddy_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_zddy_loc_3 = new QLCDNumber(tab_xtxx);
         lcd_zddy_loc_3->setObjectName(QString::fromUtf8("lcd_zddy_loc_3"));
-        lcd_zddy_loc_3->setGeometry(QRect(230, 270, 21, 31));
+        lcd_zddy_loc_3->setGeometry(QRect(140, 270, 21, 31));
         lcd_zddy_loc_3->setFont(font);
         lcd_zddy_loc_3->setAutoFillBackground(false);
         lcd_zddy_loc_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
@@ -629,7 +504,7 @@ public:
         lcd_zddy_loc_3->setSegmentStyle(QLCDNumber::Flat);
         lcd_zxdy_loc_3 = new QLCDNumber(tab_xtxx);
         lcd_zxdy_loc_3->setObjectName(QString::fromUtf8("lcd_zxdy_loc_3"));
-        lcd_zxdy_loc_3->setGeometry(QRect(230, 370, 21, 31));
+        lcd_zxdy_loc_3->setGeometry(QRect(140, 370, 21, 31));
         lcd_zxdy_loc_3->setFont(font);
         lcd_zxdy_loc_3->setAutoFillBackground(false);
         lcd_zxdy_loc_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
@@ -639,7 +514,7 @@ public:
         lcd_zxdy_loc_3->setSegmentStyle(QLCDNumber::Flat);
         lcd_zxdy_loc_1 = new QLCDNumber(tab_xtxx);
         lcd_zxdy_loc_1->setObjectName(QString::fromUtf8("lcd_zxdy_loc_1"));
-        lcd_zxdy_loc_1->setGeometry(QRect(180, 370, 21, 31));
+        lcd_zxdy_loc_1->setGeometry(QRect(90, 370, 21, 31));
         lcd_zxdy_loc_1->setFont(font);
         lcd_zxdy_loc_1->setAutoFillBackground(false);
         lcd_zxdy_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
@@ -649,7 +524,7 @@ public:
         lcd_zxdy_loc_1->setSegmentStyle(QLCDNumber::Flat);
         lcd_zxdy_loc_2 = new QLCDNumber(tab_xtxx);
         lcd_zxdy_loc_2->setObjectName(QString::fromUtf8("lcd_zxdy_loc_2"));
-        lcd_zxdy_loc_2->setGeometry(QRect(205, 370, 21, 31));
+        lcd_zxdy_loc_2->setGeometry(QRect(115, 370, 21, 31));
         lcd_zxdy_loc_2->setFont(font);
         lcd_zxdy_loc_2->setAutoFillBackground(false);
         lcd_zxdy_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
@@ -659,7 +534,7 @@ public:
         lcd_zxdy_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_zgwd_loc_3 = new QLCDNumber(tab_xtxx);
         lcd_zgwd_loc_3->setObjectName(QString::fromUtf8("lcd_zgwd_loc_3"));
-        lcd_zgwd_loc_3->setGeometry(QRect(530, 270, 21, 31));
+        lcd_zgwd_loc_3->setGeometry(QRect(400, 270, 21, 31));
         lcd_zgwd_loc_3->setFont(font);
         lcd_zgwd_loc_3->setAutoFillBackground(false);
         lcd_zgwd_loc_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
@@ -669,7 +544,7 @@ public:
         lcd_zgwd_loc_3->setSegmentStyle(QLCDNumber::Flat);
         lcd_zgwd_loc_1 = new QLCDNumber(tab_xtxx);
         lcd_zgwd_loc_1->setObjectName(QString::fromUtf8("lcd_zgwd_loc_1"));
-        lcd_zgwd_loc_1->setGeometry(QRect(480, 270, 21, 31));
+        lcd_zgwd_loc_1->setGeometry(QRect(350, 270, 21, 31));
         lcd_zgwd_loc_1->setFont(font);
         lcd_zgwd_loc_1->setAutoFillBackground(false);
         lcd_zgwd_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
@@ -679,7 +554,7 @@ public:
         lcd_zgwd_loc_1->setSegmentStyle(QLCDNumber::Flat);
         lcd_zgwd_loc_2 = new QLCDNumber(tab_xtxx);
         lcd_zgwd_loc_2->setObjectName(QString::fromUtf8("lcd_zgwd_loc_2"));
-        lcd_zgwd_loc_2->setGeometry(QRect(505, 270, 21, 31));
+        lcd_zgwd_loc_2->setGeometry(QRect(375, 270, 21, 31));
         lcd_zgwd_loc_2->setFont(font);
         lcd_zgwd_loc_2->setAutoFillBackground(false);
         lcd_zgwd_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
@@ -689,7 +564,7 @@ public:
         lcd_zgwd_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_zdwd_loc_2 = new QLCDNumber(tab_xtxx);
         lcd_zdwd_loc_2->setObjectName(QString::fromUtf8("lcd_zdwd_loc_2"));
-        lcd_zdwd_loc_2->setGeometry(QRect(505, 370, 21, 31));
+        lcd_zdwd_loc_2->setGeometry(QRect(375, 370, 21, 31));
         lcd_zdwd_loc_2->setFont(font);
         lcd_zdwd_loc_2->setAutoFillBackground(false);
         lcd_zdwd_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
@@ -699,7 +574,7 @@ public:
         lcd_zdwd_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_zdwd_loc_1 = new QLCDNumber(tab_xtxx);
         lcd_zdwd_loc_1->setObjectName(QString::fromUtf8("lcd_zdwd_loc_1"));
-        lcd_zdwd_loc_1->setGeometry(QRect(480, 370, 21, 31));
+        lcd_zdwd_loc_1->setGeometry(QRect(350, 370, 21, 31));
         lcd_zdwd_loc_1->setFont(font);
         lcd_zdwd_loc_1->setAutoFillBackground(false);
         lcd_zdwd_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
@@ -709,7 +584,7 @@ public:
         lcd_zdwd_loc_1->setSegmentStyle(QLCDNumber::Flat);
         lcd_zdwd_loc_3 = new QLCDNumber(tab_xtxx);
         lcd_zdwd_loc_3->setObjectName(QString::fromUtf8("lcd_zdwd_loc_3"));
-        lcd_zdwd_loc_3->setGeometry(QRect(530, 370, 21, 31));
+        lcd_zdwd_loc_3->setGeometry(QRect(400, 370, 21, 31));
         lcd_zdwd_loc_3->setFont(font);
         lcd_zdwd_loc_3->setAutoFillBackground(false);
         lcd_zdwd_loc_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
@@ -718,6 +593,46 @@ public:
         lcd_zdwd_loc_3->setSmallDecimalPoint(false);
         lcd_zdwd_loc_3->setSegmentStyle(QLCDNumber::Flat);
         tabWidget->addTab(tab_xtxx, QString());
+        text_zddy->raise();
+        label_zddy_loc->raise();
+        lcd_zddy_loc_2->raise();
+        text_zdwc->raise();
+        text_zdyc->raise();
+        lcd_zdwc->raise();
+        text_zgwd->raise();
+        lcd_zddy_loc_1->raise();
+        lcd_zddy_loc_3->raise();
+        text_zxdy->raise();
+        lcd_zddy->raise();
+        lcd_zdyc->raise();
+        text_zdl->raise();
+        text_zdy->raise();
+        lcd_zdy->raise();
+        lcd_zdl->raise();
+        pBar_soc->raise();
+        text_soc->raise();
+        lcd_soc->raise();
+        label_zxdy_loc->raise();
+        lcd_zxdy->raise();
+        label_zgwd_loc->raise();
+        text_zdwd->raise();
+        lcd_zdwd->raise();
+        lcd_zgwd->raise();
+        label_zdwd_loc->raise();
+        text_xtzt->raise();
+        text_pjdy->raise();
+        lcd_pjdy_2->raise();
+        text_value_xtzt->raise();
+        textBrowser_header->raise();
+        lcd_zxdy_loc_3->raise();
+        lcd_zxdy_loc_1->raise();
+        lcd_zxdy_loc_2->raise();
+        lcd_zgwd_loc_3->raise();
+        lcd_zgwd_loc_1->raise();
+        lcd_zgwd_loc_2->raise();
+        lcd_zdwd_loc_2->raise();
+        lcd_zdwd_loc_1->raise();
+        lcd_zdwd_loc_3->raise();
         tab_cjbxx = new QWidget();
         tab_cjbxx->setObjectName(QString::fromUtf8("tab_cjbxx"));
         pbutton_right = new QPushButton(tab_cjbxx);
@@ -728,18 +643,20 @@ public:
         pbutton_left->setGeometry(QRect(20, 20, 31, 81));
         frame = new QFrame(tab_cjbxx);
         frame->setObjectName(QString::fromUtf8("frame"));
-        frame->setGeometry(QRect(250, 10, 661, 131));
+        frame->setGeometry(QRect(190, 10, 580, 121));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
         label_xtzy = new QLabel(frame);
         label_xtzy->setObjectName(QString::fromUtf8("label_xtzy"));
         label_xtzy->setGeometry(QRect(20, 10, 71, 31));
         QFont font1;
-        font1.setPointSize(11);
+        font1.setFamily(QString::fromUtf8("Andale Mono"));
+        font1.setBold(true);
+        font1.setWeight(75);
         label_xtzy->setFont(font1);
         lcd_p2_xtzy = new QLCDNumber(frame);
         lcd_p2_xtzy->setObjectName(QString::fromUtf8("lcd_p2_xtzy"));
-        lcd_p2_xtzy->setGeometry(QRect(20, 40, 71, 71));
+        lcd_p2_xtzy->setGeometry(QRect(20, 40, 61, 61));
         lcd_p2_xtzy->setAutoFillBackground(false);
         lcd_p2_xtzy->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_xtzy->setFrameShape(QFrame::NoFrame);
@@ -749,11 +666,11 @@ public:
         lcd_p2_xtzy->setSegmentStyle(QLCDNumber::Flat);
         label_xtzy_2 = new QLabel(frame);
         label_xtzy_2->setObjectName(QString::fromUtf8("label_xtzy_2"));
-        label_xtzy_2->setGeometry(QRect(120, 40, 61, 21));
+        label_xtzy_2->setGeometry(QRect(110, 40, 61, 21));
         label_xtzy_2->setFont(font1);
         lcd_p2_dl = new QLCDNumber(frame);
         lcd_p2_dl->setObjectName(QString::fromUtf8("lcd_p2_dl"));
-        lcd_p2_dl->setGeometry(QRect(190, 40, 61, 21));
+        lcd_p2_dl->setGeometry(QRect(160, 35, 61, 21));
         lcd_p2_dl->setAutoFillBackground(false);
         lcd_p2_dl->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_dl->setFrameShape(QFrame::NoFrame);
@@ -763,11 +680,11 @@ public:
         lcd_p2_dl->setSegmentStyle(QLCDNumber::Flat);
         label_xtzy_3 = new QLabel(frame);
         label_xtzy_3->setObjectName(QString::fromUtf8("label_xtzy_3"));
-        label_xtzy_3->setGeometry(QRect(120, 70, 41, 21));
+        label_xtzy_3->setGeometry(QRect(110, 70, 41, 21));
         label_xtzy_3->setFont(font1);
         lcd_p2_soh = new QLCDNumber(frame);
         lcd_p2_soh->setObjectName(QString::fromUtf8("lcd_p2_soh"));
-        lcd_p2_soh->setGeometry(QRect(190, 100, 61, 21));
+        lcd_p2_soh->setGeometry(QRect(160, 95, 61, 21));
         lcd_p2_soh->setAutoFillBackground(false);
         lcd_p2_soh->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_soh->setFrameShape(QFrame::NoFrame);
@@ -777,11 +694,11 @@ public:
         lcd_p2_soh->setSegmentStyle(QLCDNumber::Flat);
         label_xtzy_4 = new QLabel(frame);
         label_xtzy_4->setObjectName(QString::fromUtf8("label_xtzy_4"));
-        label_xtzy_4->setGeometry(QRect(120, 100, 62, 17));
+        label_xtzy_4->setGeometry(QRect(110, 100, 62, 17));
         label_xtzy_4->setFont(font1);
         lcd_p2_soc = new QLCDNumber(frame);
         lcd_p2_soc->setObjectName(QString::fromUtf8("lcd_p2_soc"));
-        lcd_p2_soc->setGeometry(QRect(190, 70, 61, 21));
+        lcd_p2_soc->setGeometry(QRect(160, 65, 61, 21));
         lcd_p2_soc->setAutoFillBackground(false);
         lcd_p2_soc->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_soc->setFrameShape(QFrame::NoFrame);
@@ -791,7 +708,7 @@ public:
         lcd_p2_soc->setSegmentStyle(QLCDNumber::Flat);
         lcd_p2_rjbbh = new QLCDNumber(frame);
         lcd_p2_rjbbh->setObjectName(QString::fromUtf8("lcd_p2_rjbbh"));
-        lcd_p2_rjbbh->setGeometry(QRect(570, 100, 61, 21));
+        lcd_p2_rjbbh->setGeometry(QRect(480, 95, 61, 21));
         lcd_p2_rjbbh->setAutoFillBackground(false);
         lcd_p2_rjbbh->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_rjbbh->setFrameShape(QFrame::NoFrame);
@@ -801,19 +718,19 @@ public:
         lcd_p2_rjbbh->setSegmentStyle(QLCDNumber::Flat);
         label_xtzy_5 = new QLabel(frame);
         label_xtzy_5->setObjectName(QString::fromUtf8("label_xtzy_5"));
-        label_xtzy_5->setGeometry(QRect(480, 100, 81, 17));
+        label_xtzy_5->setGeometry(QRect(410, 100, 81, 17));
         label_xtzy_5->setFont(font1);
         label_xtzy_6 = new QLabel(frame);
         label_xtzy_6->setObjectName(QString::fromUtf8("label_xtzy_6"));
-        label_xtzy_6->setGeometry(QRect(120, 10, 71, 17));
+        label_xtzy_6->setGeometry(QRect(100, 10, 71, 17));
         label_xtzy_6->setFont(font1);
         label_xtzy_7 = new QLabel(frame);
         label_xtzy_7->setObjectName(QString::fromUtf8("label_xtzy_7"));
-        label_xtzy_7->setGeometry(QRect(280, 40, 71, 17));
+        label_xtzy_7->setGeometry(QRect(250, 40, 71, 17));
         label_xtzy_7->setFont(font1);
         lcd_p2_gl = new QLCDNumber(frame);
         lcd_p2_gl->setObjectName(QString::fromUtf8("lcd_p2_gl"));
-        lcd_p2_gl->setGeometry(QRect(370, 40, 61, 21));
+        lcd_p2_gl->setGeometry(QRect(320, 35, 61, 21));
         lcd_p2_gl->setAutoFillBackground(false);
         lcd_p2_gl->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_gl->setFrameShape(QFrame::NoFrame);
@@ -823,11 +740,11 @@ public:
         lcd_p2_gl->setSegmentStyle(QLCDNumber::Flat);
         label_xtzy_8 = new QLabel(frame);
         label_xtzy_8->setObjectName(QString::fromUtf8("label_xtzy_8"));
-        label_xtzy_8->setGeometry(QRect(280, 70, 71, 17));
+        label_xtzy_8->setGeometry(QRect(250, 70, 71, 17));
         label_xtzy_8->setFont(font1);
         lcd_p2_zmsl = new QLCDNumber(frame);
         lcd_p2_zmsl->setObjectName(QString::fromUtf8("lcd_p2_zmsl"));
-        lcd_p2_zmsl->setGeometry(QRect(370, 70, 61, 21));
+        lcd_p2_zmsl->setGeometry(QRect(320, 65, 61, 21));
         lcd_p2_zmsl->setAutoFillBackground(false);
         lcd_p2_zmsl->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_zmsl->setFrameShape(QFrame::NoFrame);
@@ -837,11 +754,11 @@ public:
         lcd_p2_zmsl->setSegmentStyle(QLCDNumber::Flat);
         label_xtzy_9 = new QLabel(frame);
         label_xtzy_9->setObjectName(QString::fromUtf8("label_xtzy_9"));
-        label_xtzy_9->setGeometry(QRect(280, 100, 71, 17));
+        label_xtzy_9->setGeometry(QRect(250, 100, 71, 17));
         label_xtzy_9->setFont(font1);
         lcd_p2_cdcs = new QLCDNumber(frame);
         lcd_p2_cdcs->setObjectName(QString::fromUtf8("lcd_p2_cdcs"));
-        lcd_p2_cdcs->setGeometry(QRect(370, 100, 61, 21));
+        lcd_p2_cdcs->setGeometry(QRect(320, 95, 61, 21));
         lcd_p2_cdcs->setAutoFillBackground(false);
         lcd_p2_cdcs->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_cdcs->setFrameShape(QFrame::NoFrame);
@@ -851,15 +768,15 @@ public:
         lcd_p2_cdcs->setSegmentStyle(QLCDNumber::Flat);
         label_xtzy_12 = new QLabel(frame);
         label_xtzy_12->setObjectName(QString::fromUtf8("label_xtzy_12"));
-        label_xtzy_12->setGeometry(QRect(480, 10, 71, 17));
+        label_xtzy_12->setGeometry(QRect(410, 10, 71, 17));
         label_xtzy_12->setFont(font1);
         label_xtzy_13 = new QLabel(frame);
         label_xtzy_13->setObjectName(QString::fromUtf8("label_xtzy_13"));
-        label_xtzy_13->setGeometry(QRect(480, 70, 71, 17));
+        label_xtzy_13->setGeometry(QRect(410, 70, 71, 17));
         label_xtzy_13->setFont(font1);
         lcd_p2_jyzz = new QLCDNumber(frame);
         lcd_p2_jyzz->setObjectName(QString::fromUtf8("lcd_p2_jyzz"));
-        lcd_p2_jyzz->setGeometry(QRect(570, 40, 61, 21));
+        lcd_p2_jyzz->setGeometry(QRect(480, 35, 61, 21));
         lcd_p2_jyzz->setAutoFillBackground(false);
         lcd_p2_jyzz->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_jyzz->setFrameShape(QFrame::NoFrame);
@@ -869,7 +786,7 @@ public:
         lcd_p2_jyzz->setSegmentStyle(QLCDNumber::Flat);
         lcd_p2_smzq = new QLCDNumber(frame);
         lcd_p2_smzq->setObjectName(QString::fromUtf8("lcd_p2_smzq"));
-        lcd_p2_smzq->setGeometry(QRect(570, 70, 61, 21));
+        lcd_p2_smzq->setGeometry(QRect(480, 65, 61, 21));
         lcd_p2_smzq->setAutoFillBackground(false);
         lcd_p2_smzq->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_smzq->setFrameShape(QFrame::NoFrame);
@@ -879,23 +796,23 @@ public:
         lcd_p2_smzq->setSegmentStyle(QLCDNumber::Flat);
         label_xtzy_15 = new QLabel(frame);
         label_xtzy_15->setObjectName(QString::fromUtf8("label_xtzy_15"));
-        label_xtzy_15->setGeometry(QRect(480, 40, 71, 17));
+        label_xtzy_15->setGeometry(QRect(410, 40, 71, 17));
         label_xtzy_15->setFont(font1);
         label_xtzy_10 = new QLabel(frame);
         label_xtzy_10->setObjectName(QString::fromUtf8("label_xtzy_10"));
-        label_xtzy_10->setGeometry(QRect(280, 10, 71, 17));
+        label_xtzy_10->setGeometry(QRect(250, 10, 71, 17));
         label_xtzy_10->setFont(font1);
         text_p2_dczt = new QTextBrowser(frame);
         text_p2_dczt->setObjectName(QString::fromUtf8("text_p2_dczt"));
-        text_p2_dczt->setGeometry(QRect(570, 10, 61, 21));
+        text_p2_dczt->setGeometry(QRect(480, 5, 61, 21));
         text_p2_dczt->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_xtzt = new QTextBrowser(frame);
         text_p2_xtzt->setObjectName(QString::fromUtf8("text_p2_xtzt"));
-        text_p2_xtzt->setGeometry(QRect(190, 10, 61, 21));
+        text_p2_xtzt->setGeometry(QRect(160, 5, 61, 21));
         text_p2_xtzt->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_gzzt = new QTextBrowser(frame);
         text_p2_gzzt->setObjectName(QString::fromUtf8("text_p2_gzzt"));
-        text_p2_gzzt->setGeometry(QRect(370, 10, 61, 21));
+        text_p2_gzzt->setGeometry(QRect(320, 5, 61, 21));
         text_p2_gzzt->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         label_cluster = new QLabel(tab_cjbxx);
         label_cluster->setObjectName(QString::fromUtf8("label_cluster"));
@@ -905,38 +822,41 @@ public:
         label_cluster->setAlignment(Qt::AlignCenter);
         frame_2 = new QFrame(tab_cjbxx);
         frame_2->setObjectName(QString::fromUtf8("frame_2"));
-        frame_2->setGeometry(QRect(20, 160, 211, 351));
+        frame_2->setGeometry(QRect(10, 140, 171, 291));
         frame_2->setFrameShape(QFrame::StyledPanel);
         frame_2->setFrameShadow(QFrame::Raised);
         frame_12 = new QFrame(frame_2);
         frame_12->setObjectName(QString::fromUtf8("frame_12"));
-        frame_12->setGeometry(QRect(20, 20, 171, 71));
+        frame_12->setGeometry(QRect(10, 10, 141, 61));
         frame_12->setFrameShape(QFrame::StyledPanel);
         frame_12->setFrameShadow(QFrame::Raised);
         label_zgdy = new QLabel(frame_12);
         label_zgdy->setObjectName(QString::fromUtf8("label_zgdy"));
         label_zgdy->setGeometry(QRect(50, 0, 71, 31));
         QFont font2;
-        font2.setPointSize(12);
+        font2.setFamily(QString::fromUtf8("Andale Mono"));
+        font2.setPointSize(10);
+        font2.setBold(true);
+        font2.setWeight(75);
         label_zgdy->setFont(font2);
         lcd_p2_zgdy = new QLCDNumber(frame_12);
         lcd_p2_zgdy->setObjectName(QString::fromUtf8("lcd_p2_zgdy"));
-        lcd_p2_zgdy->setGeometry(QRect(70, 30, 91, 31));
+        lcd_p2_zgdy->setGeometry(QRect(50, 30, 81, 21));
         lcd_p2_zgdy->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_zgdy->setSegmentStyle(QLCDNumber::Flat);
         lcd_p2_zgdy_loc_2 = new QLCDNumber(frame_12);
         lcd_p2_zgdy_loc_2->setObjectName(QString::fromUtf8("lcd_p2_zgdy_loc_2"));
-        lcd_p2_zgdy_loc_2->setGeometry(QRect(40, 30, 21, 31));
+        lcd_p2_zgdy_loc_2->setGeometry(QRect(30, 30, 16, 21));
         lcd_p2_zgdy_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_zgdy_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_p2_zgdy_loc_1 = new QLCDNumber(frame_12);
         lcd_p2_zgdy_loc_1->setObjectName(QString::fromUtf8("lcd_p2_zgdy_loc_1"));
-        lcd_p2_zgdy_loc_1->setGeometry(QRect(10, 30, 21, 31));
+        lcd_p2_zgdy_loc_1->setGeometry(QRect(10, 30, 16, 21));
         lcd_p2_zgdy_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_zgdy_loc_1->setSegmentStyle(QLCDNumber::Flat);
         frame_13 = new QFrame(frame_2);
         frame_13->setObjectName(QString::fromUtf8("frame_13"));
-        frame_13->setGeometry(QRect(20, 100, 171, 71));
+        frame_13->setGeometry(QRect(10, 80, 141, 61));
         frame_13->setFrameShape(QFrame::StyledPanel);
         frame_13->setFrameShadow(QFrame::Raised);
         label_zddy = new QLabel(frame_13);
@@ -945,22 +865,22 @@ public:
         label_zddy->setFont(font2);
         lcd_p2_zddy = new QLCDNumber(frame_13);
         lcd_p2_zddy->setObjectName(QString::fromUtf8("lcd_p2_zddy"));
-        lcd_p2_zddy->setGeometry(QRect(70, 30, 91, 31));
+        lcd_p2_zddy->setGeometry(QRect(50, 30, 81, 21));
         lcd_p2_zddy->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_zddy->setSegmentStyle(QLCDNumber::Flat);
         lcd_p2_zddy_loc_2 = new QLCDNumber(frame_13);
         lcd_p2_zddy_loc_2->setObjectName(QString::fromUtf8("lcd_p2_zddy_loc_2"));
-        lcd_p2_zddy_loc_2->setGeometry(QRect(40, 30, 21, 31));
+        lcd_p2_zddy_loc_2->setGeometry(QRect(30, 30, 16, 21));
         lcd_p2_zddy_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_zddy_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_p2_zddy_loc_1 = new QLCDNumber(frame_13);
         lcd_p2_zddy_loc_1->setObjectName(QString::fromUtf8("lcd_p2_zddy_loc_1"));
-        lcd_p2_zddy_loc_1->setGeometry(QRect(10, 30, 21, 31));
+        lcd_p2_zddy_loc_1->setGeometry(QRect(10, 30, 16, 21));
         lcd_p2_zddy_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_zddy_loc_1->setSegmentStyle(QLCDNumber::Flat);
         frame_14 = new QFrame(frame_2);
         frame_14->setObjectName(QString::fromUtf8("frame_14"));
-        frame_14->setGeometry(QRect(20, 180, 171, 71));
+        frame_14->setGeometry(QRect(10, 150, 141, 61));
         frame_14->setFrameShape(QFrame::StyledPanel);
         frame_14->setFrameShadow(QFrame::Raised);
         label_zgwd = new QLabel(frame_14);
@@ -969,22 +889,22 @@ public:
         label_zgwd->setFont(font2);
         lcd_p2_zgwd = new QLCDNumber(frame_14);
         lcd_p2_zgwd->setObjectName(QString::fromUtf8("lcd_p2_zgwd"));
-        lcd_p2_zgwd->setGeometry(QRect(70, 30, 91, 31));
+        lcd_p2_zgwd->setGeometry(QRect(50, 30, 81, 21));
         lcd_p2_zgwd->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_zgwd->setSegmentStyle(QLCDNumber::Flat);
         lcd_p2_zgwd_loc_2 = new QLCDNumber(frame_14);
         lcd_p2_zgwd_loc_2->setObjectName(QString::fromUtf8("lcd_p2_zgwd_loc_2"));
-        lcd_p2_zgwd_loc_2->setGeometry(QRect(40, 30, 21, 31));
+        lcd_p2_zgwd_loc_2->setGeometry(QRect(30, 30, 16, 21));
         lcd_p2_zgwd_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_zgwd_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_p2_zgwd_loc_1 = new QLCDNumber(frame_14);
         lcd_p2_zgwd_loc_1->setObjectName(QString::fromUtf8("lcd_p2_zgwd_loc_1"));
-        lcd_p2_zgwd_loc_1->setGeometry(QRect(10, 30, 21, 31));
+        lcd_p2_zgwd_loc_1->setGeometry(QRect(10, 30, 16, 21));
         lcd_p2_zgwd_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_zgwd_loc_1->setSegmentStyle(QLCDNumber::Flat);
         frame_15 = new QFrame(frame_2);
         frame_15->setObjectName(QString::fromUtf8("frame_15"));
-        frame_15->setGeometry(QRect(20, 260, 171, 71));
+        frame_15->setGeometry(QRect(10, 220, 141, 61));
         frame_15->setFrameShape(QFrame::StyledPanel);
         frame_15->setFrameShadow(QFrame::Raised);
         label_zdwd = new QLabel(frame_15);
@@ -993,27 +913,29 @@ public:
         label_zdwd->setFont(font2);
         lcd_p2_zdwd = new QLCDNumber(frame_15);
         lcd_p2_zdwd->setObjectName(QString::fromUtf8("lcd_p2_zdwd"));
-        lcd_p2_zdwd->setGeometry(QRect(70, 30, 91, 31));
+        lcd_p2_zdwd->setGeometry(QRect(50, 30, 81, 21));
         lcd_p2_zdwd->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_zdwd->setSegmentStyle(QLCDNumber::Flat);
         lcd_p2_zdwd_loc_2 = new QLCDNumber(frame_15);
         lcd_p2_zdwd_loc_2->setObjectName(QString::fromUtf8("lcd_p2_zdwd_loc_2"));
-        lcd_p2_zdwd_loc_2->setGeometry(QRect(40, 30, 21, 31));
+        lcd_p2_zdwd_loc_2->setGeometry(QRect(30, 30, 16, 21));
         lcd_p2_zdwd_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_zdwd_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_p2_zdwd_loc_1 = new QLCDNumber(frame_15);
         lcd_p2_zdwd_loc_1->setObjectName(QString::fromUtf8("lcd_p2_zdwd_loc_1"));
-        lcd_p2_zdwd_loc_1->setGeometry(QRect(10, 30, 21, 31));
+        lcd_p2_zdwd_loc_1->setGeometry(QRect(10, 30, 16, 21));
         lcd_p2_zdwd_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p2_zdwd_loc_1->setSegmentStyle(QLCDNumber::Flat);
         frame_bj = new QFrame(tab_cjbxx);
         frame_bj->setObjectName(QString::fromUtf8("frame_bj"));
-        frame_bj->setGeometry(QRect(250, 160, 751, 351));
+        frame_bj->setGeometry(QRect(190, 140, 580, 291));
         frame_bj->setFrameShape(QFrame::StyledPanel);
         frame_bj->setFrameShadow(QFrame::Raised);
         tableWidget = new QTableWidget(frame_bj);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
-        tableWidget->setGeometry(QRect(10, 10, 730, 331));
+        tableWidget->setGeometry(QRect(10, 10, 560, 271));
+        tableWidget->setFont(font2);
+        tableWidget->setAutoFillBackground(true);
         tableWidget->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         tableWidget->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         tableWidget->setRowCount(0);
@@ -1025,105 +947,130 @@ public:
         tableWidget->verticalHeader()->setStretchLastSection(true);
         text_p2_bj_dtgy = new QTextBrowser(frame_bj);
         text_p2_bj_dtgy->setObjectName(QString::fromUtf8("text_p2_bj_dtgy"));
-        text_p2_bj_dtgy->setGeometry(QRect(114, 22, 35, 41));
+        text_p2_bj_dtgy->setGeometry(QRect(90, 22, 25, 31));
         text_p2_bj_dtgy->setAutoFillBackground(false);
         text_p2_bj_dtgy->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_dtgy->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_bj_xtwc = new QTextBrowser(frame_bj);
         text_p2_bj_xtwc->setObjectName(QString::fromUtf8("text_p2_bj_xtwc"));
-        text_p2_bj_xtwc->setGeometry(QRect(114, 88, 35, 41));
+        text_p2_bj_xtwc->setGeometry(QRect(90, 73, 25, 31));
         text_p2_bj_xtwc->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_xtwc->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_bj_socg = new QTextBrowser(frame_bj);
         text_p2_bj_socg->setObjectName(QString::fromUtf8("text_p2_bj_socg"));
-        text_p2_bj_socg->setGeometry(QRect(114, 154, 35, 41));
+        text_p2_bj_socg->setGeometry(QRect(90, 124, 25, 31));
         text_p2_bj_socg->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_socg->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_gz_yzctx = new QTextBrowser(frame_bj);
         text_p2_gz_yzctx->setObjectName(QString::fromUtf8("text_p2_gz_yzctx"));
-        text_p2_gz_yzctx->setGeometry(QRect(114, 220, 35, 41));
+        text_p2_gz_yzctx->setGeometry(QRect(90, 175, 25, 31));
         text_p2_gz_yzctx->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_yzctx->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_gz_zzzl = new QTextBrowser(frame_bj);
         text_p2_gz_zzzl->setObjectName(QString::fromUtf8("text_p2_gz_zzzl"));
-        text_p2_gz_zzzl->setGeometry(QRect(114, 286, 35, 41));
+        text_p2_gz_zzzl->setGeometry(QRect(90, 226, 25, 31));
         text_p2_gz_zzzl->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_zzzl->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_bj_xtgw = new QTextBrowser(frame_bj);
         text_p2_bj_xtgw->setObjectName(QString::fromUtf8("text_p2_bj_xtgw"));
-        text_p2_bj_xtgw->setGeometry(QRect(260, 88, 35, 41));
+        text_p2_bj_xtgw->setGeometry(QRect(200, 73, 25, 31));
         text_p2_bj_xtgw->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_xtgw->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_bj_socd = new QTextBrowser(frame_bj);
         text_p2_bj_socd->setObjectName(QString::fromUtf8("text_p2_bj_socd"));
-        text_p2_bj_socd->setGeometry(QRect(260, 154, 35, 41));
+        text_p2_bj_socd->setGeometry(QRect(200, 124, 25, 31));
         text_p2_bj_socd->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_socd->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_gz_ybmutx = new QTextBrowser(frame_bj);
         text_p2_gz_ybmutx->setObjectName(QString::fromUtf8("text_p2_gz_ybmutx"));
-        text_p2_gz_ybmutx->setGeometry(QRect(260, 220, 35, 41));
+        text_p2_gz_ybmutx->setGeometry(QRect(200, 175, 25, 31));
         text_p2_gz_ybmutx->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_ybmutx->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_gz_zfzl = new QTextBrowser(frame_bj);
         text_p2_gz_zfzl->setObjectName(QString::fromUtf8("text_p2_gz_zfzl"));
-        text_p2_gz_zfzl->setGeometry(QRect(260, 286, 35, 41));
+        text_p2_gz_zfzl->setGeometry(QRect(200, 226, 25, 31));
         text_p2_gz_zfzl->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_zfzl->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_bj_dtqy = new QTextBrowser(frame_bj);
         text_p2_bj_dtqy->setObjectName(QString::fromUtf8("text_p2_bj_dtqy"));
-        text_p2_bj_dtqy->setGeometry(QRect(260, 22, 35, 41));
+        text_p2_bj_dtqy->setGeometry(QRect(200, 22, 25, 31));
         text_p2_bj_dtqy->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_dtqy->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_bj_xtdw = new QTextBrowser(frame_bj);
         text_p2_bj_xtdw->setObjectName(QString::fromUtf8("text_p2_bj_xtdw"));
-        text_p2_bj_xtdw->setGeometry(QRect(406, 88, 35, 41));
+        text_p2_bj_xtdw->setGeometry(QRect(310, 73, 25, 31));
         text_p2_bj_xtdw->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_xtdw->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_gz_yc = new QTextBrowser(frame_bj);
         text_p2_gz_yc->setObjectName(QString::fromUtf8("text_p2_gz_yc"));
-        text_p2_gz_yc->setGeometry(QRect(406, 286, 35, 41));
+        text_p2_gz_yc->setGeometry(QRect(310, 226, 25, 31));
         text_p2_gz_yc->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_yc->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_bj_xtjy = new QTextBrowser(frame_bj);
         text_p2_bj_xtjy->setObjectName(QString::fromUtf8("text_p2_bj_xtjy"));
-        text_p2_bj_xtjy->setGeometry(QRect(406, 154, 35, 41));
+        text_p2_bj_xtjy->setGeometry(QRect(310, 124, 25, 31));
         text_p2_bj_xtjy->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_xtjy->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_bj_xtgy = new QTextBrowser(frame_bj);
         text_p2_bj_xtgy->setObjectName(QString::fromUtf8("text_p2_bj_xtgy"));
-        text_p2_bj_xtgy->setGeometry(QRect(406, 22, 35, 41));
+        text_p2_bj_xtgy->setGeometry(QRect(310, 22, 25, 31));
         text_p2_bj_xtgy->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_xtgy->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_gz_ycdjtx = new QTextBrowser(frame_bj);
         text_p2_gz_ycdjtx->setObjectName(QString::fromUtf8("text_p2_gz_ycdjtx"));
-        text_p2_gz_ycdjtx->setGeometry(QRect(406, 220, 35, 41));
+        text_p2_gz_ycdjtx->setGeometry(QRect(310, 175, 25, 31));
         text_p2_gz_ycdjtx->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_ycdjtx->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_gz_dycgq = new QTextBrowser(frame_bj);
         text_p2_gz_dycgq->setObjectName(QString::fromUtf8("text_p2_gz_dycgq"));
-        text_p2_gz_dycgq->setGeometry(QRect(550, 286, 35, 41));
+        text_p2_gz_dycgq->setGeometry(QRect(420, 226, 25, 31));
         text_p2_gz_dycgq->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_dycgq->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_bj_xtqy = new QTextBrowser(frame_bj);
         text_p2_bj_xtqy->setObjectName(QString::fromUtf8("text_p2_bj_xtqy"));
-        text_p2_bj_xtqy->setGeometry(QRect(550, 22, 35, 41));
+        text_p2_bj_xtqy->setGeometry(QRect(420, 22, 25, 31));
         text_p2_bj_xtqy->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_xtqy->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_bj_jzgw = new QTextBrowser(frame_bj);
         text_p2_bj_jzgw->setObjectName(QString::fromUtf8("text_p2_bj_jzgw"));
-        text_p2_bj_jzgw->setGeometry(QRect(550, 154, 35, 41));
+        text_p2_bj_jzgw->setGeometry(QRect(420, 124, 25, 31));
         text_p2_bj_jzgw->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_jzgw->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_gz_jr = new QTextBrowser(frame_bj);
         text_p2_gz_jr->setObjectName(QString::fromUtf8("text_p2_gz_jr"));
-        text_p2_gz_jr->setGeometry(QRect(550, 220, 35, 41));
+        text_p2_gz_jr->setGeometry(QRect(420, 175, 25, 31));
         text_p2_gz_jr->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_jr->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_bj_fdgl = new QTextBrowser(frame_bj);
         text_p2_bj_fdgl->setObjectName(QString::fromUtf8("text_p2_bj_fdgl"));
-        text_p2_bj_fdgl->setGeometry(QRect(550, 88, 35, 41));
+        text_p2_bj_fdgl->setGeometry(QRect(420, 73, 25, 31));
         text_p2_bj_fdgl->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_fdgl->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_gz_wdcgq = new QTextBrowser(frame_bj);
         text_p2_gz_wdcgq->setObjectName(QString::fromUtf8("text_p2_gz_wdcgq"));
-        text_p2_gz_wdcgq->setGeometry(QRect(696, 286, 35, 41));
+        text_p2_gz_wdcgq->setGeometry(QRect(530, 226, 25, 31));
         text_p2_gz_wdcgq->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_wdcgq->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_bj_xtyc = new QTextBrowser(frame_bj);
         text_p2_bj_xtyc->setObjectName(QString::fromUtf8("text_p2_bj_xtyc"));
-        text_p2_bj_xtyc->setGeometry(QRect(696, 22, 35, 41));
+        text_p2_bj_xtyc->setGeometry(QRect(530, 22, 25, 31));
         text_p2_bj_xtyc->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_xtyc->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_gz_sjzj = new QTextBrowser(frame_bj);
         text_p2_gz_sjzj->setObjectName(QString::fromUtf8("text_p2_gz_sjzj"));
-        text_p2_gz_sjzj->setGeometry(QRect(696, 154, 35, 41));
+        text_p2_gz_sjzj->setGeometry(QRect(530, 124, 25, 31));
         text_p2_gz_sjzj->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_sjzj->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_gz_fs = new QTextBrowser(frame_bj);
         text_p2_gz_fs->setObjectName(QString::fromUtf8("text_p2_gz_fs"));
-        text_p2_gz_fs->setGeometry(QRect(696, 220, 35, 41));
+        text_p2_gz_fs->setGeometry(QRect(530, 175, 25, 31));
         text_p2_gz_fs->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_gz_fs->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p2_bj_cdgl = new QTextBrowser(frame_bj);
         text_p2_bj_cdgl->setObjectName(QString::fromUtf8("text_p2_bj_cdgl"));
-        text_p2_bj_cdgl->setGeometry(QRect(696, 88, 35, 41));
+        text_p2_bj_cdgl->setGeometry(QRect(530, 73, 25, 31));
         text_p2_bj_cdgl->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        text_p2_bj_cdgl->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         tabWidget->addTab(tab_cjbxx, QString());
         frame_2->raise();
         pbutton_right->raise();
@@ -1133,32 +1080,18 @@ public:
         frame_bj->raise();
         tab_cxxxx = new QWidget();
         tab_cxxxx->setObjectName(QString::fromUtf8("tab_cxxxx"));
-        label_cluster_2 = new QLabel(tab_cxxxx);
-        label_cluster_2->setObjectName(QString::fromUtf8("label_cluster_2"));
-        label_cluster_2->setGeometry(QRect(70, 30, 61, 61));
-        label_cluster_2->setFrameShape(QFrame::StyledPanel);
-        label_cluster_2->setFrameShadow(QFrame::Raised);
-        label_cluster_2->setAlignment(Qt::AlignCenter);
-        pbutton_left_2 = new QPushButton(tab_cxxxx);
-        pbutton_left_2->setObjectName(QString::fromUtf8("pbutton_left_2"));
-        pbutton_left_2->setGeometry(QRect(30, 30, 31, 61));
-        pbutton_right_2 = new QPushButton(tab_cxxxx);
-        pbutton_right_2->setObjectName(QString::fromUtf8("pbutton_right_2"));
-        pbutton_right_2->setGeometry(QRect(140, 30, 31, 61));
-        comboBox = new QComboBox(tab_cxxxx);
-        comboBox->setObjectName(QString::fromUtf8("comboBox"));
-        comboBox->setGeometry(QRect(60, 100, 81, 27));
         frame_4 = new QFrame(tab_cxxxx);
         frame_4->setObjectName(QString::fromUtf8("frame_4"));
-        frame_4->setGeometry(QRect(350, 150, 641, 351));
+        frame_4->setGeometry(QRect(280, 120, 501, 311));
         frame_4->setFrameShape(QFrame::StyledPanel);
         frame_4->setFrameShadow(QFrame::Raised);
         tableWidget_dy = new QTableWidget(frame_4);
         tableWidget_dy->setObjectName(QString::fromUtf8("tableWidget_dy"));
-        tableWidget_dy->setGeometry(QRect(10, 10, 621, 331));
+        tableWidget_dy->setGeometry(QRect(10, 10, 480, 291));
+        tableWidget_dy->setFont(font2);
         lcd_p3_dy_22 = new QLCDNumber(frame_4);
         lcd_p3_dy_22->setObjectName(QString::fromUtf8("lcd_p3_dy_22"));
-        lcd_p3_dy_22->setGeometry(QRect(259, 298, 51, 30));
+        lcd_p3_dy_22->setGeometry(QRect(190, 270, 41, 20));
         lcd_p3_dy_22->setAutoFillBackground(false);
         lcd_p3_dy_22->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_22->setFrameShape(QFrame::NoFrame);
@@ -1168,7 +1101,7 @@ public:
         lcd_p3_dy_22->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_3 = new QLCDNumber(frame_4);
         lcd_p3_dy_3->setObjectName(QString::fromUtf8("lcd_p3_dy_3"));
-        lcd_p3_dy_3->setGeometry(QRect(414, 23, 51, 30));
+        lcd_p3_dy_3->setGeometry(QRect(310, 23, 41, 20));
         lcd_p3_dy_3->setAutoFillBackground(false);
         lcd_p3_dy_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_3->setFrameShape(QFrame::NoFrame);
@@ -1178,7 +1111,7 @@ public:
         lcd_p3_dy_3->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_8 = new QLCDNumber(frame_4);
         lcd_p3_dy_8->setObjectName(QString::fromUtf8("lcd_p3_dy_8"));
-        lcd_p3_dy_8->setGeometry(QRect(549, 78, 51, 30));
+        lcd_p3_dy_8->setGeometry(QRect(420, 70, 41, 20));
         lcd_p3_dy_8->setAutoFillBackground(false);
         lcd_p3_dy_8->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_8->setFrameShape(QFrame::NoFrame);
@@ -1188,7 +1121,7 @@ public:
         lcd_p3_dy_8->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_10 = new QLCDNumber(frame_4);
         lcd_p3_dy_10->setObjectName(QString::fromUtf8("lcd_p3_dy_10"));
-        lcd_p3_dy_10->setGeometry(QRect(259, 133, 51, 30));
+        lcd_p3_dy_10->setGeometry(QRect(190, 120, 41, 20));
         lcd_p3_dy_10->setAutoFillBackground(false);
         lcd_p3_dy_10->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_10->setFrameShape(QFrame::NoFrame);
@@ -1198,7 +1131,7 @@ public:
         lcd_p3_dy_10->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_6 = new QLCDNumber(frame_4);
         lcd_p3_dy_6->setObjectName(QString::fromUtf8("lcd_p3_dy_6"));
-        lcd_p3_dy_6->setGeometry(QRect(259, 78, 51, 30));
+        lcd_p3_dy_6->setGeometry(QRect(190, 70, 41, 20));
         lcd_p3_dy_6->setAutoFillBackground(false);
         lcd_p3_dy_6->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_6->setFrameShape(QFrame::NoFrame);
@@ -1208,7 +1141,7 @@ public:
         lcd_p3_dy_6->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_5 = new QLCDNumber(frame_4);
         lcd_p3_dy_5->setObjectName(QString::fromUtf8("lcd_p3_dy_5"));
-        lcd_p3_dy_5->setGeometry(QRect(104, 78, 51, 30));
+        lcd_p3_dy_5->setGeometry(QRect(70, 70, 41, 20));
         lcd_p3_dy_5->setAutoFillBackground(false);
         lcd_p3_dy_5->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_5->setFrameShape(QFrame::NoFrame);
@@ -1218,7 +1151,7 @@ public:
         lcd_p3_dy_5->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_19 = new QLCDNumber(frame_4);
         lcd_p3_dy_19->setObjectName(QString::fromUtf8("lcd_p3_dy_19"));
-        lcd_p3_dy_19->setGeometry(QRect(414, 243, 51, 30));
+        lcd_p3_dy_19->setGeometry(QRect(310, 220, 41, 20));
         lcd_p3_dy_19->setAutoFillBackground(false);
         lcd_p3_dy_19->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_19->setFrameShape(QFrame::NoFrame);
@@ -1228,7 +1161,7 @@ public:
         lcd_p3_dy_19->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_14 = new QLCDNumber(frame_4);
         lcd_p3_dy_14->setObjectName(QString::fromUtf8("lcd_p3_dy_14"));
-        lcd_p3_dy_14->setGeometry(QRect(259, 188, 51, 30));
+        lcd_p3_dy_14->setGeometry(QRect(190, 170, 41, 20));
         lcd_p3_dy_14->setAutoFillBackground(false);
         lcd_p3_dy_14->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_14->setFrameShape(QFrame::NoFrame);
@@ -1238,7 +1171,7 @@ public:
         lcd_p3_dy_14->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_12 = new QLCDNumber(frame_4);
         lcd_p3_dy_12->setObjectName(QString::fromUtf8("lcd_p3_dy_12"));
-        lcd_p3_dy_12->setGeometry(QRect(549, 133, 51, 31));
+        lcd_p3_dy_12->setGeometry(QRect(420, 120, 41, 20));
         lcd_p3_dy_12->setAutoFillBackground(false);
         lcd_p3_dy_12->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_12->setFrameShape(QFrame::NoFrame);
@@ -1248,7 +1181,7 @@ public:
         lcd_p3_dy_12->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_9 = new QLCDNumber(frame_4);
         lcd_p3_dy_9->setObjectName(QString::fromUtf8("lcd_p3_dy_9"));
-        lcd_p3_dy_9->setGeometry(QRect(104, 133, 51, 30));
+        lcd_p3_dy_9->setGeometry(QRect(70, 120, 41, 20));
         lcd_p3_dy_9->setAutoFillBackground(false);
         lcd_p3_dy_9->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_9->setFrameShape(QFrame::NoFrame);
@@ -1258,7 +1191,7 @@ public:
         lcd_p3_dy_9->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_11 = new QLCDNumber(frame_4);
         lcd_p3_dy_11->setObjectName(QString::fromUtf8("lcd_p3_dy_11"));
-        lcd_p3_dy_11->setGeometry(QRect(414, 133, 51, 30));
+        lcd_p3_dy_11->setGeometry(QRect(310, 120, 41, 20));
         lcd_p3_dy_11->setAutoFillBackground(false);
         lcd_p3_dy_11->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_11->setFrameShape(QFrame::NoFrame);
@@ -1268,7 +1201,7 @@ public:
         lcd_p3_dy_11->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_23 = new QLCDNumber(frame_4);
         lcd_p3_dy_23->setObjectName(QString::fromUtf8("lcd_p3_dy_23"));
-        lcd_p3_dy_23->setGeometry(QRect(414, 298, 51, 30));
+        lcd_p3_dy_23->setGeometry(QRect(310, 270, 41, 20));
         lcd_p3_dy_23->setAutoFillBackground(false);
         lcd_p3_dy_23->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_23->setFrameShape(QFrame::NoFrame);
@@ -1278,7 +1211,7 @@ public:
         lcd_p3_dy_23->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_18 = new QLCDNumber(frame_4);
         lcd_p3_dy_18->setObjectName(QString::fromUtf8("lcd_p3_dy_18"));
-        lcd_p3_dy_18->setGeometry(QRect(259, 243, 51, 30));
+        lcd_p3_dy_18->setGeometry(QRect(190, 220, 41, 20));
         lcd_p3_dy_18->setAutoFillBackground(false);
         lcd_p3_dy_18->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_18->setFrameShape(QFrame::NoFrame);
@@ -1288,7 +1221,7 @@ public:
         lcd_p3_dy_18->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_1 = new QLCDNumber(frame_4);
         lcd_p3_dy_1->setObjectName(QString::fromUtf8("lcd_p3_dy_1"));
-        lcd_p3_dy_1->setGeometry(QRect(104, 23, 51, 30));
+        lcd_p3_dy_1->setGeometry(QRect(70, 23, 41, 20));
         lcd_p3_dy_1->setAutoFillBackground(false);
         lcd_p3_dy_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_1->setFrameShape(QFrame::NoFrame);
@@ -1298,7 +1231,7 @@ public:
         lcd_p3_dy_1->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_17 = new QLCDNumber(frame_4);
         lcd_p3_dy_17->setObjectName(QString::fromUtf8("lcd_p3_dy_17"));
-        lcd_p3_dy_17->setGeometry(QRect(104, 243, 51, 30));
+        lcd_p3_dy_17->setGeometry(QRect(70, 220, 41, 20));
         lcd_p3_dy_17->setAutoFillBackground(false);
         lcd_p3_dy_17->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_17->setFrameShape(QFrame::NoFrame);
@@ -1308,7 +1241,7 @@ public:
         lcd_p3_dy_17->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_20 = new QLCDNumber(frame_4);
         lcd_p3_dy_20->setObjectName(QString::fromUtf8("lcd_p3_dy_20"));
-        lcd_p3_dy_20->setGeometry(QRect(549, 243, 51, 30));
+        lcd_p3_dy_20->setGeometry(QRect(420, 220, 41, 20));
         lcd_p3_dy_20->setAutoFillBackground(false);
         lcd_p3_dy_20->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_20->setFrameShape(QFrame::NoFrame);
@@ -1318,7 +1251,7 @@ public:
         lcd_p3_dy_20->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_21 = new QLCDNumber(frame_4);
         lcd_p3_dy_21->setObjectName(QString::fromUtf8("lcd_p3_dy_21"));
-        lcd_p3_dy_21->setGeometry(QRect(104, 298, 51, 30));
+        lcd_p3_dy_21->setGeometry(QRect(70, 270, 41, 20));
         lcd_p3_dy_21->setAutoFillBackground(false);
         lcd_p3_dy_21->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_21->setFrameShape(QFrame::NoFrame);
@@ -1328,7 +1261,7 @@ public:
         lcd_p3_dy_21->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_7 = new QLCDNumber(frame_4);
         lcd_p3_dy_7->setObjectName(QString::fromUtf8("lcd_p3_dy_7"));
-        lcd_p3_dy_7->setGeometry(QRect(414, 78, 51, 30));
+        lcd_p3_dy_7->setGeometry(QRect(310, 70, 41, 20));
         lcd_p3_dy_7->setAutoFillBackground(false);
         lcd_p3_dy_7->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_7->setFrameShape(QFrame::NoFrame);
@@ -1338,7 +1271,7 @@ public:
         lcd_p3_dy_7->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_16 = new QLCDNumber(frame_4);
         lcd_p3_dy_16->setObjectName(QString::fromUtf8("lcd_p3_dy_16"));
-        lcd_p3_dy_16->setGeometry(QRect(550, 188, 51, 31));
+        lcd_p3_dy_16->setGeometry(QRect(420, 170, 41, 20));
         lcd_p3_dy_16->setAutoFillBackground(false);
         lcd_p3_dy_16->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_16->setFrameShape(QFrame::NoFrame);
@@ -1348,7 +1281,7 @@ public:
         lcd_p3_dy_16->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_4 = new QLCDNumber(frame_4);
         lcd_p3_dy_4->setObjectName(QString::fromUtf8("lcd_p3_dy_4"));
-        lcd_p3_dy_4->setGeometry(QRect(549, 23, 51, 30));
+        lcd_p3_dy_4->setGeometry(QRect(420, 23, 41, 20));
         lcd_p3_dy_4->setAutoFillBackground(false);
         lcd_p3_dy_4->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_4->setFrameShape(QFrame::NoFrame);
@@ -1358,7 +1291,7 @@ public:
         lcd_p3_dy_4->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_15 = new QLCDNumber(frame_4);
         lcd_p3_dy_15->setObjectName(QString::fromUtf8("lcd_p3_dy_15"));
-        lcd_p3_dy_15->setGeometry(QRect(414, 188, 51, 30));
+        lcd_p3_dy_15->setGeometry(QRect(310, 170, 41, 20));
         lcd_p3_dy_15->setAutoFillBackground(false);
         lcd_p3_dy_15->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_15->setFrameShape(QFrame::NoFrame);
@@ -1368,7 +1301,7 @@ public:
         lcd_p3_dy_15->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_2 = new QLCDNumber(frame_4);
         lcd_p3_dy_2->setObjectName(QString::fromUtf8("lcd_p3_dy_2"));
-        lcd_p3_dy_2->setGeometry(QRect(259, 23, 51, 30));
+        lcd_p3_dy_2->setGeometry(QRect(190, 23, 41, 20));
         lcd_p3_dy_2->setAutoFillBackground(false);
         lcd_p3_dy_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_2->setFrameShape(QFrame::NoFrame);
@@ -1378,7 +1311,7 @@ public:
         lcd_p3_dy_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_24 = new QLCDNumber(frame_4);
         lcd_p3_dy_24->setObjectName(QString::fromUtf8("lcd_p3_dy_24"));
-        lcd_p3_dy_24->setGeometry(QRect(549, 298, 51, 30));
+        lcd_p3_dy_24->setGeometry(QRect(420, 270, 41, 20));
         lcd_p3_dy_24->setAutoFillBackground(false);
         lcd_p3_dy_24->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_24->setFrameShape(QFrame::NoFrame);
@@ -1388,7 +1321,7 @@ public:
         lcd_p3_dy_24->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_13 = new QLCDNumber(frame_4);
         lcd_p3_dy_13->setObjectName(QString::fromUtf8("lcd_p3_dy_13"));
-        lcd_p3_dy_13->setGeometry(QRect(104, 188, 51, 30));
+        lcd_p3_dy_13->setGeometry(QRect(70, 170, 41, 20));
         lcd_p3_dy_13->setAutoFillBackground(false);
         lcd_p3_dy_13->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_13->setFrameShape(QFrame::NoFrame);
@@ -1418,166 +1351,173 @@ public:
         lcd_zy_26->setSegmentStyle(QLCDNumber::Flat);
         frame_5 = new QFrame(tab_cxxxx);
         frame_5->setObjectName(QString::fromUtf8("frame_5"));
-        frame_5->setGeometry(QRect(350, 20, 641, 111));
+        frame_5->setGeometry(QRect(280, 10, 501, 101));
         frame_5->setFrameShape(QFrame::StyledPanel);
         frame_5->setFrameShadow(QFrame::Raised);
-        lcd_p3_zgwd = new QLCDNumber(frame_5);
-        lcd_p3_zgwd->setObjectName(QString::fromUtf8("lcd_p3_zgwd"));
-        lcd_p3_zgwd->setGeometry(QRect(80, 50, 71, 31));
-        lcd_p3_zgwd->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_p3_zgwd->setSegmentStyle(QLCDNumber::Flat);
-        label_8 = new QLabel(frame_5);
-        label_8->setObjectName(QString::fromUtf8("label_8"));
-        label_8->setGeometry(QRect(60, 20, 62, 17));
-        label_9 = new QLabel(frame_5);
-        label_9->setObjectName(QString::fromUtf8("label_9"));
-        label_9->setGeometry(QRect(220, 20, 62, 17));
-        label_11 = new QLabel(frame_5);
-        label_11->setObjectName(QString::fromUtf8("label_11"));
-        label_11->setGeometry(QRect(370, 20, 62, 17));
-        label_12 = new QLabel(frame_5);
-        label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setGeometry(QRect(520, 20, 62, 17));
-        lcd_p3_zgwd_loc_2 = new QLCDNumber(frame_5);
-        lcd_p3_zgwd_loc_2->setObjectName(QString::fromUtf8("lcd_p3_zgwd_loc_2"));
-        lcd_p3_zgwd_loc_2->setGeometry(QRect(55, 50, 21, 31));
-        lcd_p3_zgwd_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_p3_zgwd_loc_2->setSegmentStyle(QLCDNumber::Flat);
-        lcd_p3_zgwd_loc_1 = new QLCDNumber(frame_5);
-        lcd_p3_zgwd_loc_1->setObjectName(QString::fromUtf8("lcd_p3_zgwd_loc_1"));
-        lcd_p3_zgwd_loc_1->setGeometry(QRect(30, 50, 21, 31));
-        lcd_p3_zgwd_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_p3_zgwd_loc_1->setSegmentStyle(QLCDNumber::Flat);
         frame_7 = new QFrame(frame_5);
         frame_7->setObjectName(QString::fromUtf8("frame_7"));
-        frame_7->setGeometry(QRect(20, 10, 141, 91));
+        frame_7->setGeometry(QRect(10, 10, 111, 71));
         frame_7->setFrameShape(QFrame::StyledPanel);
         frame_7->setFrameShadow(QFrame::Raised);
-        lcd_p3_zdwd = new QLCDNumber(frame_5);
-        lcd_p3_zdwd->setObjectName(QString::fromUtf8("lcd_p3_zdwd"));
-        lcd_p3_zdwd->setGeometry(QRect(235, 50, 71, 31));
-        lcd_p3_zdwd->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_p3_zdwd->setSegmentStyle(QLCDNumber::Flat);
-        lcd_p3_zdwd_loc_1 = new QLCDNumber(frame_5);
-        lcd_p3_zdwd_loc_1->setObjectName(QString::fromUtf8("lcd_p3_zdwd_loc_1"));
-        lcd_p3_zdwd_loc_1->setGeometry(QRect(185, 50, 21, 31));
-        lcd_p3_zdwd_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_p3_zdwd_loc_1->setSegmentStyle(QLCDNumber::Flat);
+        label_8 = new QLabel(frame_7);
+        label_8->setObjectName(QString::fromUtf8("label_8"));
+        label_8->setGeometry(QRect(30, 10, 62, 17));
+        label_8->setFont(font1);
+        lcd_p3_zgwd_loc_1 = new QLCDNumber(frame_7);
+        lcd_p3_zgwd_loc_1->setObjectName(QString::fromUtf8("lcd_p3_zgwd_loc_1"));
+        lcd_p3_zgwd_loc_1->setGeometry(QRect(10, 40, 16, 21));
+        lcd_p3_zgwd_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p3_zgwd_loc_1->setSegmentStyle(QLCDNumber::Flat);
+        lcd_p3_zgwd_loc_2 = new QLCDNumber(frame_7);
+        lcd_p3_zgwd_loc_2->setObjectName(QString::fromUtf8("lcd_p3_zgwd_loc_2"));
+        lcd_p3_zgwd_loc_2->setGeometry(QRect(30, 40, 16, 21));
+        lcd_p3_zgwd_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p3_zgwd_loc_2->setSegmentStyle(QLCDNumber::Flat);
+        lcd_p3_zgwd = new QLCDNumber(frame_7);
+        lcd_p3_zgwd->setObjectName(QString::fromUtf8("lcd_p3_zgwd"));
+        lcd_p3_zgwd->setGeometry(QRect(50, 40, 51, 21));
+        lcd_p3_zgwd->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p3_zgwd->setSegmentStyle(QLCDNumber::Flat);
         frame_8 = new QFrame(frame_5);
         frame_8->setObjectName(QString::fromUtf8("frame_8"));
-        frame_8->setGeometry(QRect(175, 10, 141, 91));
+        frame_8->setGeometry(QRect(130, 10, 111, 71));
         frame_8->setFrameShape(QFrame::StyledPanel);
         frame_8->setFrameShadow(QFrame::Raised);
-        lcd_p3_zdwd_loc_2 = new QLCDNumber(frame_5);
+        lcd_p3_zdwd_loc_2 = new QLCDNumber(frame_8);
         lcd_p3_zdwd_loc_2->setObjectName(QString::fromUtf8("lcd_p3_zdwd_loc_2"));
-        lcd_p3_zdwd_loc_2->setGeometry(QRect(210, 50, 21, 31));
+        lcd_p3_zdwd_loc_2->setGeometry(QRect(30, 40, 16, 21));
         lcd_p3_zdwd_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_zdwd_loc_2->setSegmentStyle(QLCDNumber::Flat);
-        lcd_p3_zddy = new QLCDNumber(frame_5);
-        lcd_p3_zddy->setObjectName(QString::fromUtf8("lcd_p3_zddy"));
-        lcd_p3_zddy->setGeometry(QRect(390, 50, 71, 31));
-        lcd_p3_zddy->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_p3_zddy->setSegmentStyle(QLCDNumber::Flat);
-        lcd_p3_zddy_loc_1 = new QLCDNumber(frame_5);
-        lcd_p3_zddy_loc_1->setObjectName(QString::fromUtf8("lcd_p3_zddy_loc_1"));
-        lcd_p3_zddy_loc_1->setGeometry(QRect(340, 50, 21, 31));
-        lcd_p3_zddy_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_p3_zddy_loc_1->setSegmentStyle(QLCDNumber::Flat);
+        lcd_p3_zdwd = new QLCDNumber(frame_8);
+        lcd_p3_zdwd->setObjectName(QString::fromUtf8("lcd_p3_zdwd"));
+        lcd_p3_zdwd->setGeometry(QRect(50, 40, 51, 21));
+        lcd_p3_zdwd->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p3_zdwd->setSegmentStyle(QLCDNumber::Flat);
+        label_9 = new QLabel(frame_8);
+        label_9->setObjectName(QString::fromUtf8("label_9"));
+        label_9->setGeometry(QRect(35, 10, 62, 17));
+        label_9->setFont(font1);
+        lcd_p3_zdwd_loc_1 = new QLCDNumber(frame_8);
+        lcd_p3_zdwd_loc_1->setObjectName(QString::fromUtf8("lcd_p3_zdwd_loc_1"));
+        lcd_p3_zdwd_loc_1->setGeometry(QRect(10, 40, 16, 21));
+        lcd_p3_zdwd_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p3_zdwd_loc_1->setSegmentStyle(QLCDNumber::Flat);
         frame_9 = new QFrame(frame_5);
         frame_9->setObjectName(QString::fromUtf8("frame_9"));
-        frame_9->setGeometry(QRect(330, 10, 141, 91));
+        frame_9->setGeometry(QRect(250, 10, 111, 71));
         frame_9->setFrameShape(QFrame::StyledPanel);
         frame_9->setFrameShadow(QFrame::Raised);
-        lcd_p3_zddy_loc_2 = new QLCDNumber(frame_5);
+        lcd_p3_zddy_loc_2 = new QLCDNumber(frame_9);
         lcd_p3_zddy_loc_2->setObjectName(QString::fromUtf8("lcd_p3_zddy_loc_2"));
-        lcd_p3_zddy_loc_2->setGeometry(QRect(365, 50, 21, 31));
+        lcd_p3_zddy_loc_2->setGeometry(QRect(10, 40, 16, 21));
         lcd_p3_zddy_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_zddy_loc_2->setSegmentStyle(QLCDNumber::Flat);
-        lcd_p3_zxdy = new QLCDNumber(frame_5);
-        lcd_p3_zxdy->setObjectName(QString::fromUtf8("lcd_p3_zxdy"));
-        lcd_p3_zxdy->setGeometry(QRect(545, 50, 71, 31));
-        lcd_p3_zxdy->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_p3_zxdy->setSegmentStyle(QLCDNumber::Flat);
-        lcd_p3_zxdy_loc_1 = new QLCDNumber(frame_5);
-        lcd_p3_zxdy_loc_1->setObjectName(QString::fromUtf8("lcd_p3_zxdy_loc_1"));
-        lcd_p3_zxdy_loc_1->setGeometry(QRect(495, 50, 21, 31));
-        lcd_p3_zxdy_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lcd_p3_zxdy_loc_1->setSegmentStyle(QLCDNumber::Flat);
+        lcd_p3_zddy = new QLCDNumber(frame_9);
+        lcd_p3_zddy->setObjectName(QString::fromUtf8("lcd_p3_zddy"));
+        lcd_p3_zddy->setGeometry(QRect(50, 40, 51, 21));
+        lcd_p3_zddy->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p3_zddy->setSegmentStyle(QLCDNumber::Flat);
+        label_11 = new QLabel(frame_9);
+        label_11->setObjectName(QString::fromUtf8("label_11"));
+        label_11->setGeometry(QRect(30, 10, 62, 17));
+        label_11->setFont(font1);
+        lcd_p3_zddy_loc_1 = new QLCDNumber(frame_9);
+        lcd_p3_zddy_loc_1->setObjectName(QString::fromUtf8("lcd_p3_zddy_loc_1"));
+        lcd_p3_zddy_loc_1->setGeometry(QRect(30, 40, 16, 21));
+        lcd_p3_zddy_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p3_zddy_loc_1->setSegmentStyle(QLCDNumber::Flat);
         frame_10 = new QFrame(frame_5);
         frame_10->setObjectName(QString::fromUtf8("frame_10"));
-        frame_10->setGeometry(QRect(485, 10, 141, 91));
+        frame_10->setGeometry(QRect(370, 10, 111, 71));
         frame_10->setFrameShape(QFrame::StyledPanel);
         frame_10->setFrameShadow(QFrame::Raised);
-        lcd_p3_zxdy_loc_2 = new QLCDNumber(frame_5);
+        label_12 = new QLabel(frame_10);
+        label_12->setObjectName(QString::fromUtf8("label_12"));
+        label_12->setGeometry(QRect(20, 10, 62, 17));
+        label_12->setFont(font1);
+        lcd_p3_zxdy_loc_1 = new QLCDNumber(frame_10);
+        lcd_p3_zxdy_loc_1->setObjectName(QString::fromUtf8("lcd_p3_zxdy_loc_1"));
+        lcd_p3_zxdy_loc_1->setGeometry(QRect(10, 40, 16, 21));
+        lcd_p3_zxdy_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p3_zxdy_loc_1->setSegmentStyle(QLCDNumber::Flat);
+        lcd_p3_zxdy_loc_2 = new QLCDNumber(frame_10);
         lcd_p3_zxdy_loc_2->setObjectName(QString::fromUtf8("lcd_p3_zxdy_loc_2"));
-        lcd_p3_zxdy_loc_2->setGeometry(QRect(520, 50, 21, 31));
+        lcd_p3_zxdy_loc_2->setGeometry(QRect(30, 40, 16, 21));
         lcd_p3_zxdy_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_zxdy_loc_2->setSegmentStyle(QLCDNumber::Flat);
+        lcd_p3_zxdy = new QLCDNumber(frame_10);
+        lcd_p3_zxdy->setObjectName(QString::fromUtf8("lcd_p3_zxdy"));
+        lcd_p3_zxdy->setGeometry(QRect(50, 40, 51, 21));
+        lcd_p3_zxdy->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p3_zxdy->setSegmentStyle(QLCDNumber::Flat);
         frame_8->raise();
         frame_7->raise();
         frame_9->raise();
         frame_10->raise();
-        lcd_p3_zgwd->raise();
-        label_8->raise();
-        label_9->raise();
-        label_11->raise();
-        label_12->raise();
-        lcd_p3_zgwd_loc_2->raise();
-        lcd_p3_zgwd_loc_1->raise();
-        lcd_p3_zdwd->raise();
-        lcd_p3_zdwd_loc_1->raise();
-        lcd_p3_zdwd_loc_2->raise();
-        lcd_p3_zddy->raise();
-        lcd_p3_zddy_loc_1->raise();
-        lcd_p3_zddy_loc_2->raise();
-        lcd_p3_zxdy->raise();
-        lcd_p3_zxdy_loc_1->raise();
-        lcd_p3_zxdy_loc_2->raise();
         frame_3 = new QFrame(tab_cxxxx);
         frame_3->setObjectName(QString::fromUtf8("frame_3"));
-        frame_3->setGeometry(QRect(20, 20, 161, 111));
+        frame_3->setGeometry(QRect(10, 10, 111, 101));
         frame_3->setFrameShape(QFrame::StyledPanel);
         frame_3->setFrameShadow(QFrame::Raised);
+        comboBox = new QComboBox(frame_3);
+        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+        comboBox->setGeometry(QRect(20, 70, 71, 21));
+        pbutton_right_2 = new QPushButton(frame_3);
+        pbutton_right_2->setObjectName(QString::fromUtf8("pbutton_right_2"));
+        pbutton_right_2->setGeometry(QRect(85, 10, 21, 51));
+        label_cluster_2 = new QLabel(frame_3);
+        label_cluster_2->setObjectName(QString::fromUtf8("label_cluster_2"));
+        label_cluster_2->setGeometry(QRect(30, 10, 51, 51));
+        label_cluster_2->setFrameShape(QFrame::StyledPanel);
+        label_cluster_2->setFrameShadow(QFrame::Raised);
+        label_cluster_2->setAlignment(Qt::AlignCenter);
+        pbutton_left_2 = new QPushButton(frame_3);
+        pbutton_left_2->setObjectName(QString::fromUtf8("pbutton_left_2"));
+        pbutton_left_2->setGeometry(QRect(5, 10, 21, 51));
         frame_6 = new QFrame(tab_cxxxx);
         frame_6->setObjectName(QString::fromUtf8("frame_6"));
-        frame_6->setGeometry(QRect(190, 20, 151, 111));
+        frame_6->setGeometry(QRect(140, 10, 131, 101));
         frame_6->setFrameShape(QFrame::StyledPanel);
         frame_6->setFrameShadow(QFrame::Raised);
         label_6 = new QLabel(frame_6);
         label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setGeometry(QRect(10, 20, 62, 17));
+        label_6->setGeometry(QRect(5, 10, 62, 17));
+        label_6->setFont(font2);
         lcd_p3_mkzy = new QLCDNumber(frame_6);
         lcd_p3_mkzy->setObjectName(QString::fromUtf8("lcd_p3_mkzy"));
-        lcd_p3_mkzy->setGeometry(QRect(70, 15, 70, 25));
+        lcd_p3_mkzy->setGeometry(QRect(60, 10, 61, 21));
         lcd_p3_mkzy->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_mkzy->setSegmentStyle(QLCDNumber::Flat);
         label_7 = new QLabel(frame_6);
         label_7->setObjectName(QString::fromUtf8("label_7"));
-        label_7->setGeometry(QRect(10, 50, 62, 17));
+        label_7->setGeometry(QRect(5, 40, 62, 17));
+        label_7->setFont(font2);
         lcd_p3_dtcs = new QLCDNumber(frame_6);
         lcd_p3_dtcs->setObjectName(QString::fromUtf8("lcd_p3_dtcs"));
-        lcd_p3_dtcs->setGeometry(QRect(70, 45, 70, 25));
+        lcd_p3_dtcs->setGeometry(QRect(60, 40, 61, 21));
         lcd_p3_dtcs->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dtcs->setSegmentStyle(QLCDNumber::Flat);
         label_10 = new QLabel(frame_6);
         label_10->setObjectName(QString::fromUtf8("label_10"));
-        label_10->setGeometry(QRect(10, 80, 62, 17));
+        label_10->setGeometry(QRect(5, 70, 61, 16));
+        label_10->setFont(font2);
         lcd_p3_wdgs = new QLCDNumber(frame_6);
         lcd_p3_wdgs->setObjectName(QString::fromUtf8("lcd_p3_wdgs"));
-        lcd_p3_wdgs->setGeometry(QRect(70, 75, 70, 25));
+        lcd_p3_wdgs->setGeometry(QRect(60, 70, 61, 21));
         lcd_p3_wdgs->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_wdgs->setSegmentStyle(QLCDNumber::Flat);
         frame_11 = new QFrame(tab_cxxxx);
         frame_11->setObjectName(QString::fromUtf8("frame_11"));
-        frame_11->setGeometry(QRect(20, 150, 321, 351));
+        frame_11->setGeometry(QRect(10, 120, 261, 311));
         frame_11->setFrameShape(QFrame::StyledPanel);
         frame_11->setFrameShadow(QFrame::Raised);
         tableWidget_wd = new QTableWidget(frame_11);
         tableWidget_wd->setObjectName(QString::fromUtf8("tableWidget_wd"));
-        tableWidget_wd->setGeometry(QRect(10, 10, 301, 331));
+        tableWidget_wd->setGeometry(QRect(10, 10, 241, 291));
+        tableWidget_wd->setFont(font2);
         lcd_p3_wd_1 = new QLCDNumber(frame_11);
         lcd_p3_wd_1->setObjectName(QString::fromUtf8("lcd_p3_wd_1"));
-        lcd_p3_wd_1->setGeometry(QRect(80, 36, 70, 30));
+        lcd_p3_wd_1->setGeometry(QRect(70, 36, 51, 21));
         lcd_p3_wd_1->setAutoFillBackground(false);
         lcd_p3_wd_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_wd_1->setFrameShape(QFrame::NoFrame);
@@ -1587,7 +1527,7 @@ public:
         lcd_p3_wd_1->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_wd_2 = new QLCDNumber(frame_11);
         lcd_p3_wd_2->setObjectName(QString::fromUtf8("lcd_p3_wd_2"));
-        lcd_p3_wd_2->setGeometry(QRect(230, 36, 70, 30));
+        lcd_p3_wd_2->setGeometry(QRect(190, 36, 51, 21));
         lcd_p3_wd_2->setAutoFillBackground(false);
         lcd_p3_wd_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_wd_2->setFrameShape(QFrame::NoFrame);
@@ -1597,7 +1537,7 @@ public:
         lcd_p3_wd_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_wd_4 = new QLCDNumber(frame_11);
         lcd_p3_wd_4->setObjectName(QString::fromUtf8("lcd_p3_wd_4"));
-        lcd_p3_wd_4->setGeometry(QRect(230, 118, 70, 30));
+        lcd_p3_wd_4->setGeometry(QRect(190, 110, 51, 21));
         lcd_p3_wd_4->setAutoFillBackground(false);
         lcd_p3_wd_4->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_wd_4->setFrameShape(QFrame::NoFrame);
@@ -1607,7 +1547,7 @@ public:
         lcd_p3_wd_4->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_wd_3 = new QLCDNumber(frame_11);
         lcd_p3_wd_3->setObjectName(QString::fromUtf8("lcd_p3_wd_3"));
-        lcd_p3_wd_3->setGeometry(QRect(80, 118, 70, 30));
+        lcd_p3_wd_3->setGeometry(QRect(70, 110, 51, 21));
         lcd_p3_wd_3->setAutoFillBackground(false);
         lcd_p3_wd_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_wd_3->setFrameShape(QFrame::NoFrame);
@@ -1617,7 +1557,7 @@ public:
         lcd_p3_wd_3->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_wd_5 = new QLCDNumber(frame_11);
         lcd_p3_wd_5->setObjectName(QString::fromUtf8("lcd_p3_wd_5"));
-        lcd_p3_wd_5->setGeometry(QRect(80, 200, 70, 30));
+        lcd_p3_wd_5->setGeometry(QRect(70, 190, 51, 21));
         lcd_p3_wd_5->setAutoFillBackground(false);
         lcd_p3_wd_5->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_wd_5->setFrameShape(QFrame::NoFrame);
@@ -1627,7 +1567,7 @@ public:
         lcd_p3_wd_5->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_wd_6 = new QLCDNumber(frame_11);
         lcd_p3_wd_6->setObjectName(QString::fromUtf8("lcd_p3_wd_6"));
-        lcd_p3_wd_6->setGeometry(QRect(230, 200, 70, 30));
+        lcd_p3_wd_6->setGeometry(QRect(190, 190, 51, 21));
         lcd_p3_wd_6->setAutoFillBackground(false);
         lcd_p3_wd_6->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_wd_6->setFrameShape(QFrame::NoFrame);
@@ -1637,7 +1577,7 @@ public:
         lcd_p3_wd_6->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_wd_7 = new QLCDNumber(frame_11);
         lcd_p3_wd_7->setObjectName(QString::fromUtf8("lcd_p3_wd_7"));
-        lcd_p3_wd_7->setGeometry(QRect(80, 282, 70, 30));
+        lcd_p3_wd_7->setGeometry(QRect(70, 260, 51, 21));
         lcd_p3_wd_7->setAutoFillBackground(false);
         lcd_p3_wd_7->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_wd_7->setFrameShape(QFrame::NoFrame);
@@ -1647,7 +1587,7 @@ public:
         lcd_p3_wd_7->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_wd_8 = new QLCDNumber(frame_11);
         lcd_p3_wd_8->setObjectName(QString::fromUtf8("lcd_p3_wd_8"));
-        lcd_p3_wd_8->setGeometry(QRect(230, 282, 70, 30));
+        lcd_p3_wd_8->setGeometry(QRect(190, 260, 51, 21));
         lcd_p3_wd_8->setAutoFillBackground(false);
         lcd_p3_wd_8->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_wd_8->setFrameShape(QFrame::NoFrame);
@@ -1657,10 +1597,6 @@ public:
         lcd_p3_wd_8->setSegmentStyle(QLCDNumber::Flat);
         tabWidget->addTab(tab_cxxxx, QString());
         frame_3->raise();
-        label_cluster_2->raise();
-        pbutton_left_2->raise();
-        pbutton_right_2->raise();
-        comboBox->raise();
         frame_4->raise();
         frame_5->raise();
         frame_6->raise();
@@ -1669,7 +1605,7 @@ public:
         tab_gzxx->setObjectName(QString::fromUtf8("tab_gzxx"));
         tableWidget_2 = new QTableWidget(tab_gzxx);
         tableWidget_2->setObjectName(QString::fromUtf8("tableWidget_2"));
-        tableWidget_2->setGeometry(QRect(10, 10, 1031, 441));
+        tableWidget_2->setGeometry(QRect(10, 10, 761, 411));
         pbutton_up = new QPushButton(tab_gzxx);
         pbutton_up->setObjectName(QString::fromUtf8("pbutton_up"));
         pbutton_up->setGeometry(QRect(210, 470, 121, 41));
@@ -1684,7 +1620,7 @@ public:
         tab_xtrz->setObjectName(QString::fromUtf8("tab_xtrz"));
         text_log = new QTextBrowser(tab_xtrz);
         text_log->setObjectName(QString::fromUtf8("text_log"));
-        text_log->setGeometry(QRect(20, 20, 981, 481));
+        text_log->setGeometry(QRect(10, 10, 761, 411));
         tabWidget->addTab(tab_xtrz, QString());
         QWidget::setTabOrder(tabWidget, text_zdy);
 
@@ -1758,51 +1694,6 @@ public:
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">\345\271\263\345\235\207\347\224\265\345\216\213</span></p></body></html>", 0, QApplication::UnicodeUTF8));
-        text_c1->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">1</p></body></html>", 0, QApplication::UnicodeUTF8));
-        text_c2->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">2</p></body></html>", 0, QApplication::UnicodeUTF8));
-        text_c3->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">3</p></body></html>", 0, QApplication::UnicodeUTF8));
-        text_c4->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">4</p></body></html>", 0, QApplication::UnicodeUTF8));
-        text_c5->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">5</p></body></html>", 0, QApplication::UnicodeUTF8));
-        text_c6->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">6</p></body></html>", 0, QApplication::UnicodeUTF8));
-        text_c7->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">7</p></body></html>", 0, QApplication::UnicodeUTF8));
-        text_c8->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">8</p></body></html>", 0, QApplication::UnicodeUTF8));
-        text_c9->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">9</p></body></html>", 0, QApplication::UnicodeUTF8));
         textBrowser_header->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -1833,135 +1724,135 @@ public:
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_bj_xtwc->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_bj_socg->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_gz_yzctx->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_gz_zzzl->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_bj_xtgw->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_bj_socd->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_gz_ybmutx->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_gz_zfzl->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_bj_dtqy->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_bj_xtdw->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_gz_yc->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_bj_xtjy->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_bj_xtgy->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_gz_ycdjtx->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_gz_dycgq->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_bj_xtqy->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_bj_jzgw->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_gz_jr->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_bj_fdgl->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_gz_wdcgq->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_bj_xtyc->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_gz_sjzj->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_gz_fs->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         text_p2_bj_cdgl->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\255\243\345\270\270</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_cjbxx), QApplication::translate("Widget", "\347\260\207\345\237\272\346\234\254\344\277\241\346\201\257", 0, QApplication::UnicodeUTF8));
-        label_cluster_2->setText(QApplication::translate("Widget", "1", 0, QApplication::UnicodeUTF8));
-        pbutton_left_2->setText(QApplication::translate("Widget", "<", 0, QApplication::UnicodeUTF8));
-        pbutton_right_2->setText(QApplication::translate("Widget", ">", 0, QApplication::UnicodeUTF8));
         label_8->setText(QApplication::translate("Widget", "\346\234\200\351\253\230\346\270\251\345\272\246", 0, QApplication::UnicodeUTF8));
         label_9->setText(QApplication::translate("Widget", "\346\234\200\344\275\216\346\270\251\345\272\246", 0, QApplication::UnicodeUTF8));
         label_11->setText(QApplication::translate("Widget", "\346\234\200\345\244\247\347\224\265\345\216\213", 0, QApplication::UnicodeUTF8));
         label_12->setText(QApplication::translate("Widget", "\346\234\200\345\260\217\347\224\265\345\216\213", 0, QApplication::UnicodeUTF8));
+        pbutton_right_2->setText(QApplication::translate("Widget", ">", 0, QApplication::UnicodeUTF8));
+        label_cluster_2->setText(QApplication::translate("Widget", "1", 0, QApplication::UnicodeUTF8));
+        pbutton_left_2->setText(QApplication::translate("Widget", "<", 0, QApplication::UnicodeUTF8));
         label_6->setText(QApplication::translate("Widget", "\346\250\241\345\235\227\346\200\273\345\216\213", 0, QApplication::UnicodeUTF8));
         label_7->setText(QApplication::translate("Widget", "\345\215\225\344\275\223\344\270\262\346\225\260", 0, QApplication::UnicodeUTF8));
         label_10->setText(QApplication::translate("Widget", "\346\270\251\345\272\246\344\270\252\346\225\260", 0, QApplication::UnicodeUTF8));

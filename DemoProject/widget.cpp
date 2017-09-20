@@ -144,6 +144,10 @@ void Widget::setAlertText(QTextBrowser* textBrowser, double value){
     }
 }
 
+void Widget::setAlertItems(QMap<string, QTableWidgetItem*> alertItemMap){
+    this->alertItemMap = alertItemMap;
+}
+
 void Widget::display()
 {
     // page 1
