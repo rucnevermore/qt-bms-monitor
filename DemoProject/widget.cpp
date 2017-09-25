@@ -128,19 +128,19 @@ void Widget::onIndexChanged(const QString &){
 // set alert value and change color accordingly.
 void Widget::setAlertText(QTextBrowser* textBrowser, double value){
     if (value == 0){
-        textBrowser->setText(QString::fromUtf8("正常"));
-        textBrowser->setStyleSheet("background-color: green");
+//        textBrowser->setText(QString::fromUtf8("正常"));
+        textBrowser->setStyleSheet("border-image: url(./images/green.png);border: 0px;");
     }else if (value == 1){
-        textBrowser->setText(QString::fromUtf8("一级"));
-        textBrowser->setStyleSheet("background-color: yellow");
+//        textBrowser->setText(QString::fromUtf8("一级"));
+        textBrowser->setStyleSheet("border-image: url(./images/yellow.png);border: 0px;");
     }else if (value == 2){
-        textBrowser->setText(QString::fromUtf8("二级"));
-        textBrowser->setStyleSheet("background-color: orange");
+//        textBrowser->setText(QString::fromUtf8("二级"));
+        textBrowser->setStyleSheet("border-image: url(./images/pink.png);border: 0px;");
     }else if (value == 3){
-        textBrowser->setText(QString::fromUtf8("三级"));
-        textBrowser->setStyleSheet("background-color: red");
+//        textBrowser->setText(QString::fromUtf8("三级"));
+        textBrowser->setStyleSheet("border-image: url(./images/red.png);border: 0px;");
     }else{
-        textBrowser->setText(QString::fromUtf8("未知"));
+//        textBrowser->setText(QString::fromUtf8("未知"));
     }
 }
 
@@ -234,11 +234,11 @@ void Widget::display()
     if (value == 0){
         ui->text_p2_gzzt->setText(QString::fromUtf8("无故障"));
     }else if (value == 1){
-        ui->text_p2_gzzt->setText(QString::fromUtf8("一级故障"));
+        ui->text_p2_gzzt->setText(QString::fromUtf8("一级"));
     }else if (value == 2){
-        ui->text_p2_gzzt->setText(QString::fromUtf8("二级故障"));
+        ui->text_p2_gzzt->setText(QString::fromUtf8("二级"));
     }else if (value == 3){
-        ui->text_p2_gzzt->setText(QString::fromUtf8("三级故障"));
+        ui->text_p2_gzzt->setText(QString::fromUtf8("三级"));
     }else{
         ui->text_p2_gzzt->setText(QString::fromUtf8("未知"));
     }

@@ -2379,10 +2379,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_bj_dtgy">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>22</y>
-        <width>25</width>
-        <height>31</height>
+        <x>100</x>
+        <y>42</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="autoFillBackground">
@@ -2405,10 +2405,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_bj_xtwc">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>73</y>
-        <width>25</width>
-        <height>31</height>
+        <x>100</x>
+        <y>96</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2428,10 +2428,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_bj_socg">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>124</y>
-        <width>25</width>
-        <height>31</height>
+        <x>100</x>
+        <y>148</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2451,10 +2451,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_gz_yzctx">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>175</y>
-        <width>25</width>
-        <height>31</height>
+        <x>100</x>
+        <y>200</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2474,10 +2474,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_gz_zzzl">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>226</y>
-        <width>25</width>
-        <height>31</height>
+        <x>100</x>
+        <y>252</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2497,10 +2497,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_bj_xtgw">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>73</y>
-        <width>25</width>
-        <height>31</height>
+        <x>210</x>
+        <y>96</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2520,10 +2520,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_bj_socd">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>124</y>
-        <width>25</width>
-        <height>31</height>
+        <x>210</x>
+        <y>148</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2543,10 +2543,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_gz_ybmutx">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>175</y>
-        <width>25</width>
-        <height>31</height>
+        <x>210</x>
+        <y>200</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2566,10 +2566,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_gz_zfzl">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>226</y>
-        <width>25</width>
-        <height>31</height>
+        <x>210</x>
+        <y>252</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2589,10 +2589,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_bj_dtqy">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>22</y>
-        <width>25</width>
-        <height>31</height>
+        <x>210</x>
+        <y>42</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2612,10 +2612,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_bj_xtdw">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>73</y>
-        <width>25</width>
-        <height>31</height>
+        <x>320</x>
+        <y>96</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2635,10 +2635,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_gz_yc">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>226</y>
-        <width>25</width>
-        <height>31</height>
+        <x>320</x>
+        <y>252</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2658,10 +2658,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_bj_xtjy">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>124</y>
-        <width>25</width>
-        <height>31</height>
+        <x>320</x>
+        <y>148</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2681,10 +2681,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_bj_xtgy">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>22</y>
-        <width>25</width>
-        <height>31</height>
+        <x>320</x>
+        <y>42</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2704,10 +2704,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_gz_ycdjtx">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>175</y>
-        <width>25</width>
-        <height>31</height>
+        <x>320</x>
+        <y>200</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2727,10 +2727,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_gz_dycgq">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>226</y>
-        <width>25</width>
-        <height>31</height>
+        <x>430</x>
+        <y>252</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2750,10 +2750,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_bj_xtqy">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>22</y>
-        <width>25</width>
-        <height>31</height>
+        <x>430</x>
+        <y>42</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2773,10 +2773,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_bj_jzgw">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>124</y>
-        <width>25</width>
-        <height>31</height>
+        <x>430</x>
+        <y>148</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2796,10 +2796,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_gz_jr">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>175</y>
-        <width>25</width>
-        <height>31</height>
+        <x>430</x>
+        <y>200</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2819,10 +2819,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_bj_fdgl">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>73</y>
-        <width>25</width>
-        <height>31</height>
+        <x>430</x>
+        <y>96</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2842,10 +2842,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_gz_wdcgq">
       <property name="geometry">
        <rect>
-        <x>530</x>
-        <y>226</y>
-        <width>25</width>
-        <height>31</height>
+        <x>540</x>
+        <y>252</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2865,10 +2865,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_bj_xtyc">
       <property name="geometry">
        <rect>
-        <x>530</x>
-        <y>22</y>
-        <width>25</width>
-        <height>31</height>
+        <x>540</x>
+        <y>42</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2888,10 +2888,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_gz_sjzj">
       <property name="geometry">
        <rect>
-        <x>530</x>
-        <y>124</y>
-        <width>25</width>
-        <height>31</height>
+        <x>540</x>
+        <y>148</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2911,10 +2911,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_gz_fs">
       <property name="geometry">
        <rect>
-        <x>530</x>
-        <y>175</y>
-        <width>25</width>
-        <height>31</height>
+        <x>540</x>
+        <y>200</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -2934,10 +2934,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="text_p2_bj_cdgl">
       <property name="geometry">
        <rect>
-        <x>530</x>
-        <y>73</y>
-        <width>25</width>
-        <height>31</height>
+        <x>540</x>
+        <y>96</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
