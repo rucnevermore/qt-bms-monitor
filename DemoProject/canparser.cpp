@@ -152,40 +152,40 @@ void CanParser::processBAMS_INF2(can_frame frame){
 
 void CanParser::processBAMS_INF3(can_frame frame){
     // byte 1, 最高电压所在组号, 1, 0,
-    visit8BytesArray((char*)frame.data,0x000000000000FFFF, 0, "g_zgdy_zh", 1, 0);
+    visit8BytesArray((char*)frame.data,0x00000000000000FF, 0, "g_zgdy_zh", 1, 0);
     // byte 2, 最高电压所在模块号, 1, 0,
-    visit8BytesArray((char*)frame.data,0x00000000FFFF0000, 8, "g_zgdy_mkh", 1, 0);
+    visit8BytesArray((char*)frame.data,0x000000000000FF00, 8, "g_zgdy_mkh", 1, 0);
     // byte 3, 最高电压所在位置, 1, 0,
-    visit8BytesArray((char*)frame.data,0x000000FF00000000, 16, "g_zgdy_wz", 1, 0);
+    visit8BytesArray((char*)frame.data,0x0000000000FF0000, 16, "g_zgdy_wz", 1, 0);
     // byte 4, 最低电压所在组号, 1, 0,
-    visit8BytesArray((char*)frame.data,0x0000FF0000000000, 24, "g_zddy_zh", 1, 0);
+    visit8BytesArray((char*)frame.data,0x00000000FF000000, 24, "g_zddy_zh", 1, 0);
     // byte 5, 最低电压所在模块号, 1, 0,
-    visit8BytesArray((char*)frame.data,0x000000000000FFFF, 32, "g_zddy_mkh", 1, 0);
+    visit8BytesArray((char*)frame.data,0x000000FF00000000, 32, "g_zddy_mkh", 1, 0);
     // byte 6, 最低电压所在位置, 1, 0,
-    visit8BytesArray((char*)frame.data,0x00000000FFFF0000, 40, "g_zddy_wz", 1, 0);
+    visit8BytesArray((char*)frame.data,0x0000FF0000000000, 40, "g_zddy_wz", 1, 0);
     // byte 7, 最高SOC, 1, 0,
-    visit8BytesArray((char*)frame.data,0x000000FF00000000, 48, "g_zgsoc", 1, 0);
+    visit8BytesArray((char*)frame.data,0x00FF000000000000, 48, "g_zgsoc", 1, 0);
     // byte 8, 最高SOC所在箱号, 1, 0,
-    visit8BytesArray((char*)frame.data,0x0000FF0000000000, 56, "g_zgsoc_xh", 1, 0);
+    visit8BytesArray((char*)frame.data,0xFF00000000000000, 56, "g_zgsoc_xh", 1, 0);
 }
 
 void CanParser::processBAMS_INF4(can_frame frame){
     // byte 1, 最高温度所在组号, 1, 0,
-    visit8BytesArray((char*)frame.data,0x000000000000FFFF, 0, "g_zgwd_zh", 1, 0);
+    visit8BytesArray((char*)frame.data,0x00000000000000FF, 0, "g_zgwd_zh", 1, 0);
     // byte 2, 最高温度所在模块号, 1, 0,
-    visit8BytesArray((char*)frame.data,0x00000000FFFF0000, 8, "g_zgwd_mkh", 1, 0);
+    visit8BytesArray((char*)frame.data,0x000000000000FF00, 8, "g_zgwd_mkh", 1, 0);
     // byte 3, 最高温度所在位置, 1, 0,
-    visit8BytesArray((char*)frame.data,0x000000FF00000000, 16, "g_zgwd_wz", 1, 0);
+    visit8BytesArray((char*)frame.data,0x0000000000FF0000, 16, "g_zgwd_wz", 1, 0);
     // byte 4, 最低温度所在组号, 1, 0,
-    visit8BytesArray((char*)frame.data,0x0000FF0000000000, 24, "g_zdwd_zh", 1, 0);
+    visit8BytesArray((char*)frame.data,0x00000000FF000000, 24, "g_zdwd_zh", 1, 0);
     // byte 5, 最低温度所在模块号, 1, 0,
-    visit8BytesArray((char*)frame.data,0x000000000000FFFF, 32, "g_zdwd_mkh", 1, 0);
+    visit8BytesArray((char*)frame.data,0x000000FF00000000, 32, "g_zdwd_mkh", 1, 0);
     // byte 6, 最低温度所在位置, 1, 0,
-    visit8BytesArray((char*)frame.data,0x00000000FFFF0000, 40, "g_zdwd_wz", 1, 0);
+    visit8BytesArray((char*)frame.data,0x0000FF0000000000, 40, "g_zdwd_wz", 1, 0);
     // byte 7, 最低SOC, 1, 0,
-    visit8BytesArray((char*)frame.data,0x000000FF00000000, 48, "g_zdsoc", 1, 0);
+    visit8BytesArray((char*)frame.data,0x00FF000000000000, 48, "g_zdsoc", 1, 0);
     // byte 8, 最低SOC所在箱号, 1, 0,
-    visit8BytesArray((char*)frame.data,0x0000FF0000000000, 56, "g_zdsoc_xh", 1, 0);
+    visit8BytesArray((char*)frame.data,0xFF00000000000000, 56, "g_zdsoc_xh", 1, 0);
 }
 
 void CanParser::processBMS_INF(can_frame frame){

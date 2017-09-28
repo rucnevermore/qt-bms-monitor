@@ -94,9 +94,9 @@
     <value type="QString">LOGNAME=root</value>
     <value type="QString">MANDATORY_PATH=/usr/share/gconf/gnome.mandatory.path</value>
     <value type="QString">ORBIT_SOCKETDIR=/tmp/orbit-root</value>
-    <value type="QString">PATH=/usr/local/arm/yc335X/qt4.8.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
+    <value type="QString">PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
     <value type="QString">PWD=/root</value>
-    <value type="QString">QTDIR=/usr/local/arm/yc335X/qt4.8.5</value>
+    <value type="QString">QTDIR=/usr/share/qt4</value>
     <value type="QString">SESSION_MANAGER=local/ubuntu:@/tmp/.ICE-unix/1686,unix/ubuntu:/tmp/.ICE-unix/1686</value>
     <value type="QString">SHELL=/bin/bash</value>
     <value type="QString">SPEECHD_PORT=6560</value>
@@ -110,15 +110,15 @@
     <value type="QString">XDG_SESSION_COOKIE=8bcbac38be63191a4ac97f0a4e69bec2-1503763091.951659-760663955</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList">
-    <value type="QString">/root/qt-projects/DemoProject/DemoProject.pro</value>
+    <value type="QString">/root/qt-projects/DemoProject_7_inch/DemoProject.pro</value>
     <value type="QString">-spec</value>
-    <value type="QString">/usr/local/arm/yc335X/qt4.8.5/mkspecs/qws/linux-arm-g++</value>
+    <value type="QString">linux-g++</value>
     <value type="QString">-r</value>
     <value type="QString">CONFIG+=debug</value>
    </valuelist>
-   <value key="abstractProcess.command" type="QString">/usr/local/arm/yc335X/qt4.8.5/bin/qmake</value>
+   <value key="abstractProcess.command" type="QString">/usr/bin/qmake-qt4</value>
    <value key="abstractProcess.enabled" type="bool">false</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/root/qt-projects/DemoProject</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/root/qt-projects/DemoProject_7_inch</value>
   </valuemap>
  </data>
  <data>
@@ -144,9 +144,9 @@
     <value type="QString">LOGNAME=root</value>
     <value type="QString">MANDATORY_PATH=/usr/share/gconf/gnome.mandatory.path</value>
     <value type="QString">ORBIT_SOCKETDIR=/tmp/orbit-root</value>
-    <value type="QString">PATH=/usr/local/arm/yc335X/qt4.8.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
+    <value type="QString">PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
     <value type="QString">PWD=/root</value>
-    <value type="QString">QTDIR=/usr/local/arm/yc335X/qt4.8.5</value>
+    <value type="QString">QTDIR=/usr/share/qt4</value>
     <value type="QString">SESSION_MANAGER=local/ubuntu:@/tmp/.ICE-unix/1686,unix/ubuntu:/tmp/.ICE-unix/1686</value>
     <value type="QString">SHELL=/bin/bash</value>
     <value type="QString">SPEECHD_PORT=6560</value>
@@ -165,7 +165,7 @@
    </valuelist>
    <value key="abstractProcess.command" type="QString">/usr/bin/make</value>
    <value key="abstractProcess.enabled" type="bool">true</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/root/qt-projects/DemoProject</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/root/qt-projects/DemoProject_7_inch</value>
   </valuemap>
  </data>
  <data>
@@ -191,9 +191,9 @@
     <value type="QString">LOGNAME=root</value>
     <value type="QString">MANDATORY_PATH=/usr/share/gconf/gnome.mandatory.path</value>
     <value type="QString">ORBIT_SOCKETDIR=/tmp/orbit-root</value>
-    <value type="QString">PATH=/usr/local/arm/yc335X/qt4.8.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
+    <value type="QString">PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
     <value type="QString">PWD=/root</value>
-    <value type="QString">QTDIR=/usr/local/arm/yc335X/qt4.8.5</value>
+    <value type="QString">QTDIR=/usr/share/qt4</value>
     <value type="QString">SESSION_MANAGER=local/ubuntu:@/tmp/.ICE-unix/1686,unix/ubuntu:/tmp/.ICE-unix/1686</value>
     <value type="QString">SHELL=/bin/bash</value>
     <value type="QString">SPEECHD_PORT=6560</value>
@@ -213,7 +213,7 @@
    </valuelist>
    <value key="abstractProcess.command" type="QString">/usr/bin/make</value>
    <value key="abstractProcess.enabled" type="bool">true</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/root/qt-projects/DemoProject</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/root/qt-projects/DemoProject_7_inch</value>
    <value key="cleanConfig" type="bool">true</value>
    <valuelist key="makeargs" type="QVariantList">
     <value type="QString">clean</value>

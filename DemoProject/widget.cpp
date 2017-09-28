@@ -121,7 +121,7 @@ void Widget::nextPage(){
 
 void Widget::onIndexChanged(const QString &){
     int currentClusterIndex = configure->getClusterIndex();
-    configure->setCurrentModuleSelected(currentClusterIndex, ui->comboBox->currentIndex());
+    configure->setCurrentModuleSelected(currentClusterIndex, ui->comboBox->currentIndex() + 1);
 }
 
 

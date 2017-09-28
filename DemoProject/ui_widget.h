@@ -1,7 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'widget.ui'
 **
-** Created by: Qt User Interface Compiler version 4.8.5
+** Created: Thu Sep 28 09:38:27 2017
+**      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -375,6 +376,7 @@ public:
         lcd_zddy_loc_1->setFrameShape(QFrame::NoFrame);
         lcd_zddy_loc_1->setFrameShadow(QFrame::Raised);
         lcd_zddy_loc_1->setSmallDecimalPoint(false);
+        lcd_zddy_loc_1->setNumDigits(2);
         lcd_zddy_loc_1->setSegmentStyle(QLCDNumber::Flat);
         label_zddy_loc = new QLabel(tab_xtxx);
         label_zddy_loc->setObjectName(QString::fromUtf8("label_zddy_loc"));
@@ -490,6 +492,7 @@ public:
         lcd_zddy_loc_2->setFrameShape(QFrame::NoFrame);
         lcd_zddy_loc_2->setFrameShadow(QFrame::Raised);
         lcd_zddy_loc_2->setSmallDecimalPoint(false);
+        lcd_zddy_loc_2->setNumDigits(2);
         lcd_zddy_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_zddy_loc_3 = new QLCDNumber(tab_xtxx);
         lcd_zddy_loc_3->setObjectName(QString::fromUtf8("lcd_zddy_loc_3"));
@@ -500,6 +503,7 @@ public:
         lcd_zddy_loc_3->setFrameShape(QFrame::NoFrame);
         lcd_zddy_loc_3->setFrameShadow(QFrame::Raised);
         lcd_zddy_loc_3->setSmallDecimalPoint(false);
+        lcd_zddy_loc_3->setNumDigits(2);
         lcd_zddy_loc_3->setSegmentStyle(QLCDNumber::Flat);
         lcd_zxdy_loc_3 = new QLCDNumber(tab_xtxx);
         lcd_zxdy_loc_3->setObjectName(QString::fromUtf8("lcd_zxdy_loc_3"));
@@ -510,6 +514,7 @@ public:
         lcd_zxdy_loc_3->setFrameShape(QFrame::NoFrame);
         lcd_zxdy_loc_3->setFrameShadow(QFrame::Raised);
         lcd_zxdy_loc_3->setSmallDecimalPoint(false);
+        lcd_zxdy_loc_3->setNumDigits(2);
         lcd_zxdy_loc_3->setSegmentStyle(QLCDNumber::Flat);
         lcd_zxdy_loc_1 = new QLCDNumber(tab_xtxx);
         lcd_zxdy_loc_1->setObjectName(QString::fromUtf8("lcd_zxdy_loc_1"));
@@ -520,6 +525,7 @@ public:
         lcd_zxdy_loc_1->setFrameShape(QFrame::NoFrame);
         lcd_zxdy_loc_1->setFrameShadow(QFrame::Raised);
         lcd_zxdy_loc_1->setSmallDecimalPoint(false);
+        lcd_zxdy_loc_1->setNumDigits(2);
         lcd_zxdy_loc_1->setSegmentStyle(QLCDNumber::Flat);
         lcd_zxdy_loc_2 = new QLCDNumber(tab_xtxx);
         lcd_zxdy_loc_2->setObjectName(QString::fromUtf8("lcd_zxdy_loc_2"));
@@ -530,6 +536,7 @@ public:
         lcd_zxdy_loc_2->setFrameShape(QFrame::NoFrame);
         lcd_zxdy_loc_2->setFrameShadow(QFrame::Raised);
         lcd_zxdy_loc_2->setSmallDecimalPoint(false);
+        lcd_zxdy_loc_2->setNumDigits(2);
         lcd_zxdy_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_zgwd_loc_3 = new QLCDNumber(tab_xtxx);
         lcd_zgwd_loc_3->setObjectName(QString::fromUtf8("lcd_zgwd_loc_3"));
@@ -540,6 +547,7 @@ public:
         lcd_zgwd_loc_3->setFrameShape(QFrame::NoFrame);
         lcd_zgwd_loc_3->setFrameShadow(QFrame::Raised);
         lcd_zgwd_loc_3->setSmallDecimalPoint(false);
+        lcd_zgwd_loc_3->setNumDigits(2);
         lcd_zgwd_loc_3->setSegmentStyle(QLCDNumber::Flat);
         lcd_zgwd_loc_1 = new QLCDNumber(tab_xtxx);
         lcd_zgwd_loc_1->setObjectName(QString::fromUtf8("lcd_zgwd_loc_1"));
@@ -550,6 +558,7 @@ public:
         lcd_zgwd_loc_1->setFrameShape(QFrame::NoFrame);
         lcd_zgwd_loc_1->setFrameShadow(QFrame::Raised);
         lcd_zgwd_loc_1->setSmallDecimalPoint(false);
+        lcd_zgwd_loc_1->setNumDigits(2);
         lcd_zgwd_loc_1->setSegmentStyle(QLCDNumber::Flat);
         lcd_zgwd_loc_2 = new QLCDNumber(tab_xtxx);
         lcd_zgwd_loc_2->setObjectName(QString::fromUtf8("lcd_zgwd_loc_2"));
@@ -560,6 +569,7 @@ public:
         lcd_zgwd_loc_2->setFrameShape(QFrame::NoFrame);
         lcd_zgwd_loc_2->setFrameShadow(QFrame::Raised);
         lcd_zgwd_loc_2->setSmallDecimalPoint(false);
+        lcd_zgwd_loc_2->setNumDigits(2);
         lcd_zgwd_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_zdwd_loc_2 = new QLCDNumber(tab_xtxx);
         lcd_zdwd_loc_2->setObjectName(QString::fromUtf8("lcd_zdwd_loc_2"));
@@ -570,6 +580,7 @@ public:
         lcd_zdwd_loc_2->setFrameShape(QFrame::NoFrame);
         lcd_zdwd_loc_2->setFrameShadow(QFrame::Raised);
         lcd_zdwd_loc_2->setSmallDecimalPoint(false);
+        lcd_zdwd_loc_2->setNumDigits(2);
         lcd_zdwd_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_zdwd_loc_1 = new QLCDNumber(tab_xtxx);
         lcd_zdwd_loc_1->setObjectName(QString::fromUtf8("lcd_zdwd_loc_1"));
@@ -580,6 +591,7 @@ public:
         lcd_zdwd_loc_1->setFrameShape(QFrame::NoFrame);
         lcd_zdwd_loc_1->setFrameShadow(QFrame::Raised);
         lcd_zdwd_loc_1->setSmallDecimalPoint(false);
+        lcd_zdwd_loc_1->setNumDigits(2);
         lcd_zdwd_loc_1->setSegmentStyle(QLCDNumber::Flat);
         lcd_zdwd_loc_3 = new QLCDNumber(tab_xtxx);
         lcd_zdwd_loc_3->setObjectName(QString::fromUtf8("lcd_zdwd_loc_3"));
@@ -590,6 +602,7 @@ public:
         lcd_zdwd_loc_3->setFrameShape(QFrame::NoFrame);
         lcd_zdwd_loc_3->setFrameShadow(QFrame::Raised);
         lcd_zdwd_loc_3->setSmallDecimalPoint(false);
+        lcd_zdwd_loc_3->setNumDigits(2);
         lcd_zdwd_loc_3->setSegmentStyle(QLCDNumber::Flat);
         tabWidget->addTab(tab_xtxx, QString());
         text_zddy->raise();
@@ -847,11 +860,13 @@ public:
         lcd_p2_zgdy_loc_2->setObjectName(QString::fromUtf8("lcd_p2_zgdy_loc_2"));
         lcd_p2_zgdy_loc_2->setGeometry(QRect(30, 30, 16, 21));
         lcd_p2_zgdy_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p2_zgdy_loc_2->setNumDigits(2);
         lcd_p2_zgdy_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_p2_zgdy_loc_1 = new QLCDNumber(frame_12);
         lcd_p2_zgdy_loc_1->setObjectName(QString::fromUtf8("lcd_p2_zgdy_loc_1"));
         lcd_p2_zgdy_loc_1->setGeometry(QRect(10, 30, 16, 21));
         lcd_p2_zgdy_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p2_zgdy_loc_1->setNumDigits(2);
         lcd_p2_zgdy_loc_1->setSegmentStyle(QLCDNumber::Flat);
         frame_13 = new QFrame(frame_2);
         frame_13->setObjectName(QString::fromUtf8("frame_13"));
@@ -871,11 +886,13 @@ public:
         lcd_p2_zddy_loc_2->setObjectName(QString::fromUtf8("lcd_p2_zddy_loc_2"));
         lcd_p2_zddy_loc_2->setGeometry(QRect(30, 30, 16, 21));
         lcd_p2_zddy_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p2_zddy_loc_2->setNumDigits(2);
         lcd_p2_zddy_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_p2_zddy_loc_1 = new QLCDNumber(frame_13);
         lcd_p2_zddy_loc_1->setObjectName(QString::fromUtf8("lcd_p2_zddy_loc_1"));
         lcd_p2_zddy_loc_1->setGeometry(QRect(10, 30, 16, 21));
         lcd_p2_zddy_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p2_zddy_loc_1->setNumDigits(2);
         lcd_p2_zddy_loc_1->setSegmentStyle(QLCDNumber::Flat);
         frame_14 = new QFrame(frame_2);
         frame_14->setObjectName(QString::fromUtf8("frame_14"));
@@ -895,11 +912,13 @@ public:
         lcd_p2_zgwd_loc_2->setObjectName(QString::fromUtf8("lcd_p2_zgwd_loc_2"));
         lcd_p2_zgwd_loc_2->setGeometry(QRect(30, 30, 16, 21));
         lcd_p2_zgwd_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p2_zgwd_loc_2->setNumDigits(2);
         lcd_p2_zgwd_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_p2_zgwd_loc_1 = new QLCDNumber(frame_14);
         lcd_p2_zgwd_loc_1->setObjectName(QString::fromUtf8("lcd_p2_zgwd_loc_1"));
         lcd_p2_zgwd_loc_1->setGeometry(QRect(10, 30, 16, 21));
         lcd_p2_zgwd_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p2_zgwd_loc_1->setNumDigits(2);
         lcd_p2_zgwd_loc_1->setSegmentStyle(QLCDNumber::Flat);
         frame_15 = new QFrame(frame_2);
         frame_15->setObjectName(QString::fromUtf8("frame_15"));
@@ -919,11 +938,13 @@ public:
         lcd_p2_zdwd_loc_2->setObjectName(QString::fromUtf8("lcd_p2_zdwd_loc_2"));
         lcd_p2_zdwd_loc_2->setGeometry(QRect(30, 30, 16, 21));
         lcd_p2_zdwd_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p2_zdwd_loc_2->setNumDigits(2);
         lcd_p2_zdwd_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_p2_zdwd_loc_1 = new QLCDNumber(frame_15);
         lcd_p2_zdwd_loc_1->setObjectName(QString::fromUtf8("lcd_p2_zdwd_loc_1"));
         lcd_p2_zdwd_loc_1->setGeometry(QRect(10, 30, 16, 21));
         lcd_p2_zdwd_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p2_zdwd_loc_1->setNumDigits(2);
         lcd_p2_zdwd_loc_1->setSegmentStyle(QLCDNumber::Flat);
         frame_bj = new QFrame(tab_cjbxx);
         frame_bj->setObjectName(QString::fromUtf8("frame_bj"));
@@ -1366,11 +1387,13 @@ public:
         lcd_p3_zgwd_loc_1->setObjectName(QString::fromUtf8("lcd_p3_zgwd_loc_1"));
         lcd_p3_zgwd_loc_1->setGeometry(QRect(10, 40, 16, 21));
         lcd_p3_zgwd_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p3_zgwd_loc_1->setNumDigits(2);
         lcd_p3_zgwd_loc_1->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_zgwd_loc_2 = new QLCDNumber(frame_7);
         lcd_p3_zgwd_loc_2->setObjectName(QString::fromUtf8("lcd_p3_zgwd_loc_2"));
         lcd_p3_zgwd_loc_2->setGeometry(QRect(30, 40, 16, 21));
         lcd_p3_zgwd_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p3_zgwd_loc_2->setNumDigits(2);
         lcd_p3_zgwd_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_zgwd = new QLCDNumber(frame_7);
         lcd_p3_zgwd->setObjectName(QString::fromUtf8("lcd_p3_zgwd"));
@@ -1386,6 +1409,7 @@ public:
         lcd_p3_zdwd_loc_2->setObjectName(QString::fromUtf8("lcd_p3_zdwd_loc_2"));
         lcd_p3_zdwd_loc_2->setGeometry(QRect(30, 40, 16, 21));
         lcd_p3_zdwd_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p3_zdwd_loc_2->setNumDigits(2);
         lcd_p3_zdwd_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_zdwd = new QLCDNumber(frame_8);
         lcd_p3_zdwd->setObjectName(QString::fromUtf8("lcd_p3_zdwd"));
@@ -1400,6 +1424,7 @@ public:
         lcd_p3_zdwd_loc_1->setObjectName(QString::fromUtf8("lcd_p3_zdwd_loc_1"));
         lcd_p3_zdwd_loc_1->setGeometry(QRect(10, 40, 16, 21));
         lcd_p3_zdwd_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p3_zdwd_loc_1->setNumDigits(2);
         lcd_p3_zdwd_loc_1->setSegmentStyle(QLCDNumber::Flat);
         frame_9 = new QFrame(frame_5);
         frame_9->setObjectName(QString::fromUtf8("frame_9"));
@@ -1410,6 +1435,7 @@ public:
         lcd_p3_zddy_loc_2->setObjectName(QString::fromUtf8("lcd_p3_zddy_loc_2"));
         lcd_p3_zddy_loc_2->setGeometry(QRect(10, 40, 16, 21));
         lcd_p3_zddy_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p3_zddy_loc_2->setNumDigits(2);
         lcd_p3_zddy_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_zddy = new QLCDNumber(frame_9);
         lcd_p3_zddy->setObjectName(QString::fromUtf8("lcd_p3_zddy"));
@@ -1424,6 +1450,7 @@ public:
         lcd_p3_zddy_loc_1->setObjectName(QString::fromUtf8("lcd_p3_zddy_loc_1"));
         lcd_p3_zddy_loc_1->setGeometry(QRect(30, 40, 16, 21));
         lcd_p3_zddy_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p3_zddy_loc_1->setNumDigits(2);
         lcd_p3_zddy_loc_1->setSegmentStyle(QLCDNumber::Flat);
         frame_10 = new QFrame(frame_5);
         frame_10->setObjectName(QString::fromUtf8("frame_10"));
@@ -1438,11 +1465,13 @@ public:
         lcd_p3_zxdy_loc_1->setObjectName(QString::fromUtf8("lcd_p3_zxdy_loc_1"));
         lcd_p3_zxdy_loc_1->setGeometry(QRect(10, 40, 16, 21));
         lcd_p3_zxdy_loc_1->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p3_zxdy_loc_1->setNumDigits(2);
         lcd_p3_zxdy_loc_1->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_zxdy_loc_2 = new QLCDNumber(frame_10);
         lcd_p3_zxdy_loc_2->setObjectName(QString::fromUtf8("lcd_p3_zxdy_loc_2"));
         lcd_p3_zxdy_loc_2->setGeometry(QRect(30, 40, 16, 21));
         lcd_p3_zxdy_loc_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        lcd_p3_zxdy_loc_2->setNumDigits(2);
         lcd_p3_zxdy_loc_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_zxdy = new QLCDNumber(frame_10);
         lcd_p3_zxdy->setObjectName(QString::fromUtf8("lcd_p3_zxdy"));
@@ -1461,6 +1490,10 @@ public:
         comboBox = new QComboBox(frame_3);
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setGeometry(QRect(20, 70, 71, 21));
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("Andale Mono"));
+        font3.setPointSize(8);
+        comboBox->setFont(font3);
         pbutton_right_2 = new QPushButton(frame_3);
         pbutton_right_2->setObjectName(QString::fromUtf8("pbutton_right_2"));
         pbutton_right_2->setGeometry(QRect(85, 10, 21, 51));
@@ -1604,16 +1637,16 @@ public:
         tab_gzxx->setObjectName(QString::fromUtf8("tab_gzxx"));
         tableWidget_2 = new QTableWidget(tab_gzxx);
         tableWidget_2->setObjectName(QString::fromUtf8("tableWidget_2"));
-        tableWidget_2->setGeometry(QRect(10, 10, 761, 411));
+        tableWidget_2->setGeometry(QRect(10, 10, 761, 371));
         pbutton_up = new QPushButton(tab_gzxx);
         pbutton_up->setObjectName(QString::fromUtf8("pbutton_up"));
-        pbutton_up->setGeometry(QRect(210, 470, 121, 41));
+        pbutton_up->setGeometry(QRect(110, 390, 121, 41));
         pbutton_down = new QPushButton(tab_gzxx);
         pbutton_down->setObjectName(QString::fromUtf8("pbutton_down"));
-        pbutton_down->setGeometry(QRect(640, 470, 121, 41));
+        pbutton_down->setGeometry(QRect(560, 390, 121, 41));
         text_p4_pagenum = new QTextBrowser(tab_gzxx);
         text_p4_pagenum->setObjectName(QString::fromUtf8("text_p4_pagenum"));
-        text_p4_pagenum->setGeometry(QRect(470, 470, 41, 41));
+        text_p4_pagenum->setGeometry(QRect(380, 390, 41, 41));
         tabWidget->addTab(tab_gzxx, QString());
         tab_xtrz = new QWidget();
         tab_xtrz->setObjectName(QString::fromUtf8("tab_xtrz"));
@@ -1625,7 +1658,7 @@ public:
 
         retranslateUi(Widget);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(Widget);
@@ -1858,6 +1891,11 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(tab_cxxxx), QApplication::translate("Widget", "\347\260\207\350\257\246\347\273\206\344\277\241\346\201\257", 0, QApplication::UnicodeUTF8));
         pbutton_up->setText(QApplication::translate("Widget", "\344\270\212\344\270\200\351\241\265", 0, QApplication::UnicodeUTF8));
         pbutton_down->setText(QApplication::translate("Widget", "\344\270\213\344\270\200\351\241\265", 0, QApplication::UnicodeUTF8));
+        text_p4_pagenum->setHtml(QApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_gzxx), QApplication::translate("Widget", "\346\225\205\351\232\234\344\277\241\346\201\257", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_xtrz), QApplication::translate("Widget", "\347\263\273\347\273\237\346\227\245\345\277\227", 0, QApplication::UnicodeUTF8));
     } // retranslateUi

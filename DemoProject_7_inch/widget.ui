@@ -53,7 +53,7 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="tab_xtxx">
     <property name="sizePolicy">
@@ -461,6 +461,9 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="smallDecimalPoint">
       <bool>false</bool>
+     </property>
+     <property name="numDigits">
+      <number>2</number>
      </property>
      <property name="segmentStyle">
       <enum>QLCDNumber::Flat</enum>
@@ -880,6 +883,9 @@ p, li { white-space: pre-wrap; }
      <property name="smallDecimalPoint">
       <bool>false</bool>
      </property>
+     <property name="numDigits">
+      <number>2</number>
+     </property>
      <property name="segmentStyle">
       <enum>QLCDNumber::Flat</enum>
      </property>
@@ -913,6 +919,9 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="smallDecimalPoint">
       <bool>false</bool>
+     </property>
+     <property name="numDigits">
+      <number>2</number>
      </property>
      <property name="segmentStyle">
       <enum>QLCDNumber::Flat</enum>
@@ -948,6 +957,9 @@ p, li { white-space: pre-wrap; }
      <property name="smallDecimalPoint">
       <bool>false</bool>
      </property>
+     <property name="numDigits">
+      <number>2</number>
+     </property>
      <property name="segmentStyle">
       <enum>QLCDNumber::Flat</enum>
      </property>
@@ -981,6 +993,9 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="smallDecimalPoint">
       <bool>false</bool>
+     </property>
+     <property name="numDigits">
+      <number>2</number>
      </property>
      <property name="segmentStyle">
       <enum>QLCDNumber::Flat</enum>
@@ -1016,6 +1031,9 @@ p, li { white-space: pre-wrap; }
      <property name="smallDecimalPoint">
       <bool>false</bool>
      </property>
+     <property name="numDigits">
+      <number>2</number>
+     </property>
      <property name="segmentStyle">
       <enum>QLCDNumber::Flat</enum>
      </property>
@@ -1049,6 +1067,9 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="smallDecimalPoint">
       <bool>false</bool>
+     </property>
+     <property name="numDigits">
+      <number>2</number>
      </property>
      <property name="segmentStyle">
       <enum>QLCDNumber::Flat</enum>
@@ -1084,6 +1105,9 @@ p, li { white-space: pre-wrap; }
      <property name="smallDecimalPoint">
       <bool>false</bool>
      </property>
+     <property name="numDigits">
+      <number>2</number>
+     </property>
      <property name="segmentStyle">
       <enum>QLCDNumber::Flat</enum>
      </property>
@@ -1117,6 +1141,9 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="smallDecimalPoint">
       <bool>false</bool>
+     </property>
+     <property name="numDigits">
+      <number>2</number>
      </property>
      <property name="segmentStyle">
       <enum>QLCDNumber::Flat</enum>
@@ -1152,6 +1179,9 @@ p, li { white-space: pre-wrap; }
      <property name="smallDecimalPoint">
       <bool>false</bool>
      </property>
+     <property name="numDigits">
+      <number>2</number>
+     </property>
      <property name="segmentStyle">
       <enum>QLCDNumber::Flat</enum>
      </property>
@@ -1186,6 +1216,9 @@ p, li { white-space: pre-wrap; }
      <property name="smallDecimalPoint">
       <bool>false</bool>
      </property>
+     <property name="numDigits">
+      <number>2</number>
+     </property>
      <property name="segmentStyle">
       <enum>QLCDNumber::Flat</enum>
      </property>
@@ -1219,6 +1252,9 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="smallDecimalPoint">
       <bool>false</bool>
+     </property>
+     <property name="numDigits">
+      <number>2</number>
      </property>
      <property name="segmentStyle">
       <enum>QLCDNumber::Flat</enum>
@@ -2021,6 +2057,9 @@ p, li { white-space: pre-wrap; }
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
+       <property name="numDigits">
+        <number>2</number>
+       </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
        </property>
@@ -2036,6 +2075,9 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="numDigits">
+        <number>2</number>
        </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
@@ -2106,6 +2148,9 @@ p, li { white-space: pre-wrap; }
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
+       <property name="numDigits">
+        <number>2</number>
+       </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
        </property>
@@ -2121,6 +2166,9 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="numDigits">
+        <number>2</number>
        </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
@@ -2191,6 +2239,9 @@ p, li { white-space: pre-wrap; }
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
+       <property name="numDigits">
+        <number>2</number>
+       </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
        </property>
@@ -2206,6 +2257,9 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="numDigits">
+        <number>2</number>
        </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
@@ -2276,6 +2330,9 @@ p, li { white-space: pre-wrap; }
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
+       <property name="numDigits">
+        <number>2</number>
+       </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
        </property>
@@ -2291,6 +2348,9 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="numDigits">
+        <number>2</number>
        </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
@@ -3868,6 +3928,9 @@ p, li { white-space: pre-wrap; }
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
+       <property name="numDigits">
+        <number>2</number>
+       </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
        </property>
@@ -3883,6 +3946,9 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="numDigits">
+        <number>2</number>
        </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
@@ -3931,6 +3997,9 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="numDigits">
+        <number>2</number>
        </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
@@ -3984,6 +4053,9 @@ p, li { white-space: pre-wrap; }
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
+       <property name="numDigits">
+        <number>2</number>
+       </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
        </property>
@@ -4015,6 +4087,9 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="numDigits">
+        <number>2</number>
        </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
@@ -4068,6 +4143,9 @@ p, li { white-space: pre-wrap; }
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
+       <property name="numDigits">
+        <number>2</number>
+       </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
        </property>
@@ -4120,6 +4198,9 @@ p, li { white-space: pre-wrap; }
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
+       <property name="numDigits">
+        <number>2</number>
+       </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
        </property>
@@ -4135,6 +4216,9 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="numDigits">
+        <number>2</number>
        </property>
        <property name="segmentStyle">
         <enum>QLCDNumber::Flat</enum>
@@ -4185,6 +4269,12 @@ p, li { white-space: pre-wrap; }
         <width>71</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Andale Mono</family>
+        <pointsize>8</pointsize>
+       </font>
       </property>
      </widget>
      <widget class="QPushButton" name="pbutton_right_2">
@@ -4661,15 +4751,15 @@ p, li { white-space: pre-wrap; }
        <x>10</x>
        <y>10</y>
        <width>761</width>
-       <height>411</height>
+       <height>371</height>
       </rect>
      </property>
     </widget>
     <widget class="QPushButton" name="pbutton_up">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>470</y>
+       <x>110</x>
+       <y>390</y>
        <width>121</width>
        <height>41</height>
       </rect>
@@ -4681,8 +4771,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QPushButton" name="pbutton_down">
      <property name="geometry">
       <rect>
-       <x>640</x>
-       <y>470</y>
+       <x>560</x>
+       <y>390</y>
        <width>121</width>
        <height>41</height>
       </rect>
@@ -4694,11 +4784,18 @@ p, li { white-space: pre-wrap; }
     <widget class="QTextBrowser" name="text_p4_pagenum">
      <property name="geometry">
       <rect>
-       <x>470</x>
-       <y>470</y>
+       <x>380</x>
+       <y>390</y>
        <width>41</width>
        <height>41</height>
       </rect>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </widget>
