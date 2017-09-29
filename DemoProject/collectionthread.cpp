@@ -81,7 +81,6 @@ void CollectionThread::run()
             sendDebugPackage(parser, PCBA_6803_3+1, 0x08, 0x21FA101F0041005);
             sendDebugPackage(parser, PCBA_6803_4+1, 0x08, 0x21FA101F0041005);
 
-
             // cluster 2
             sendDebugPackage(parser, NOM_PAR+2, 0x08, 0x0200520100750601);
         }else{

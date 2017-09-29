@@ -7,6 +7,10 @@
 #include <net/if.h>
 #include <linux/can.h>
 
+#define MOTOROLA 1
+#define INTEL 2
+#define CAN_MODE MOTOROLA
+
 class CanParser : public QObject
 {
         Q_OBJECT

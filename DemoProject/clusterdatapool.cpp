@@ -19,7 +19,7 @@ bool ClusterDataPool::storeById(int moduleId, string name, double value){
 }
 
 double ClusterDataPool::getDoubleByIndex(int moduleIndex, string name){
-    int i = 1;
+    int i = 0;
     int key = -1;
     QMap<int, QMap<string, Data*>* >::iterator iter;
     for(iter = moduleDataMap.begin(); iter != moduleDataMap.end(); ++iter)

@@ -121,7 +121,7 @@ void Widget::nextPage(){
 
 void Widget::onIndexChanged(const QString &){
     int currentClusterIndex = configure->getClusterIndex();
-    configure->setCurrentModuleSelected(currentClusterIndex, ui->comboBox->currentIndex() + 1);
+    configure->setCurrentModuleSelected(currentClusterIndex, ui->comboBox->currentIndex());
 }
 
 
@@ -318,9 +318,9 @@ void Widget::display()
     // page 3    
     ui->comboBox->clear();
     int moduleTotal = dataPool->getDoubleByIndex(currentClusterIndex, "_MODULE_NUMBER_");
-    for (int i = 1; i <= moduleTotal; i++){
+    for (int i = 0; i < moduleTotal; i++){
         int moduleId = dataPool->getDoubleByIndex(currentClusterIndex, i, "_ID_");
-        ui->comboBox->addItem(QString::fromUtf8("模块").append(QString::number(i)).append(QString::fromUtf8("(")).append(QString::number(moduleId)).append(QString::fromUtf8(")")));
+        ui->comboBox->addItem(QString::fromUtf8("模块").append(QString::number(i+1)).append(QString::fromUtf8("(")).append(QString::number(moduleId)).append(QString::fromUtf8(")")));
     }
     int currentModuleSelected = configure->getCurrentModuleSelected(currentClusterIndex);
     ui->comboBox->setCurrentIndex(currentModuleSelected);

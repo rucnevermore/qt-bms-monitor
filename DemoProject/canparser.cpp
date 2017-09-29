@@ -7,7 +7,11 @@ CanParser::CanParser()
 
 // parse the can data and store into the data pool according to the can id.
 void CanParser::parse(can_frame frame){
-    //use mask to remove the cluster information.
+
+    if (CAN_MODE == MOTOROLA){
+        int high = frame.can_id & 0xFFFF0000;
+    }
+    // use mask to remove the cluster information.
     int id = frame.can_id& CAN_ID_MASK;
     switch (id){
         case BAMS_INF1:
