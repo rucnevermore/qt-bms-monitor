@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
     alertItemMap.insert("sjzjgz", new QTableWidgetItem(QString::fromUtf8("数据自检故障")));
     alertItemMap.insert("yzctxgz", new QTableWidgetItem(QString::fromUtf8("与整车通信故障")));
     alertItemMap.insert("ybmutxgz", new QTableWidgetItem(QString::fromUtf8("与bmu通信故障")));
-    alertItemMap.insert("ycdjtxgz", new QTableWidgetItem(QString::fromUtf8("与充电机通信故障")));
+    alertItemMap.insert("ycdjtxgz", new QTableWidgetItem(QString::fromUtf8("充电机通信故障")));
     alertItemMap.insert("jrgz", new QTableWidgetItem(QString::fromUtf8("加热故障")));
     alertItemMap.insert("fsgz", new QTableWidgetItem(QString::fromUtf8("风扇故障")));
     alertItemMap.insert("zzzlgz", new QTableWidgetItem(QString::fromUtf8("主正粘连故障")));

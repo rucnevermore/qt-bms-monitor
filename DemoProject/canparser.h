@@ -22,10 +22,11 @@ signals:
 private:
     DataPool* dataPool;
 
-    double maskAndGetValue(char* source, long long mask, int mask_offset, double resol, double offset);
-    double visit8BytesArray(char* source, long long mask, int mask_offset, string name, double resol, double offset);
-    double visit8BytesArray(int clusterId, char* source, long long mask, int mask_offset, string name, double resol, double offset);
-    double visit8BytesArray(int clusterId, int moduleId, char* source, long long mask, int mask_offset, string name, double resol, double offset);
+    void debugFrame(can_frame frame);
+    double maskAndGetValue(char* source, long long mask, int mask_offset, double resol, double offset, bool multiBytes);
+    double visit8BytesArray(char* source, long long mask, int mask_offset, string name, double resol, double offset, bool multiBytes);
+    double visit8BytesArray(int clusterId, char* source, long long mask, int mask_offset, string name, double resol, double offset, bool multiBytes);
+    double visit8BytesArray(int clusterId, int moduleId, char* source, long long mask, int mask_offset, string name, double resol, double offset, bool multiBytes);
 
     void processBAMS_INF1(can_frame frame);
     void processBAMS_INF2(can_frame frame);

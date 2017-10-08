@@ -1,4 +1,5 @@
 #include "displaythread.h"
+#include "cancache.h"
 
 DisplayThread::DisplayThread(QObject *parent) :
     QThread(parent)
@@ -8,12 +9,12 @@ DisplayThread::DisplayThread(QObject *parent) :
 
 void DisplayThread::run()
 {
-
-
     while(running)
     {
         display();
-        this->sleep(1);
+        this->sleep(2);
+        int size = CanCache::newInstance()->currentSize();
+        log(QString::number(size).append(QString(" can frame ready for parse")));
     }
 
 }

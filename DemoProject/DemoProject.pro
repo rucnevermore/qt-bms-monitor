@@ -14,7 +14,9 @@ SOURCES += main.cpp \
     basedatapool.cpp \
     clusterdatapool.cpp \
     alertevent.cpp \
-    alerteventlistener.cpp
+    alerteventlistener.cpp \
+    cancache.cpp \
+    parsethread.cpp
 HEADERS += widget.h \
     data.h \
     displayThread.h \
@@ -29,11 +31,13 @@ HEADERS += widget.h \
     clusterdatapool.h \
     alertevent.h \
     eventlistener.h \
-    alerteventlistener.h
+    alerteventlistener.h \
+    cancache.h \
+    parsethread.h
 FORMS += widget.ui
 INSTALLS += target
 RESOURCES += resources.qrc
 OTHER_FILES += 
-#LIBS += -L../ycapi \
-#    -lycapi
-#INCLUDEPATH += ../ycapi
+LIBS += -L../ycapi \
+    -lycapi
+INCLUDEPATH += ../ycapi

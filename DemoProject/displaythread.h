@@ -14,6 +14,7 @@ public:
     
 signals:
     void display();
+    void log(QString str);
 
 public slots:
     void run();

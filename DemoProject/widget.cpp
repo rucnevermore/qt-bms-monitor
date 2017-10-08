@@ -6,7 +6,6 @@ Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
 {
-
     ui->setupUi(this);
 
     log(QString::number(this->width(),10));
@@ -29,12 +28,33 @@ Widget::Widget(QWidget *parent) :
     log(QString::fromStdString("start display thread..."));
     displayThread = new DisplayThread();
     connect(displayThread,SIGNAL(display()),this,SLOT(display()));
+    connect(displayThread,SIGNAL(log(QString)),this,SLOT(log(QString)));
     displayThread->start();
 
+    // start the collection thread.
     log(QString::fromStdString("start collection thread..."));
-    collectionThread = new CollectionThread();
-    connect(collectionThread,SIGNAL(log(QString)),this,SLOT(log(QString)));
-    collectionThread->start();
+    int collectionThreadNumber = 1;
+    for (int i = 0; i < collectionThreadNumber; i++){
+        CollectionThread* cThread = new CollectionThread();
+        connect(cThread,SIGNAL(log(QString)),this,SLOT(log(QString)));
+        cThread->start();
+    }
+//    collectionThread = new CollectionThread();
+//    connect(collectionThread,SIGNAL(log(QString)),this,SLOT(log(QString)));
+//    collectionThread->start();
+
+    // start the parse thread.
+    log(QString::fromStdString("start parse thread..."));
+    int parseThreadNumber = 50;
+    for (int i = 0; i < parseThreadNumber; i++){
+        ParseThread* pThread = new ParseThread();
+        connect(pThread,SIGNAL(log(QString)),this,SLOT(log(QString)));
+        pThread->start();
+    }
+
+//    parseThread = new ParseThread();
+//    connect(parseThread,SIGNAL(log(QString)),this,SLOT(log(QString)));
+//    parseThread->start();
 
     connect(ui->pbutton_left,SIGNAL(clicked()),this,SLOT(decreaseCluster()));
     connect(ui->pbutton_right,SIGNAL(clicked()),this,SLOT(increaseCluster()));
@@ -213,15 +233,15 @@ void Widget::display()
     // 系统状态
     int value = dataPool->getDoubleByIndex(currentClusterIndex, "xtyxzt");
     if (value == 0){
-        ui->text_p2_xtzt->setText(QString::fromUtf8("上电"));
-    }else if (value == 1){
-        ui->text_p2_xtzt->setText(QString::fromUtf8("直流充电"));
-    }else if (value == 2){
-        ui->text_p2_xtzt->setText(QString::fromUtf8("交流充电"));
-    }else if (value == 3){
-        ui->text_p2_xtzt->setText(QString::fromUtf8("放电"));
+        ui->text_p2_xtzt->setText(QString::fromUtf8("正常"));
+//    }else if (value == 1){
+//        ui->text_p2_xtzt->setText(QString::fromUtf8("直流充电"));
+//    }else if (value == 2){
+//        ui->text_p2_xtzt->setText(QString::fromUtf8("交流充电"));
+//    }else if (value == 3){
+//        ui->text_p2_xtzt->setText(QString::fromUtf8("放电"));
     }else{
-        ui->text_p2_xtzt->setText(QString::fromUtf8("未知"));
+        ui->text_p2_xtzt->setText(QString::fromUtf8("故障"));
     }
     // 电流
     ui->lcd_p2_dl->display(dataPool->getDoubleByIndex(currentClusterIndex, "zdl"));
@@ -232,15 +252,15 @@ void Widget::display()
     // 故障状态
     value = dataPool->getDoubleByIndex(currentClusterIndex, "xtgz");
     if (value == 0){
-        ui->text_p2_gzzt->setText(QString::fromUtf8("无故障"));
-    }else if (value == 1){
-        ui->text_p2_gzzt->setText(QString::fromUtf8("一级"));
-    }else if (value == 2){
-        ui->text_p2_gzzt->setText(QString::fromUtf8("二级"));
-    }else if (value == 3){
-        ui->text_p2_gzzt->setText(QString::fromUtf8("三级"));
+        ui->text_p2_gzzt->setText(QString::fromUtf8("正常"));
+//    }else if (value == 1){
+//        ui->text_p2_gzzt->setText(QString::fromUtf8("一级"));
+//    }else if (value == 2){
+//        ui->text_p2_gzzt->setText(QString::fromUtf8("二级"));
+//    }else if (value == 3){
+//        ui->text_p2_gzzt->setText(QString::fromUtf8("三级"));
     }else{
-        ui->text_p2_gzzt->setText(QString::fromUtf8("未知"));
+        ui->text_p2_gzzt->setText(QString::fromUtf8("故障"));
     }
     // 功率
     ui->lcd_p2_gl->display(dataPool->getDoubleByIndex(currentClusterIndex, "xdcsrscgl"));
@@ -251,9 +271,9 @@ void Widget::display()
     // 电池状态
     value = dataPool->getDoubleByIndex(currentClusterIndex, "dccdzt");
     if (value == 1){
-        ui->text_p2_dczt->setText(QString::fromUtf8("充电中"));
+        ui->text_p2_dczt->setText(QString::fromUtf8("充电"));
     }else if (value == 0){
-        ui->text_p2_dczt->setText(QString::fromUtf8("未充电"));
+        ui->text_p2_dczt->setText(QString::fromUtf8("放电"));
     }else{
         ui->text_p2_dczt->setText(QString::fromUtf8("未知"));
     }

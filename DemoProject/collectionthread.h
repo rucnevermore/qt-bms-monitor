@@ -1,11 +1,12 @@
 #ifndef COLLECTIONTHREAD_H
 #define COLLECTIONTHREAD_H
 #include <QThread>
-//#include "ycapi.h"
-//#include <sys/ioctl.h>
-//#include <net/if.h>
-//#include <linux/can.h>
+#include "ycapi.h"
+#include <sys/ioctl.h>
+#include <net/if.h>
+#include <linux/can.h>
 #include "canparser.h"
+#include "cancache.h"
 
 #ifndef PF_CAN
 #define PF_CAN 29
@@ -30,8 +31,10 @@ public slots:
 private:
     bool running;
     std::string getstring(int n);
-//    Ycapi *ycapi;
-    void sendDebugPackage(CanParser* parser, unsigned int id, unsigned char length, long long data);
+    Ycapi *ycapi;
+    CanParser* parser;
+    CanCache* cache;
+    void sendDebugPackage(unsigned int id, unsigned char length, long long data);
 };
 
 #endif // COLLECTIONTHREAD_H

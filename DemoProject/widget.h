@@ -7,6 +7,7 @@
 #include "collectionthread.h"
 #include "datapool.h"
 #include "configure.h"
+#include "parsethread.h"
 
 namespace Ui {
     class Widget;
@@ -35,6 +36,7 @@ protected:
 private:
     DataPool* dataPool;
     Configure* configure;
+    ParseThread *parseThread;
     DisplayThread *displayThread;
     CollectionThread *collectionThread;
     QMap<string, QTableWidgetItem*> alertItemMap;
