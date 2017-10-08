@@ -52,3 +52,14 @@ double ClusterDataPool::getDoubleById(int moduleId, string name){
         return 0;
     }
 }
+
+int ClusterDataPool::getDataNumber(){
+    int dataNumber = this->dataMap.size();
+    QMap<int, QMap<string, Data*>* >::iterator iter;
+    for(iter = moduleDataMap.begin(); iter != moduleDataMap.end(); ++iter)
+    {
+        QMap<string, Data*>* moduleDataMap = iter.value();
+        dataNumber = dataNumber + moduleDataMap->size();
+    }
+    return dataNumber;
+}

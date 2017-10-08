@@ -41,8 +41,7 @@ void DataPool::addEvent(QDateTime date, QString message){
     Configure* configure = Configure::newInstance();
     int maxEventNum = configure->getMaxEventNum();
     if (events.size() > 0 && events.size() >= maxEventNum){
-        AlertEvent* event = events.at(0);
-        events.remove(0);
+        AlertEvent* event = events.takeFirst();
         delete event;
     }
     events.append(new AlertEvent(date, message));
@@ -54,7 +53,7 @@ void DataPool::storeById(int clusterId, string name, double value){
     if (clusterDataMap.contains(clusterId)){
         currentClusterDataPool = clusterDataMap.value(clusterId);
     }else{
-        currentClusterDataPool = new ClusterDataPool;
+        currentClusterDataPool = new ClusterDataPool();
         this->clusterDataMap.insert(clusterId, currentClusterDataPool);
     }
     if (currentClusterDataPool->store(name, value)){
@@ -67,7 +66,7 @@ void DataPool::storeById(int clusterId, int moduleId, string name, double value)
     if (clusterDataMap.contains(clusterId)){
         currentClusterDataPool = clusterDataMap.value(clusterId);
     }else{
-        currentClusterDataPool = new ClusterDataPool;
+        currentClusterDataPool = new ClusterDataPool();
         this->clusterDataMap.insert(clusterId, currentClusterDataPool);
     }
     if (currentClusterDataPool->storeById(moduleId, name, value)){
@@ -150,7 +149,15 @@ double DataPool::getDoubleById(int clusterId, int moduleId, string name){
 }
 
 QString DataPool::statistic(){
-
+    int dataNumber = this->dataMap.size();
+    int clusterNumber = clusterDataMap.size();
+    QMap<int, ClusterDataPool* >::iterator iter;
+    for(iter = clusterDataMap.begin(); iter != clusterDataMap.end(); ++iter)
+    {
+        ClusterDataPool* clusterDataPool = iter.value();
+        dataNumber = dataNumber + clusterDataPool->getDataNumber();
+    }
+    return QString("cluster number : ").append(QString::number(clusterNumber)).append(QString(". data number : ")).append(QString::number(dataNumber));
 }
 
 

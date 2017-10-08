@@ -2,6 +2,8 @@
 #include <ctime>
 #include "alerteventlistener.h"
 
+QTableWidgetItem* qTableWidgetItems[10][3];
+
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -68,6 +70,14 @@ Widget::Widget(QWidget *parent) :
     connect(ui->comboBox, SIGNAL(activated(const QString &)), this, SLOT(onIndexChanged(const QString &)));
 
     configure->setClusterIndex(1);
+
+    //init the QTableWidgetItem
+    for (int i = 0; i < 10; i++){
+        for (int j = 0; j < 3; j++){
+            qTableWidgetItems[i][j] = new QTableWidgetItem();
+            qTableWidgetItems[i][j]->setTextAlignment(Qt::AlignCenter);
+        }
+    }
 }
 
 
@@ -146,7 +156,7 @@ void Widget::onIndexChanged(const QString &){
 
 
 // set alert value and change color accordingly.
-void Widget::setAlertText(QTextBrowser* textBrowser, double value){
+void setAlertText(QTextBrowser* textBrowser, double value){
     if (value == 0){
 //        textBrowser->setText(QString::fromUtf8("正常"));
         textBrowser->setStyleSheet("border-image: url(./images/green.png);border: 0px;");
@@ -158,6 +168,19 @@ void Widget::setAlertText(QTextBrowser* textBrowser, double value){
         textBrowser->setStyleSheet("border-image: url(./images/pink.png);border: 0px;");
     }else if (value == 3){
 //        textBrowser->setText(QString::fromUtf8("三级"));
+        textBrowser->setStyleSheet("border-image: url(./images/red.png);border: 0px;");
+    }else{
+//        textBrowser->setText(QString::fromUtf8("未知"));
+    }
+}
+
+// set alert value and change color accordingly.
+void setAlertText2(QTextBrowser* textBrowser, double value){
+    if (value == 0){
+//        textBrowser->setText(QString::fromUtf8("正常"));
+        textBrowser->setStyleSheet("border-image: url(./images/green.png);border: 0px;");
+    }else if (value == 1){
+//        textBrowser->setText(QString::fromUtf8("一级"));
         textBrowser->setStyleSheet("border-image: url(./images/red.png);border: 0px;");
     }else{
 //        textBrowser->setText(QString::fromUtf8("未知"));
@@ -312,28 +335,29 @@ void Widget::display()
     setAlertText(ui->text_p2_bj_xtjy, dataPool->getDoubleByIndex(currentClusterIndex, "xtjy_bj"));
     // 极柱高温报警
     setAlertText(ui->text_p2_bj_jzgw, dataPool->getDoubleByIndex(currentClusterIndex, "jzgw_bj"));
+
     // 数据自检故障
-    setAlertText(ui->text_p2_gz_sjzj, dataPool->getDoubleByIndex(currentClusterIndex, "sjzj_gz"));
+    setAlertText2(ui->text_p2_gz_sjzj, dataPool->getDoubleByIndex(currentClusterIndex, "sjzj_gz"));
     // 与整车通信故障
-    setAlertText(ui->text_p2_gz_yzctx, dataPool->getDoubleByIndex(currentClusterIndex, "yzctx_gz"));
+    setAlertText2(ui->text_p2_gz_yzctx, dataPool->getDoubleByIndex(currentClusterIndex, "yzctx_gz"));
     // 与bmu通信故障
-    setAlertText(ui->text_p2_gz_ybmutx, dataPool->getDoubleByIndex(currentClusterIndex, "ybmutx_gz"));
+    setAlertText2(ui->text_p2_gz_ybmutx, dataPool->getDoubleByIndex(currentClusterIndex, "ybmutx_gz"));
     // 与充电机通信故障
-    setAlertText(ui->text_p2_gz_ycdjtx, dataPool->getDoubleByIndex(currentClusterIndex, "ycdjtx_gz"));
+    setAlertText2(ui->text_p2_gz_ycdjtx, dataPool->getDoubleByIndex(currentClusterIndex, "ycdjtx_gz"));
     // 加热故障
-    setAlertText(ui->text_p2_gz_jr, dataPool->getDoubleByIndex(currentClusterIndex, "rj_gz"));
+    setAlertText2(ui->text_p2_gz_jr, dataPool->getDoubleByIndex(currentClusterIndex, "jr_gz"));
     // 风扇故障
-    setAlertText(ui->text_p2_gz_fs, dataPool->getDoubleByIndex(currentClusterIndex, "fs_gz"));
+    setAlertText2(ui->text_p2_gz_fs, dataPool->getDoubleByIndex(currentClusterIndex, "fs_gz"));
     // 主正粘连故障
-    setAlertText(ui->text_p2_gz_zzzl, dataPool->getDoubleByIndex(currentClusterIndex, "zzzl_gz"));
+    setAlertText2(ui->text_p2_gz_zzzl, dataPool->getDoubleByIndex(currentClusterIndex, "zzzl_gz"));
     // 主负粘连故障
-    setAlertText(ui->text_p2_gz_zfzl, dataPool->getDoubleByIndex(currentClusterIndex, "zfzl_gz"));
+    setAlertText2(ui->text_p2_gz_zfzl, dataPool->getDoubleByIndex(currentClusterIndex, "zfzl_gz"));
     // 预充故障
-    setAlertText(ui->text_p2_gz_yc, dataPool->getDoubleByIndex(currentClusterIndex, "yc_gz"));
+    setAlertText2(ui->text_p2_gz_yc, dataPool->getDoubleByIndex(currentClusterIndex, "yc_gz"));
     // 电压传感器故障
-    setAlertText(ui->text_p2_gz_dycgq, dataPool->getDoubleByIndex(currentClusterIndex, "dycgq_gz"));
+    setAlertText2(ui->text_p2_gz_dycgq, dataPool->getDoubleByIndex(currentClusterIndex, "dycgq_gz"));
     // 温度传感器故障
-    setAlertText(ui->text_p2_gz_wdcgq, dataPool->getDoubleByIndex(currentClusterIndex, "wdcgq_gz"));
+    setAlertText2(ui->text_p2_gz_wdcgq, dataPool->getDoubleByIndex(currentClusterIndex, "wdcgq_gz"));
 
     // page 3    
     ui->comboBox->clear();
@@ -411,11 +435,15 @@ void Widget::display()
         if (j == maxEventInOnePage){
             break;
         }
-        ui->tableWidget_2->setItem(j,0,new QTableWidgetItem(dataPool->events.at(i)->date.toString(QString("yyyy-MM-dd hh:mm:ss"))));
-        QTableWidgetItem* item = new QTableWidgetItem(dataPool->events.at(i)->message);
-        item->setTextAlignment(Qt::AlignCenter);
-        ui->tableWidget_2->setItem(j,1,item);
-        ui->tableWidget_2->setItem(j,2,new QTableWidgetItem(QString::fromUtf8("  查看  ")));
+        qTableWidgetItems[j][0]->setText(dataPool->events.at(i)->date.toString(QString("yyyy-MM-dd hh:mm:ss")));
+        ui->tableWidget_2->setItem(j,0,qTableWidgetItems[j][0]);
+//        QTableWidgetItem* item = new QTableWidgetItem(dataPool->events.at(i)->message);
+//        item->setTextAlignment(Qt::AlignCenter);
+        qTableWidgetItems[j][1]->setText(dataPool->events.at(i)->message);
+        ui->tableWidget_2->setItem(j,1,qTableWidgetItems[j][1]);
+//        ui->tableWidget_2->setItem(j,2,new QTableWidgetItem(QString::fromUtf8("  查看  ")));
+        qTableWidgetItems[j][2]->setText(QString::fromUtf8("  查看  "));
+        ui->tableWidget_2->setItem(j,2,qTableWidgetItems[j][2]);
         ui->text_p4_pagenum->setText(QString::number(currentPage));
         j++;
     }

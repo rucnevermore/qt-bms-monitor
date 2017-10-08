@@ -12,6 +12,8 @@ public:
     bool storeById(int moduleId, string name, double value);
     double getDoubleByIndex(int moduleIndex, string name);
     double getDoubleById(int moduleId, string name);
+    int getDataNumber();
+
     QMap<int, QMap<string, Data*>*> moduleDataMap;
 };
 

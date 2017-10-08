@@ -4264,10 +4264,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QComboBox" name="comboBox">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>70</y>
-        <width>71</width>
-        <height>21</height>
+        <x>10</x>
+        <y>65</y>
+        <width>91</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">

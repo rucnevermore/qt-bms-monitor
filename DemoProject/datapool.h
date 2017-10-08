@@ -10,7 +10,7 @@
 #include "basedatapool.h"
 #include "clusterdatapool.h"
 #include "alertevent.h"
-#include <QVector>
+#include <QList>
 
 class DataPool : public BaseDataPool
 {
@@ -26,7 +26,7 @@ public:
 
     void addEvent(QString message);
     void addEvent(QDateTime date, QString message);
-    QVector<AlertEvent*> events;
+    QList<AlertEvent*> events;
 
     QString statistic();
 

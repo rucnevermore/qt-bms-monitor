@@ -1488,7 +1488,7 @@ public:
         frame_3->setFrameShadow(QFrame::Raised);
         comboBox = new QComboBox(frame_3);
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
-        comboBox->setGeometry(QRect(20, 70, 71, 21));
+        comboBox->setGeometry(QRect(10, 65, 91, 31));
         QFont font3;
         font3.setFamily(QString::fromUtf8("Andale Mono"));
         font3.setPointSize(8);
