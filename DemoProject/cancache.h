@@ -14,13 +14,13 @@ class CanCache
 {
 public:
     static CanCache* newInstance();
-    void addFrame(can_frame frame);
+    void addFrame(can_frame* frame);
 //    int parse();
     int currentSize();
-    can_frame get();
+    can_frame* get();
 private:
     CanCache(){};
-    QList<can_frame> frames;
+    QList<can_frame*> frames;
     static CanCache* instance_;
 //    CanParser* parser;
 };

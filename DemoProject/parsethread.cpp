@@ -9,9 +9,10 @@ void ParseThread::run()
 {
     while(running)
     {  
-        can_frame frame = cache->get();
+        can_frame* frame = cache->get();
         parser->parse(frame);
-        free(&frame);
+        delete frame;
+        frame=NULL;
 //        log(QString::number(res).append(QString(" frames has been parsed.")));
 //        this->sleep(1);
     }

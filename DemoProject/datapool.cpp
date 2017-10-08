@@ -41,7 +41,9 @@ void DataPool::addEvent(QDateTime date, QString message){
     Configure* configure = Configure::newInstance();
     int maxEventNum = configure->getMaxEventNum();
     if (events.size() > 0 && events.size() >= maxEventNum){
+        AlertEvent* event = events.at(0);
         events.remove(0);
+        delete event;
     }
     events.append(new AlertEvent(date, message));
 }
@@ -145,6 +147,10 @@ double DataPool::getDoubleById(int clusterId, int moduleId, string name){
     }else{// no such data
         return 0;
     }
+}
+
+QString DataPool::statistic(){
+
 }
 
 

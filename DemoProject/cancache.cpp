@@ -13,7 +13,7 @@ CanCache* CanCache::newInstance(){
     return instance_;
 };
 
-void CanCache::addFrame(can_frame frame){
+void CanCache::addFrame(can_frame* frame){
     // use mask to remove the cluster information.
 //    int id = frame.can_id& CAN_ID_MASK;
 //    switch (id){
@@ -42,12 +42,12 @@ int CanCache::currentSize(){
     return frames.size();
 }
 
-can_frame CanCache::get(){
+can_frame* CanCache::get(){
     lock.lock();
     while (frames.isEmpty()){
 
     }
-    can_frame frame = frames.takeFirst();
+    can_frame* frame = frames.takeFirst();
     lock.unlock();
     return frame;
 }

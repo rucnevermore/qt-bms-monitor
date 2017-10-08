@@ -28,6 +28,8 @@ public:
     void addEvent(QDateTime date, QString message);
     QVector<AlertEvent*> events;
 
+    QString statistic();
+
     void registerListener(EventListener* listener);
     void notifyListener(string name, QString value);
     QList<EventListener*> listeners;

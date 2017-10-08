@@ -16,35 +16,35 @@ class CanParser : public QObject
         Q_OBJECT
 public:
     CanParser();
-    void parse(can_frame frame);
+    void parse(can_frame* frame);
 signals:
     void log(QString str);
 private:
     DataPool* dataPool;
 
-    void debugFrame(can_frame frame);
+    void debugFrame(can_frame* frame);
     double maskAndGetValue(char* source, long long mask, int mask_offset, double resol, double offset, bool multiBytes);
     double visit8BytesArray(char* source, long long mask, int mask_offset, string name, double resol, double offset, bool multiBytes);
     double visit8BytesArray(int clusterId, char* source, long long mask, int mask_offset, string name, double resol, double offset, bool multiBytes);
     double visit8BytesArray(int clusterId, int moduleId, char* source, long long mask, int mask_offset, string name, double resol, double offset, bool multiBytes);
 
-    void processBAMS_INF1(can_frame frame);
-    void processBAMS_INF2(can_frame frame);
-    void processBAMS_INF3(can_frame frame);
-    void processBAMS_INF4(can_frame frame);
-    void processBMS_INF(can_frame frame);
-    void processBMS_INF1(can_frame frame);
-    void processFAU_ALA(can_frame frame);
-    void processBMS_INF2(can_frame frame);
-    void processNOM_PAR(can_frame frame);
-    void processMUN_ID(can_frame frame);
-    void processMNOM_PAR(can_frame frame);
-    void processMVT_PAR1(can_frame frame);
-    void processMVT_PAR2(can_frame frame);
-    void processCELL_V(int index, can_frame frame);
-    void processCELL_T1(can_frame frame);
-    void processCELL_T2(can_frame frame);
-    void processPCBA(int index, can_frame frame);
+    void processBAMS_INF1(can_frame* frame);
+    void processBAMS_INF2(can_frame* frame);
+    void processBAMS_INF3(can_frame* frame);
+    void processBAMS_INF4(can_frame* frame);
+    void processBMS_INF(can_frame* frame);
+    void processBMS_INF1(can_frame* frame);
+    void processFAU_ALA(can_frame* frame);
+    void processBMS_INF2(can_frame* frame);
+    void processNOM_PAR(can_frame* frame);
+    void processMUN_ID(can_frame* frame);
+    void processMNOM_PAR(can_frame* frame);
+    void processMVT_PAR1(can_frame* frame);
+    void processMVT_PAR2(can_frame* frame);
+    void processCELL_V(int index, can_frame* frame);
+    void processCELL_T1(can_frame* frame);
+    void processCELL_T2(can_frame* frame);
+    void processPCBA(int index, can_frame* frame);
 };
 
 #define CAN_ID_1 0x01020304

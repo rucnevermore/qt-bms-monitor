@@ -15,20 +15,19 @@ CollectionThread::CollectionThread(QObject *parent) :
     cache = CanCache::newInstance();
 }
 
-void CollectionThread::sendDebugPackage(unsigned int id, unsigned char length, long long data){
-    can_frame frame;
-    frame.can_id = id;
-    frame.can_dlc = length;
-    for(int j = 0; j < 8; j++){
-        frame.data[j] = data >> (j * 8) & 0xFF;
-    }
-//    parser->parse(frame);
-    cache->addFrame(frame);
-}
+//void CollectionThread::sendDebugPackage(unsigned int id, unsigned char length, long long data){
+//    can_frame frame;
+//    frame.can_id = id;
+//    frame.can_dlc = length;
+//    for(int j = 0; j < 8; j++){
+//        frame.data[j] = data >> (j * 8) & 0xFF;
+//    }
+////    parser->parse(frame);
+//    cache->addFrame(frame);
+//}
 
 void CollectionThread::run()
 {
-    can_frame frame;
     bool debug = false;
     while(running)
     {
@@ -82,7 +81,8 @@ void CollectionThread::run()
 //            sendDebugPackage(NOM_PAR+2, 0x08, 0x0200520100750601);
         }else{
             // collection from Can Bus start.
-            ycapi->ReadCan(&frame.can_id,&frame.can_dlc,frame.data);
+            can_frame* frame = new can_frame();
+            ycapi->ReadCan(&frame->can_id,&frame->can_dlc,frame->data);
             cache->addFrame(frame);
 //            parser->parse(frame);
             // collection from Can Bus finish.
