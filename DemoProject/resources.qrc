@@ -1,8 +1,13 @@
 <RCC>
-    <qresource prefix="/">
-        <file>qss/blue.qss</file>
-        <file>qss/white.qss</file>
-        <file>ycapi/libycapi.so</file>
-        <file>ycapi/libycapic.so</file>
+    <qresource prefix="/"/>
+    <qresource prefix="/qss">
+        <file>white.qss</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>images/green.png</file>
+        <file>images/item.png</file>
+        <file>images/pink.png</file>
+        <file>images/red.png</file>
+        <file>images/yellow.png</file>
     </qresource>
 </RCC>

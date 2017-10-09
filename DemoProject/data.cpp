@@ -34,7 +34,7 @@ bool Data::update(string name, Channel channel, DataType type, QString value){
     this->type = type;
 
     bool flag = false;
-    if (this->value.toStdString() != value.toStdString()){
+    if (this->value != value){
         flag = true;
     }
     this->value = value;

@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    QFile qss("white.qss");
+    QFile qss("/yctek/app/white.qss");
     qss.open(QFile::ReadOnly);
     a.setStyleSheet(qss.readAll());
     qss.close();

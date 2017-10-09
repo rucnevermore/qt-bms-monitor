@@ -1,8 +1,7 @@
 #include "widget.h"
 #include <ctime>
 #include "alerteventlistener.h"
-
-QTableWidgetItem* qTableWidgetItems[10][3];
+#include <QListWidget>
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -70,14 +69,6 @@ Widget::Widget(QWidget *parent) :
     connect(ui->comboBox, SIGNAL(activated(const QString &)), this, SLOT(onIndexChanged(const QString &)));
 
     configure->setClusterIndex(1);
-
-    //init the QTableWidgetItem
-    for (int i = 0; i < 10; i++){
-        for (int j = 0; j < 3; j++){
-            qTableWidgetItems[i][j] = new QTableWidgetItem();
-            qTableWidgetItems[i][j]->setTextAlignment(Qt::AlignCenter);
-        }
-    }
 }
 
 
@@ -159,16 +150,16 @@ void Widget::onIndexChanged(const QString &){
 void setAlertText(QTextBrowser* textBrowser, double value){
     if (value == 0){
 //        textBrowser->setText(QString::fromUtf8("正常"));
-        textBrowser->setStyleSheet("border-image: url(./images/green.png);border: 0px;");
+        textBrowser->setStyleSheet("border-image: url(/yctek/app/images/green.png);border: 0px;");
     }else if (value == 1){
 //        textBrowser->setText(QString::fromUtf8("一级"));
-        textBrowser->setStyleSheet("border-image: url(./images/yellow.png);border: 0px;");
+        textBrowser->setStyleSheet("border-image: url(/yctek/app/images/yellow.png);border: 0px;");
     }else if (value == 2){
 //        textBrowser->setText(QString::fromUtf8("二级"));
-        textBrowser->setStyleSheet("border-image: url(./images/pink.png);border: 0px;");
+        textBrowser->setStyleSheet("border-image: url(/yctek/app/images/pink.png);border: 0px;");
     }else if (value == 3){
 //        textBrowser->setText(QString::fromUtf8("三级"));
-        textBrowser->setStyleSheet("border-image: url(./images/red.png);border: 0px;");
+        textBrowser->setStyleSheet("border-image: url(/yctek/app/images/red.png);border: 0px;");
     }else{
 //        textBrowser->setText(QString::fromUtf8("未知"));
     }
@@ -178,10 +169,10 @@ void setAlertText(QTextBrowser* textBrowser, double value){
 void setAlertText2(QTextBrowser* textBrowser, double value){
     if (value == 0){
 //        textBrowser->setText(QString::fromUtf8("正常"));
-        textBrowser->setStyleSheet("border-image: url(./images/green.png);border: 0px;");
+        textBrowser->setStyleSheet("border-image: url(/yctek/app/images/green.png);border: 0px;");
     }else if (value == 1){
 //        textBrowser->setText(QString::fromUtf8("一级"));
-        textBrowser->setStyleSheet("border-image: url(./images/red.png);border: 0px;");
+        textBrowser->setStyleSheet("border-image: url(/yctek/app/images/red.png);border: 0px;");
     }else{
 //        textBrowser->setText(QString::fromUtf8("未知"));
     }
@@ -362,9 +353,19 @@ void Widget::display()
     // page 3    
     ui->comboBox->clear();
     int moduleTotal = dataPool->getDoubleByIndex(currentClusterIndex, "_MODULE_NUMBER_");
+
+//    for (int i = 0; i < moduleTotal; i++){
+//        ComboboxItem* item = new ComboboxItem(this);
+//        int moduleId = dataPool->getDoubleByIndex(currentClusterIndex, i, "_ID_");
+//        item->setLabelContent(QString::fromUtf8("模块").append(QString::number(i+1)).append(QString::fromUtf8("(")).append(QString::number(moduleId)).append(QString::fromUtf8(")")));
+//        connect(item, SIGNAL(chooseAccount(const QString&)), this, SLOT(onIndexChanged(const QString&)));
+//        QListWidgetItem* widgetItem = new QListWidgetItem(m_listWidget);
+//        m_listWidget->setItemWidget(widgetItem, item);
+//    }
+    QIcon itemIcon ("/yctek/app/images/item.png");
     for (int i = 0; i < moduleTotal; i++){
         int moduleId = dataPool->getDoubleByIndex(currentClusterIndex, i, "_ID_");
-        ui->comboBox->addItem(QString::fromUtf8("模块").append(QString::number(i+1)).append(QString::fromUtf8("(")).append(QString::number(moduleId)).append(QString::fromUtf8(")")));
+        ui->comboBox->addItem(itemIcon, QString::fromUtf8("模块").append(QString::number(i+1)).append(QString::fromUtf8("(")).append(QString::number(moduleId)).append(QString::fromUtf8(")")));
     }
     int currentModuleSelected = configure->getCurrentModuleSelected(currentClusterIndex);
     ui->comboBox->setCurrentIndex(currentModuleSelected);
@@ -426,7 +427,7 @@ void Widget::display()
 
 
     // page 4
-    ui->tableWidget_2->clear();
+    ui->tableWidget_2->clearContents();
     int maxEventInOnePage = configure->getMaxEventInOnePage();
     int currentPage = configure->getEventCurrentPageNum();
     int initIndexInCurrentPage = (currentPage - 1) * maxEventInOnePage;
@@ -435,15 +436,11 @@ void Widget::display()
         if (j == maxEventInOnePage){
             break;
         }
-        qTableWidgetItems[j][0]->setText(dataPool->events.at(i)->date.toString(QString("yyyy-MM-dd hh:mm:ss")));
-        ui->tableWidget_2->setItem(j,0,qTableWidgetItems[j][0]);
-//        QTableWidgetItem* item = new QTableWidgetItem(dataPool->events.at(i)->message);
-//        item->setTextAlignment(Qt::AlignCenter);
-        qTableWidgetItems[j][1]->setText(dataPool->events.at(i)->message);
-        ui->tableWidget_2->setItem(j,1,qTableWidgetItems[j][1]);
-//        ui->tableWidget_2->setItem(j,2,new QTableWidgetItem(QString::fromUtf8("  查看  ")));
-        qTableWidgetItems[j][2]->setText(QString::fromUtf8("  查看  "));
-        ui->tableWidget_2->setItem(j,2,qTableWidgetItems[j][2]);
+        ui->tableWidget_2->setItem(j,0,new QTableWidgetItem(dataPool->events.at(i)->date.toString(QString("yyyy-MM-dd hh:mm:ss"))));
+        QTableWidgetItem* item = new QTableWidgetItem(dataPool->events.at(i)->message);
+        item->setTextAlignment(Qt::AlignCenter);
+        ui->tableWidget_2->setItem(j,1,item);
+        ui->tableWidget_2->setItem(j,2,new QTableWidgetItem(QString::fromUtf8("  查看  ")));
         ui->text_p4_pagenum->setText(QString::number(currentPage));
         j++;
     }

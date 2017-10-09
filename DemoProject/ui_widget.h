@@ -1489,10 +1489,17 @@ public:
         comboBox = new QComboBox(frame_3);
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setGeometry(QRect(10, 65, 91, 31));
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(comboBox->sizePolicy().hasHeightForWidth());
+        comboBox->setSizePolicy(sizePolicy2);
         QFont font3;
         font3.setFamily(QString::fromUtf8("Andale Mono"));
-        font3.setPointSize(8);
+        font3.setPointSize(10);
         comboBox->setFont(font3);
+        comboBox->setSizeAdjustPolicy(QComboBox::AdjustToContentsOnFirstShow);
+        comboBox->setIconSize(QSize(32, 32));
         pbutton_right_2 = new QPushButton(frame_3);
         pbutton_right_2->setObjectName(QString::fromUtf8("pbutton_right_2"));
         pbutton_right_2->setGeometry(QRect(85, 10, 21, 51));
