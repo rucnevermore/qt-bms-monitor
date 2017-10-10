@@ -1110,7 +1110,7 @@ public:
         tableWidget_dy->setFont(font2);
         lcd_p3_dy_22 = new QLCDNumber(frame_4);
         lcd_p3_dy_22->setObjectName(QString::fromUtf8("lcd_p3_dy_22"));
-        lcd_p3_dy_22->setGeometry(QRect(190, 270, 41, 20));
+        lcd_p3_dy_22->setGeometry(QRect(190, 260, 41, 20));
         lcd_p3_dy_22->setAutoFillBackground(false);
         lcd_p3_dy_22->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_22->setFrameShape(QFrame::NoFrame);
@@ -1170,7 +1170,7 @@ public:
         lcd_p3_dy_5->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_19 = new QLCDNumber(frame_4);
         lcd_p3_dy_19->setObjectName(QString::fromUtf8("lcd_p3_dy_19"));
-        lcd_p3_dy_19->setGeometry(QRect(310, 220, 41, 20));
+        lcd_p3_dy_19->setGeometry(QRect(310, 215, 41, 20));
         lcd_p3_dy_19->setAutoFillBackground(false);
         lcd_p3_dy_19->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_19->setFrameShape(QFrame::NoFrame);
@@ -1220,7 +1220,7 @@ public:
         lcd_p3_dy_11->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_23 = new QLCDNumber(frame_4);
         lcd_p3_dy_23->setObjectName(QString::fromUtf8("lcd_p3_dy_23"));
-        lcd_p3_dy_23->setGeometry(QRect(310, 270, 41, 20));
+        lcd_p3_dy_23->setGeometry(QRect(310, 260, 41, 20));
         lcd_p3_dy_23->setAutoFillBackground(false);
         lcd_p3_dy_23->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_23->setFrameShape(QFrame::NoFrame);
@@ -1230,7 +1230,7 @@ public:
         lcd_p3_dy_23->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_18 = new QLCDNumber(frame_4);
         lcd_p3_dy_18->setObjectName(QString::fromUtf8("lcd_p3_dy_18"));
-        lcd_p3_dy_18->setGeometry(QRect(190, 220, 41, 20));
+        lcd_p3_dy_18->setGeometry(QRect(190, 215, 41, 20));
         lcd_p3_dy_18->setAutoFillBackground(false);
         lcd_p3_dy_18->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_18->setFrameShape(QFrame::NoFrame);
@@ -1250,7 +1250,7 @@ public:
         lcd_p3_dy_1->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_17 = new QLCDNumber(frame_4);
         lcd_p3_dy_17->setObjectName(QString::fromUtf8("lcd_p3_dy_17"));
-        lcd_p3_dy_17->setGeometry(QRect(70, 220, 41, 20));
+        lcd_p3_dy_17->setGeometry(QRect(70, 215, 41, 20));
         lcd_p3_dy_17->setAutoFillBackground(false);
         lcd_p3_dy_17->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_17->setFrameShape(QFrame::NoFrame);
@@ -1260,7 +1260,7 @@ public:
         lcd_p3_dy_17->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_20 = new QLCDNumber(frame_4);
         lcd_p3_dy_20->setObjectName(QString::fromUtf8("lcd_p3_dy_20"));
-        lcd_p3_dy_20->setGeometry(QRect(420, 220, 41, 20));
+        lcd_p3_dy_20->setGeometry(QRect(420, 215, 41, 20));
         lcd_p3_dy_20->setAutoFillBackground(false);
         lcd_p3_dy_20->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_20->setFrameShape(QFrame::NoFrame);
@@ -1270,7 +1270,7 @@ public:
         lcd_p3_dy_20->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_21 = new QLCDNumber(frame_4);
         lcd_p3_dy_21->setObjectName(QString::fromUtf8("lcd_p3_dy_21"));
-        lcd_p3_dy_21->setGeometry(QRect(70, 270, 41, 20));
+        lcd_p3_dy_21->setGeometry(QRect(70, 260, 41, 20));
         lcd_p3_dy_21->setAutoFillBackground(false);
         lcd_p3_dy_21->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_21->setFrameShape(QFrame::NoFrame);
@@ -1330,7 +1330,7 @@ public:
         lcd_p3_dy_2->setSegmentStyle(QLCDNumber::Flat);
         lcd_p3_dy_24 = new QLCDNumber(frame_4);
         lcd_p3_dy_24->setObjectName(QString::fromUtf8("lcd_p3_dy_24"));
-        lcd_p3_dy_24->setGeometry(QRect(420, 270, 41, 20));
+        lcd_p3_dy_24->setGeometry(QRect(420, 260, 41, 20));
         lcd_p3_dy_24->setAutoFillBackground(false);
         lcd_p3_dy_24->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lcd_p3_dy_24->setFrameShape(QFrame::NoFrame);
@@ -1499,7 +1499,7 @@ public:
         font3.setPointSize(10);
         comboBox->setFont(font3);
         comboBox->setSizeAdjustPolicy(QComboBox::AdjustToContentsOnFirstShow);
-        comboBox->setIconSize(QSize(32, 32));
+        comboBox->setIconSize(QSize(16, 16));
         pbutton_right_2 = new QPushButton(frame_3);
         pbutton_right_2->setObjectName(QString::fromUtf8("pbutton_right_2"));
         pbutton_right_2->setGeometry(QRect(85, 10, 21, 51));

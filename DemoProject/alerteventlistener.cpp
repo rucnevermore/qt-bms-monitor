@@ -9,7 +9,8 @@ void AlertEventListener::notify(string name, QString value){
     int intValue = value.toInt();
     QString textValue;
     if (intValue == 0){
-        textValue = QString::fromUtf8("正常");
+//        textValue = QString::fromUtf8("正常");
+        return;
     }else if (intValue == 1){
         textValue = QString::fromUtf8("一级");
     }else if (intValue == 2){

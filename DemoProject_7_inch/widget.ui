@@ -3063,7 +3063,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>190</x>
-        <y>270</y>
+        <y>260</y>
         <width>41</width>
         <height>20</height>
        </rect>
@@ -3249,7 +3249,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>310</x>
-        <y>220</y>
+        <y>215</y>
         <width>41</width>
         <height>20</height>
        </rect>
@@ -3404,7 +3404,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>310</x>
-        <y>270</y>
+        <y>260</y>
         <width>41</width>
         <height>20</height>
        </rect>
@@ -3435,7 +3435,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>190</x>
-        <y>220</y>
+        <y>215</y>
         <width>41</width>
         <height>20</height>
        </rect>
@@ -3497,7 +3497,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>220</y>
+        <y>215</y>
         <width>41</width>
         <height>20</height>
        </rect>
@@ -3528,7 +3528,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>420</x>
-        <y>220</y>
+        <y>215</y>
         <width>41</width>
         <height>20</height>
        </rect>
@@ -3559,7 +3559,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>270</y>
+        <y>260</y>
         <width>41</width>
         <height>20</height>
        </rect>
@@ -3745,7 +3745,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>420</x>
-        <y>270</y>
+        <y>260</y>
         <width>41</width>
         <height>20</height>
        </rect>
@@ -4287,8 +4287,8 @@ p, li { white-space: pre-wrap; }
       </property>
       <property name="iconSize">
        <size>
-        <width>32</width>
-        <height>32</height>
+        <width>16</width>
+        <height>16</height>
        </size>
       </property>
      </widget>
