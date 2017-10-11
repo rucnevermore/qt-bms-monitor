@@ -37,7 +37,7 @@ HEADERS += widget.h \
 FORMS += widget.ui
 INSTALLS += target
 RESOURCES += resources.qrc
-OTHER_FILES += 
+OTHER_FILES +=
 LIBS += -L../ycapi \
     -lycapi
 INCLUDEPATH += ../ycapi

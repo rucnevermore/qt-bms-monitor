@@ -1,5 +1,6 @@
 #include "datapool.h"
 #include "configure.h"
+#include <QFile>
 
 DataPool* DataPool::instance_ = NULL;
 
@@ -45,6 +46,20 @@ void DataPool::addEvent(QDateTime date, QString message){
         delete event;
     }
     events.append(new AlertEvent(date, message));
+    // serialize the event list into file system.
+    serializeEvents();
+}
+
+void DataPool::serializeEvents(){
+    QFile f("./serialization.txt");
+    f.open(QIODevice::ReadWrite);
+    QDataStream ds(&f);
+    for (int i=0; i!=events.size(); ++i )
+    {
+       ds << events.at(i)->date;
+       ds << events.at(i)->message;
+    }
+    f.close();
 }
 
 void DataPool::storeById(int clusterId, string name, double value){

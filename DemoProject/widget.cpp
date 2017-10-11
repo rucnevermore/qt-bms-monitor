@@ -2,6 +2,7 @@
 #include <ctime>
 #include "alerteventlistener.h"
 #include <QListWidget>
+#include <QFile>
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -21,6 +22,9 @@ Widget::Widget(QWidget *parent) :
     // for debug purpose.
     dataPool->store("max_event_number", 100);
     dataPool->store("cluster_number", 10);
+
+    // de-serialize the event list.
+    deserializeEvent();
 
     configure = Configure::newInstance();
     configure->setEventCurrentPageNum(1);
@@ -71,6 +75,21 @@ Widget::Widget(QWidget *parent) :
     configure->setClusterIndex(1);
 }
 
+void Widget::deserializeEvent(){
+    QFile f("./serialization.txt");
+    f.open(QIODevice::ReadWrite);
+    QDataStream ds(&f);
+    QDateTime date;
+    QString message;
+    while(!ds.atEnd())
+    {
+        ds >> date;
+        ds >> message;
+        AlertEvent* event = new AlertEvent(date, message);
+        dataPool->events.append(event);
+    }
+    f.close();
+}
 
 Widget::~Widget()
 {
@@ -186,41 +205,41 @@ void Widget::display()
 {
     // page 1
 
-    // 总电压
-    ui->lcd_zdy->display(dataPool->getDouble("g_xtdy"));
-    // 总电流
-    ui->lcd_zdl->display(dataPool->getDouble("g_xtdl"));
-    // SOC
-    ui->lcd_soc->display(dataPool->getDouble("g_xtsoc"));
-    ui->pBar_soc->setValue(dataPool->getDouble("g_xtsoc"));
-    // 最大压差
-    ui->lcd_zdyc->display(dataPool->getDouble("zdyc"));
-    // 最大温差
-    ui->lcd_zdwc->display(dataPool->getDouble("zdwc"));
-    // 最大电压
-    ui->lcd_zddy->display(dataPool->getDouble("g_zgdy"));
-    ui->lcd_zddy_loc_1->display(dataPool->getDouble("g_zgdy_zh"));
-    ui->lcd_zddy_loc_2->display(dataPool->getDouble("g_zgdy_mkh"));
-    ui->lcd_zddy_loc_3->display(dataPool->getDouble("g_zgdy_wz"));
-    // 最小电压
-    ui->lcd_zxdy->display(dataPool->getDouble("g_zgdy"));
-    ui->lcd_zxdy_loc_1->display(dataPool->getDouble("g_zddy_zh"));
-    ui->lcd_zxdy_loc_2->display(dataPool->getDouble("g_zddy_mkh"));
-    ui->lcd_zxdy_loc_3->display(dataPool->getDouble("g_zddy_wz"));
-    // 最高温度
-    ui->lcd_zgwd->display(dataPool->getDouble("g_zgwd"));
-    ui->lcd_zgwd_loc_1->display(dataPool->getDouble("g_zgwd_zh"));
-    ui->lcd_zgwd_loc_2->display(dataPool->getDouble("g_zgwd_mkh"));
-    ui->lcd_zgwd_loc_3->display(dataPool->getDouble("g_zgwd_wz"));
-    // 最低温度
-    ui->lcd_zdwd->display(dataPool->getDouble("g_zdwd"));
-    ui->lcd_zdwd_loc_1->display(dataPool->getDouble("g_zdwd_zh"));
-    ui->lcd_zdwd_loc_2->display(dataPool->getDouble("g_zdwd_mkh"));
-    ui->lcd_zdwd_loc_3->display(dataPool->getDouble("g_zdwd_wz"));
-
-    // 平均电压
-    // 系统状态
-    ui->text_value_xtzt->setText(QString::number(dataPool->getDouble("g_xtzt")));
+//    // 总电压
+//    ui->lcd_zdy->display(dataPool->getDouble("g_xtdy"));
+//    // 总电流
+//    ui->lcd_zdl->display(dataPool->getDouble("g_xtdl"));
+//    // SOC
+//    ui->lcd_soc->display(dataPool->getDouble("g_xtsoc"));
+//    ui->pBar_soc->setValue(dataPool->getDouble("g_xtsoc"));
+//    // 最大压差
+//    ui->lcd_zdyc->display(dataPool->getDouble("zdyc"));
+//    // 最大温差
+//    ui->lcd_zdwc->display(dataPool->getDouble("zdwc"));
+//    // 最大电压
+//    ui->lcd_zddy->display(dataPool->getDouble("g_zgdy"));
+//    ui->lcd_zddy_loc_1->display(dataPool->getDouble("g_zgdy_zh"));
+//    ui->lcd_zddy_loc_2->display(dataPool->getDouble("g_zgdy_mkh"));
+//    ui->lcd_zddy_loc_3->display(dataPool->getDouble("g_zgdy_wz"));
+//    // 最小电压
+//    ui->lcd_zxdy->display(dataPool->getDouble("g_zgdy"));
+//    ui->lcd_zxdy_loc_1->display(dataPool->getDouble("g_zddy_zh"));
+//    ui->lcd_zxdy_loc_2->display(dataPool->getDouble("g_zddy_mkh"));
+//    ui->lcd_zxdy_loc_3->display(dataPool->getDouble("g_zddy_wz"));
+//    // 最高温度
+//    ui->lcd_zgwd->display(dataPool->getDouble("g_zgwd"));
+//    ui->lcd_zgwd_loc_1->display(dataPool->getDouble("g_zgwd_zh"));
+//    ui->lcd_zgwd_loc_2->display(dataPool->getDouble("g_zgwd_mkh"));
+//    ui->lcd_zgwd_loc_3->display(dataPool->getDouble("g_zgwd_wz"));
+//    // 最低温度
+//    ui->lcd_zdwd->display(dataPool->getDouble("g_zdwd"));
+//    ui->lcd_zdwd_loc_1->display(dataPool->getDouble("g_zdwd_zh"));
+//    ui->lcd_zdwd_loc_2->display(dataPool->getDouble("g_zdwd_mkh"));
+//    ui->lcd_zdwd_loc_3->display(dataPool->getDouble("g_zdwd_wz"));
+//
+//    // 平均电压
+//    // 系统状态
+//    ui->text_value_xtzt->setText(QString::number(dataPool->getDouble("g_xtzt")));
 
     // page 2
     int currentClusterIndex = configure->getClusterIndex();
@@ -448,7 +467,7 @@ void Widget::display()
 }
 void Widget::log(QString str)
 {
-    ui->text_log->append(str);
+//    ui->text_log->append(str);
 }
 
 void Widget::changeEvent(QEvent *e)

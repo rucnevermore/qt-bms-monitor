@@ -41,6 +41,8 @@ private:
     CollectionThread *collectionThread;
     QMap<string, QTableWidgetItem*> alertItemMap;
 
+    void deserializeEvent();
+
 //    void setAlertText(QTextBrowser* textBrowser, double value);
 };
 

@@ -38,6 +38,7 @@ public:
 private:
     DataPool(){};
     ~DataPool();
+    void serializeEvents();
     static DataPool* instance_;
 };
 
