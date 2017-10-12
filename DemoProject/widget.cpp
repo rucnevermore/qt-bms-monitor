@@ -3,6 +3,7 @@
 #include "alerteventlistener.h"
 #include <QListWidget>
 #include <QFile>
+#include <QTextStream>
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -468,6 +469,11 @@ void Widget::display()
 void Widget::log(QString str)
 {
 //    ui->text_log->append(str);
+    QFile f("/yctek/app/log.txt");
+    f.open(QIODevice::Append);
+    QTextStream in(&f);
+    in << QDateTime::currentDateTime().toString(QString("yyyy-MM-dd hh:mm:ss"))<<"\t" << str << "\n";
+    f.close();
 }
 
 void Widget::changeEvent(QEvent *e)
