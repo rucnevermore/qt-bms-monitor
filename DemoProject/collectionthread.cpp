@@ -22,7 +22,6 @@ void CollectionThread::sendDebugPackage(unsigned int id, unsigned char length, l
     for(int j = 0; j < 8; j++){
         frame->data[j] = data >> (j * 8) & 0xFF;
     }
-//    parser->parse(frame);
     cache->addFrame(frame);
 }
 
@@ -85,7 +84,6 @@ void CollectionThread::run()
             can_frame* frame = new can_frame();
             ycapi->ReadCan(&frame->can_id,&frame->can_dlc,frame->data);
             cache->addFrame(frame);
-//            parser->parse(frame);
             // collection from Can Bus finish.
         }
     }

@@ -208,6 +208,7 @@ public:
         tabWidget->setStyleSheet(QString::fromUtf8(""));
         tabWidget->setTabPosition(QTabWidget::South);
         tabWidget->setTabShape(QTabWidget::Rounded);
+        tabWidget->setUsesScrollButtons(false);
         tab_cjbxx = new QWidget();
         tab_cjbxx->setObjectName(QString::fromUtf8("tab_cjbxx"));
         pbutton_right = new QPushButton(tab_cjbxx);
@@ -1221,7 +1222,7 @@ public:
 
         retranslateUi(Widget);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Widget);
