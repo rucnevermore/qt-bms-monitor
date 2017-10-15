@@ -23,20 +23,19 @@ public:
     double getDoubleByIndex(int clusterIndex, string name);
     double getDoubleByIndex(int clusterIndex, int moduleIndex, string name);
     double getDoubleById(int clusterId, int moduleId, string name);
-
     void addEvent(QString message);
     void addEvent(QDateTime date, QString message);
-    QList<AlertEvent*> events;
-
     QString statistic();
-
     void registerListener(EventListener* listener);
     void notifyListener(string name, QString value);
-    QList<EventListener*> listeners;
+
+
+    QList<EventListener*>* listeners;
     // Cluster id, Module id, datamap
-    QMap<int, ClusterDataPool*> clusterDataMap;
+    QMap<int, ClusterDataPool*>* clusterDataMap;
+    QList<AlertEvent*>* events;
 private:
-    DataPool(){};
+    DataPool();
     ~DataPool();
     void serializeEvents();
     static DataPool* instance_;

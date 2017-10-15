@@ -87,7 +87,7 @@ void Widget::deserializeEvent(){
         ds >> date;
         ds >> message;
         AlertEvent* event = new AlertEvent(date, message);
-        dataPool->events.append(event);
+        dataPool->events->append(event);
     }
     f.close();
 }
@@ -456,12 +456,13 @@ void Widget::display()
         if (j == maxEventInOnePage){
             break;
         }
-        ui->tableWidget_2->setItem(j,0,new QTableWidgetItem(dataPool->events.at(i)->date.toString(QString("yyyy-MM-dd hh:mm:ss"))));
-        QTableWidgetItem* item = new QTableWidgetItem(dataPool->events.at(i)->message);
+        ui->tableWidget_2->setItem(j,0,new QTableWidgetItem(dataPool->events->at(i)->date.toString(QString("yyyy-MM-dd hh:mm:ss"))));
+        QTableWidgetItem* item = new QTableWidgetItem(dataPool->events->at(i)->message);
         item->setTextAlignment(Qt::AlignCenter);
         ui->tableWidget_2->setItem(j,1,item);
-        ui->tableWidget_2->setItem(j,2,new QTableWidgetItem(QString::fromUtf8("  查看  ")));
-        ui->text_p4_pagenum->setText(QString::number(currentPage));
+//        ui->tableWidget_2->setItem(j,2,new QTableWidgetItem(QString::fromUtf8("  查看  ")));
+//        ui->text_p4_pagenum->setAlignment(Qt::AlignCenter);
+        ui->text_p4_pagenum->setPlainText(QString::number(currentPage));
         j++;
     }
 

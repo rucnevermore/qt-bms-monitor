@@ -16,7 +16,7 @@ Configure* Configure::newInstance(){
 }
 
 int Configure::getClusterNum(){
-    return dataPool->clusterDataMap.size();
+    return dataPool->clusterDataMap->size();
 }
 
 int Configure::getMaxEventNum(){
@@ -52,7 +52,7 @@ void Configure::setEventCurrentPageNum(int num){
 
 // event total
 int Configure::getEventTotal(){
-    return dataPool->events.size();
+    return dataPool->events->size();
 }
 
 void Configure::setClusterIndex(int clusterId){

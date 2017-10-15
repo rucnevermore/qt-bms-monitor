@@ -78,7 +78,7 @@ void CollectionThread::run()
 
             // cluster 2
             sendDebugPackage(NOM_PAR+2, 0x08, 0x0200520100750601);
-            this->sleep(1);
+            this->msleep(100);
         }else{
             // collection from Can Bus start.
             can_frame* frame = new can_frame();
