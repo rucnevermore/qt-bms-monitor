@@ -27,7 +27,7 @@ void CollectionThread::sendDebugPackage(unsigned int id, unsigned char length, l
 
 void CollectionThread::run()
 {
-    bool debug = false;
+    bool debug = true;
     while(running)
     {
         if (debug){
