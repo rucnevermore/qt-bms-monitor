@@ -1217,14 +1217,14 @@ public:
         pbutton_down->setGeometry(QRect(560, 390, 121, 41));
         text_p4_pagenum = new QTextBrowser(tab_gzxx);
         text_p4_pagenum->setObjectName(QString::fromUtf8("text_p4_pagenum"));
-        text_p4_pagenum->setGeometry(QRect(380, 400, 21, 21));
+        text_p4_pagenum->setGeometry(QRect(390, 400, 31, 21));
         text_p4_pagenum->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         text_p4_pagenum->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
         tabWidget->addTab(tab_gzxx, QString());
 
         retranslateUi(Widget);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(Widget);

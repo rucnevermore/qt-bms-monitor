@@ -35,49 +35,48 @@ void CollectionThread::run()
             sendDebugPackage(BAMS_INF2, 0x08, 0x130052C880F21F23);
             sendDebugPackage(BAMS_INF3, 0x08, 0x0A0B0C0D0E0F0607);
             sendDebugPackage(BAMS_INF4, 0x08, 0x0A0B0C0D0E0F0607);
+            int clusterNumber = 10;
+            for (int i = 1; i <= clusterNumber; i++){
+                // cluster 1
+                sendDebugPackage(BMS_INF+i, 0x08, 0x130052C880F21F23);
+                sendDebugPackage(BMS_INF1+i, 0x08, 0x0100640005A505A5);
+                sendDebugPackage(FAU_ALA+i, 0x08, 0x1B1B1B1B1B1B1B1B);
+                sendDebugPackage(BMS_INF2+i, 0x08, 0x1B1B1B1B1B1B1B1B);
+                sendDebugPackage(NOM_PAR+i, 0x08, 0x0200520100640801);
+                // module 1
+                sendDebugPackage(MNOM_PAR+i, 0x08, 0x21FA101F0041011);
+                sendDebugPackage(MVT_PAR1+i, 0x08, 0x21FA10150164411);
+                sendDebugPackage(MVT_PAR2+i, 0x08, 0x21FA101F0041011);
+                sendDebugPackage(CELL_V1+i, 0x08, 0x21FA101F0041011);
+                sendDebugPackage(CELL_V2+i, 0x08, 0x21FA101F0041011);
+                sendDebugPackage(CELL_V3+i, 0x08, 0x21FA101F0041011);
+                sendDebugPackage(CELL_V4+i, 0x08, 0x21FA101F0041011);
+                sendDebugPackage(CELL_V5+i, 0x08, 0x21FA101F0041011);
+                sendDebugPackage(CELL_V6+i, 0x08, 0x21FA101F0041011);
+                sendDebugPackage(CELL_T1+i, 0x08, 0x21FA101F0041011);
+                sendDebugPackage(CELL_T2+i, 0x08, 0x21FA101F0041011);
+                sendDebugPackage(PCBA_6803_1+i, 0x08, 0x21FA101F0041011);
+                sendDebugPackage(PCBA_6803_2+i, 0x08, 0x21FA101F0041011);
+                sendDebugPackage(PCBA_6803_3+i, 0x08, 0x21FA101F0041011);
+                sendDebugPackage(PCBA_6803_4+i, 0x08, 0x21FA101F0041011);
 
-            // cluster 1
-            sendDebugPackage(BMS_INF+1, 0x08, 0x130052C880F21F23);
-            sendDebugPackage(BMS_INF1+1, 0x08, 0x0100640005A505A5);
-            sendDebugPackage(FAU_ALA+1, 0x08, 0x1B1B1B1B1B1B1B1B);
-            sendDebugPackage(BMS_INF2+1, 0x08, 0x1B1B1B1B1B1B1B1B);
-            sendDebugPackage(NOM_PAR+1, 0x08, 0x0200520100640801);
-            // module 1
-            sendDebugPackage(MNOM_PAR+1, 0x08, 0x21FA101F0041011);
-            sendDebugPackage(MVT_PAR1+1, 0x08, 0x21FA10150164411);
-            sendDebugPackage(MVT_PAR2+1, 0x08, 0x21FA101F0041011);
-            sendDebugPackage(CELL_V1+1, 0x08, 0x21FA101F0041011);
-            sendDebugPackage(CELL_V2+1, 0x08, 0x21FA101F0041011);
-            sendDebugPackage(CELL_V3+1, 0x08, 0x21FA101F0041011);
-            sendDebugPackage(CELL_V4+1, 0x08, 0x21FA101F0041011);
-            sendDebugPackage(CELL_V5+1, 0x08, 0x21FA101F0041011);
-            sendDebugPackage(CELL_V6+1, 0x08, 0x21FA101F0041011);
-            sendDebugPackage(CELL_T1+1, 0x08, 0x21FA101F0041011);
-            sendDebugPackage(CELL_T2+1, 0x08, 0x21FA101F0041011);
-            sendDebugPackage(PCBA_6803_1+1, 0x08, 0x21FA101F0041011);
-            sendDebugPackage(PCBA_6803_2+1, 0x08, 0x21FA101F0041011);
-            sendDebugPackage(PCBA_6803_3+1, 0x08, 0x21FA101F0041011);
-            sendDebugPackage(PCBA_6803_4+1, 0x08, 0x21FA101F0041011);
-
-            // module 2
-            sendDebugPackage(MNOM_PAR+1, 0x08, 0x21FA101F0041005);
-            sendDebugPackage(MVT_PAR1+1, 0x08, 0x21FA10150164405);
-            sendDebugPackage(MVT_PAR2+1, 0x08, 0x21FA101F0041005);
-            sendDebugPackage(CELL_V1+1, 0x08, 0x21FA101F0041005);
-            sendDebugPackage(CELL_V2+1, 0x08, 0x21FA101F0041005);
-            sendDebugPackage(CELL_V3+1, 0x08, 0x21FA101F0041005);
-            sendDebugPackage(CELL_V4+1, 0x08, 0x21FA101F0041005);
-            sendDebugPackage(CELL_V5+1, 0x08, 0x21FA101F0041005);
-            sendDebugPackage(CELL_V6+1, 0x08, 0x21FA101F0041005);
-            sendDebugPackage(CELL_T1+1, 0x08, 0x21FA101F0041005);
-            sendDebugPackage(CELL_T2+1, 0x08, 0x21FA101F0041005);
-            sendDebugPackage(PCBA_6803_1+1, 0x08, 0x21FA101F0041005);
-            sendDebugPackage(PCBA_6803_2+1, 0x08, 0x21FA101F0041005);
-            sendDebugPackage(PCBA_6803_3+1, 0x08, 0x21FA101F0041005);
-            sendDebugPackage(PCBA_6803_4+1, 0x08, 0x21FA101F0041005);
-
-            // cluster 2
-            sendDebugPackage(NOM_PAR+2, 0x08, 0x0200520100750601);
+                // module 2
+                sendDebugPackage(MNOM_PAR+i, 0x08, 0x21FA101F0041005);
+                sendDebugPackage(MVT_PAR1+i, 0x08, 0x21FA10150164405);
+                sendDebugPackage(MVT_PAR2+i, 0x08, 0x21FA101F0041005);
+                sendDebugPackage(CELL_V1+i, 0x08, 0x21FA101F0041005);
+                sendDebugPackage(CELL_V2+i, 0x08, 0x21FA101F0041005);
+                sendDebugPackage(CELL_V3+i, 0x08, 0x21FA101F0041005);
+                sendDebugPackage(CELL_V4+i, 0x08, 0x21FA101F0041005);
+                sendDebugPackage(CELL_V5+i, 0x08, 0x21FA101F0041005);
+                sendDebugPackage(CELL_V6+i, 0x08, 0x21FA101F0041005);
+                sendDebugPackage(CELL_T1+i, 0x08, 0x21FA101F0041005);
+                sendDebugPackage(CELL_T2+i, 0x08, 0x21FA101F0041005);
+                sendDebugPackage(PCBA_6803_1+i, 0x08, 0x21FA101F0041005);
+                sendDebugPackage(PCBA_6803_2+i, 0x08, 0x21FA101F0041005);
+                sendDebugPackage(PCBA_6803_3+i, 0x08, 0x21FA101F0041005);
+                sendDebugPackage(PCBA_6803_4+i, 0x08, 0x21FA101F0041005);
+            }
             this->msleep(100);
         }else{
             // collection from Can Bus start.

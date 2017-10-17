@@ -13,8 +13,6 @@ void ParseThread::run()
         parser->parse(frame);
         delete frame;
         frame=NULL;
-//        log(QString::number(res).append(QString(" frames has been parsed.")));
-//        this->sleep(1);
     }
 }
 

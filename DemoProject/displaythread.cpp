@@ -14,8 +14,8 @@ void DisplayThread::run()
     {
         display();
         this->sleep(2);
-//        int size = CanCache::newInstance()->currentSize();
-//        log(QString::number(size).append(QString(" can frame ready for parse")));
+        int size = CanCache::newInstance()->currentSize();
+        log(QString::number(size).append(QString(" can frame ready for parse")));
         log(datapool->statistic());
     }
 

@@ -53,7 +53,7 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>1</number>
    </property>
    <property name="usesScrollButtons">
     <bool>false</bool>
@@ -3556,9 +3556,9 @@ p, li { white-space: pre-wrap; }
     <widget class="QTextBrowser" name="text_p4_pagenum">
      <property name="geometry">
       <rect>
-       <x>380</x>
+       <x>390</x>
        <y>400</y>
-       <width>21</width>
+       <width>31</width>
        <height>21</height>
       </rect>
      </property>

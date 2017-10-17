@@ -18,9 +18,9 @@ DataPool::DataPool(){
 }
 
 DataPool::~DataPool(){
-    //remove all the instance in the map.
-    clusterDataMap->clear();
     events->clear();
+    listeners->clear();
+    clusterDataMap->clear();
 }
 
 void DataPool::registerListener(EventListener* listener){
@@ -30,7 +30,7 @@ void DataPool::registerListener(EventListener* listener){
 }
 
 void DataPool::notifyListener(string name, QString value){
-    EventListener* listener;
+    EventListener* listener = NULL;
     for(int i = 0; i < listeners->length(); i++){
         listener = listeners->at(i);
         listener->notify(name, value);
@@ -48,6 +48,7 @@ void DataPool::addEvent(QDateTime date, QString message){
     if (events->size() > 0 && events->size() >= maxEventNum){
         AlertEvent* event = events->takeFirst();
         delete event;
+        event = NULL;
     }
     events->append(new AlertEvent(date, message));
     // serialize the event list into file system.
@@ -67,8 +68,7 @@ void DataPool::serializeEvents(){
 }
 
 void DataPool::storeById(int clusterId, string name, double value){
-    ClusterDataPool* currentClusterDataPool;
-
+    ClusterDataPool* currentClusterDataPool = NULL;
     if (clusterDataMap->contains(clusterId)){
         currentClusterDataPool = clusterDataMap->value(clusterId);
     }else{
@@ -81,7 +81,7 @@ void DataPool::storeById(int clusterId, string name, double value){
 }
 
 void DataPool::storeById(int clusterId, int moduleId, string name, double value){
-    ClusterDataPool* currentClusterDataPool;
+    ClusterDataPool* currentClusterDataPool = NULL;
     if (clusterDataMap->contains(clusterId)){
         currentClusterDataPool = clusterDataMap->value(clusterId);
     }else{

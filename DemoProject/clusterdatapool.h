@@ -9,6 +9,7 @@ class ClusterDataPool : public QObject, public BaseDataPool
 {
 public:
     ClusterDataPool();
+//    ~ClusterDataPool();
     bool storeById(int moduleId, string name, double value);
     double getDoubleByIndex(int moduleIndex, string name);
     double getDoubleById(int moduleId, string name);

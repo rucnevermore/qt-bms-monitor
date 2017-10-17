@@ -13,7 +13,7 @@ bool BaseDataPool::store(string name, double value){
 
 
 bool BaseDataPool::store(QMap<string, Data*>* localMap, string name, Channel channel, DataType type, QString value){
-    if (localMap->find(name) != localMap->end()){
+    if (localMap->contains(name)){
         Data* dataT = localMap->value(name);
         if (dataT->update(name, channel, type, value)){
             return true;

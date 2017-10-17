@@ -29,7 +29,6 @@ public:
     void registerListener(EventListener* listener);
     void notifyListener(string name, QString value);
 
-
     QList<EventListener*>* listeners;
     // Cluster id, Module id, datamap
     QMap<int, ClusterDataPool*>* clusterDataMap;

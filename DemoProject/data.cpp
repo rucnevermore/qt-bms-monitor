@@ -11,6 +11,10 @@ Data::Data(string name, Channel channel, DataType type, QString value)
     this->value = value;
 }
 
+Data::~Data(){
+    delete &value;
+}
+
 string Data::getName(){
     return name;
 }

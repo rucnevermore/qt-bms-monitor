@@ -38,6 +38,7 @@ void CanCache::addFrame(can_frame* frame){
         frames.append(frame);
     }else{
         delete frame;
+        frame=NULL;
     }
 }
 int CanCache::currentSize(){

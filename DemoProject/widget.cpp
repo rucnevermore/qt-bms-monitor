@@ -204,6 +204,7 @@ void Widget::setAlertItems(QMap<string, QTableWidgetItem*> alertItemMap){
 
 void Widget::display()
 {
+//    return;
     int currentPage = ui->tabWidget->currentIndex();
     // page 1
 
@@ -247,11 +248,11 @@ void Widget::display()
     // page 2
     if (currentPage == 0){
         // 最高电压
-        ui->lcd_p2_zgdy->display(dataPool->getDoubleByIndex(currentClusterIndex, "dtzgdy"));
+        ui->lcd_p2_zgdy->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, "dtzgdy"), 'f', 3));
         ui->lcd_p2_zgdy_loc_1->display(dataPool->getDoubleByIndex(currentClusterIndex, "zgdyxh"));
         ui->lcd_p2_zgdy_loc_2->display(dataPool->getDoubleByIndex(currentClusterIndex, "zgdywz"));
         // 最低电压
-        ui->lcd_p2_zddy->display(dataPool->getDoubleByIndex(currentClusterIndex, "dtzddy"));
+        ui->lcd_p2_zddy->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, "dtzddy"), 'f', 3));
         ui->lcd_p2_zddy_loc_1->display(dataPool->getDoubleByIndex(currentClusterIndex, "zddyxh"));
         ui->lcd_p2_zddy_loc_2->display(dataPool->getDoubleByIndex(currentClusterIndex, "zddywz"));
         // 最高温度
@@ -372,7 +373,6 @@ void Widget::display()
         setAlertText2(ui->text_p2_gz_wdcgq, dataPool->getDoubleByIndex(currentClusterIndex, "wdcgq_gz"));
     }
 
-
     // page 3
     if (currentPage == 1){
         ui->comboBox->clear();
@@ -408,10 +408,10 @@ void Widget::display()
         ui->lcd_p3_zdwd->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "mknzdwd"));
         ui->lcd_p3_zdwd_loc_2->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "zdwdcydh"));
         // 最大电压
-        ui->lcd_p3_zddy->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "mkndtzgdy"));
+        ui->lcd_p3_zddy->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "mkndtzgdy"), 'f', 3));
         ui->lcd_p3_zddy_loc_2->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dyzgdth"));
         // 最小电压
-        ui->lcd_p3_zxdy->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "mkndtzddy"));
+        ui->lcd_p3_zxdy->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "mkndtzddy"), 'f', 3));
         ui->lcd_p3_zxdy_loc_2->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dyzddth"));
 
         // 温度1-8
@@ -424,30 +424,30 @@ void Widget::display()
         ui->lcd_p3_wd_7->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "cywd_7"));
         ui->lcd_p3_wd_8->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "cywd_8"));
         // 电压1-24
-        ui->lcd_p3_dy_1->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_1"));
-        ui->lcd_p3_dy_2->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_2"));
-        ui->lcd_p3_dy_3->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_3"));
-        ui->lcd_p3_dy_4->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_4"));
-        ui->lcd_p3_dy_5->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_5"));
-        ui->lcd_p3_dy_6->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_6"));
-        ui->lcd_p3_dy_7->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_7"));
-        ui->lcd_p3_dy_8->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_8"));
-        ui->lcd_p3_dy_9->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_9"));
-        ui->lcd_p3_dy_10->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_10"));
-        ui->lcd_p3_dy_11->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_11"));
-        ui->lcd_p3_dy_12->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_12"));
-        ui->lcd_p3_dy_13->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_13"));
-        ui->lcd_p3_dy_14->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_14"));
-        ui->lcd_p3_dy_15->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_15"));
-        ui->lcd_p3_dy_16->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_16"));
-        ui->lcd_p3_dy_17->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_17"));
-        ui->lcd_p3_dy_18->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_18"));
-        ui->lcd_p3_dy_19->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_19"));
-        ui->lcd_p3_dy_20->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_20"));
-        ui->lcd_p3_dy_21->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_21"));
-        ui->lcd_p3_dy_22->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_22"));
-        ui->lcd_p3_dy_23->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_23"));
-        ui->lcd_p3_dy_24->display(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_24"));
+        ui->lcd_p3_dy_1->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_1"), 'f', 3));
+        ui->lcd_p3_dy_2->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_2"), 'f', 3));
+        ui->lcd_p3_dy_3->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_3"), 'f', 3));
+        ui->lcd_p3_dy_4->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_4"), 'f', 3));
+        ui->lcd_p3_dy_5->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_5"), 'f', 3));
+        ui->lcd_p3_dy_6->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_6"), 'f', 3));
+        ui->lcd_p3_dy_7->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_7"), 'f', 3));
+        ui->lcd_p3_dy_8->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_8"), 'f', 3));
+        ui->lcd_p3_dy_9->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_9"), 'f', 3));
+        ui->lcd_p3_dy_10->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_10"), 'f', 3));
+        ui->lcd_p3_dy_11->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_11"), 'f', 3));
+        ui->lcd_p3_dy_12->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_12"), 'f', 3));
+        ui->lcd_p3_dy_13->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_13"), 'f', 3));
+        ui->lcd_p3_dy_14->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_14"), 'f', 3));
+        ui->lcd_p3_dy_15->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_15"), 'f', 3));
+        ui->lcd_p3_dy_16->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_16"), 'f', 3));
+        ui->lcd_p3_dy_17->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_17"), 'f', 3));
+        ui->lcd_p3_dy_18->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_18"), 'f', 3));
+        ui->lcd_p3_dy_19->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_19"), 'f', 3));
+        ui->lcd_p3_dy_20->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_20"), 'f', 3));
+        ui->lcd_p3_dy_21->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_21"), 'f', 3));
+        ui->lcd_p3_dy_22->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_22"), 'f', 3));
+        ui->lcd_p3_dy_23->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_23"), 'f', 3));
+        ui->lcd_p3_dy_24->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, "dcdy_24"), 'f', 3));
     }
 
     if (currentPage == 2){
