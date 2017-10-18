@@ -14,8 +14,7 @@ bool ClusterDataPool::storeById(int moduleId, string name, double value){
         moduleDataMap.insert(moduleId, tempDataMap);
         currentMap = tempDataMap;
     }
-    QString temp = QString::number(value);
-    return this->store(currentMap, name, CAN, DOUBLE, temp);
+    return this->store(currentMap, name, CAN, DOUBLE, value);
 }
 
 double ClusterDataPool::getDoubleByIndex(int moduleIndex, string name){
@@ -39,7 +38,7 @@ double ClusterDataPool::getDoubleByIndex(int moduleIndex, string name){
     }
 
     if (moduleDataMap[key]->contains(name)){
-        return moduleDataMap[key]->value(name)->getValue().toDouble();
+        return moduleDataMap[key]->value(name)->getValue();
     }else{// no such data
         return 0;
     }
@@ -47,7 +46,7 @@ double ClusterDataPool::getDoubleByIndex(int moduleIndex, string name){
 
 double ClusterDataPool::getDoubleById(int moduleId, string name){
     if (moduleDataMap.contains(moduleId)&&moduleDataMap.value(moduleId)->contains(name)){
-        return moduleDataMap.value(moduleId)->value(name)->getValue().toDouble();
+        return moduleDataMap.value(moduleId)->value(name)->getValue();
     }else{// no such data
         return 0;
     }

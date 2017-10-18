@@ -29,7 +29,7 @@ void DataPool::registerListener(EventListener* listener){
     }
 }
 
-void DataPool::notifyListener(string name, QString value){
+void DataPool::notifyListener(string name, double value){
     EventListener* listener = NULL;
     for(int i = 0; i < listeners->length(); i++){
         listener = listeners->at(i);
@@ -76,7 +76,7 @@ void DataPool::storeById(int clusterId, string name, double value){
         this->clusterDataMap->insert(clusterId, currentClusterDataPool);
     }
     if (currentClusterDataPool->store(name, value)){
-        this->notifyListener(name, QString::number(value));
+        this->notifyListener(name, value);
     }
 }
 
@@ -89,7 +89,7 @@ void DataPool::storeById(int clusterId, int moduleId, string name, double value)
         this->clusterDataMap->insert(clusterId, currentClusterDataPool);
     }
     if (currentClusterDataPool->storeById(moduleId, name, value)){
-        this->notifyListener(name, QString::number(value));
+        this->notifyListener(name, value);
     }
 }
 

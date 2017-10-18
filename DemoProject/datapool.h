@@ -27,7 +27,7 @@ public:
     void addEvent(QDateTime date, QString message);
     QString statistic();
     void registerListener(EventListener* listener);
-    void notifyListener(string name, QString value);
+    void notifyListener(string name, double value);
 
     QList<EventListener*>* listeners;
     // Cluster id, Module id, datamap

@@ -7,12 +7,11 @@ BaseDataPool::BaseDataPool()
 
 
 bool BaseDataPool::store(string name, double value){
-    QString temp = QString::number(value);
-    return this->store(&dataMap, name, CAN, DOUBLE, temp);
+    return this->store(&dataMap, name, CAN, DOUBLE, value);
 }
 
 
-bool BaseDataPool::store(QMap<string, Data*>* localMap, string name, Channel channel, DataType type, QString value){
+bool BaseDataPool::store(QMap<string, Data*>* localMap, string name, int channel, int type, double value){
     if (localMap->contains(name)){
         Data* dataT = localMap->value(name);
         if (dataT->update(name, channel, type, value)){
@@ -28,12 +27,12 @@ bool BaseDataPool::store(QMap<string, Data*>* localMap, string name, Channel cha
 
 bool BaseDataPool::store(string name, unsigned char* value, int length){
     QString temp = QString::fromLocal8Bit((char*)value, length);
-    return this->store(&dataMap, name, CAN, DOUBLE, temp);
+    return this->store(&dataMap, name, CAN, DOUBLE, temp.toDouble());
 }
 
 int BaseDataPool::getInt(string name){
     if (dataMap.contains(name)){
-        return dataMap.value(name)->getValue().toInt();
+        return dataMap.value(name)->getValue();
     }else{
         return 0;
     }
@@ -41,7 +40,7 @@ int BaseDataPool::getInt(string name){
 
 double BaseDataPool::getDouble(string name){
     if (dataMap.contains(name)){
-        return dataMap.value(name)->getValue().toDouble();
+        return dataMap.value(name)->getValue();
     }else{
         return 0;
     }

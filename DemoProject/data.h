@@ -4,35 +4,31 @@
 #include <string>
 #include <qstring.h>
 
-enum Channel{
-    CAN = 0,
-    OTHER = 9
-};
+#define CAN 0
+#define OTHER 9
 
-enum DataType{
-    INTEGER = 0,
-    LONG = 1,
-    DOUBLE = 2,
-    BOOLEAN = 3,
-    STRING = 4
-};
+#define INTEGER 0
+#define LONG 1
+#define DOUBLE 2
+#define BOOLEAN 3
+#define STRING 4
 
 using namespace std;
 
 class Data
 {
 public:
-    Data(string name, Channel channel, DataType type, QString value);
+    Data(string name, int channel, int type, double value);
     string getName();
-    QString getValue();
+    double getValue();
     void replaceby(Data* data);
-    bool update(string name, Channel channel, DataType type, QString value);
+    bool update(string name, int channel, int type, double value);
     ~Data();
 private:
     string name;
-    Channel channel;
-    DataType type;
-    QString value;
+    int channel;
+    int type;
+    double value;
 };
 
 #endif // DATA_H

@@ -3,7 +3,7 @@
 /*
  * store raw data from collection
  */
-Data::Data(string name, Channel channel, DataType type, QString value)
+Data::Data(string name, int channel, int type, double value)
 {
     this->name = name;
     this->channel = channel;
@@ -19,7 +19,7 @@ string Data::getName(){
     return name;
 }
 
-QString Data::getValue(){
+double Data::getValue(){
     return value;
 }
 
@@ -32,7 +32,7 @@ void Data::replaceby(Data* data){
     }
 }
 
-bool Data::update(string name, Channel channel, DataType type, QString value){
+bool Data::update(string name, int channel, int type, double value){
     this->name = name;
     this->channel = channel;
     this->type = type;

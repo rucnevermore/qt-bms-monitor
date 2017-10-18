@@ -14,7 +14,7 @@ public:
     BaseDataPool();
     bool store(string name, double value);
     bool store(string name, unsigned char* value, int length);
-    bool store(QMap<string, Data*>* localMap, string name, Channel channel, DataType type, QString value);
+    bool store(QMap<string, Data*>* localMap, string name, int channel, int type, double value);
     Data* retrieve(string name);
     double getDouble(string name);
     int getInt(string name);

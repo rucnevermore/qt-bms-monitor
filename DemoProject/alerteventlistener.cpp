@@ -5,8 +5,8 @@ AlertEventListener::AlertEventListener()
     dataPool = DataPool::newInstance();
 }
 
-void AlertEventListener::notify(string name, QString value){
-    int intValue = value.toInt();
+void AlertEventListener::notify(string name, double value){
+    int intValue = value;
     QString textValue;
     if (intValue == 0){
 //        textValue = QString::fromUtf8("正常");
