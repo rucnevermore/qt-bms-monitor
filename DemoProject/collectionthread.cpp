@@ -31,7 +31,7 @@ void CollectionThread::sendDebugPackage(unsigned int id, unsigned char length, l
 
 void CollectionThread::run()
 {
-    bool debug = true;
+    bool debug = false;
     while(running)
     {
         if (debug){
@@ -39,7 +39,7 @@ void CollectionThread::run()
             sendDebugPackage(BAMS_INF2, 0x08, 0x130052C880F21F23);
             sendDebugPackage(BAMS_INF3, 0x08, 0x0A0B0C0D0E0F0607);
             sendDebugPackage(BAMS_INF4, 0x08, 0x0A0B0C0D0E0F0607);
-            int clusterNumber = 20;
+            int clusterNumber = 5;
             for (int i = 1; i <= clusterNumber; i++){
                 // cluster 1
                 sendDebugPackage(BMS_INF+i, 0x08, 0x130052C880F21F23);
@@ -48,21 +48,21 @@ void CollectionThread::run()
                 sendDebugPackage(BMS_INF2+i, 0x08, 0x1B1B1B1B1B1B1B1B);
                 sendDebugPackage(NOM_PAR+i, 0x08, 0x0200520100640801);
                 // module 1
-                sendDebugPackage(MNOM_PAR+i, 0x08, 0x21FA101F0041011);
-                sendDebugPackage(MVT_PAR1+i, 0x08, 0x21FA10150164411);
-                sendDebugPackage(MVT_PAR2+i, 0x08, 0x21FA101F0041011);
-                sendDebugPackage(CELL_V1+i, 0x08, 0x21FA101F0041011);
-                sendDebugPackage(CELL_V2+i, 0x08, 0x21FA101F0041011);
-                sendDebugPackage(CELL_V3+i, 0x08, 0x21FA101F0041011);
-                sendDebugPackage(CELL_V4+i, 0x08, 0x21FA101F0041011);
-                sendDebugPackage(CELL_V5+i, 0x08, 0x21FA101F0041011);
-                sendDebugPackage(CELL_V6+i, 0x08, 0x21FA101F0041011);
-                sendDebugPackage(CELL_T1+i, 0x08, 0x21FA101F0041011);
-                sendDebugPackage(CELL_T2+i, 0x08, 0x21FA101F0041011);
-                sendDebugPackage(PCBA_6803_1+i, 0x08, 0x21FA101F0041011);
-                sendDebugPackage(PCBA_6803_2+i, 0x08, 0x21FA101F0041011);
-                sendDebugPackage(PCBA_6803_3+i, 0x08, 0x21FA101F0041011);
-                sendDebugPackage(PCBA_6803_4+i, 0x08, 0x21FA101F0041011);
+                sendDebugPackage(MNOM_PAR+i, 0x08, 0x21FA101F0041001);
+                sendDebugPackage(MVT_PAR1+i, 0x08, 0x21FA10150164401);
+                sendDebugPackage(MVT_PAR2+i, 0x08, 0x21FA101F0041001);
+                sendDebugPackage(CELL_V1+i, 0x08, 0x21FA101F0041001);
+                sendDebugPackage(CELL_V2+i, 0x08, 0x21FA101F0041001);
+                sendDebugPackage(CELL_V3+i, 0x08, 0x21FA101F0041001);
+                sendDebugPackage(CELL_V4+i, 0x08, 0x21FA101F0041001);
+                sendDebugPackage(CELL_V5+i, 0x08, 0x21FA101F0041001);
+                sendDebugPackage(CELL_V6+i, 0x08, 0x21FA101F0041001);
+                sendDebugPackage(CELL_T1+i, 0x08, 0x21FA101F0041001);
+                sendDebugPackage(CELL_T2+i, 0x08, 0x21FA101F0041001);
+                sendDebugPackage(PCBA_6803_1+i, 0x08, 0x21FA101F0041001);
+                sendDebugPackage(PCBA_6803_2+i, 0x08, 0x21FA101F0041001);
+                sendDebugPackage(PCBA_6803_3+i, 0x08, 0x21FA101F0041001);
+                sendDebugPackage(PCBA_6803_4+i, 0x08, 0x21FA101F0041001);
 
                 // module 2
                 sendDebugPackage(MNOM_PAR+i, 0x08, 0x21FA101F0041005);
@@ -94,13 +94,6 @@ void CollectionThread::run()
             // collection from Can Bus finish.
         }
     }
-}
-
-string CollectionThread::getstring(int n)
-{
-    std::stringstream newstr;
-    newstr<<n;
-    return newstr.str();
 }
 
 void CollectionThread::stop()

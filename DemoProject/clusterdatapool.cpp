@@ -4,8 +4,17 @@
 
 ClusterDataPool::ClusterDataPool()
 {
-    moduleDataMap = new double[MODULE_NUM][MODULE_DATA_NUM]();
     dataMap = new double[CLUSTER_DATA_NUM]();
+    moduleDataMap = new double*[MODULE_NUM]();
+    for(int i = 0; i < MODULE_NUM; i++){
+        moduleDataMap[i] = new double[MODULE_DATA_NUM]();
+    }
+
+}
+
+ClusterDataPool::~ClusterDataPool(){
+    delete []moduleDataMap;
+    delete []dataMap;
 }
 
 bool ClusterDataPool::storeById(int moduleId, int name, double value){
@@ -15,9 +24,9 @@ bool ClusterDataPool::storeById(int moduleId, int name, double value){
 
 double ClusterDataPool::getDoubleByIndex(int moduleIndex, int name){
     // special treatment for macro.
-    if (name == "_ID_"){
-        return moduleIndex;
-    }
+//    if (name == "_ID_"){
+//        return moduleIndex;
+//    }
     return moduleDataMap[moduleIndex][name];
 }
 
@@ -25,7 +34,7 @@ double ClusterDataPool::getDoubleById(int moduleId, int name){
     return moduleDataMap[moduleId][name];
 }
 
-bool ClusterDataPool::store(string name, double value){
+bool ClusterDataPool::store(int name, double value){
     dataMap[name]=value;
     return true;
 }

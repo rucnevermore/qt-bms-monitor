@@ -2,7 +2,7 @@
 #define COLLECTIONTHREAD_H
 #include <QThread>
 
-//#define RELEASE
+#define RELEASE
 #if defined (RELEASE)
 #include "ycapi.h"
 #include <sys/ioctl.h>
@@ -34,7 +34,6 @@ public slots:
 
 private:
     bool running;
-    std::string getstring(int n);
 #if defined (RELEASE)
     Ycapi *ycapi;
 #endif

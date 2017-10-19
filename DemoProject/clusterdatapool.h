@@ -13,13 +13,13 @@ public:
     double getDoubleByIndex(int moduleIndex, int name);
     double getDoubleById(int moduleId, int name);
 
-    bool store(string name, double value);
-    bool store(string name, unsigned char* value, int length);
+    bool store(int name, double value);
+    bool store(int name, unsigned char* value, int length);
     double getDouble(int name);
     int getInt(int name);
 
     // two dimension [][]
-    double* moduleDataMap;
+    double** moduleDataMap;
     double* dataMap;
 };
 

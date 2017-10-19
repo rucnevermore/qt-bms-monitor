@@ -1,7 +1,15 @@
 #include "configure.h"
+#include <stddef.h>
 
 Configure* Configure::instance_ = NULL;
-DataPool* dataPool = NULL;
+
+Configure::Configure(){
+    max_event_number=100;
+    current_module_selected = new int[CLUSTER_NUM]();
+    max_num_in_one_page=10;
+    current_event_page=0;
+    current_cluster_index=0;
+}
 
 Configure::~Configure(){
 
@@ -10,55 +18,49 @@ Configure::~Configure(){
 Configure* Configure::newInstance(){
     if (NULL == instance_){
         instance_ = new Configure();
-        dataPool = DataPool::newInstance();
     }
     return instance_;
 }
 
 int Configure::getClusterNum(){
-    return dataPool->clusterDataMap->size();
+    return CLUSTER_NUM;
 }
 
 int Configure::getMaxEventNum(){
-    return dataPool->getInt("max_event_number");
+    return max_event_number;
 }
 
 // current selected module index
 int Configure::getCurrentModuleSelected(int clusterIndex){
-    return dataPool->getDoubleByIndex(clusterIndex, "current_module_selected");
+    return current_module_selected[clusterIndex];
 }
 
 void Configure::setCurrentModuleSelected(int clusterIndex, int moduleIndex){
-    dataPool->storeByIndex(clusterIndex, "current_module_selected", moduleIndex);
+    current_module_selected[clusterIndex]=moduleIndex;
 }
 
 // maximum event number in one page
 int Configure::getMaxEventInOnePage(){
-    return dataPool->getInt("max_num_in_one_page");
+    return max_num_in_one_page;
 }
 
 void Configure::setMaxEventInOnePage(int num){
-    dataPool->store("max_num_in_one_page", num);
+    max_num_in_one_page=num;
 }
 
 // event current page number for event
 int Configure::getEventCurrentPageNum(){
-    return dataPool->getInt("current_event_page");
+    return current_event_page;
 }
 
 void Configure::setEventCurrentPageNum(int num){
-    dataPool->store("current_event_page", num);
-}
-
-// event total
-int Configure::getEventTotal(){
-    return dataPool->events->size();
+    current_event_page=num;
 }
 
 void Configure::setClusterIndex(int clusterId){
-    dataPool->store("current_cluster_index", clusterId);
+    current_cluster_index=clusterId;
 }
 
 int Configure::getClusterIndex(){
-    return dataPool->getInt("current_cluster_index");
+    return current_cluster_index;
 }

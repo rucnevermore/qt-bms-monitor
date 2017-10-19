@@ -12,8 +12,8 @@ class BaseDataPool
 {
 public:
     BaseDataPool(int size);
-    bool store(string name, double value);
-    bool store(string name, unsigned char* value, int length);
+    bool store(int name, double value);
+    bool store(int name, unsigned char* value, int length);
     bool store(double* localMap, int name, double value);
     double getDouble(int name);
     int getInt(int name);

@@ -18,8 +18,8 @@ public:
     void storeById(int clusterId, int moduleId, int name, double value);
     void storeByIndex(int clusterIndex, int name, double value);
 
-    bool store(string name, double value);
-    bool store(string name, unsigned char* value, int length);
+    bool store(int name, double value);
+    bool store(int name, unsigned char* value, int length);
     double getDouble(int name);
     int getInt(int name);
 
@@ -31,6 +31,7 @@ public:
     QString statistic();
     void registerListener(EventListener* listener);
     void notifyListener(int name, double value);
+    int getEventTotal();
 
     QList<EventListener*>* listeners;
     ClusterDataPool* clusterDataMap;

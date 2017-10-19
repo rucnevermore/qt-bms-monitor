@@ -6,14 +6,14 @@ DataPool* DataPool::instance_ = NULL;
 
 DataPool* DataPool::newInstance(){
     if (NULL == instance_){
-        instance_ = new DataPool(CLUSTER_NUM, MODULE_NUM, MODULE_DATA_NUM);
+        instance_ = new DataPool();
     }
     return instance_;
 }
 
 DataPool::DataPool(){
     listeners = new QList<EventListener*>();
-    clusterDataMap = new ClusterDataPool[CLUSTER_NUM]();
+    clusterDataMap = new ClusterDataPool[CLUSTER_NUM];
     dataMap = new double[GLOBAL_DATA_NUM]();
     events = new QList<AlertEvent*>();
 }
@@ -93,23 +93,26 @@ double DataPool::getDoubleById(int clusterId, int moduleId, int name){
     return clusterDataMap[clusterId].getDoubleById(moduleId, name);
 }
 
-bool ClusterDataPool::store(string name, double value){
+bool DataPool::store(int name, double value){
     dataMap[name]=value;
     return true;
 }
 
-bool ClusterDataPool::store(int name, unsigned char* value, int length){
+bool DataPool::store(int name, unsigned char* value, int length){
     QString temp = QString::fromLocal8Bit((char*)value, length);
     dataMap[name]=temp.toDouble();
     return true;
 }
 
-int ClusterDataPool::getInt(int name){
+int DataPool::getInt(int name){
     return dataMap[name];
 }
 
-double ClusterDataPool::getDouble(int name){
+double DataPool::getDouble(int name){
     return dataMap[name];
 }
 
+int DataPool::getEventTotal(){
+    return events->size();
+}
 

@@ -1,8 +1,6 @@
 #ifndef CONFIGURE_H
 #define CONFIGURE_H
 
-#include "datapool.h"
-
 #define GLOBAL_DATA_NUM 30
 #define CLUSTER_NUM 10
 #define CLUSTER_DATA_NUM 60
@@ -21,14 +19,18 @@ public:
     void setMaxEventInOnePage(int num);
     int getEventCurrentPageNum();
     void setEventCurrentPageNum(int num);
-    int getEventTotal();
     int getCurrentModuleSelected(int clusterIndex);
     void setCurrentModuleSelected(int clusterIndex, int moduleIndex);
 private:
-    Configure(){};
+    Configure();
     ~Configure();
     static Configure* instance_;
 //    DataPool* dataPool;
+    int max_event_number;
+    int* current_module_selected;
+    int max_num_in_one_page;
+    int current_event_page;
+    int current_cluster_index;
 };
 
 //global level
@@ -189,22 +191,22 @@ private:
 #define cywd_12 75
 #define zjzcywd 76
 #define fjzcywd 77
-#define 6803_1_pcba1wd 78
-#define 6803_1_pcba2wd 79
-#define 6803_1_pcba3wd 80
-#define 6803_1_pcba4wd 81
-#define 6803_2_pcba1wd 82
-#define 6803_2_pcba2wd 83
-#define 6803_2_pcba3wd 84
-#define 6803_2_pcba4wd 85
-#define 6803_3_pcba1wd 86
-#define 6803_3_pcba2wd 87
-#define 6803_3_pcba3wd 88
-#define 6803_3_pcba4wd 89
-#define 6803_4_pcba1wd 90
-#define 6803_4_pcba2wd 91
-#define 6803_4_pcba3wd 92
-#define 6803_4_pcba4wd 93
+#define d_6803_1_pcba1wd 78
+#define d_6803_1_pcba2wd 79
+#define d_6803_1_pcba3wd 80
+#define d_6803_1_pcba4wd 81
+#define d_6803_2_pcba1wd 82
+#define d_6803_2_pcba2wd 83
+#define d_6803_2_pcba3wd 84
+#define d_6803_2_pcba4wd 85
+#define d_6803_3_pcba1wd 86
+#define d_6803_3_pcba2wd 87
+#define d_6803_3_pcba3wd 88
+#define d_6803_3_pcba4wd 89
+#define d_6803_4_pcba1wd 90
+#define d_6803_4_pcba2wd 91
+#define d_6803_4_pcba3wd 92
+#define d_6803_4_pcba4wd 93
 
 
 #endif // CONFIGURE_H

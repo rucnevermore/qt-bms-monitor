@@ -6,7 +6,7 @@ BaseDataPool::BaseDataPool(int size)
     dataMap = new double[size]();
 }
 
-bool BaseDataPool::store(string name, double value){
+bool BaseDataPool::store(int name, double value){
     dataMap[name]=value;
     return true;
 }

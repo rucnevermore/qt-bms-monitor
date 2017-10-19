@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     int width= QApplication::desktop()->width();
     int height= QApplication::desktop()->height();
     w.setFixedSize(width,height);
-//    w.setWindowFlags(Qt::FramelessWindowHint);
+    w.setWindowFlags(Qt::FramelessWindowHint);
 
     // display alert
 //    QMap<string, QTableWidgetItem*> alertItemMap;
