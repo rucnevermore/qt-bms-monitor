@@ -1,10 +1,14 @@
 #ifndef COLLECTIONTHREAD_H
 #define COLLECTIONTHREAD_H
 #include <QThread>
+
+//#define RELEASE
+#if defined (RELEASE)
 #include "ycapi.h"
 #include <sys/ioctl.h>
 #include <net/if.h>
 #include <linux/can.h>
+#endif
 #include "canparser.h"
 #include "cancache.h"
 
@@ -31,7 +35,9 @@ public slots:
 private:
     bool running;
     std::string getstring(int n);
+#if defined (RELEASE)
     Ycapi *ycapi;
+#endif
     CanParser* parser;
     CanCache* cache;
     void sendDebugPackage(unsigned int id, unsigned char length, long long data);

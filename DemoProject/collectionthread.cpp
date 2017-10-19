@@ -8,8 +8,10 @@ CollectionThread::CollectionThread(QObject *parent) :
         QThread(parent)
 {
     running = true;
+#if defined (RELEASE)
     ycapi = new Ycapi();
     ycapi->OpenCan(250000);
+#endif
     parser = new CanParser();
     connect(parser,SIGNAL(log(QString)),this,SIGNAL(log(QString)));
     cache = CanCache::newInstance();
@@ -84,8 +86,10 @@ void CollectionThread::run()
             // collection from Can Bus start.
 //            can_frame* frame = new can_frame();
             can_frame frame;
+#if defined (RELEASE)
             ycapi->ReadCan(&frame.can_id,&frame.can_dlc,frame.data);
-//            cache->addFrame(frame);
+#endif
+//            cache->addFrame(&frame);
             parser->parse(&frame);
             // collection from Can Bus finish.
         }

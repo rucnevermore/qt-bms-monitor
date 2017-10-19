@@ -2,20 +2,25 @@
 #define CLUSTERDATAPOOL_H
 
 #include <QObject>
-#include "basedatapool.h"
-#include <QMap>
+#include "configure.h"
 
-class ClusterDataPool : public QObject, public BaseDataPool
+class ClusterDataPool : public QObject
 {
 public:
     ClusterDataPool();
-//    ~ClusterDataPool();
-    bool storeById(int moduleId, string name, double value);
-    double getDoubleByIndex(int moduleIndex, string name);
-    double getDoubleById(int moduleId, string name);
-    int getDataNumber();
+    ~ClusterDataPool();
+    bool storeById(int moduleId, int name, double value);
+    double getDoubleByIndex(int moduleIndex, int name);
+    double getDoubleById(int moduleId, int name);
 
-    QMap<int, QMap<string, Data*>*> moduleDataMap;
+    bool store(string name, double value);
+    bool store(string name, unsigned char* value, int length);
+    double getDouble(int name);
+    int getInt(int name);
+
+    // two dimension [][]
+    double* moduleDataMap;
+    double* dataMap;
 };
 
 #endif // CLUSTERDATAPOOL_H

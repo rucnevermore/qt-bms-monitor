@@ -19,7 +19,7 @@ public:
     Widget(QWidget *parent = 0);
     ~Widget();
     Ui::Widget *ui;
-    void setAlertItems(QMap<string, QTableWidgetItem*> alertItemMap);
+//    void setAlertItems(QMap<string, QTableWidgetItem*> alertItemMap);
 
 private slots:
     void display();
@@ -39,7 +39,7 @@ private:
     ParseThread *parseThread;
     DisplayThread *displayThread;
     CollectionThread *collectionThread;
-    QMap<string, QTableWidgetItem*> alertItemMap;
+//    QMap<string, QTableWidgetItem*> alertItemMap;
 
     void deserializeEvent();
 

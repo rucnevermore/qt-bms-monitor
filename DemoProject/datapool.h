@@ -1,37 +1,40 @@
 #ifndef DATAPOOL_H
 #define DATAPOOL_H
 
-#include <QMap>
-#include "data.h"
 #include <string>
 #include <stdio.h>
 #include "ui_widget.h"
 #include <stdexcept>
-#include "basedatapool.h"
+#include "eventlistener.h"
 #include "clusterdatapool.h"
 #include "alertevent.h"
 #include <QList>
 
-class DataPool : public BaseDataPool
+class DataPool
 {
 public:
     static DataPool* newInstance();
-    void storeById(int clusterId, string name, double value);
-    void storeById(int clusterId, int moduleId, string name, double value);
-    void storeByIndex(int clusterIndex, string name, double value);
+    void storeById(int clusterId, int name, double value);
+    void storeById(int clusterId, int moduleId, int name, double value);
+    void storeByIndex(int clusterIndex, int name, double value);
 
-    double getDoubleByIndex(int clusterIndex, string name);
-    double getDoubleByIndex(int clusterIndex, int moduleIndex, string name);
-    double getDoubleById(int clusterId, int moduleId, string name);
+    bool store(string name, double value);
+    bool store(string name, unsigned char* value, int length);
+    double getDouble(int name);
+    int getInt(int name);
+
+    double getDoubleByIndex(int clusterIndex, int name);
+    double getDoubleByIndex(int clusterIndex, int moduleIndex, int name);
+    double getDoubleById(int clusterId, int moduleId, int name);
     void addEvent(QString message);
     void addEvent(QDateTime date, QString message);
     QString statistic();
     void registerListener(EventListener* listener);
-    void notifyListener(string name, double value);
+    void notifyListener(int name, double value);
 
     QList<EventListener*>* listeners;
-    // Cluster id, Module id, datamap
-    QMap<int, ClusterDataPool*>* clusterDataMap;
+    ClusterDataPool* clusterDataMap;
+    double* dataMap;
     QList<AlertEvent*>* events;
 private:
     DataPool();

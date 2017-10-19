@@ -6,7 +6,6 @@ TEMPLATE = app
 SOURCES += main.cpp \
     widget.cpp \
     datapool.cpp \
-    data.cpp \
     displaythread.cpp \
     collectionthread.cpp \
     configure.cpp \
@@ -18,7 +17,6 @@ SOURCES += main.cpp \
     cancache.cpp \
     parsethread.cpp
 HEADERS += widget.h \
-    data.h \
     displayThread.h \
     displaythread.h \
     collectionthread.h \
@@ -37,7 +35,3 @@ HEADERS += widget.h \
 FORMS += widget.ui
 INSTALLS += target
 RESOURCES += resources.qrc
-OTHER_FILES +=
-LIBS += -L../ycapi \
-    -lycapi
-INCLUDEPATH += ../ycapi

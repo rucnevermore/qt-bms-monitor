@@ -11,14 +11,13 @@
 class BaseDataPool
 {
 public:
-    BaseDataPool();
+    BaseDataPool(int size);
     bool store(string name, double value);
     bool store(string name, unsigned char* value, int length);
-    bool store(QMap<string, Data*>* localMap, string name, int channel, int type, double value);
-    Data* retrieve(string name);
-    double getDouble(string name);
-    int getInt(string name);
-    QMap<string, Data*> dataMap;
+    bool store(double* localMap, int name, double value);
+    double getDouble(int name);
+    int getInt(int name);
+    double* dataMap;
 };
 
 #endif // BASEDATAPOOL_H

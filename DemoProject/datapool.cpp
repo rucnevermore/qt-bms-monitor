@@ -6,21 +6,23 @@ DataPool* DataPool::instance_ = NULL;
 
 DataPool* DataPool::newInstance(){
     if (NULL == instance_){
-        instance_ = new DataPool();
+        instance_ = new DataPool(CLUSTER_NUM, MODULE_NUM, MODULE_DATA_NUM);
     }
     return instance_;
 }
 
 DataPool::DataPool(){
     listeners = new QList<EventListener*>();
-    clusterDataMap = new QMap<int, ClusterDataPool*>();
+    clusterDataMap = new ClusterDataPool[CLUSTER_NUM]();
+    dataMap = new double[GLOBAL_DATA_NUM]();
     events = new QList<AlertEvent*>();
 }
 
 DataPool::~DataPool(){
     events->clear();
     listeners->clear();
-    clusterDataMap->clear();
+    delete []clusterDataMap;
+    delete []dataMap;
 }
 
 void DataPool::registerListener(EventListener* listener){
@@ -29,7 +31,7 @@ void DataPool::registerListener(EventListener* listener){
     }
 }
 
-void DataPool::notifyListener(string name, double value){
+void DataPool::notifyListener(int name, double value){
     EventListener* listener = NULL;
     for(int i = 0; i < listeners->length(); i++){
         listener = listeners->at(i);
@@ -67,116 +69,47 @@ void DataPool::serializeEvents(){
     f.close();
 }
 
-void DataPool::storeById(int clusterId, string name, double value){
-    ClusterDataPool* currentClusterDataPool = NULL;
-    if (clusterDataMap->contains(clusterId)){
-        currentClusterDataPool = clusterDataMap->value(clusterId);
-    }else{
-        currentClusterDataPool = new ClusterDataPool();
-        this->clusterDataMap->insert(clusterId, currentClusterDataPool);
-    }
-    if (currentClusterDataPool->store(name, value)){
-        this->notifyListener(name, value);
-    }
+void DataPool::storeById(int clusterId, int name, double value){
+    clusterDataMap[clusterId].store(name, value);
 }
 
-void DataPool::storeById(int clusterId, int moduleId, string name, double value){
-    ClusterDataPool* currentClusterDataPool = NULL;
-    if (clusterDataMap->contains(clusterId)){
-        currentClusterDataPool = clusterDataMap->value(clusterId);
-    }else{
-        currentClusterDataPool = new ClusterDataPool();
-        this->clusterDataMap->insert(clusterId, currentClusterDataPool);
-    }
-    if (currentClusterDataPool->storeById(moduleId, name, value)){
-        this->notifyListener(name, value);
-    }
+void DataPool::storeById(int clusterId, int moduleId, int name, double value){
+    clusterDataMap[clusterId].storeById(moduleId, name, value);
 }
 
-void DataPool::storeByIndex(int clusterIndex, string name, double value){
-    int i = 1;
-    int key = -1;
-    QMap<int, ClusterDataPool* >::iterator iter;
-    for(iter = clusterDataMap->begin(); iter != clusterDataMap->end(); ++iter)
-    {
-        if (i == clusterIndex){
-            key = iter.key();
-            break;
-        }
-        i++;
-    }
-    if(key == -1){
-        return;
-    }
-    try{
-        clusterDataMap->value(key)->store(name, value);
-    }catch(std::out_of_range &e){// no such data
-        return;
-    }
+void DataPool::storeByIndex(int clusterIndex, int name, double value){
+    this->storeById(clusterIndex, name, value);
 }
 
-double DataPool::getDoubleByIndex(int clusterIndex, string name){
-    int i = 1;
-    int key = -1;
-    QMap<int, ClusterDataPool* >::iterator iter;
-    for(iter = clusterDataMap->begin(); iter != clusterDataMap->end(); ++iter)
-    {
-        if (i == clusterIndex){
-            key = iter.key();
-            break;
-        }
-        i++;
-    }
-    if(key == -1){
-        return 0;
-    }
-    // special treatment for macro.
-    if (name == "_MODULE_NUMBER_"){
-        return clusterDataMap->value(key)->moduleDataMap.size();
-    }
-    try{
-        return clusterDataMap->value(key)->getDouble(name);
-    }catch(std::out_of_range &e){// no such data
-        return 0;
-    }
+double DataPool::getDoubleByIndex(int clusterIndex, int name){
+    return clusterDataMap[clusterIndex].getDouble(name);
 }
 
-double DataPool::getDoubleByIndex(int clusterIndex, int moduleIndex, string name){
-    int i = 1;
-    int key = -1;
-    QMap<int, ClusterDataPool* >::iterator iter;
-    for(iter = clusterDataMap->begin(); iter != clusterDataMap->end(); ++iter)
-    {
-        if (i == clusterIndex){
-            key = iter.key();
-            break;
-        }
-        i++;
-    }
-    if(key == -1){
-        return 0;
-    }
-    return clusterDataMap->value(key)->getDoubleByIndex(moduleIndex, name);
+double DataPool::getDoubleByIndex(int clusterIndex, int moduleIndex, int name){
+    return clusterDataMap[clusterIndex].getDoubleById(moduleIndex, name);
 }
 
-double DataPool::getDoubleById(int clusterId, int moduleId, string name){
-    if (clusterDataMap->contains(clusterId)){
-        return clusterDataMap->value(clusterId)->getDoubleById(moduleId, name);
-    }else{// no such data
-        return 0;
-    }
+double DataPool::getDoubleById(int clusterId, int moduleId, int name){
+    return clusterDataMap[clusterId].getDoubleById(moduleId, name);
 }
 
-QString DataPool::statistic(){
-    int dataNumber = this->dataMap.size();
-    int clusterNumber = clusterDataMap->size();
-    QMap<int, ClusterDataPool* >::iterator iter;
-    for(iter = clusterDataMap->begin(); iter != clusterDataMap->end(); ++iter)
-    {
-        ClusterDataPool* clusterDataPool = iter.value();
-        dataNumber = dataNumber + clusterDataPool->getDataNumber();
-    }
-    return QString("cluster number : ").append(QString::number(clusterNumber)).append(QString(". data number : ")).append(QString::number(dataNumber));
+bool ClusterDataPool::store(string name, double value){
+    dataMap[name]=value;
+    return true;
+}
+
+bool ClusterDataPool::store(int name, unsigned char* value, int length){
+    QString temp = QString::fromLocal8Bit((char*)value, length);
+    dataMap[name]=temp.toDouble();
+    return true;
+}
+
+int ClusterDataPool::getInt(int name){
+    return dataMap[name];
+}
+
+double ClusterDataPool::getDouble(int name){
+    return dataMap[name];
 }
 
 

@@ -50,13 +50,13 @@ Widget::Widget(QWidget *parent) :
 //    collectionThread->start();
 
     // start the parse thread.
-    log(QString::fromStdString("start parse thread..."));
-    int parseThreadNumber = 50;
-    for (int i = 0; i < parseThreadNumber; i++){
-        ParseThread* pThread = new ParseThread();
-        connect(pThread,SIGNAL(log(QString)),this,SLOT(log(QString)));
-        pThread->start();
-    }
+//    log(QString::fromStdString("start parse thread..."));
+//    int parseThreadNumber = 50;
+//    for (int i = 0; i < parseThreadNumber; i++){
+//        ParseThread* pThread = new ParseThread();
+//        connect(pThread,SIGNAL(log(QString)),this,SLOT(log(QString)));
+//        pThread->start();
+//    }
 
 //    parseThread = new ParseThread();
 //    connect(parseThread,SIGNAL(log(QString)),this,SLOT(log(QString)));
@@ -72,6 +72,8 @@ Widget::Widget(QWidget *parent) :
     connect(ui->pbutton_down,SIGNAL(clicked()),this,SLOT(nextPage()));
 
     connect(ui->comboBox, SIGNAL(activated(const QString &)), this, SLOT(onIndexChanged(const QString &)));
+
+    connect(ui->tabWidget,SIGNAL(currentChanged(int)),this,SLOT(display()));
 
     configure->setClusterIndex(1);
 }
@@ -198,9 +200,9 @@ void setAlertText2(QTextBrowser* textBrowser, double value){
     }
 }
 
-void Widget::setAlertItems(QMap<string, QTableWidgetItem*> alertItemMap){
-    this->alertItemMap = alertItemMap;
-}
+//void Widget::setAlertItems(QMap<string, QTableWidgetItem*> alertItemMap){
+//    this->alertItemMap = alertItemMap;
+//}
 
 void Widget::display()
 {
