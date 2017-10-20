@@ -251,11 +251,11 @@ void Widget::display()
     // page 2
     if (currentPage == 0){
         // 最高电压
-        ui->lcd_p2_zgdy->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, dtzgdy), 'f', 3));
+        ui->lcd_p2_zgdy->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, dtzgdy), 'f', 2));
         ui->lcd_p2_zgdy_loc_1->display(dataPool->getDoubleByIndex(currentClusterIndex, zgdyxh));
         ui->lcd_p2_zgdy_loc_2->display(dataPool->getDoubleByIndex(currentClusterIndex, zgdywz));
         // 最低电压
-        ui->lcd_p2_zddy->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, dtzddy), 'f', 3));
+        ui->lcd_p2_zddy->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, dtzddy), 'f', 2));
         ui->lcd_p2_zddy_loc_1->display(dataPool->getDoubleByIndex(currentClusterIndex, zddyxh));
         ui->lcd_p2_zddy_loc_2->display(dataPool->getDoubleByIndex(currentClusterIndex, zddywz));
         // 最高温度
