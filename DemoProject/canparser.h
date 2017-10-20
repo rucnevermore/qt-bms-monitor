@@ -32,19 +32,22 @@ private:
     void processBAMS_INF2(can_frame* frame);
     void processBAMS_INF3(can_frame* frame);
     void processBAMS_INF4(can_frame* frame);
-    void processBMS_INF(can_frame* frame);
-    void processBMS_INF1(can_frame* frame);
-    void processFAU_ALA(can_frame* frame);
-    void processBMS_INF2(can_frame* frame);
-    void processNOM_PAR(can_frame* frame);
-    void processMUN_ID(can_frame* frame);
-    void processMNOM_PAR(can_frame* frame);
-    void processMVT_PAR1(can_frame* frame);
-    void processMVT_PAR2(can_frame* frame);
-    void processCELL_V(int index, can_frame* frame);
-    void processCELL_T1(can_frame* frame);
-    void processCELL_T2(can_frame* frame);
-    void processPCBA(int index, can_frame* frame);
+    void processBMS_INF(can_frame* frame, int clusterId);
+    void processBMS_INF1(can_frame* frame, int clusterId);
+    void processFAU_ALA(can_frame* frame, int clusterId);
+    void processBMS_INF2(can_frame* frame, int clusterId);
+    void processNOM_PAR(can_frame* frame, int clusterId);
+    void processMUN_ID(can_frame* frame, int clusterId);
+    void processMNOM_PAR(can_frame* frame, int clusterId, int moduleId);
+    void processMVT_PAR1(can_frame* frame, int clusterId, int moduleId);
+    void processMVT_PAR2(can_frame* frame, int clusterId, int moduleId);
+    void processCELL_V(int index, can_frame* frame, int clusterId, int moduleId);
+    void processCELL_T1(can_frame* frame, int clusterId, int moduleId);
+    void processCELL_T2(can_frame* frame, int clusterId, int moduleId);
+    void processPCBA(int index, can_frame* frame, int clusterId, int moduleId);
+
+    void processClusterFrame(can_frame* frame, int id);
+    void processModuleFrame(can_frame* frame, int id, int clusterId);
 };
 
 #define CAN_ID_1 0x01020304

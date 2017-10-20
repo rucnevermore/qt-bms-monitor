@@ -70,9 +70,8 @@ int Configure::getClusterIndex(){
 }
 
 QString Configure::print(){
-    return QString("Configure:\n").append(QString("Cluster Number: ")).append(QString::number(CLUSTER_NUM)).append(QString("\n"))
-            .append(QString("Cluster Number: ")).append(QString::number(CLUSTER_NUM)).append(QString("\n"))
-            .append(QString("Module Number: ")).append(QString::number(MODULE_NUM)).append(QString("\n"))
-            .append(QString("Max Event Number: ")).append(QString::number(MAX_EVENT_NUM)).append(QString("\n"))
-            .append(QString("Max Event In One Page: ")).append(QString::number(MAX_EVENT_IN_ONE_PAGE)).append(QString("\n"));
+    return QString("Configure:\n").append(QString("\tCluster Number: ")).append(QString::number(CLUSTER_NUM)).append(QString("\n"))
+            .append(QString("\tModule Number: ")).append(QString::number(MODULE_NUM)).append(QString("\n"))
+            .append(QString("\tMax Event Number: ")).append(QString::number(MAX_EVENT_NUM)).append(QString("\n"))
+            .append(QString("\tMax Event In One Page: ")).append(QString::number(MAX_EVENT_IN_ONE_PAGE)).append(QString("\n"));
 }

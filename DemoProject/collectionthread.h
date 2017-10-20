@@ -2,7 +2,7 @@
 #define COLLECTIONTHREAD_H
 #include <QThread>
 
-//#define RELEASE
+#define RELEASE
 #if defined (RELEASE)
 #include "ycapi.h"
 #include <sys/ioctl.h>

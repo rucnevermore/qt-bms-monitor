@@ -128,7 +128,7 @@ void Widget::decreaseCluster()
 void Widget::increaseCluster()
 {
     int currentNum = ui->label_cluster->text().toInt();
-    if (currentNum < configure->getClusterNum() - 1){
+    if (currentNum < configure->getClusterNum()){
         ui->label_cluster->setText(QString::number(currentNum + 1));
         ui->label_cluster_2->setText(QString::number(currentNum + 1));
         configure->setClusterIndex(currentNum + 1);
