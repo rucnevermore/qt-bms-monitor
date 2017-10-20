@@ -1,11 +1,8 @@
 #ifndef CONFIGURE_H
 #define CONFIGURE_H
 
-#define GLOBAL_DATA_NUM 30
-#define CLUSTER_NUM 10
-#define CLUSTER_DATA_NUM 60
-#define MODULE_NUM 10
-#define MODULE_DATA_NUM 100
+#include <QString>
+#include <QSettings>
 
 class Configure
 {
@@ -16,19 +13,27 @@ public:
     void setClusterIndex(int clusterId);
     int getClusterIndex();
     int getMaxEventInOnePage();
-    void setMaxEventInOnePage(int num);
     int getEventCurrentPageNum();
     void setEventCurrentPageNum(int num);
     int getCurrentModuleSelected(int clusterIndex);
     void setCurrentModuleSelected(int clusterIndex, int moduleIndex);
+
+    QString print();
+
+    int GLOBAL_DATA_NUM;
+    int CLUSTER_NUM;
+    int CLUSTER_DATA_NUM;
+    int MODULE_NUM;
+    int MODULE_DATA_NUM;
+    int MAX_EVENT_NUM;
+    int MAX_EVENT_IN_ONE_PAGE;
 private:
     Configure();
     ~Configure();
     static Configure* instance_;
-//    DataPool* dataPool;
-    int max_event_number;
+//    int max_event_number;
     int* current_module_selected;
-    int max_num_in_one_page;
+//    int max_num_in_one_page;
     int current_event_page;
     int current_cluster_index;
 };

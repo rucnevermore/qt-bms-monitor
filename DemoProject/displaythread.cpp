@@ -13,7 +13,7 @@ void DisplayThread::run()
     while(running)
     {
         display();
-        this->sleep(2);
+        this->sleep(1);
     }
 
 }

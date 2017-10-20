@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
     qss.open(QFile::ReadOnly);
     a.setStyleSheet(qss.readAll());
     qss.close();
+
     Widget w;
     int width= QApplication::desktop()->width();
     int height= QApplication::desktop()->height();

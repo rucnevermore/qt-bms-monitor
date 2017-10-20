@@ -12,9 +12,10 @@ DataPool* DataPool::newInstance(){
 }
 
 DataPool::DataPool(){
+    Configure* configure = Configure::newInstance();
     listeners = new QList<EventListener*>();
-    clusterDataMap = new ClusterDataPool[CLUSTER_NUM];
-    dataMap = new double[GLOBAL_DATA_NUM]();
+    clusterDataMap = new ClusterDataPool[configure->CLUSTER_NUM+1];
+    dataMap = new double[configure->GLOBAL_DATA_NUM+1]();
     events = new QList<AlertEvent*>();
 }
 

@@ -29,7 +29,8 @@ Widget::Widget(QWidget *parent) :
 
     configure = Configure::newInstance();
     configure->setEventCurrentPageNum(1);
-    configure->setMaxEventInOnePage(10);
+//    configure->setMaxEventInOnePage(10);
+    log(configure->print());
     // start the display thread.
     log(QString::fromStdString("start display thread..."));
     displayThread = new DisplayThread();
@@ -378,8 +379,7 @@ void Widget::display()
     // page 3
     if (currentPage == 1){
         ui->comboBox->clear();
-        int moduleTotal = MODULE_NUM;
-
+        int moduleTotal = configure->MODULE_NUM;
     //    for (int i = 0; i < moduleTotal; i++){
     //        ComboboxItem* item = new ComboboxItem(this);
     //        int moduleId = dataPool->getDoubleByIndex(currentClusterIndex, i, "_ID_");
@@ -389,7 +389,7 @@ void Widget::display()
     //        m_listWidget->setItemWidget(widgetItem, item);
     //    }
         QIcon itemIcon ("/yctek/app/images/item.png");
-        for (int i = 1; i < moduleTotal + 1; i++){
+        for (int i = 1; i <= moduleTotal; i++){
             int moduleId = i;
             ui->comboBox->addItem(itemIcon, QString::fromUtf8("模块").append(QString::number(i)).append(QString::fromUtf8("(")).append(QString::number(moduleId)).append(QString::fromUtf8(")")));
         }

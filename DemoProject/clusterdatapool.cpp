@@ -4,10 +4,11 @@
 
 ClusterDataPool::ClusterDataPool()
 {
-    dataMap = new double[CLUSTER_DATA_NUM]();
-    moduleDataMap = new double*[MODULE_NUM]();
-    for(int i = 0; i < MODULE_NUM; i++){
-        moduleDataMap[i] = new double[MODULE_DATA_NUM]();
+    Configure* configure = Configure::newInstance();
+    dataMap = new double[configure->CLUSTER_DATA_NUM+1]();
+    moduleDataMap = new double*[configure->MODULE_NUM+1]();
+    for(int i = 0; i < configure->MODULE_NUM+1; i++){
+        moduleDataMap[i] = new double[configure->MODULE_DATA_NUM+1]();
     }
 
 }
