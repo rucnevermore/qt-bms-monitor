@@ -14,7 +14,7 @@ Configure::Configure(){
     GLOBAL_DATA_NUM = settings.value("Private/GlobalDataNum", 30).toInt();
     CLUSTER_DATA_NUM = settings.value("Private/ClusterDataNum", 60).toInt();
     MODULE_DATA_NUM = settings.value("Private/ModuleDataNum", 100).toInt();
-    current_module_selected = new int[CLUSTER_NUM]();
+    current_module_selected = new int[CLUSTER_NUM+1]();
     current_event_page=0;
     current_cluster_index=0;
 }

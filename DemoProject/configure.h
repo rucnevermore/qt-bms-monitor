@@ -63,6 +63,9 @@ private:
 #define g_zdwd_wz 22
 #define g_zdsoc 23
 #define g_zdsoc_xh 24
+
+#define g_zdyc 25
+#define g_zdwc 26
 //cluster level
 #define zdy 1
 #define zdl 2
