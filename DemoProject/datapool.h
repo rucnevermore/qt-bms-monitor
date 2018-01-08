@@ -20,6 +20,7 @@ public:
 
     bool store(int name, double value);
     bool store(int name, unsigned char* value, int length);
+    short getShort(int name);
     double getDouble(int name);
     int getInt(int name);
 

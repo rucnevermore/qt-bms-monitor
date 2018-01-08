@@ -166,6 +166,7 @@ void Widget::nextPage(){
 void Widget::onIndexChanged(const QString &){
     int currentClusterIndex = configure->getClusterIndex();
     configure->setCurrentModuleSelected(currentClusterIndex, ui->comboBox->currentIndex());
+    this->display();
 }
 
 
@@ -207,49 +208,48 @@ void setAlertText2(QTextBrowser* textBrowser, double value){
 
 void Widget::display()
 {
-//    return;
     int currentPage = ui->tabWidget->currentIndex();
     // page 1
+    if (currentPage == 0){
+        // 总电压
+        ui->lcd_zdy->display(dataPool->getDouble(g_xtdy));
+        // 总电流
+        ui->lcd_zdl->display(dataPool->getDouble(g_xtdl));
+        // SOC
+        ui->lcd_soc->display(dataPool->getDouble(g_xtsoc));
+        ui->pBar_soc->setValue(dataPool->getDouble(g_xtsoc));
+        // 最大压差
+        ui->lcd_zdyc->display(dataPool->getDouble(g_zdyc));
+        // 最大温差
+        ui->lcd_zdwc->display(dataPool->getDouble(g_zdwc));
+        // 最大电压
+        ui->lcd_zddy->display(dataPool->getDouble(g_zgdy));
+        ui->lcd_zddy_loc_1->display(dataPool->getDouble(g_zgdy_zh));
+        ui->lcd_zddy_loc_2->display(dataPool->getDouble(g_zgdy_mkh));
+        ui->lcd_zddy_loc_3->display(dataPool->getDouble(g_zgdy_wz));
+        // 最小电压
+        ui->lcd_zxdy->display(dataPool->getDouble(g_zddy));
+        ui->lcd_zxdy_loc_1->display(dataPool->getDouble(g_zddy_zh));
+        ui->lcd_zxdy_loc_2->display(dataPool->getDouble(g_zddy_mkh));
+        ui->lcd_zxdy_loc_3->display(dataPool->getDouble(g_zddy_wz));
+        // 最高温度
+        ui->lcd_zgwd->display(dataPool->getDouble(g_zgwd));
+        ui->lcd_zgwd_loc_1->display(dataPool->getDouble(g_zgwd_zh));
+        ui->lcd_zgwd_loc_2->display(dataPool->getDouble(g_zgwd_mkh));
+        ui->lcd_zgwd_loc_3->display(dataPool->getDouble(g_zgwd_wz));
+        // 最低温度
+        ui->lcd_zdwd->display(dataPool->getDouble(g_zdwd));
+        ui->lcd_zdwd_loc_1->display(dataPool->getDouble(g_zdwd_zh));
+        ui->lcd_zdwd_loc_2->display(dataPool->getDouble(g_zdwd_mkh));
+        ui->lcd_zdwd_loc_3->display(dataPool->getDouble(g_zdwd_wz));
 
-    // 总电压
-    ui->lcd_zdy->display(dataPool->getDouble(g_xtdy));
-    // 总电流
-    ui->lcd_zdl->display(dataPool->getDouble(g_xtdl));
-    // SOC
-    ui->lcd_soc->display(dataPool->getDouble(g_xtsoc));
-    ui->pBar_soc->setValue(dataPool->getDouble(g_xtsoc));
-    // 最大压差
-    ui->lcd_zdyc->display(dataPool->getDouble(g_zdyc));
-    // 最大温差
-    ui->lcd_zdwc->display(dataPool->getDouble(g_zdwc));
-    // 最大电压
-    ui->lcd_zddy->display(dataPool->getDouble(g_zgdy));
-    ui->lcd_zddy_loc_1->display(dataPool->getDouble(g_zgdy_zh));
-    ui->lcd_zddy_loc_2->display(dataPool->getDouble(g_zgdy_mkh));
-    ui->lcd_zddy_loc_3->display(dataPool->getDouble(g_zgdy_wz));
-    // 最小电压
-    ui->lcd_zxdy->display(dataPool->getDouble(g_zgdy));
-    ui->lcd_zxdy_loc_1->display(dataPool->getDouble(g_zddy_zh));
-    ui->lcd_zxdy_loc_2->display(dataPool->getDouble(g_zddy_mkh));
-    ui->lcd_zxdy_loc_3->display(dataPool->getDouble(g_zddy_wz));
-    // 最高温度
-    ui->lcd_zgwd->display(dataPool->getDouble(g_zgwd));
-    ui->lcd_zgwd_loc_1->display(dataPool->getDouble(g_zgwd_zh));
-    ui->lcd_zgwd_loc_2->display(dataPool->getDouble(g_zgwd_mkh));
-    ui->lcd_zgwd_loc_3->display(dataPool->getDouble(g_zgwd_wz));
-    // 最低温度
-    ui->lcd_zdwd->display(dataPool->getDouble(g_zdwd));
-    ui->lcd_zdwd_loc_1->display(dataPool->getDouble(g_zdwd_zh));
-    ui->lcd_zdwd_loc_2->display(dataPool->getDouble(g_zdwd_mkh));
-    ui->lcd_zdwd_loc_3->display(dataPool->getDouble(g_zdwd_wz));
-
-    // 平均电压
-    // 系统状态
-    ui->text_value_xtzt->setText(QString::number(dataPool->getDouble(g_xtzt)));
-
+        // 平均电压
+        // 系统状态
+        ui->text_value_xtzt->setText(QString::number(dataPool->getDouble(g_xtzt)));
+    }
     int currentClusterIndex = configure->getClusterIndex();
     // page 2
-    if (currentPage == 0){
+    if (currentPage == 1){
         // 最高电压
         ui->lcd_p2_zgdy->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, dtzgdy), 'f', 2));
         ui->lcd_p2_zgdy_loc_1->display(dataPool->getDoubleByIndex(currentClusterIndex, zgdyxh));
@@ -377,7 +377,7 @@ void Widget::display()
     }
 
     // page 3
-    if (currentPage == 1){
+    if (currentPage == 2){
         ui->comboBox->clear();
         int moduleTotal = configure->MODULE_NUM;
     //    for (int i = 0; i < moduleTotal; i++){
@@ -453,7 +453,7 @@ void Widget::display()
         ui->lcd_p3_dy_24->display(QString::number(dataPool->getDoubleByIndex(currentClusterIndex, currentModuleSelected, dcdy_24), 'f', 3));
     }
 
-    if (currentPage == 2){
+    if (currentPage == 3){
         // page 4
         ui->tableWidget_2->clearContents();
         int maxEventInOnePage = configure->getMaxEventInOnePage();

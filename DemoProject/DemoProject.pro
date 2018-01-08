@@ -15,7 +15,8 @@ SOURCES += main.cpp \
     alertevent.cpp \
     alerteventlistener.cpp \
     cancache.cpp \
-    parsethread.cpp
+    parsethread.cpp \
+    modbusutil.cpp
 HEADERS += widget.h \
     displayThread.h \
     displaythread.h \
@@ -31,11 +32,18 @@ HEADERS += widget.h \
     eventlistener.h \
     alerteventlistener.h \
     cancache.h \
-    parsethread.h
+    parsethread.h \
+    modbusutil.h \
+    modbus-version.h \
+    modbus-tcp.h \
+    modbus-rtu.h \
+    modbus.h
 FORMS += widget.ui
 INSTALLS += target
 RESOURCES += resources.qrc
-OTHER_FILES +=
+OTHER_FILES += 
 LIBS += -L../ycapi \
     -lycapi
+LIBS += -L/opt/libmodbus/install/lib \
+    -lmodbus
 INCLUDEPATH += ../ycapi

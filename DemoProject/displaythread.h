@@ -21,6 +21,8 @@ public slots:
     void stop();
 
 private:
+    void sendModbusData();
+    double getDoubleBytes(int name, int offset);
     bool running;
 };
 

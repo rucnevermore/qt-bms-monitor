@@ -14,6 +14,7 @@ Configure::Configure(){
     GLOBAL_DATA_NUM = settings.value("Private/GlobalDataNum", 30).toInt();
     CLUSTER_DATA_NUM = settings.value("Private/ClusterDataNum", 60).toInt();
     MODULE_DATA_NUM = settings.value("Private/ModuleDataNum", 100).toInt();
+    MODBUS_DEV = settings.value("Private/ModbusDev", "/dev/ttySAC0").toString();
     current_module_selected = new int[CLUSTER_NUM+1]();
     current_event_page=0;
     current_cluster_index=0;
@@ -28,6 +29,10 @@ Configure* Configure::newInstance(){
         instance_ = new Configure();
     }
     return instance_;
+}
+
+QString Configure::getModbusDev(){
+    return MODBUS_DEV;
 }
 
 int Configure::getClusterNum(){
@@ -73,5 +78,6 @@ QString Configure::print(){
     return QString("Configure:\n").append(QString("\tCluster Number: ")).append(QString::number(CLUSTER_NUM)).append(QString("\n"))
             .append(QString("\tModule Number: ")).append(QString::number(MODULE_NUM)).append(QString("\n"))
             .append(QString("\tMax Event Number: ")).append(QString::number(MAX_EVENT_NUM)).append(QString("\n"))
-            .append(QString("\tMax Event In One Page: ")).append(QString::number(MAX_EVENT_IN_ONE_PAGE)).append(QString("\n"));
+            .append(QString("\tMax Event In One Page: ")).append(QString::number(MAX_EVENT_IN_ONE_PAGE)).append(QString("\n"))
+            .append(QString("\tModbus device: ")).append(MODBUS_DEV).append(QString("\n"));
 }
