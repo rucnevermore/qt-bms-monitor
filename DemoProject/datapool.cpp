@@ -105,9 +105,9 @@ bool DataPool::store(int name, unsigned char* value, int length){
     return true;
 }
 
-short DataPool::getShort(int name){
-    return dataMap[name];
-}
+//short DataPool::getShort(int name){
+//    return dataMap[name];
+//}
 
 int DataPool::getInt(int name){
     return dataMap[name];

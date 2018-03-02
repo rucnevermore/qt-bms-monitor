@@ -8,6 +8,7 @@
 #include "datapool.h"
 #include "configure.h"
 #include "parsethread.h"
+#include "modbustcpserverthread.h"
 
 namespace Ui {
     class Widget;
@@ -39,7 +40,7 @@ private:
     ParseThread *parseThread;
     DisplayThread *displayThread;
     CollectionThread *collectionThread;
-//    QMap<string, QTableWidgetItem*> alertItemMap;
+    ModbusTCPServerThread *modbusTcpServerThread;
 
     void deserializeEvent();
 

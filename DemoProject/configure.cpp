@@ -15,6 +15,8 @@ Configure::Configure(){
     CLUSTER_DATA_NUM = settings.value("Private/ClusterDataNum", 60).toInt();
     MODULE_DATA_NUM = settings.value("Private/ModuleDataNum", 100).toInt();
     MODBUS_DEV = settings.value("Private/ModbusDev", "/dev/ttySAC0").toString();
+    MODBUS_TYPE = settings.value("Private/ModbusType", "RTU").toString();
+    MODBUS_PORT = settings.value("Private/ModbusPort", 1502).toInt();
     current_module_selected = new int[CLUSTER_NUM+1]();
     current_event_page=0;
     current_cluster_index=0;
@@ -72,6 +74,14 @@ void Configure::setClusterIndex(int clusterId){
 
 int Configure::getClusterIndex(){
     return current_cluster_index;
+}
+
+QString Configure::getModbusType(){
+    return MODBUS_TYPE;
+}
+
+int Configure::getModbusPort(){
+    return MODBUS_PORT;
 }
 
 QString Configure::print(){

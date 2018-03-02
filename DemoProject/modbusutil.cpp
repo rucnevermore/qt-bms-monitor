@@ -1,5 +1,4 @@
 #include "modbusutil.h"
-#include "configure.h"
 
 ModbusUtil* ModbusUtil::instance_ = NULL;
 
@@ -14,7 +13,7 @@ ModbusUtil* ModbusUtil::newInstance(){
 
 ModbusUtil::ModbusUtil()
 {
-    Configure* configure = Configure::newInstance();
+    configure = Configure::newInstance();
     QString dev = configure->getModbusDev();
     QByteArray ba = dev.toUtf8();
     device = strdup(ba.data());
@@ -24,7 +23,17 @@ char* ModbusUtil::getDevice(){
     return device;
 }
 
-int ModbusUtil::createConnection()
+int ModbusUtil::createTCPServer()
+{
+    ctx = modbus_new_tcp("127.0.0.1", configure->getModbusPort());
+    if (ctx == NULL) {
+        return -1;
+    }
+    flag = true;
+    return 0;
+}
+
+int ModbusUtil::createRTUConnection()
 {
     ctx = modbus_new_rtu(device, 9600, 'N', 8, 1);
     if (ctx == NULL) {

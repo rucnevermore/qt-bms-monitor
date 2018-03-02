@@ -3,7 +3,7 @@
 
 #include <string>
 #include <stdio.h>
-#include "ui_widget.h"
+//#include "ui_widget.h"
 #include <stdexcept>
 #include "eventlistener.h"
 #include "clusterdatapool.h"

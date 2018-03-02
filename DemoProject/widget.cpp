@@ -46,22 +46,14 @@ Widget::Widget(QWidget *parent) :
         connect(cThread,SIGNAL(log(QString)),this,SLOT(log(QString)));
         cThread->start();
     }
-//    collectionThread = new CollectionThread();
-//    connect(collectionThread,SIGNAL(log(QString)),this,SLOT(log(QString)));
-//    collectionThread->start();
 
-    // start the parse thread.
-//    log(QString::fromStdString("start parse thread..."));
-//    int parseThreadNumber = 50;
-//    for (int i = 0; i < parseThreadNumber; i++){
-//        ParseThread* pThread = new ParseThread();
-//        connect(pThread,SIGNAL(log(QString)),this,SLOT(log(QString)));
-//        pThread->start();
-//    }
-
-//    parseThread = new ParseThread();
-//    connect(parseThread,SIGNAL(log(QString)),this,SLOT(log(QString)));
-//    parseThread->start();
+    // start the modbus tcp server thread.
+    if (configure->getModbusType() == QString("TCP")){
+        log(QString::fromStdString("start modbus tcp server..."));
+        modbusTcpServerThread = new ModbusTCPServerThread();
+        connect(modbusTcpServerThread,SIGNAL(log(QString)),this,SLOT(log(QString)));
+        modbusTcpServerThread->start();
+    }
 
     connect(ui->pbutton_left,SIGNAL(clicked()),this,SLOT(decreaseCluster()));
     connect(ui->pbutton_right,SIGNAL(clicked()),this,SLOT(increaseCluster()));

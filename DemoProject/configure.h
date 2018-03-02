@@ -17,8 +17,9 @@ public:
     void setEventCurrentPageNum(int num);
     int getCurrentModuleSelected(int clusterIndex);
     void setCurrentModuleSelected(int clusterIndex, int moduleIndex);
+    QString getModbusType();
     QString getModbusDev();
-
+    int getModbusPort();
     QString print();
 
     int GLOBAL_DATA_NUM;
@@ -29,6 +30,8 @@ public:
     int MAX_EVENT_NUM;
     int MAX_EVENT_IN_ONE_PAGE;
     QString MODBUS_DEV;
+    QString MODBUS_TYPE;
+    int MODBUS_PORT;
 private:
     Configure();
     ~Configure();

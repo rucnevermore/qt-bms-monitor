@@ -4,7 +4,8 @@
 #include <QThread>
 #include <sys/ioctl.h>
 #include <net/if.h>
-#include "ui_widget.h"
+//#include "ui_widget.h"
+#include "configure.h"
 
 class DisplayThread : public QThread
 {
@@ -24,6 +25,7 @@ private:
     void sendModbusData();
     double getDoubleBytes(int name, int offset);
     bool running;
+    Configure* configure;
 };
 
 #endif // DISPLAYTHREAD_H

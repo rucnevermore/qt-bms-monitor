@@ -16,7 +16,8 @@ SOURCES += main.cpp \
     alerteventlistener.cpp \
     cancache.cpp \
     parsethread.cpp \
-    modbusutil.cpp
+    modbusutil.cpp \
+    modbustcpserverthread.cpp
 HEADERS += widget.h \
     displayThread.h \
     displaythread.h \
@@ -37,7 +38,8 @@ HEADERS += widget.h \
     modbus-version.h \
     modbus-tcp.h \
     modbus-rtu.h \
-    modbus.h
+    modbus.h \
+    modbustcpserverthread.h
 FORMS += widget.ui
 INSTALLS += target
 RESOURCES += resources.qrc
