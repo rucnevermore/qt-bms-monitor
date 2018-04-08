@@ -25,7 +25,7 @@ char* ModbusUtil::getDevice(){
 
 int ModbusUtil::createTCPServer()
 {
-    ctx = modbus_new_tcp("127.0.0.1", configure->getModbusPort());
+    ctx = modbus_new_tcp(configure->getModbusAddress().toLocal8Bit().data(), configure->getModbusPort());
     if (ctx == NULL) {
         return -1;
     }

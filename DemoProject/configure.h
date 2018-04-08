@@ -20,6 +20,7 @@ public:
     QString getModbusType();
     QString getModbusDev();
     int getModbusPort();
+    QString getModbusAddress();
     QString print();
 
     int GLOBAL_DATA_NUM;
@@ -32,6 +33,7 @@ public:
     QString MODBUS_DEV;
     QString MODBUS_TYPE;
     int MODBUS_PORT;
+    QString MODBUS_ADDRESS;
 private:
     Configure();
     ~Configure();
@@ -77,6 +79,7 @@ private:
 #define soc 3
 #define ver 4
 #define xtgz 5
+// 0-正常  1-直流充电 2-交流充电 3-放电
 #define xtyxzt 6
 #define dtzgdy 7
 #define dtzddy 8

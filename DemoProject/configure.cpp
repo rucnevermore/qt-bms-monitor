@@ -17,6 +17,7 @@ Configure::Configure(){
     MODBUS_DEV = settings.value("Private/ModbusDev", "/dev/ttySAC0").toString();
     MODBUS_TYPE = settings.value("Private/ModbusType", "RTU").toString();
     MODBUS_PORT = settings.value("Private/ModbusPort", 1502).toInt();
+    MODBUS_ADDRESS = settings.value("Private/ModbusAddress", "127.0.0.1").toString();
     current_module_selected = new int[CLUSTER_NUM+1]();
     current_event_page=0;
     current_cluster_index=0;
@@ -84,10 +85,17 @@ int Configure::getModbusPort(){
     return MODBUS_PORT;
 }
 
+QString Configure::getModbusAddress(){
+    return MODBUS_ADDRESS;
+}
+
 QString Configure::print(){
     return QString("Configure:\n").append(QString("\tCluster Number: ")).append(QString::number(CLUSTER_NUM)).append(QString("\n"))
             .append(QString("\tModule Number: ")).append(QString::number(MODULE_NUM)).append(QString("\n"))
             .append(QString("\tMax Event Number: ")).append(QString::number(MAX_EVENT_NUM)).append(QString("\n"))
             .append(QString("\tMax Event In One Page: ")).append(QString::number(MAX_EVENT_IN_ONE_PAGE)).append(QString("\n"))
-            .append(QString("\tModbus device: ")).append(MODBUS_DEV).append(QString("\n"));
+            .append(QString("\tModbus device: ")).append(MODBUS_DEV).append(QString("\n"))
+            .append(QString("\tModbus type: ")).append(MODBUS_TYPE).append(QString("\n"))
+            .append(QString("\tModbus port: ")).append(QString::number(MODBUS_PORT)).append(QString("\n"))
+            .append(QString("\tModbus address: ")).append(MODBUS_ADDRESS).append(QString("\n"));
 }
