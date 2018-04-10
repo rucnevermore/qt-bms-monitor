@@ -106,52 +106,54 @@ void ModbusTCPServerThread::arm(modbus_mapping_t *mb_mapping)
 
         int module_num = 10;
         for (int j = 0; j < module_num; j++){
+            int module_index = j + 1;
             // 单体电压数据 1000~5799
-            registers[1000 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_1) * 1000;
-            registers[1001 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_2) * 1000;
-            registers[1002 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_3) * 1000;
-            registers[1003 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_4) * 1000;
-            registers[1004 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_5) * 1000;
-            registers[1005 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_6) * 1000;
-            registers[1006 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_7) * 1000;
-            registers[1007 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_8) * 1000;
-            registers[1008 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_9) * 1000;
-            registers[1009 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_10) * 1000;
-            registers[1010 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_11) * 1000;
-            registers[1011 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_12) * 1000;
-            registers[1012 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_13) * 1000;
-            registers[1013 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_14) * 1000;
-            registers[1014 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_15) * 1000;
-            registers[1015 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_16) * 1000;
-            registers[1016 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_17) * 1000;
-            registers[1017 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_18) * 1000;
-            registers[1018 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_19) * 1000;
-            registers[1019 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_20) * 1000;
-            registers[1020 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_21) * 1000;
-            registers[1021 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_22) * 1000;
-            registers[1022 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_23) * 1000;
-            registers[1023 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, j, dcdy_24) * 1000;
+            registers[1000 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_1) * 1000;
+            registers[1001 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_2) * 1000;
+            registers[1002 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_3) * 1000;
+            registers[1003 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_4) * 1000;
+            registers[1004 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_5) * 1000;
+            registers[1005 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_6) * 1000;
+            registers[1006 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_7) * 1000;
+            registers[1007 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_8) * 1000;
+            registers[1008 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_9) * 1000;
+            registers[1009 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_10) * 1000;
+            registers[1010 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_11) * 1000;
+            registers[1011 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_12) * 1000;
+            registers[1012 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_13) * 1000;
+            registers[1013 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_14) * 1000;
+            registers[1014 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_15) * 1000;
+            registers[1015 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_16) * 1000;
+            registers[1016 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_17) * 1000;
+            registers[1017 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_18) * 1000;
+            registers[1018 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_19) * 1000;
+            registers[1019 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_20) * 1000;
+            registers[1020 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_21) * 1000;
+            registers[1021 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_22) * 1000;
+            registers[1022 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_23) * 1000;
+            registers[1023 + i * 240 + j * 24] = datapool->getDoubleByIndex(cluster_index, module_index, dcdy_24) * 1000;
             // 单体电池温度数据 20000~21599
-            registers[20000 + i * 80 + j * 8] = datapool->getDoubleByIndex(cluster_index, j, cywd_1) + 40;
-            registers[20001 + i * 80 + j * 8] = datapool->getDoubleByIndex(cluster_index, j, cywd_2) + 40;
-            registers[20002 + i * 80 + j * 8] = datapool->getDoubleByIndex(cluster_index, j, cywd_3) + 40;
-            registers[20003 + i * 80 + j * 8] = datapool->getDoubleByIndex(cluster_index, j, cywd_4) + 40;
-            registers[20004 + i * 80 + j * 8] = datapool->getDoubleByIndex(cluster_index, j, cywd_5) + 40;
-            registers[20005 + i * 80 + j * 8] = datapool->getDoubleByIndex(cluster_index, j, cywd_6) + 40;
-            registers[20006 + i * 80 + j * 8] = datapool->getDoubleByIndex(cluster_index, j, cywd_7) + 40;
-            registers[20007 + i * 80 + j * 8] = datapool->getDoubleByIndex(cluster_index, j, cywd_8) + 40;
+            registers[20000 + i * 80 + j * 8] = datapool->getDoubleByIndex(cluster_index, module_index, cywd_1) + 40;
+            registers[20001 + i * 80 + j * 8] = datapool->getDoubleByIndex(cluster_index, module_index, cywd_2) + 40;
+            registers[20002 + i * 80 + j * 8] = datapool->getDoubleByIndex(cluster_index, module_index, cywd_3) + 40;
+            registers[20003 + i * 80 + j * 8] = datapool->getDoubleByIndex(cluster_index, module_index, cywd_4) + 40;
+            registers[20004 + i * 80 + j * 8] = datapool->getDoubleByIndex(cluster_index, module_index, cywd_5) + 40;
+            registers[20005 + i * 80 + j * 8] = datapool->getDoubleByIndex(cluster_index, module_index, cywd_6) + 40;
+            registers[20006 + i * 80 + j * 8] = datapool->getDoubleByIndex(cluster_index, module_index, cywd_7) + 40;
+            registers[20007 + i * 80 + j * 8] = datapool->getDoubleByIndex(cluster_index, module_index, cywd_8) + 40;
+        }
+        // 故障/告警数据 30000~31199
+        for (int k = 0; k < 25; k++){
+            registers[30000 + i * 150 + k * 6] = k + 1;
+            registers[30001 + i * 150 + k * 6] = datapool->getDoubleByIndex(1, 13 + k);
+            registers[30002 + i * 150 + k * 6] = cluster_index;
+            registers[30003 + i * 150 + k * 6] = 0xFFFF;
+            registers[30004 + i * 150 + k * 6] = 0xFFFF;
+            registers[30005 + i * 150 + k * 6] = 0xFFFF;
         }
     }
     // 目前只放第一簇的告警信息
-    // 故障/告警数据 30000~31199
-    for (int k = 0; k < 25; k++){
-        registers[30000 + k * 6] = k + 1;
-        registers[30001 + k * 6] = datapool->getDoubleByIndex(1, 13 + k);
-        registers[30002 + k * 6] = 1;
-        registers[30003 + k * 6] = 0xFFFF;
-        registers[30004 + k * 6] = 0xFFFF;
-        registers[30005 + k * 6] = 0xFFFF;
-    }
+
 }
 
 void ModbusTCPServerThread::stop()
