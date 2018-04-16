@@ -144,12 +144,23 @@ void ModbusTCPServerThread::arm(modbus_mapping_t *mb_mapping)
         }
         // 故障/告警数据 30000~31199
         for (int k = 0; k < 25; k++){
+            int alert_level = datapool->getDoubleByIndex(cluster_index, 13 + k);
+            int alert_status = 0;
+            if (alert_level > 0){
+                alert_status = 1;
+            }
+            int alert_no = 13 + k;
             registers[30000 + i * 150 + k * 6] = k + 1;
-            registers[30001 + i * 150 + k * 6] = datapool->getDoubleByIndex(1, 13 + k);
+            registers[30001 + i * 150 + k * 6] = alert_level;
             registers[30002 + i * 150 + k * 6] = cluster_index;
-            registers[30003 + i * 150 + k * 6] = 0xFFFF;
-            registers[30004 + i * 150 + k * 6] = 0xFFFF;
-            registers[30005 + i * 150 + k * 6] = 0xFFFF;
+            if ((alert_no == dtgy_bj || alert_no == dtqy_bj) && alert_status != 0){
+                registers[30003 + i * 150 + k * 6] = datapool->getDoubleByIndex(cluster_index, zgdyxh);
+                registers[30004 + i * 150 + k * 6] = datapool->getDoubleByIndex(cluster_index, zgdywz);
+            }else{
+                registers[30003 + i * 150 + k * 6] = 0xFF;
+                registers[30004 + i * 150 + k * 6] = 0xFF;
+            }
+            registers[30005 + i * 150 + k * 6] = alert_status;
         }
     }
     // 目前只放第一簇的告警信息
