@@ -17,7 +17,7 @@ void ModbusTCPServerThread::run()
     }
     uint8_t *query = new uint8_t[MODBUS_TCP_MAX_ADU_LENGTH];
     log(QString("create modbus mapping"));
-    modbus_mapping_t *mb_mapping = modbus_mapping_new(0,0,32000,0);
+    modbus_mapping_t *mb_mapping = modbus_mapping_new(0,0,33000,0);
     if (mb_mapping == NULL){
         log(QString("failed to create modbus mapping"));
         modbus->close();
@@ -153,9 +153,12 @@ void ModbusTCPServerThread::arm(modbus_mapping_t *mb_mapping)
             registers[30000 + i * 150 + k * 6] = k + 1;
             registers[30001 + i * 150 + k * 6] = alert_level;
             registers[30002 + i * 150 + k * 6] = cluster_index;
-            if ((alert_no == dtgy_bj || alert_no == dtqy_bj) && alert_status != 0){
+            if (alert_no == dtgy_bj && alert_status != 0){
                 registers[30003 + i * 150 + k * 6] = datapool->getDoubleByIndex(cluster_index, zgdyxh);
                 registers[30004 + i * 150 + k * 6] = datapool->getDoubleByIndex(cluster_index, zgdywz);
+            }else if (alert_no == dtqy_bj && alert_status != 0){
+                registers[30003 + i * 150 + k * 6] = datapool->getDoubleByIndex(cluster_index, zddyxh);
+                registers[30004 + i * 150 + k * 6] = datapool->getDoubleByIndex(cluster_index, zddywz);
             }else{
                 registers[30003 + i * 150 + k * 6] = 0xFF;
                 registers[30004 + i * 150 + k * 6] = 0xFF;

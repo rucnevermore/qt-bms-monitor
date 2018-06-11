@@ -59,7 +59,7 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab_xtxx">
     <attribute name="title">
@@ -162,8 +162,8 @@ p, li { white-space: pre-wrap; }
       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20pt;&quot;&gt;镇江科信动力系统设计研究有限公司&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Andale Mono'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:20pt;&quot;&gt;镇江科信动力系统设计研究有限公司&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLCDNumber" name="lcd_zxdy_loc_3">
@@ -2126,7 +2126,7 @@ p, li { white-space: pre-wrap; }
       <widget class="QLCDNumber" name="lcd_p2_zddy_loc_1">
        <property name="geometry">
         <rect>
-         <x>40</x>
+         <x>10</x>
          <y>30</y>
          <width>21</width>
          <height>31</height>
@@ -2145,7 +2145,7 @@ p, li { white-space: pre-wrap; }
       <widget class="QLCDNumber" name="lcd_p2_zddy_loc_2">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>40</x>
          <y>30</y>
          <width>21</width>
          <height>31</height>
@@ -2308,7 +2308,7 @@ p, li { white-space: pre-wrap; }
       <widget class="QLCDNumber" name="lcd_p2_zdwd_loc_1">
        <property name="geometry">
         <rect>
-         <x>40</x>
+         <x>10</x>
          <y>30</y>
          <width>21</width>
          <height>31</height>
@@ -2343,7 +2343,7 @@ p, li { white-space: pre-wrap; }
       <widget class="QLCDNumber" name="lcd_p2_zdwd_loc_2">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>40</x>
          <y>30</y>
          <width>21</width>
          <height>31</height>
@@ -3959,31 +3959,12 @@ p, li { white-space: pre-wrap; }
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLCDNumber" name="lcd_p3_zddy_loc_1">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>40</y>
-         <width>21</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
       <widget class="QLCDNumber" name="lcd_p3_zddy">
        <property name="geometry">
         <rect>
-         <x>70</x>
+         <x>50</x>
          <y>40</y>
-         <width>71</width>
+         <width>91</width>
          <height>31</height>
         </rect>
        </property>
@@ -4018,7 +3999,7 @@ p, li { white-space: pre-wrap; }
       <widget class="QLCDNumber" name="lcd_p3_zddy_loc_2">
        <property name="geometry">
         <rect>
-         <x>40</x>
+         <x>20</x>
          <y>40</y>
          <width>21</width>
          <height>31</height>
@@ -4071,29 +4052,10 @@ p, li { white-space: pre-wrap; }
         <string>最小电压</string>
        </property>
       </widget>
-      <widget class="QLCDNumber" name="lcd_p3_zxdy_loc_1">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>40</y>
-         <width>21</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
       <widget class="QLCDNumber" name="lcd_p3_zxdy_loc_2">
        <property name="geometry">
         <rect>
-         <x>40</x>
+         <x>20</x>
          <y>40</y>
          <width>21</width>
          <height>31</height>
@@ -4112,9 +4074,9 @@ p, li { white-space: pre-wrap; }
       <widget class="QLCDNumber" name="lcd_p3_zxdy">
        <property name="geometry">
         <rect>
-         <x>70</x>
+         <x>50</x>
          <y>40</y>
-         <width>71</width>
+         <width>91</width>
          <height>31</height>
         </rect>
        </property>
@@ -4144,7 +4106,7 @@ p, li { white-space: pre-wrap; }
       <widget class="QLCDNumber" name="lcd_p3_zdwd_loc_2">
        <property name="geometry">
         <rect>
-         <x>40</x>
+         <x>20</x>
          <y>40</y>
          <width>21</width>
          <height>31</height>
@@ -4163,9 +4125,9 @@ p, li { white-space: pre-wrap; }
       <widget class="QLCDNumber" name="lcd_p3_zdwd">
        <property name="geometry">
         <rect>
-         <x>70</x>
+         <x>50</x>
          <y>40</y>
-         <width>71</width>
+         <width>91</width>
          <height>31</height>
         </rect>
        </property>
@@ -4195,25 +4157,6 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="text">
         <string>最低温度</string>
-       </property>
-      </widget>
-      <widget class="QLCDNumber" name="lcd_p3_zdwd_loc_1">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>40</y>
-         <width>21</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
        </property>
       </widget>
      </widget>
@@ -4253,29 +4196,10 @@ p, li { white-space: pre-wrap; }
         <string>最高温度</string>
        </property>
       </widget>
-      <widget class="QLCDNumber" name="lcd_p3_zgwd_loc_1">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>40</y>
-         <width>21</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
       <widget class="QLCDNumber" name="lcd_p3_zgwd_loc_2">
        <property name="geometry">
         <rect>
-         <x>40</x>
+         <x>20</x>
          <y>40</y>
          <width>21</width>
          <height>31</height>
@@ -4294,9 +4218,9 @@ p, li { white-space: pre-wrap; }
       <widget class="QLCDNumber" name="lcd_p3_zgwd">
        <property name="geometry">
         <rect>
-         <x>70</x>
+         <x>50</x>
          <y>40</y>
-         <width>71</width>
+         <width>81</width>
          <height>31</height>
         </rect>
        </property>
