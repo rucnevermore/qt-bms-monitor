@@ -211,9 +211,9 @@ void Widget::display()
         ui->lcd_soc->display(dataPool->getDouble(g_xtsoc));
         ui->pBar_soc->setValue(dataPool->getDouble(g_xtsoc));
         // 最大压差
-        ui->lcd_zdyc->display(dataPool->getDouble(g_zdyc));
+        ui->lcd_zdyc->display(dataPool->getDouble(g_zgdy)-dataPool->getDouble(g_zddy));
         // 最大温差
-        ui->lcd_zdwc->display(dataPool->getDouble(g_zdwc));
+        ui->lcd_zdwc->display(dataPool->getDouble(g_zgwd)-dataPool->getDouble(g_zdwd));
         // 最大电压
         ui->lcd_zddy->display(dataPool->getDouble(g_zgdy));
         ui->lcd_zddy_loc_1->display(dataPool->getDouble(g_zgdy_zh));
